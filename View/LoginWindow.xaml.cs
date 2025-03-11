@@ -5,9 +5,6 @@ using System.Windows.Input;
 
 namespace Project.View
 {
-    /// <summary>
-    /// Interaction logic for LoginWindow.xaml
-    /// </summary>
     public partial class LoginWindow : Window
     {
         private readonly LoginViewModel _viewModel;
@@ -19,11 +16,6 @@ namespace Project.View
             DataContext = _viewModel;
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
             if (sender is PasswordBox pb)
@@ -32,21 +24,11 @@ namespace Project.View
             }
         }
 
-        private void RoleComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // Empty - no validation needed
-        }
-
-        // Enable window dragging
+        // Các hàm khác (như drag window, close, v.v.) giữ nguyên
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
             DragMove();
-        }
-
-        private void roleComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

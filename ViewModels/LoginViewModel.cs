@@ -1,91 +1,81 @@
-﻿// Project.ViewModels/LoginViewModel.cs
-using Microsoft.Extensions.DependencyInjection; // Add this for GetRequiredService
-using Project.DAO; // Correct DAO namespace
-using Project.Enums; // Correct Enums namespace
-using Project.Models; // Add this for the User class
-using Project.View; // Add this for the windows
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.Extensions.DependencyInjection;
+using Project.DAO;
+using Project.Enums;
+using Project.View;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Windows;
-using System.Windows.Input;
 
-namespace Project.ViewModels // Correct namespace   
+namespace Project.ViewModels
 {
-    public class LoginViewModel : INotifyPropertyChanged
+    public partial class LoginViewModel : ObservableObject
     {
         private readonly UserDAO _userDAO;
+        private readonly IServiceProvider _serviceProvider;
 
-        private string _email = string.Empty;
-        private string _password = string.Empty;
-        private Role _selectedRole;
-        private string _errorMessage = string.Empty;
+        [ObservableProperty]
+        private string email = string.Empty;
 
-        public string Email
-        {
-            get { return _email; }
-            set { _email = value; OnPropertyChanged(nameof(Email)); }
-        }
+        [ObservableProperty]
+        private string password = string.Empty;
 
-        public string Password
-        {
-            get { return _password; }
-            set { _password = value; OnPropertyChanged(nameof(Password)); }
-        }
+        [ObservableProperty]
+        private Role selectedRole;
 
-        public Role SelectedRole
-        {
-            get { return _selectedRole; }
-            set { _selectedRole = value; OnPropertyChanged(nameof(SelectedRole)); }
-        }
+        [ObservableProperty]
+        private string errorMessage = string.Empty;
 
-        public string ErrorMessage
-        {
-            get { return _errorMessage; }
-            set { _errorMessage = value; OnPropertyChanged(nameof(ErrorMessage)); }
-        }
+        public ObservableCollection<Role> Roles { get; } =
+            new ObservableCollection<Role>(System.Enum.GetValues(typeof(Role)).Cast<Role>());
 
-        public ObservableCollection<Role> Roles { get; } = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());
+        public IAsyncRelayCommand LoginCommand { get; }
+        public IAsyncRelayCommand RegisterCommand { get; }
 
-        public ICommand LoginCommand { get; }
-
-        // Constructor (using dependency injection)
         public LoginViewModel(IServiceProvider serviceProvider)
         {
-            _userDAO = serviceProvider.GetRequiredService<UserDAO>();
-            LoginCommand = new AsyncRelayCommand(Login);
+            _serviceProvider = serviceProvider;
+            _userDAO = _serviceProvider.GetRequiredService<UserDAO>();
+
+            // Đặt mặc định là Citizen
             SelectedRole = Role.Citizen;
+
+            LoginCommand = new AsyncRelayCommand(LoginAsync);
+            RegisterCommand = new AsyncRelayCommand(RegisterAsync);
         }
 
-        private async Task Login()
+        private async Task LoginAsync()
         {
             try
             {
                 ErrorMessage = string.Empty;
-                var user = await _userDAO.AuthenticateUser(Email, Password, SelectedRole);
 
+                var user = await _userDAO.AuthenticateUser(Email, Password, SelectedRole);
                 if (user != null)
                 {
                     Window nextWindow = null;
                     switch (user.Role)
                     {
                         case Role.Admin:
-                            nextWindow = new AdminWindow();
+                            nextWindow = _serviceProvider.GetRequiredService<AdminWindow>();
                             break;
                         case Role.Police:
-                            nextWindow = new PoliceWindow();
+                            nextWindow = _serviceProvider.GetRequiredService<PoliceWindow>();
                             break;
                         case Role.AreaLeader:
-                            nextWindow = new AreaLeaderWindow();
+                            nextWindow = _serviceProvider.GetRequiredService<AreaLeaderWindow>();
                             break;
                         case Role.Citizen:
-                            nextWindow = new CitizenWindow();
+                            nextWindow = _serviceProvider.GetRequiredService<CitizenWindow>();
                             break;
                     }
 
                     if (nextWindow != null)
                     {
                         nextWindow.Show();
-                        Application.Current.MainWindow.Close();
+                        // Đóng LoginWindow hiện tại thông qua DI (tìm theo kiểu)
+                        var loginWindow = Application.Current.Windows.OfType<LoginWindow>().FirstOrDefault();
+                        loginWindow?.Close();
                     }
                 }
                 else
@@ -93,57 +83,19 @@ namespace Project.ViewModels // Correct namespace
                     ErrorMessage = "Invalid email, password, or role.";
                 }
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
-                ErrorMessage = "An error occurred during login.";
+                ErrorMessage = "An error occurred during login: " + ex.Message;
             }
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
+        private async Task RegisterAsync()
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
-
-    public class AsyncRelayCommand : ICommand
-    {
-        private readonly Func<Task> _execute;
-        private readonly Func<bool>? _canExecute;
-        private bool _isExecuting;
-
-        public event EventHandler? CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-
-        public AsyncRelayCommand(Func<Task> execute, Func<bool>? canExecute = null)
-        {
-            _execute = execute;
-            _canExecute = canExecute;
-        }
-
-        public bool CanExecute(object? parameter)
-        {
-            return !_isExecuting && (_canExecute?.Invoke() ?? true);
-        }
-
-        public async void Execute(object? parameter)
-        {
-            if (_isExecuting)
-                return;
-
-            _isExecuting = true;
-            try
-            {
-                await _execute();
-            }
-            finally
-            {
-                _isExecuting = false;
-            }
+            var currentWindow = Application.Current.Windows.OfType<LoginWindow>().FirstOrDefault();
+            var registerWindow = _serviceProvider.GetRequiredService<Register>();
+            registerWindow.Show();
+            currentWindow?.Close();
+            await Task.CompletedTask;
         }
     }
 }

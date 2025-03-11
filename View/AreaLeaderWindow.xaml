@@ -1,8 +1,48 @@
-<Window x:Class="Project.View.AreaLeaderWindow"
+﻿<Window x:Class="Project.View.AreaLeaderWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Area Leader Window" Height="300" Width="400">
+        Title="Dashboard AreaLeader" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock Text="Welcome, Area Leader!" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <!-- Header -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border Background="LightBlue" Grid.Row="0" Padding="10">
+            <TextBlock Text="Dashboard AreaLeader" 
+                       FontSize="24" FontWeight="Bold" Foreground="DarkBlue"/>
+        </Border>
+        <!-- Nội dung chính -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Danh sách hồ sơ cần duyệt -->
+            <GroupBox Header="Hồ sơ cần duyệt" Grid.Column="0" Margin="5">
+                <ListView Name="lvApplications">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mã hồ sơ" Width="80" DisplayMemberBinding="{Binding ApplicationId}"/>
+                            <GridViewColumn Header="Họ tên" Width="150" DisplayMemberBinding="{Binding FullName}"/>
+                            <GridViewColumn Header="Trạng thái" Width="100" DisplayMemberBinding="{Binding Status}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </GroupBox>
+            <!-- Các chức năng phụ -->
+            <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
+                <Button Content="Duyệt hồ sơ" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Gửi nhận xét cho Công an" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Chat" Height="40" Margin="0,0,0,10"/>
+            </StackPanel>
+        </Grid>
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Logout" Width="100" Height="30" x:Name="btnLogout"/>
+        </StackPanel>
     </Grid>
-</Window> 
+</Window>
