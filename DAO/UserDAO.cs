@@ -44,8 +44,6 @@ namespace Project.DAO
         {
             PrnContext prnContext = new PrnContext();
             return prnContext.Users.ToList();
-
-
         }
 
 

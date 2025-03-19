@@ -42,6 +42,7 @@ namespace Project
             services.AddTransient<CitizenWindow>();
             services.AddTransient<Register>();
             services.AddTransient<RegisterViewModel>();
+            services.AddTransient<HouseHoldControlWindow>();
         }
         protected override async void OnStartup(StartupEventArgs e)
         {

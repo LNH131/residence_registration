@@ -17,6 +17,14 @@ public partial class Address
 
     public string Country { get; set; } = null!;
 
+    public string? HouseNumber { get; set; }
+
+    public string? Ward { get; set; }
+
+    public string? District { get; set; }
+
+    public string? Province { get; set; }
+
     public virtual ICollection<Household> Households { get; set; } = new List<Household>();
 
     public virtual ICollection<Registration> Registrations { get; set; } = new List<Registration>();

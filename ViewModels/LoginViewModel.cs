@@ -66,7 +66,10 @@ namespace Project.ViewModels
                             nextWindow = _serviceProvider.GetRequiredService<AreaLeaderWindow>();
                             break;
                         case Role.Citizen:
-                            nextWindow = _serviceProvider.GetRequiredService<CitizenWindow>();
+                            var citizenViewModel = new CitizenViewModel(user);
+                            var citizenWindow = _serviceProvider.GetRequiredService<CitizenWindow>();
+                            citizenWindow.DataContext = citizenViewModel;
+                            nextWindow = citizenWindow;
                             break;
                     }
 

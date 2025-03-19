@@ -6,62 +6,59 @@
         Height="500" Width="800"
         WindowStartupLocation="CenterScreen">
 
-    <!-- Thiết lập DataContext -->
-    <Window.DataContext>
-        <vm:CitizenViewModel/>
-    </Window.DataContext>
     <Grid>
-        <!-- Header -->
+        <!-- Define grid rows -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!-- Header -->
         <Border Background="LightCyan" Grid.Row="0" Padding="10">
             <TextBlock Text="Dashboard Citizen" 
                        FontSize="24" FontWeight="Bold" Foreground="DarkBlue"/>
         </Border>
 
-        <!-- Nội dung chính -->
+        <!-- Main content -->
         <Grid Grid.Row="1" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- Thông tin hồ sơ -->
+            <!-- Personal information section with ScrollViewer -->
             <GroupBox Header="Thông tin cá nhân" Grid.Column="0" Margin="5">
-                <StackPanel Margin="10">
-                    <TextBlock Text="Họ và tên:" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding FullName}" Margin="0,0,0,5"/>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Họ và tên:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CurrentUser.FullName}" Margin="0,0,0,5"/>
 
-                    <TextBlock Text="Email:" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding Email}" Margin="0,0,0,5"/>
+                        <TextBlock Text="Email:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CurrentUser.Email}" Margin="0,0,0,5"/>
 
-                    <TextBlock Text="Trạng thái hồ sơ:" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding RegistrationStatus}" Foreground="DarkRed" Margin="0,0,0,5"/>
+                        <TextBlock Text="CCCD:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CurrentUser.Cccd}" Margin="0,0,0,5"/>
 
-                    <Button Content="Cập nhật hồ sơ" Width="150" Height="30" Margin="0,10,0,0"/>
-                </StackPanel>
+                        <TextBlock Text="Ngày sinh:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CurrentUser.BirthDate, StringFormat='dd/MM/yyyy'}" Margin="0,0,0,5"/>
+
+                        <TextBlock Text="Giới tính:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding CurrentUser.Gender}" Margin="0,0,0,5"/>
+
+                        <TextBlock Text="Trạng thái hồ sơ:" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding RegistrationStatus}" Foreground="DarkRed" Margin="0,0,0,5"/>
+
+                        <Button Content="Cập nhật hồ sơ" Width="150" Height="30" Margin="0,10,0,0"/>
+                    </StackPanel>
+                </ScrollViewer>
             </GroupBox>
 
-            <!-- Chức năng -->
+            <!-- Functionality section -->
             <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
-                <!-- Nút Xem thông báo -->
                 <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"
                         Command="{Binding LoadNotificationsCommand}"/>
-
-                <!-- Nút Nộp đơn đăng ký hộ khẩu -->
-                <Button Content="Nộp đơn đăng ký hộ khẩu" Height="40" Margin="0,0,0,10"/>
-
-                <!-- Nút Chuyển hộ khẩu -->
-                <Button Content="Chuyển hộ khẩu" Height="40" Margin="0,0,0,10"/>
-
-                <!-- Nút Tách hộ khẩu -->
-                <Button Content="Tách hộ khẩu" Height="40" Margin="0,0,0,10"/>
-
-                <!-- Nút Chat -->
+                <Button Content="Quản lý hộ khẩu" Height="40" Margin="0,0,0,10"/>
                 <Button Content="Chat với tổ trưởng khu phố" Height="40" Margin="0,0,0,10"
                         Command="{Binding OpenChatCommand}"/>
             </StackPanel>

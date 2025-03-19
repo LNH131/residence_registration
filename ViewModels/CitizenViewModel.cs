@@ -7,18 +7,15 @@ namespace Project.ViewModels
     public class CitizenViewModel : BaseViewModel
     {
         // Các thuộc tính thông tin cá nhân
-        private string _fullName;
-        public string FullName
+        private User _currentUser;
+        public User CurrentUser
         {
-            get => _fullName;
-            set { _fullName = value; OnPropertyChanged(); }
-        }
-
-        private string _email;
-        public string Email
-        {
-            get => _email;
-            set { _email = value; OnPropertyChanged(); }
+            get => _currentUser;
+            set
+            {
+                _currentUser = value;
+                OnPropertyChanged();
+            }
         }
 
         private string _registrationStatus;
@@ -50,11 +47,10 @@ namespace Project.ViewModels
         public ICommand OpenChatCommand { get; set; }
 
         // Constructor: khởi tạo giá trị và command
-        public CitizenViewModel()
+        public CitizenViewModel(User user)
         {
             // Giả lập thông tin cá nhân (thay bằng dữ liệu thật từ DB hoặc session)
-            FullName = "Nguyễn Văn A";
-            Email = "nguyenvana@example.com";
+            CurrentUser = user;
             RegistrationStatus = "Chờ phê duyệt";
 
             // Khởi tạo danh sách thông báo

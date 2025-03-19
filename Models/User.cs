@@ -1,4 +1,7 @@
-﻿using Project.Enums;
+﻿using System;
+using System.Collections.Generic;
+using Project.Enums;
+
 namespace Project.Models;
 
 public partial class User
@@ -11,21 +14,25 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
-    public Role Role { get; set; }
+    public Role Role { get; set; } 
 
     public int? AreaId { get; set; }
 
     public int CurrentAddressId { get; set; }
 
+    public string? IdentityCard { get; set; }
+
+    public DateOnly? Birthday { get; set; }
+
+    public string? Sex { get; set; }
+
     public virtual Area? Area { get; set; }
 
     public virtual ICollection<Area> Areas { get; set; } = new List<Area>();
 
-    public virtual ICollection<ChatMessage> ChatMessageFromUsers { get; set; } = new List<ChatMessage>();
-
-    public virtual ICollection<ChatMessage> ChatMessageToUsers { get; set; } = new List<ChatMessage>();
-
     public virtual Address CurrentAddress { get; set; } = null!;
+
+    public virtual ICollection<HeadOfHouseHold> HeadOfHouseHolds { get; set; } = new List<HeadOfHouseHold>();
 
     public virtual ICollection<HouseholdMember> HouseholdMembers { get; set; } = new List<HouseholdMember>();
 
@@ -44,4 +51,8 @@ public partial class User
     public virtual ICollection<Registration> RegistrationUsers { get; set; } = new List<Registration>();
 
     public virtual ICollection<UserContact> UserContacts { get; set; } = new List<UserContact>();
+
+    public virtual ICollection<ChatMessage> ChatMessageFromUsers { get; set; } = new List<ChatMessage>();
+
+    public virtual ICollection<ChatMessage> ChatMessageToUsers { get; set; } = new List<ChatMessage>();
 }
