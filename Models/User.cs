@@ -21,6 +21,10 @@ public partial class User
 
     public virtual ICollection<Area> Areas { get; set; } = new List<Area>();
 
+    public virtual ICollection<ChatMessage> ChatMessageFromUsers { get; set; } = new List<ChatMessage>();
+
+    public virtual ICollection<ChatMessage> ChatMessageToUsers { get; set; } = new List<ChatMessage>();
+
     public virtual Address CurrentAddress { get; set; } = null!;
 
     public virtual ICollection<HouseholdMember> HouseholdMembers { get; set; } = new List<HouseholdMember>();

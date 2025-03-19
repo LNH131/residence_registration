@@ -20,6 +20,8 @@ public partial class PrnContext : DbContext
 
     public virtual DbSet<Area> Areas { get; set; }
 
+    public virtual DbSet<ChatMessage> ChatMessages { get; set; }
+
     public virtual DbSet<Document> Documents { get; set; }
 
     public virtual DbSet<DocumentType> DocumentTypes { get; set; }
@@ -106,7 +108,23 @@ public partial class PrnContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Areas__PoliceID__5535A963");
         });
+        modelBuilder.Entity<ChatMessage>(entity =>
+        {
+            entity.HasKey(e => e.MessageId);
 
+            entity.ToTable("ChatMessage");
+
+            entity.Property(e => e.Content).HasMaxLength(500);
+            entity.Property(e => e.SentDate).HasColumnType("datetime");
+
+            entity.HasOne(d => d.FromUser).WithMany(p => p.ChatMessageFromUsers)
+                .HasForeignKey(d => d.FromUserId)
+                .HasConstraintName("FK_ChatMessage_Users");
+
+            entity.HasOne(d => d.ToUser).WithMany(p => p.ChatMessageToUsers)
+                .HasForeignKey(d => d.ToUserId)
+                .HasConstraintName("FK_ChatMessage_Users1");
+        });
         modelBuilder.Entity<Document>(entity =>
         {
             entity.HasKey(e => e.DocumentId).HasName("PK__Document__1ABEEF6FC77CF848");

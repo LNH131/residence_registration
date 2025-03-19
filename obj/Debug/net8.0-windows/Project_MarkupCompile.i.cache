@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\acer\Desktop\CNki5\PRN212\PROJECT\Project\obj\Debug\net8.0-windows\
+C:\Users\acer\Desktop\CNki5\PRN212\git\residence_registration\obj\Debug\net8.0-windows\
 Project
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\acer\Desktop\CNki5\PRN212\PROJECT\Project\App.xaml
-7-458853696
+C:\Users\acer\Desktop\CNki5\PRN212\git\residence_registration\App.xaml
+8-1361514756
 
-36-2093949915
+44768364707
 264475249198
-MainWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\CitizenWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;
+MainWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;
 
 False
 

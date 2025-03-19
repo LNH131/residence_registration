@@ -1,8 +1,15 @@
 ﻿<Window x:Class="Project.View.CitizenWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Dashboard Citizen" Height="500" Width="800"
+        xmlns:vm="clr-namespace:Project.ViewModels" 
+        Title="Dashboard Citizen" 
+        Height="500" Width="800"
         WindowStartupLocation="CenterScreen">
+
+    <!-- Thiết lập DataContext -->
+    <Window.DataContext>
+        <vm:CitizenViewModel/>
+    </Window.DataContext>
     <Grid>
         <!-- Header -->
         <Grid.RowDefinitions>
@@ -41,11 +48,22 @@
 
             <!-- Chức năng -->
             <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
-                <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"/>
+                <!-- Nút Xem thông báo -->
+                <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"
+                        Command="{Binding LoadNotificationsCommand}"/>
+
+                <!-- Nút Nộp đơn đăng ký hộ khẩu -->
                 <Button Content="Nộp đơn đăng ký hộ khẩu" Height="40" Margin="0,0,0,10"/>
+
+                <!-- Nút Chuyển hộ khẩu -->
                 <Button Content="Chuyển hộ khẩu" Height="40" Margin="0,0,0,10"/>
+
+                <!-- Nút Tách hộ khẩu -->
                 <Button Content="Tách hộ khẩu" Height="40" Margin="0,0,0,10"/>
-                <Button Content="Chat với tổ trưởng khu phố" Height="40" Margin="0,0,0,10"/>
+
+                <!-- Nút Chat -->
+                <Button Content="Chat với tổ trưởng khu phố" Height="40" Margin="0,0,0,10"
+                        Command="{Binding OpenChatCommand}"/>
             </StackPanel>
         </Grid>
 
