@@ -54,7 +54,7 @@ namespace Project.ViewModels
             Roles = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());
             SelectedRole = Roles.FirstOrDefault();
 
-            Areas = new ObservableCollection<Area>(_context.Areas.ToList());
+            Areas = new ObservableCollection<Area>(_context.Areas.ToList());    
             SelectedArea = Areas.FirstOrDefault();
 
             Addresses = new ObservableCollection<Address>(_context.Addresses.ToList());

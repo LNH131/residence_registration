@@ -12,6 +12,7 @@ namespace Project.View
         public LoginWindow(LoginViewModel viewModel)
         {
             InitializeComponent();
+
             _viewModel = viewModel;
             DataContext = _viewModel;
         }

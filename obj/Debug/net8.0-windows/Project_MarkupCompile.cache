@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\github\residence_registration\obj\Debug\net8.0-windows\
+F:\Clone100\residence_registration\obj\Debug\net8.0-windows\
 Project
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\github\residence_registration\App.xaml
-91821601282
+F:\Clone100\residence_registration\App.xaml
+101911685279
 
-451057883597
-264573982475
-MainWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;
+48-784963279
+264-1600849603
+MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;
 
 False
 
