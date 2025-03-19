@@ -40,6 +40,14 @@ namespace Project.DAO
             _context.Users.Add(newUser);
             await _context.SaveChangesAsync();
         }
+        public static List<User> GetAllUsers()
+        {
+            PrnContext prnContext = new PrnContext();
+            return prnContext.Users.ToList();
+
+
+        }
+
 
 
     }

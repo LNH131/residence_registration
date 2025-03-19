@@ -38,6 +38,8 @@
                 <Button Content="Quản lý hộ khẩu" Height="40" Margin="0,0,0,10"/>
                 <Button Content="Xem báo cáo" Height="40" Margin="0,0,0,10"/>
                 <Button Content="Thông báo" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Chat" Height="40" Margin="0,0,0,10"
+        Command="{Binding ChatCommand}"/>
             </StackPanel>
         </Grid>
         <!-- Footer -->
