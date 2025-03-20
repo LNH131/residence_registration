@@ -1,0 +1,50 @@
+﻿<Window x:Class="Resident.View.PoliceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dashboard Police" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- Header -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Border Background="LightSteelBlue" Grid.Row="0" Padding="10">
+            <TextBlock Text="Dashboard Police" 
+                       FontSize="24" FontWeight="Bold" Foreground="Navy"/>
+        </Border>
+        <!-- Nội dung chính -->
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Danh sách hồ sơ cần phê duyệt -->
+            <GroupBox Header="Hồ sơ cần phê duyệt" Grid.Column="0" Margin="5">
+                <ListView Name="lvApprovals">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Mã hồ sơ" Width="80" DisplayMemberBinding="{Binding RegistrationId}"/>
+                            <GridViewColumn Header="Họ tên" Width="150" DisplayMemberBinding="{Binding FullName}"/>
+                            <GridViewColumn Header="Trạng thái" Width="100" DisplayMemberBinding="{Binding Status}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </GroupBox>
+            <!-- Các chức năng phụ -->
+            <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
+                <Button Content="Phê duyệt hồ sơ" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Quản lý hộ khẩu" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Xem báo cáo" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Thông báo" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Chat" Height="40" Margin="0,0,0,10"
+        Command="{Binding ChatCommand}"/>
+            </StackPanel>
+        </Grid>
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Logout" Width="100" Height="30" x:Name="btnLogout"/>
+        </StackPanel>
+    </Grid>
+</Window>
