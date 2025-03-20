@@ -7,7 +7,7 @@ public partial class Household
 {
     public int HouseholdId { get; set; }
 
-    public int HeadOfHouseholdId { get; set; }
+    public int HeadId { get; set; }
 
     public int AddressId { get; set; }
 
@@ -15,7 +15,9 @@ public partial class Household
 
     public virtual Address Address { get; set; } = null!;
 
-    public virtual User HeadOfHousehold { get; set; } = null!;
+    public virtual HeadOfHouseHold Head { get; set; } = null!;
+
+    public virtual ICollection<HeadOfHouseHold> HeadOfHouseHolds { get; set; } = new List<HeadOfHouseHold>();
 
     public virtual ICollection<HouseholdMember> HouseholdMembers { get; set; } = new List<HouseholdMember>();
 

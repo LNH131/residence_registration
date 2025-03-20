@@ -1,4 +1,5 @@
-﻿using Project.ViewModels;
+﻿using Project.Models;
+using Project.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -8,6 +9,7 @@ namespace Project.View
     public partial class LoginWindow : Window
     {
         private readonly LoginViewModel _viewModel;
+
 
         public LoginWindow(LoginViewModel viewModel)
         {

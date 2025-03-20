@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Project.Models;
 
 namespace Project.Models;
 
 public partial class HeadOfHouseHold
 {
-    [Key]
-    public int HeadId { get; set; }
+    public int HeadOfHouseHoldId { get; set; }
 
     public int UserId { get; set; }
 

@@ -26,6 +26,8 @@ public partial class PrnContext : DbContext
 
     public virtual DbSet<DocumentType> DocumentTypes { get; set; }
 
+    public virtual DbSet<HeadOfHouseHold> HeadOfHouseHolds { get; set; }
+
     public virtual DbSet<Household> Households { get; set; }
 
     public virtual DbSet<HouseholdMember> HouseholdMembers { get; set; }
@@ -52,28 +54,12 @@ public partial class PrnContext : DbContext
         var configuration = builder.Build();
         optionsBuilder.UseSqlServer(configuration.GetConnectionString("Default"));
     }
-    //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>()
-                .Property(u => u.Role)
-                .HasConversion<string>();
-
-        modelBuilder.Entity<Registration>()
-            .Property(r => r.RegistrationType)
-            .HasConversion<string>();
-
-        modelBuilder.Entity<Registration>()
-            .Property(r => r.Status)
-            .HasConversion<string>();
-
-        modelBuilder.Entity<HouseholdTransfer>()
-            .Property(ht => ht.Status)
-            .HasConversion<string>();
         modelBuilder.Entity<Address>(entity =>
         {
-            entity.HasKey(e => e.AddressId).HasName("PK__Addresse__091C2A1BE566D4B5");
+            entity.HasKey(e => e.AddressId).HasName("PK__Addresse__091C2A1BB25977FA");
 
             entity.Property(e => e.AddressId).HasColumnName("AddressID");
             entity.Property(e => e.City)
@@ -82,11 +68,17 @@ public partial class PrnContext : DbContext
             entity.Property(e => e.Country)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.District)
+                .HasMaxLength(100)
+                .IsUnicode(false);
             entity.Property(e => e.State)
                 .HasMaxLength(50)
                 .IsUnicode(false);
             entity.Property(e => e.Street)
                 .HasMaxLength(255)
+                .IsUnicode(false);
+            entity.Property(e => e.Ward)
+                .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.ZipCode)
                 .HasMaxLength(10)
@@ -95,7 +87,7 @@ public partial class PrnContext : DbContext
 
         modelBuilder.Entity<Area>(entity =>
         {
-            entity.HasKey(e => e.AreaId).HasName("PK__Areas__70B8202833CA3679");
+            entity.HasKey(e => e.AreaId).HasName("PK__Areas__70B82028BDAA5286");
 
             entity.Property(e => e.AreaId).HasColumnName("AreaID");
             entity.Property(e => e.AreaName)
@@ -106,8 +98,9 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.Police).WithMany(p => p.Areas)
                 .HasForeignKey(d => d.PoliceId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Areas__PoliceID__5535A963");
+                .HasConstraintName("FK__Areas__PoliceID__5CD6CB2B");
         });
+
         modelBuilder.Entity<ChatMessage>(entity =>
         {
             entity.HasKey(e => e.MessageId);
@@ -125,9 +118,10 @@ public partial class PrnContext : DbContext
                 .HasForeignKey(d => d.ToUserId)
                 .HasConstraintName("FK_ChatMessage_Users1");
         });
+
         modelBuilder.Entity<Document>(entity =>
         {
-            entity.HasKey(e => e.DocumentId).HasName("PK__Document__1ABEEF6FC77CF848");
+            entity.HasKey(e => e.DocumentId).HasName("PK__Document__1ABEEF6F7C345C98");
 
             entity.Property(e => e.DocumentId).HasColumnName("DocumentID");
             entity.Property(e => e.FilePath)
@@ -139,17 +133,17 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.DocumentType).WithMany(p => p.Documents)
                 .HasForeignKey(d => d.DocumentTypeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Documents__Docum__73BA3083");
+                .HasConstraintName("FK__Documents__Docum__5FB337D6");
 
             entity.HasOne(d => d.Registration).WithMany(p => p.Documents)
                 .HasForeignKey(d => d.RegistrationId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Documents__Regis__72C60C4A");
+                .HasConstraintName("FK__Documents__Regis__60A75C0F");
         });
 
         modelBuilder.Entity<DocumentType>(entity =>
         {
-            entity.HasKey(e => e.DocumentTypeId).HasName("PK__Document__DBA390E1A029C5BB");
+            entity.HasKey(e => e.DocumentTypeId).HasName("PK__Document__DBA390E13C2B087C");
 
             entity.Property(e => e.Description).HasColumnType("text");
             entity.Property(e => e.Name)
@@ -157,29 +151,50 @@ public partial class PrnContext : DbContext
                 .IsUnicode(false);
         });
 
+        modelBuilder.Entity<HeadOfHouseHold>(entity =>
+        {
+            entity.HasKey(e => e.HeadOfHouseHoldId).HasName("PK__HeadOfHo__EB3F22F02BD45FBC");
+
+            entity.ToTable("HeadOfHouseHold");
+
+            entity.Property(e => e.HeadOfHouseHoldId).HasColumnName("HeadOfHouseHoldID");
+            entity.Property(e => e.HouseholdId).HasColumnName("HouseholdID");
+            entity.Property(e => e.RegisteredDate).HasColumnType("datetime");
+            entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.Household).WithMany(p => p.HeadOfHouseHolds)
+                .HasForeignKey(d => d.HouseholdId)
+                .HasConstraintName("FK_HeadOfHouseHold_Households");
+
+            entity.HasOne(d => d.User).WithMany(p => p.HeadOfHouseHolds)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_HeadOfHouseHold_Users");
+        });
+
         modelBuilder.Entity<Household>(entity =>
         {
-            entity.HasKey(e => e.HouseholdId).HasName("PK__Househol__1453D6EC5392AB01");
+            entity.HasKey(e => e.HouseholdId).HasName("PK__Househol__1453D6ECEB7C64BC");
 
             entity.Property(e => e.HouseholdId).HasColumnName("HouseholdID");
             entity.Property(e => e.AddressId).HasColumnName("AddressID");
             entity.Property(e => e.CreatedDate).HasDefaultValueSql("(getdate())");
-            entity.Property(e => e.HeadOfHouseholdId).HasColumnName("HeadOfHouseholdID");
+            entity.Property(e => e.HeadId).HasColumnName("HeadID");
 
             entity.HasOne(d => d.Address).WithMany(p => p.Households)
                 .HasForeignKey(d => d.AddressId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__Addre__59FA5E80");
+                .HasConstraintName("FK__Household__Addre__656C112C");
 
-            entity.HasOne(d => d.HeadOfHousehold).WithMany(p => p.Households)
-                .HasForeignKey(d => d.HeadOfHouseholdId)
+            entity.HasOne(d => d.Head).WithMany(p => p.Households)
+                .HasForeignKey(d => d.HeadId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__HeadO__59063A47");
+                .HasConstraintName("FK_Households_HeadOfHouseHold");
         });
 
         modelBuilder.Entity<HouseholdMember>(entity =>
         {
-            entity.HasKey(e => e.MemberId).HasName("PK__Househol__0CF04B381ECC127C");
+            entity.HasKey(e => e.MemberId).HasName("PK__Househol__0CF04B38BFEC5CBA");
 
             entity.Property(e => e.MemberId).HasColumnName("MemberID");
             entity.Property(e => e.HouseholdId).HasColumnName("HouseholdID");
@@ -191,17 +206,17 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.Household).WithMany(p => p.HouseholdMembers)
                 .HasForeignKey(d => d.HouseholdId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__House__66603565");
+                .HasConstraintName("FK__Household__House__6383C8BA");
 
             entity.HasOne(d => d.User).WithMany(p => p.HouseholdMembers)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__UserI__6754599E");
+                .HasConstraintName("FK__Household__UserI__6477ECF3");
         });
 
         modelBuilder.Entity<HouseholdTransfer>(entity =>
         {
-            entity.HasKey(e => e.TransferId).HasName("PK__Househol__954901718643E863");
+            entity.HasKey(e => e.TransferId).HasName("PK__Househol__9549017179948462");
 
             entity.Property(e => e.TransferId).HasColumnName("TransferID");
             entity.Property(e => e.Comments).HasColumnType("text");
@@ -215,27 +230,27 @@ public partial class PrnContext : DbContext
 
             entity.HasOne(d => d.ApprovedByNavigation).WithMany(p => p.HouseholdTransfers)
                 .HasForeignKey(d => d.ApprovedBy)
-                .HasConstraintName("FK__Household__Appro__6EF57B66");
+                .HasConstraintName("FK__Household__Appro__6754599E");
 
             entity.HasOne(d => d.FromArea).WithMany(p => p.HouseholdTransferFromAreas)
                 .HasForeignKey(d => d.FromAreaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__FromA__6D0D32F4");
+                .HasConstraintName("FK__Household__FromA__68487DD7");
 
             entity.HasOne(d => d.Household).WithMany(p => p.HouseholdTransfers)
                 .HasForeignKey(d => d.HouseholdId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__House__6C190EBB");
+                .HasConstraintName("FK__Household__House__693CA210");
 
             entity.HasOne(d => d.ToArea).WithMany(p => p.HouseholdTransferToAreas)
                 .HasForeignKey(d => d.ToAreaId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__ToAre__6E01572D");
+                .HasConstraintName("FK__Household__ToAre__6A30C649");
         });
 
         modelBuilder.Entity<Log>(entity =>
         {
-            entity.HasKey(e => e.LogId).HasName("PK__Logs__5E5499A8A62400F6");
+            entity.HasKey(e => e.LogId).HasName("PK__Logs__5E5499A82AC29951");
 
             entity.Property(e => e.LogId).HasColumnName("LogID");
             entity.Property(e => e.Action)
@@ -253,12 +268,12 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Logs)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Logs__UserID__7C4F7684");
+                .HasConstraintName("FK__Logs__UserID__6B24EA82");
         });
 
         modelBuilder.Entity<Notification>(entity =>
         {
-            entity.HasKey(e => e.NotificationId).HasName("PK__Notifica__20CF2E3230EE6B88");
+            entity.HasKey(e => e.NotificationId).HasName("PK__Notifica__20CF2E323019421C");
 
             entity.Property(e => e.NotificationId).HasColumnName("NotificationID");
             entity.Property(e => e.IsRead).HasDefaultValue(false);
@@ -271,12 +286,12 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Notifications)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Notificat__UserI__787EE5A0");
+                .HasConstraintName("FK_Notifications_Users");
         });
 
         modelBuilder.Entity<Registration>(entity =>
         {
-            entity.HasKey(e => e.RegistrationId).HasName("PK__Registra__6EF58830B05E7312");
+            entity.HasKey(e => e.RegistrationId).HasName("PK__Registra__6EF58830AD733B87");
 
             entity.Property(e => e.RegistrationId).HasColumnName("RegistrationID");
             entity.Property(e => e.AddressId).HasColumnName("AddressID");
@@ -293,21 +308,21 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.Address).WithMany(p => p.Registrations)
                 .HasForeignKey(d => d.AddressId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Registrat__Addre__628FA481");
+                .HasConstraintName("FK__Registrat__Addre__6EF57B66");
 
             entity.HasOne(d => d.ApprovedByNavigation).WithMany(p => p.RegistrationApprovedByNavigations)
                 .HasForeignKey(d => d.ApprovedBy)
-                .HasConstraintName("FK__Registrat__Appro__6383C8BA");
+                .HasConstraintName("FK__Registrat__Appro__6FE99F9F");
 
             entity.HasOne(d => d.User).WithMany(p => p.RegistrationUsers)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Registrat__UserI__619B8048");
+                .HasConstraintName("FK__Registrat__UserI__70DDC3D8");
         });
 
         modelBuilder.Entity<RegistrationApproval>(entity =>
         {
-            entity.HasKey(e => e.ApprovalId).HasName("PK__Registra__328477D40A73391B");
+            entity.HasKey(e => e.ApprovalId).HasName("PK__Registra__328477D47FC4BFCD");
 
             entity.Property(e => e.ApprovalId).HasColumnName("ApprovalID");
             entity.Property(e => e.ApprovalDate)
@@ -326,19 +341,19 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.Approver).WithMany(p => p.RegistrationApprovals)
                 .HasForeignKey(d => d.ApproverId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Registrat__Appro__03F0984C");
+                .HasConstraintName("FK__Registrat__Appro__6D0D32F4");
 
             entity.HasOne(d => d.Registration).WithMany(p => p.RegistrationApprovals)
                 .HasForeignKey(d => d.RegistrationId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Registrat__Regis__02FC7413");
+                .HasConstraintName("FK__Registrat__Regis__6E01572D");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC2A7B4E16");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC6CA2A430");
 
-            entity.HasIndex(e => e.Email, "UQ__Users__A9D10534DD04C0A5").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Users__A9D10534A64319FA").IsUnique();
 
             entity.Property(e => e.UserId).HasColumnName("UserID");
             entity.Property(e => e.AreaId).HasColumnName("AreaID");
@@ -349,11 +364,18 @@ public partial class PrnContext : DbContext
             entity.Property(e => e.FullName)
                 .HasMaxLength(100)
                 .IsUnicode(false);
+            entity.Property(e => e.IdentityCard)
+                .HasMaxLength(20)
+                .IsUnicode(false);
             entity.Property(e => e.Password)
                 .HasMaxLength(255)
                 .IsUnicode(false);
             entity.Property(e => e.Role)
+                .HasConversion<string>()
                 .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Sex)
+                .HasMaxLength(10)
                 .IsUnicode(false);
 
             entity.HasOne(d => d.Area).WithMany(p => p.Users)
@@ -363,12 +385,12 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.CurrentAddress).WithMany(p => p.Users)
                 .HasForeignKey(d => d.CurrentAddressId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Users__CurrentAd__52593CB8");
+                .HasConstraintName("FK_Users_Addresses");
         });
 
         modelBuilder.Entity<UserContact>(entity =>
         {
-            entity.HasKey(e => e.ContactId).HasName("PK__UserCont__5C6625BBE7BB5306");
+            entity.HasKey(e => e.ContactId).HasName("PK__UserCont__5C6625BB0D18E2D7");
 
             entity.Property(e => e.ContactId).HasColumnName("ContactID");
             entity.Property(e => e.ContactType)
@@ -382,7 +404,7 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.UserContacts)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__UserConta__UserI__7F2BE32F");
+                .HasConstraintName("FK__UserConta__UserI__71D1E811");
         });
 
         OnModelCreatingPartial(modelBuilder);

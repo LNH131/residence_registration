@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ViewModels"
   ],
-  "SelectedNode": "\\Project.sln",
+  "SelectedNode": "\\ViewModels\\RegisterViewModel.cs",
   "PreviewInSolutionExplorer": false
 }

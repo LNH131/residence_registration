@@ -1,4 +1,5 @@
 ﻿// Project.DAO/UserDAO.cs
+using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Project.Enums;
 using Project.Models;
@@ -15,6 +16,7 @@ namespace Project.DAO
 
         public async Task<User?> AuthenticateUser(string email, string password, Role selectedRole)
         {
+            Debug.WriteLine("selectedRole: " + selectedRole);
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
             if (user == null)
             {

@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.DependencyInjection;
 using Project.DAO;
 using Project.Enums;
+using Project.Service;
 using Project.View;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -13,6 +14,7 @@ namespace Project.ViewModels
     {
         private readonly UserDAO _userDAO;
         private readonly IServiceProvider _serviceProvider;
+        private readonly ICurrentUserService _currentUserService;
 
         [ObservableProperty]
         private string email = string.Empty;
@@ -32,9 +34,10 @@ namespace Project.ViewModels
         public IAsyncRelayCommand LoginCommand { get; }
         public IAsyncRelayCommand RegisterCommand { get; }
 
-        public LoginViewModel(IServiceProvider serviceProvider)
+        public LoginViewModel(IServiceProvider serviceProvider, ICurrentUserService currentUserService)
         {
             _serviceProvider = serviceProvider;
+            _currentUserService = currentUserService;
             _userDAO = _serviceProvider.GetRequiredService<UserDAO>();
 
             // Đặt mặc định là Citizen
@@ -66,7 +69,8 @@ namespace Project.ViewModels
                             nextWindow = _serviceProvider.GetRequiredService<AreaLeaderWindow>();
                             break;
                         case Role.Citizen:
-                            var citizenViewModel = new CitizenViewModel(user);
+                            _currentUserService.CurrentUser = user;
+                            var citizenViewModel = _serviceProvider.GetRequiredService<CitizenViewModel>();
                             var citizenWindow = _serviceProvider.GetRequiredService<CitizenWindow>();
                             citizenWindow.DataContext = citizenViewModel;
                             nextWindow = citizenWindow;

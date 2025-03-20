@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration; // IMPORTANT: Add this for configurati
 using Microsoft.Extensions.DependencyInjection;
 using Project.DAO;
 using Project.Models;
+using Project.Service;
 using Project.View;
 using Project.ViewModels;
 using System.IO;
@@ -33,6 +34,7 @@ namespace Project
                 options.UseSqlServer(configuration.GetConnectionString("Default")));
 
             // Register services
+            services.AddSingleton<ICurrentUserService, CurrentUserService>();
             services.AddTransient<UserDAO>();
             services.AddTransient<LoginViewModel>();
             services.AddTransient<LoginWindow>();
@@ -40,9 +42,11 @@ namespace Project
             services.AddTransient<PoliceWindow>();
             services.AddTransient<AreaLeaderWindow>();
             services.AddTransient<CitizenWindow>();
+            services.AddTransient<CitizenViewModel>();
             services.AddTransient<Register>();
             services.AddTransient<RegisterViewModel>();
             services.AddTransient<HouseHoldControlWindow>();
+            services.AddTransient<HouseHoldControlViewModel>();
             services.AddTransient<AddUserWindow>();
             services.AddTransient<AddUserViewModel>();
             services.AddTransient<UpdateCitizenProfileWindow>();

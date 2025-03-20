@@ -2,7 +2,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Project.DAO;
 using Project.Enums;
 using Project.Models;
+using Project.ViewModels;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows;
 namespace Project.View
 {
@@ -10,9 +12,13 @@ namespace Project.View
     {
         private readonly UserDAO _userDAO;
         private readonly User _currentUser;
-        public CitizenWindow()
+        private readonly CitizenViewModel _viewModel;
+        public CitizenWindow(CitizenViewModel viewModel)
         {
             InitializeComponent();
+            _viewModel = viewModel;
+            DataContext = _viewModel;
+            _currentUser = _viewModel.CurrentUser;
             this.btnLogout.Click += this.Logout_Click;
         }
         private void Logout_Click(object sender, RoutedEventArgs e)
@@ -31,6 +37,7 @@ namespace Project.View
 
         private void ManageHousehold_Click(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine("house Household: " + _currentUser.FullName);
             var registerHouseholdWindow = new HouseHoldControlWindow(_currentUser, _userDAO);
             registerHouseholdWindow.ShowDialog();
         }

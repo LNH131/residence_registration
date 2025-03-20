@@ -1,23 +1,18 @@
 ﻿using Project.Models;
 using Project.Service;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
+
 namespace Project.ViewModels
 {
     public class CitizenViewModel : BaseViewModel
     {
-        // Các thuộc tính thông tin cá nhân
-        private User _currentUser;
-        public User CurrentUser
-        {
-            get => _currentUser;
-            set
-            {
-                _currentUser = value;
-                OnPropertyChanged();
-            }
-        }
+        private readonly ICurrentUserService _currentUserService;
+
+        // Thuộc tính CurrentUser lấy từ ICurrentUserService
+        public User CurrentUser => _currentUserService.CurrentUser;
 
         private string _registrationStatus;
         public string RegistrationStatus
@@ -26,7 +21,6 @@ namespace Project.ViewModels
             set { _registrationStatus = value; OnPropertyChanged(); }
         }
 
-        // Notification Center: Danh sách thông báo
         private ObservableCollection<Notification> _notifications;
         public ObservableCollection<Notification> Notifications
         {
@@ -34,7 +28,6 @@ namespace Project.ViewModels
             set { _notifications = value; OnPropertyChanged(); }
         }
 
-        // Thông báo đang chọn (nếu cần)
         private Notification _selectedNotification;
         public Notification SelectedNotification
         {
@@ -42,17 +35,16 @@ namespace Project.ViewModels
             set { _selectedNotification = value; OnPropertyChanged(); }
         }
 
-        // Các Command
         public ICommand LoadNotificationsCommand { get; set; }
         public ICommand MarkAsReadCommand { get; set; }
         public ICommand OpenChatCommand { get; set; }
 
-        // Constructor: khởi tạo giá trị và command
-        public CitizenViewModel(User user)
+        public CitizenViewModel(ICurrentUserService currentUserService)
         {
-            // Giả lập thông tin cá nhân (thay bằng dữ liệu thật từ DB hoặc session)
-            CurrentUser = user;
-            Debug.WriteLine($"User: {CurrentUser.Sex}");
+            _currentUserService = currentUserService;
+
+            // Debug thông tin người dùng
+            Debug.WriteLine($"User: {CurrentUser?.Sex ?? "Chưa có thông tin"}");
             RegistrationStatus = "Chờ phê duyệt";
 
             // Khởi tạo danh sách thông báo
@@ -67,13 +59,9 @@ namespace Project.ViewModels
             LoadNotifications();
         }
 
-        // Phương thức lấy danh sách thông báo
         private void LoadNotifications()
         {
-            // Ở đây bạn có thể gọi service thực sự thay vì dữ liệu mẫu
             Notifications.Clear();
-
-            // Ví dụ: thêm vài thông báo mẫu
             Notifications.Add(new Notification
             {
                 NotificationId = 1,
@@ -92,18 +80,15 @@ namespace Project.ViewModels
             });
         }
 
-        // Phương thức đánh dấu thông báo đã đọc
         private void MarkNotificationAsRead()
         {
             if (SelectedNotification != null)
             {
                 SelectedNotification.IsRead = true;
-                // Nếu có service cập nhật DB, gọi ở đây
                 OnPropertyChanged(nameof(Notifications));
             }
         }
 
-        // Phương thức mở cửa sổ chat với tổ trưởng hoặc công an
         private void OpenChat()
         {
             var chatWindow = new Project.View.ChatWindow();
