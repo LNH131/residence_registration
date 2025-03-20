@@ -38,13 +38,13 @@
                         <TextBlock Text="{Binding CurrentUser.Email}" Margin="0,0,0,5"/>
 
                         <TextBlock Text="CCCD:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding CurrentUser.Cccd}" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding CurrentUser.IdentityCard}" Margin="0,0,0,5"/>
 
                         <TextBlock Text="Ngày sinh:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding CurrentUser.BirthDate, StringFormat='dd/MM/yyyy'}" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding CurrentUser.Birthday, StringFormat='dd/MM/yyyy'}" Margin="0,0,0,5"/>
 
                         <TextBlock Text="Giới tính:" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding CurrentUser.Gender}" Margin="0,0,0,5"/>
+                        <TextBlock Text="{Binding CurrentUser.Sex}" Margin="0,0,0,5"/>
 
                         <TextBlock Text="Trạng thái hồ sơ:" FontWeight="Bold"/>
                         <TextBlock Text="{Binding RegistrationStatus}" Foreground="DarkRed" Margin="0,0,0,5"/>
@@ -56,9 +56,12 @@
 
             <!-- Functionality section -->
             <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
+                <Button Content="Cập nhật profile" Height="40" Margin="0,0,0,15"
+                        Foreground="Black" BorderBrush="Gray"
+                        FontWeight="SemiBold" Cursor="Hand" Click="UpdateProfile_Click"/>
                 <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"
                         Command="{Binding LoadNotificationsCommand}"/>
-                <Button Content="Quản lý hộ khẩu" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Quản lý hộ khẩu" Height="40" Margin="0,0,0,10" Click="ManageHousehold_Click"/>
                 <Button Content="Chat với tổ trưởng khu phố" Height="40" Margin="0,0,0,10"
                         Command="{Binding OpenChatCommand}"/>
             </StackPanel>

@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Project.Models;
+using Project.DAO;
+using System.Collections.ObjectModel;
+using Project.ViewModels;
 
 namespace Project.View
 {
@@ -19,9 +23,17 @@ namespace Project.View
     /// </summary>
     public partial class HouseHoldControlWindow : Window
     {
-        public HouseHoldControlWindow()
+        private readonly CitizenViewModel _citizenViewModel;
+        private ObservableCollection<HouseholdMember> _householdMembers;
+        private readonly UserDAO _userDAO;
+        public HouseHoldControlWindow(User currentUser, UserDAO userDAO)
         {
             InitializeComponent();
+            DataContext = currentUser;
+            _userDAO = userDAO;
+
+            _householdMembers = new ObservableCollection<HouseholdMember>();
+            dgHouseholdMembers.ItemsSource = _householdMembers;
         }
     }
 }

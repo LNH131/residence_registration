@@ -729,3 +729,7 @@ F:\Clone100\residence_registration\obj\Debug\net8.0-windows\Project.genruntimeco
 F:\Clone100\residence_registration\obj\Debug\net8.0-windows\ref\Project.dll
 F:\Clone100\residence_registration\obj\Debug\net8.0-windows\View\AddUserWindow.g.cs
 F:\Clone100\residence_registration\obj\Debug\net8.0-windows\View\AddUserWindow.baml
+D:\github\residence_registration\obj\Debug\net8.0-windows\View\AddUserWindow.g.cs
+D:\github\residence_registration\obj\Debug\net8.0-windows\View\AddUserWindow.baml
+D:\github\residence_registration\obj\Debug\net8.0-windows\View\UpdateCitizenProfileWindow.g.cs
+D:\github\residence_registration\obj\Debug\net8.0-windows\View\UpdateCitizenProfileWindow.baml

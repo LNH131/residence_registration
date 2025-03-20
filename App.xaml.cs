@@ -45,6 +45,7 @@ namespace Project
             services.AddTransient<HouseHoldControlWindow>();
             services.AddTransient<AddUserWindow>();
             services.AddTransient<AddUserViewModel>();
+            services.AddTransient<UpdateCitizenProfileWindow>();
 
         }
         protected override async void OnStartup(StartupEventArgs e)

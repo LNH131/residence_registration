@@ -14,9 +14,15 @@
     <Compile Update="View\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UpdateCitizenProfileWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="View\AddUserWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UpdateCitizenProfileWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

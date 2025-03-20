@@ -1,38 +1,142 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Clone100\\residence_registration\\",
+  "WorkspaceRootPath": "D:\\github\\residence_registration\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\residenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\residenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|f:\\clone100\\residence_registration\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\dao\\admindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:dao\\admindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|d:\\github\\residence_registration\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4A0A0485-C1E8-43FC-81A3-274465F7EF99}|Project.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,116 +146,454 @@
       "DocumentGroups": [
         {
           "DockedHeight": 330,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "F:\\Clone100\\residence_registration\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-19T16:55:17.563Z",
+              "DocumentIndex": 0,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "D:\\github\\residence_registration\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:10:20.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.xaml.cs",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\View\\Register.xaml.cs",
-              "RelativeDocumentMoniker": "View\\Register.xaml.cs",
-              "ToolTip": "F:\\Clone100\\residence_registration\\View\\Register.xaml.cs",
-              "RelativeToolTip": "View\\Register.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "Title": "PoliceViewModel.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\ViewModels\\PoliceViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\PoliceViewModel.cs",
+              "ToolTip": "D:\\github\\residence_registration\\ViewModels\\PoliceViewModel.cs",
+              "RelativeToolTip": "ViewModels\\PoliceViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:34:23.57Z",
+              "WhenOpened": "2025-03-20T01:33:32.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CitizenViewModel.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\ViewModels\\CitizenViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CitizenViewModel.cs",
+              "ToolTip": "D:\\github\\residence_registration\\ViewModels\\CitizenViewModel.cs",
+              "RelativeToolTip": "ViewModels\\CitizenViewModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAnwAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:24:23.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
-              "ToolTip": "F:\\Clone100\\residence_registration\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowDsAAABcAAAAAAAAAA==",
+              "Title": "ChatViewModel.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\ViewModels\\ChatViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ChatViewModel.cs",
+              "ToolTip": "D:\\github\\residence_registration\\ViewModels\\ChatViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ChatViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:13:24.888Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "F:\\Clone100\\residence_registration\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAD4vzgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:13:17.28Z",
+              "WhenOpened": "2025-03-20T01:24:24.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AddUserViewModel.cs",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\ViewModels\\AddUserViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\AddUserViewModel.cs",
-              "ToolTip": "F:\\Clone100\\residence_registration\\ViewModels\\AddUserViewModel.cs",
-              "RelativeToolTip": "ViewModels\\AddUserViewModel.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAIA4wD0AAABCAAAAAAAAAA==",
+              "Title": "AreaLeaderViewModel.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\ViewModels\\AreaLeaderViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AreaLeaderViewModel.cs",
+              "ToolTip": "D:\\github\\residence_registration\\ViewModels\\AreaLeaderViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AreaLeaderViewModel.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:12:59.143Z",
+              "WhenOpened": "2025-03-20T01:39:37.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddUserWindow.xaml.cs",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\View\\AddUserWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\AddUserWindow.xaml.cs",
-              "ToolTip": "F:\\Clone100\\residence_registration\\View\\AddUserWindow.xaml.cs",
-              "RelativeToolTip": "View\\AddUserWindow.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAArwBsAAAAdAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "D:\\github\\residence_registration\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwEQAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:45:31.806Z",
+              "WhenOpened": "2025-03-20T01:09:50.29Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AddUserWindow.xaml",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\View\\AddUserWindow.xaml",
-              "RelativeDocumentMoniker": "View\\AddUserWindow.xaml",
-              "ToolTip": "F:\\Clone100\\residence_registration\\View\\AddUserWindow.xaml",
-              "RelativeToolTip": "View\\AddUserWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-19T16:34:38.708Z",
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\LoginWindow.xaml.cs",
+              "ToolTip": "D:\\github\\residence_registration\\View\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "View\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:22:21.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AddUserViewModel.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\ViewModels\\AddUserViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\AddUserViewModel.cs",
+              "ToolTip": "D:\\github\\residence_registration\\ViewModels\\AddUserViewModel.cs",
+              "RelativeToolTip": "ViewModels\\AddUserViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:39:49.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CitizenWindow.xaml.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\CitizenWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\CitizenWindow.xaml.cs",
+              "ToolTip": "D:\\github\\residence_registration\\View\\CitizenWindow.xaml.cs",
+              "RelativeToolTip": "View\\CitizenWindow.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:11:38.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HouseHoldControlWindow.xaml.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\HouseHoldControlWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\HouseHoldControlWindow.xaml.cs",
+              "ToolTip": "D:\\github\\residence_registration\\View\\HouseHoldControlWindow.xaml.cs",
+              "RelativeToolTip": "View\\HouseHoldControlWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:20:14.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateCitizenProfileWindow.xaml.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\UpdateCitizenProfileWindow.xaml.cs",
+              "ToolTip": "D:\\github\\residence_registration\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "RelativeToolTip": "View\\UpdateCitizenProfileWindow.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:10:22.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UpdateCitizenProfileWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\UpdateCitizenProfileWindow.xaml",
+              "RelativeDocumentMoniker": "View\\UpdateCitizenProfileWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\UpdateCitizenProfileWindow.xaml",
+              "RelativeToolTip": "View\\UpdateCitizenProfileWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:09:04.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HouseHoldControlWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\HouseHoldControlWindow.xaml",
+              "RelativeDocumentMoniker": "View\\HouseHoldControlWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\HouseHoldControlWindow.xaml",
+              "RelativeToolTip": "View\\HouseHoldControlWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:19:11.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CitizenWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\CitizenWindow.xaml",
+              "RelativeDocumentMoniker": "View\\CitizenWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\CitizenWindow.xaml",
+              "RelativeToolTip": "View\\CitizenWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:10:32.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:22:44.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ResidenceRegistration.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\ResidenceRegistration.cs",
+              "RelativeDocumentMoniker": "Models\\ResidenceRegistration.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\ResidenceRegistration.cs",
+              "RelativeToolTip": "Models\\ResidenceRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:22:45.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PoliceWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\PoliceWindow.xaml",
+              "RelativeDocumentMoniker": "View\\PoliceWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\PoliceWindow.xaml",
+              "RelativeToolTip": "View\\PoliceWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:10:30.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "View\\LoginWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\LoginWindow.xaml",
+              "RelativeToolTip": "View\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:16:12.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ChatWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\ChatWindow.xaml",
+              "RelativeDocumentMoniker": "View\\ChatWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\ChatWindow.xaml",
+              "RelativeToolTip": "View\\ChatWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:22:50.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AreaLeaderWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\AreaLeaderWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AreaLeaderWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\AreaLeaderWindow.xaml",
+              "RelativeToolTip": "View\\AreaLeaderWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:22:49.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AdminWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\AdminWindow.xaml",
+              "RelativeToolTip": "View\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:22:46.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AddUserWindow.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\AddUserWindow.xaml",
+              "RelativeDocumentMoniker": "View\\AddUserWindow.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\AddUserWindow.xaml",
+              "RelativeToolTip": "View\\AddUserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T01:22:45.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Status.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\Status.cs",
+              "RelativeDocumentMoniker": "Models\\Status.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\Status.cs",
+              "RelativeToolTip": "Models\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:22:44.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Register.xaml",
-              "DocumentMoniker": "F:\\Clone100\\residence_registration\\View\\Register.xaml",
+              "DocumentMoniker": "D:\\github\\residence_registration\\View\\Register.xaml",
               "RelativeDocumentMoniker": "View\\Register.xaml",
-              "ToolTip": "F:\\Clone100\\residence_registration\\View\\Register.xaml",
+              "ToolTip": "D:\\github\\residence_registration\\View\\Register.xaml",
               "RelativeToolTip": "View\\Register.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-19T16:34:25.876Z",
+              "WhenOpened": "2025-03-20T01:10:30.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "D:\\github\\residence_registration\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAxwC8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:10:05.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Area.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\Area.cs",
+              "RelativeDocumentMoniker": "Models\\Area.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\Area.cs",
+              "RelativeToolTip": "Models\\Area.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:07:35.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ChatMessage.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\ChatMessage.cs",
+              "RelativeDocumentMoniker": "Models\\ChatMessage.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\ChatMessage.cs",
+              "RelativeToolTip": "Models\\ChatMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:07:35.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Document.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\Document.cs",
+              "RelativeDocumentMoniker": "Models\\Document.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\Document.cs",
+              "RelativeToolTip": "Models\\Document.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:07:34.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "HeadOfHouseHold.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\HeadOfHouseHold.cs",
+              "RelativeDocumentMoniker": "Models\\HeadOfHouseHold.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\HeadOfHouseHold.cs",
+              "RelativeToolTip": "Models\\HeadOfHouseHold.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:07:33.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Household.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\Household.cs",
+              "RelativeDocumentMoniker": "Models\\Household.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\Household.cs",
+              "RelativeToolTip": "Models\\Household.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:07:32.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserDAO.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\DAO\\UserDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\UserDAO.cs",
+              "ToolTip": "D:\\github\\residence_registration\\DAO\\UserDAO.cs",
+              "RelativeToolTip": "DAO\\UserDAO.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:06:59.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AdminDAO.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\DAO\\AdminDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\AdminDAO.cs",
+              "ToolTip": "D:\\github\\residence_registration\\DAO\\AdminDAO.cs",
+              "RelativeToolTip": "DAO\\AdminDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:06:58.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Address.cs",
+              "DocumentMoniker": "D:\\github\\residence_registration\\Models\\Address.cs",
+              "RelativeDocumentMoniker": "Models\\Address.cs",
+              "ToolTip": "D:\\github\\residence_registration\\Models\\Address.cs",
+              "RelativeToolTip": "Models\\Address.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T01:02:23.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\github\\residence_registration\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\github\\residence_registration\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-20T00:59:33.072Z",
               "EditorCaption": ""
             }
           ]

@@ -1,6 +1,7 @@
 ﻿using Project.Models;
 using Project.Service;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 namespace Project.ViewModels
 {
@@ -51,6 +52,7 @@ namespace Project.ViewModels
         {
             // Giả lập thông tin cá nhân (thay bằng dữ liệu thật từ DB hoặc session)
             CurrentUser = user;
+            Debug.WriteLine($"User: {CurrentUser.Sex}");
             RegistrationStatus = "Chờ phê duyệt";
 
             // Khởi tạo danh sách thông báo
