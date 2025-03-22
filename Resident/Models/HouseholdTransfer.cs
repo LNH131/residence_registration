@@ -1,4 +1,5 @@
-﻿using Resident.Enums;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Resident.Models;
 
@@ -14,7 +15,7 @@ public partial class HouseholdTransfer
 
     public DateOnly RequestDate { get; set; }
 
-    public Status Status { get; set; } 
+    public string Status { get; set; } = null!;
 
     public int? ApprovedBy { get; set; }
 

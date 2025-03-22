@@ -39,13 +39,6 @@ namespace Resident.View
             updateProfileWindow.ShowDialog();
         }
 
-        private void ManageHousehold_Click(object sender, RoutedEventArgs e)
-        {
-            Debug.WriteLine("house Household: " + _currentUser.FullName);
-            var registerHouseholdWindow = new HouseHoldControlWindow(_currentUser, _userDAO);
-            registerHouseholdWindow.ShowDialog();
-        }
-
         public ObservableCollection<Role> Roles { get; } = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());
     }
 }

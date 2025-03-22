@@ -40,6 +40,8 @@ public partial class User
 
     public virtual ICollection<HouseholdMember> HouseholdMembers { get; set; } = new List<HouseholdMember>();
 
+    public virtual ICollection<HouseholdSeparation> HouseholdSeparations { get; set; } = new List<HouseholdSeparation>();
+
     public virtual ICollection<HouseholdTransfer> HouseholdTransfers { get; set; } = new List<HouseholdTransfer>();
 
     public virtual ICollection<Log> Logs { get; set; } = new List<Log>();
@@ -51,6 +53,8 @@ public partial class User
     public virtual ICollection<Registration> RegistrationApprovedByNavigations { get; set; } = new List<Registration>();
 
     public virtual ICollection<Registration> RegistrationUsers { get; set; } = new List<Registration>();
+
+    public virtual ICollection<SeparationMember> SeparationMembers { get; set; } = new List<SeparationMember>();
 
     public virtual ICollection<UserContact> UserContacts { get; set; } = new List<UserContact>();
 }

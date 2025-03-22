@@ -17,9 +17,13 @@ public partial class Household
 
     public virtual HeadOfHouseHold Head { get; set; } = null!;
 
-    public virtual ICollection<HeadOfHouseHold> HeadOfHouseHolds { get; set; } = new List<HeadOfHouseHold>();
+    public virtual HeadOfHouseHold? HeadOfHouseHold { get; set; }
 
     public virtual ICollection<HouseholdMember> HouseholdMembers { get; set; } = new List<HouseholdMember>();
+
+    public virtual ICollection<HouseholdSeparation> HouseholdSeparationNewHouseholds { get; set; } = new List<HouseholdSeparation>();
+
+    public virtual ICollection<HouseholdSeparation> HouseholdSeparationOriginalHouseholds { get; set; } = new List<HouseholdSeparation>();
 
     public virtual ICollection<HouseholdTransfer> HouseholdTransfers { get; set; } = new List<HouseholdTransfer>();
 }

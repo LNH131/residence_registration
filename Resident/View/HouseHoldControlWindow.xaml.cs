@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using Resident.DAO;
+using Resident.Enums;
 using Resident.Models;
+using Resident.ViewModels;
 
 namespace Resident.View
 {
@@ -13,15 +16,41 @@ namespace Resident.View
     /// </summary>
     public partial class HouseHoldControlWindow : Window
     {
+        private readonly HouseHoldControlViewModel _viewModel;
+        private Household _selectedHousehold;
+        private readonly User _currentUser;
+
+        public User User { get { return _currentUser; } }
         private ObservableCollection<HouseholdMember> _householdMembers;
 
-        public HouseHoldControlWindow(User currentUser, UserDAO userDAO)
+
+        public HouseHoldControlWindow(HouseHoldControlViewModel viewModel)
         {
             InitializeComponent();
-            DataContext = currentUser; // Set the DataContext to the current user
+            _viewModel = viewModel;
+            _currentUser = viewModel.CurrentUser;
+            DataContext = _viewModel; // Set DataContext cho binding tự động trong XAML
 
             _householdMembers = new ObservableCollection<HouseholdMember>();
             dgHouseholdMembers.ItemsSource = _householdMembers;
+
+            // Đăng ký sự kiện để theo dõi khi SelectedHousehold thay đổi
+            _viewModel.PropertyChanged += ViewModel_PropertyChanged;
+        }
+
+        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(_viewModel.SelectedHousehold))
+            {
+                _selectedHousehold = _viewModel.SelectedHousehold;
+                Debug.WriteLine("Selected Household updated: " + _selectedHousehold?.HouseholdId);
+                // Bạn có thể thực hiện các hành động khác khi SelectedHousehold thay đổi tại đây.
+            }
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         private void AddMember_Click(object sender, RoutedEventArgs e)
@@ -81,8 +110,26 @@ namespace Resident.View
             }
         }
 
+        private Household GetHouseholdByUserId()
+        {
+            using (var context = new PrnContext())
+            {
+                HeadOfHouseHold? headOfHouseHold = context.HeadOfHouseHolds.FirstOrDefault(u => u.UserId == _currentUser.UserId);
+                if (headOfHouseHold == null)
+                    return null;
+
+                return context.Households.FirstOrDefault(u => u.HeadId == headOfHouseHold.HeadOfHouseHoldId);
+            }
+        }
+
         private void Register_Click(object sender, RoutedEventArgs e)
         {
+            // Kiểm tra nếu tài khoản đã đăng ký hộ khẩu rồi
+            //if (GetHouseholdByUserId() != null)
+            //{
+            //    MessageBox.Show("Mỗi tài khoản chỉ được đăng ký 1 lần.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            //    return;
+            //}
             if (string.IsNullOrWhiteSpace(StreetTextBox.Text) ||
                 string.IsNullOrWhiteSpace(WardTextBox.Text) ||
                 string.IsNullOrWhiteSpace(DistrictTextBox.Text) ||
@@ -105,8 +152,7 @@ namespace Resident.View
                 {
                     try
                     {
-                        var currentUser = this.DataContext as User;
-                        if (currentUser == null)
+                        if (_currentUser == null)
                         {
                             MessageBox.Show("Không tìm thấy thông tin người dùng!");
                             return;
@@ -125,32 +171,19 @@ namespace Resident.View
                         context.Addresses.Add(address);
                         context.SaveChanges();
 
-                        HeadOfHouseHold head = new HeadOfHouseHold
+                        Registration registration = new Registration
                         {
-                            UserId = currentUser.UserId,
-                            RegisteredDate = DateTime.Now,
-                        };
-                        context.HeadOfHouseHolds.Add(head);
-                        context.SaveChanges();
-
-                        Household household = new Household
-                        {
-                            HeadId = head.HeadOfHouseHoldId,
+                            UserId = _currentUser.UserId,
                             AddressId = address.AddressId,
-                            CreatedDate = DateOnly.FromDateTime(DateTime.Now)
+                            RegistrationType = RegistrationType.HouseholdRegistration,
+                            StartDate = DateOnly.FromDateTime(DateTime.Now),
+                            EndDate = null,
+                            Status = Status.Pending,
+                            ApprovedBy = null,
+                            Comments = null 
                         };
-                        context.Households.Add(household);
-                        context.SaveChanges();
 
-                        head.HouseholdId = household.HouseholdId;
-                        context.SaveChanges();
-
-                        foreach (var member in _householdMembers)
-                        {
-                            member.HouseholdId = household.HouseholdId;
-                            context.Users.Attach(member.User); // Attach existing User
-                            context.HouseholdMembers.Add(member);
-                        }
+                        context.Registrations.Add(registration);
                         context.SaveChanges();
 
                         transaction.Commit();

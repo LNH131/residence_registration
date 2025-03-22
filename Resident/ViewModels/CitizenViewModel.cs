@@ -1,5 +1,7 @@
-﻿using Resident.Models;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Resident.Models;
 using Resident.Service;
+using Resident.View;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
@@ -10,6 +12,7 @@ namespace Resident.ViewModels
     public class CitizenViewModel : BaseViewModel
     {
         private readonly ICurrentUserService _currentUserService;
+        private readonly IServiceProvider _serviceProvider;
 
         // Thuộc tính CurrentUser lấy từ ICurrentUserService
         public User CurrentUser => _currentUserService.CurrentUser;
@@ -34,12 +37,12 @@ namespace Resident.ViewModels
             get => _selectedNotification;
             set { _selectedNotification = value; OnPropertyChanged(); }
         }
-
+        public ICommand ManageHouseholdCommand { get; set; }
         public ICommand LoadNotificationsCommand { get; set; }
         public ICommand MarkAsReadCommand { get; set; }
         public ICommand OpenChatCommand { get; set; }
 
-        public CitizenViewModel(ICurrentUserService currentUserService)
+        public CitizenViewModel(ICurrentUserService currentUserService, IServiceProvider serviceProvider)
         {
             _currentUserService = currentUserService;
 
@@ -51,12 +54,14 @@ namespace Resident.ViewModels
             Notifications = new ObservableCollection<Notification>();
 
             // Khởi tạo các command
+            ManageHouseholdCommand = new RelayCommand(o => ManageHousehold());
             LoadNotificationsCommand = new RelayCommand(o => LoadNotifications());
             MarkAsReadCommand = new RelayCommand(o => MarkNotificationAsRead(), o => SelectedNotification != null);
             OpenChatCommand = new RelayCommand(o => OpenChat());
 
             // Load dữ liệu thông báo ban đầu
             LoadNotifications();
+            _serviceProvider = serviceProvider;
         }
 
         private void LoadNotifications()
@@ -94,6 +99,11 @@ namespace Resident.ViewModels
             var chatWindow = new Resident.View.ChatWindow();
             chatWindow.DataContext = new Resident.ViewModels.ChatViewModel(1008, 1009);
             chatWindow.Show();
+        }
+        private void ManageHousehold()
+        {
+            var manageHouseholdWindow = _serviceProvider.GetRequiredService<HouseHoldControlWindow>();
+            manageHouseholdWindow.ShowDialog();
         }
     }
 }

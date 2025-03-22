@@ -143,6 +143,7 @@ C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\Area
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\ChatWindow.g.cs
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\CitizenWindow.g.cs
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\HouseHoldControlWindow.g.cs
+C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\HouseHoldSelectionWindow.g.cs
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\LoginWindow.g.cs
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\PoliceWindow.g.cs
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\Register.g.cs
@@ -156,6 +157,7 @@ C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\AddU
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\AreaLeaderWindow.baml
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\CitizenWindow.baml
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\HouseHoldControlWindow.baml
+C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\HouseHoldSelectionWindow.baml
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\LoginWindow.baml
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\Register.baml
 C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\View\UpdateCitizenProfileWindow.baml

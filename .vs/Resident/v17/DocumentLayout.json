@@ -3,172 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ngoch\\source\\repos\\Resident\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\dateonlyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\dateonlyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\householdcontrolviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdcontrolviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\householdtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\chatwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\chatwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\arealeaderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\arealeaderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\dao\\householddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\dao\\householddao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\dao\\admindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\dao\\admindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -179,72 +23,232 @@
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\dateonlyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\dateonlyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\chatmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\chatmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\reportdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\reportdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\resident.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\resident.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\registrationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registrationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\householdcontrolviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdcontrolviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\householdselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\registrationapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registrationapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\residenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\residenceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\separationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\separationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\reportdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\reportdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\householdmemberdisplayinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdmemberdisplayinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\householdtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\usercontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\usercontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\householdseparation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdseparation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\householdselectionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdselectionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\householdselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\service\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\ngoch\\source\\repos\\resident\\resident\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -254,7 +258,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 330,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -273,60 +277,249 @@
               "Name": "ST:16:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DateOnlyConverter.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\DateOnlyConverter.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\DateOnlyConverter.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\DateOnlyConverter.cs",
+              "RelativeToolTip": "Resident\\Service\\DateOnlyConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T07:23:26.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PrnContext.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\PrnContext.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\PrnContext.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\PrnContext.cs",
-              "RelativeToolTip": "Resident\\Models\\PrnContext.cs",
-              "ViewState": "AgIAAIIBAAAAAAAAAAAuwJ8BAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\INotificationService.cs",
+              "RelativeToolTip": "Resident\\Service\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:34:30.552Z"
+              "WhenOpened": "2025-03-22T07:23:25.245Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\User.cs",
-              "RelativeToolTip": "Resident\\Models\\User.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAfAAAAAAAAAA==",
+              "Title": "ChatMessageService.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ChatMessageService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\ChatMessageService.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ChatMessageService.cs",
+              "RelativeToolTip": "Resident\\Service\\ChatMessageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:41:16.334Z"
+              "WhenOpened": "2025-03-22T04:30:29.528Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAvwDIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "IReportService.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\IReportService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\IReportService.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\IReportService.cs",
+              "RelativeToolTip": "Resident\\Service\\IReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:44:21.1Z"
+              "WhenOpened": "2025-03-22T04:30:31.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "ICurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ICurrentUserService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\ICurrentUserService.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ICurrentUserService.cs",
+              "RelativeToolTip": "Resident\\Service\\ICurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:30:31.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "HouseHoldControlWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\HouseHoldControlWindow.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\View\\HouseHoldControlWindow.xaml.cs",
               "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\HouseHoldControlWindow.xaml.cs",
               "RelativeToolTip": "Resident\\View\\HouseHoldControlWindow.xaml.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAAAKYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAASwKIAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:57:00.646Z"
+              "WhenOpened": "2025-03-20T14:18:23.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:31:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:32:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReportData.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ReportData.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\ReportData.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ReportData.cs",
+              "RelativeToolTip": "Resident\\Models\\ReportData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:06.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegistrationType.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\RegistrationType.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationType.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\RegistrationType.cs",
+              "RelativeToolTip": "Resident\\Models\\RegistrationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:04.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChatViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\ChatViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\ChatViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\ChatViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\ChatViewModel.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:31:00.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\BaseViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\BaseViewModel.cs",
+              "RelativeToolTip": "Resident\\Service\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T18:43:33.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CitizenViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\CitizenViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\CitizenViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\CitizenViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\CitizenViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:52:21.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HouseHoldControlViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALoAAACIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:53:12.86Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:52:54.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PoliceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\PoliceViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\PoliceViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\PoliceViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\PoliceViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T06:08:46.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAG4AAACAkhx+AEsuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T19:01:00.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HouseHoldSelectionViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:37:18.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PrnContext.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\PrnContext.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\PrnContext.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\PrnContext.cs",
+              "RelativeToolTip": "Resident\\Models\\PrnContext.cs",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAtwFUBAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:23.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Notification.cs",
+              "RelativeToolTip": "Resident\\Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:35:37.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Registration.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Registration.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Registration.cs",
+              "RelativeToolTip": "Resident\\Models\\Registration.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:10.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\appsettings.json",
               "RelativeDocumentMoniker": "Resident\\appsettings.json",
@@ -334,278 +527,102 @@
               "RelativeToolTip": "Resident\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-20T13:04:20.428Z"
+              "WhenOpened": "2025-03-21T11:53:49.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:17:01.117Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CitizenWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAhwC0AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:55:20.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HouseHoldControlViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:02:15.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\DAO\\UserDAO.cs",
-              "RelativeDocumentMoniker": "Resident\\DAO\\UserDAO.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\DAO\\UserDAO.cs",
-              "RelativeToolTip": "Resident\\DAO\\UserDAO.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAhwBMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:49:28.012Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\App.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\App.xaml.cs",
               "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\App.xaml.cs",
               "RelativeToolTip": "Resident\\App.xaml.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAADEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:31:41.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:43:25.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PoliceViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\PoliceViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\PoliceViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\PoliceViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\PoliceViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:02:56.818Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AreaLeaderViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwC8AAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:00:50.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AddUserViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AddUserViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\AddUserViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AddUserViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\AddUserViewModel.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAuwHUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:00:15.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\MainWindow.xaml",
-              "RelativeToolTip": "Resident\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T13:16:56.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Registration.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Registration.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Registration.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Registration.cs",
-              "RelativeToolTip": "Resident\\Models\\Registration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:39:22.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "HouseholdTransfer.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdTransfer.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdTransfer.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdTransfer.cs",
-              "RelativeToolTip": "Resident\\Models\\HouseholdTransfer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:36:07.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CitizenViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\CitizenViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\CitizenViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\CitizenViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\CitizenViewModel.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAcwF8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:01:50.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAowGsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:03:17.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\App.xaml",
-              "RelativeDocumentMoniker": "Resident\\App.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\App.xaml",
-              "RelativeToolTip": "Resident\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:31:11.732Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ChatViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\ChatViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\ChatViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\ChatViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\ChatViewModel.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:01:22.963Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UpdateCitizenProfileWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:59:42.688Z"
+              "WhenOpened": "2025-03-20T15:03:06.948Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Status.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Status.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Status.cs",
+              "RelativeToolTip": "Resident\\Models\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:00.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RegistrationApproval.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\RegistrationApproval.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationApproval.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\RegistrationApproval.cs",
+              "RelativeToolTip": "Resident\\Models\\RegistrationApproval.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:07.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "UpdateCitizenProfileWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\UpdateCitizenProfileWindow.xaml",
               "RelativeDocumentMoniker": "Resident\\View\\UpdateCitizenProfileWindow.xaml",
               "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\UpdateCitizenProfileWindow.xaml",
               "RelativeToolTip": "Resident\\View\\UpdateCitizenProfileWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:59:26.157Z"
+              "WhenOpened": "2025-03-22T04:50:17.626Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "Register.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\Register.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\Register.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABKAAAAAAAAAA==",
+              "Title": "SeparationMember.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\SeparationMember.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\SeparationMember.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\SeparationMember.cs",
+              "RelativeToolTip": "Resident\\Models\\SeparationMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:58:50.236Z"
+              "WhenOpened": "2025-03-20T14:32:02.439Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "Register.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\Register.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml",
-              "RelativeToolTip": "Resident\\View\\Register.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:58:26.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PoliceWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\PoliceWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\PoliceWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\User.cs",
+              "RelativeToolTip": "Resident\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:58:06.474Z"
+              "WhenOpened": "2025-03-20T14:23:13.707Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "PoliceWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\PoliceWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\PoliceWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:57:50.151Z"
+              "Title": "AreaLeaderViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:36:15.886Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\LoginWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:43:09.652Z"
+              "Title": "AddUserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AddUserViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\AddUserViewModel.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\ViewModels\\AddUserViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\AddUserViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:35:08.355Z"
             },
             {
               "$type": "Document",
@@ -616,378 +633,71 @@
               "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\HouseHoldControlWindow.xaml",
               "RelativeToolTip": "Resident\\View\\HouseHoldControlWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:55:50.587Z"
+              "WhenOpened": "2025-03-20T14:18:37.632Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "CitizenWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:55:01.943Z"
+              "Title": "HouseholdMemberDisplayInfo.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "RelativeToolTip": "Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAA3wC0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T19:22:05.068Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "ChatWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\ChatWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\ChatWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\ChatWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\ChatWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Title": "HouseholdTransfer.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdTransfer.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdTransfer.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdTransfer.cs",
+              "RelativeToolTip": "Resident\\Models\\HouseholdTransfer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:54:43.089Z"
+              "WhenOpened": "2025-03-20T14:33:15.194Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "ChatWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\ChatWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\ChatWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\ChatWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\ChatWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:54:23.459Z"
+              "Title": "Log.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Log.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Log.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Log.cs",
+              "RelativeToolTip": "Resident\\Models\\Log.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:35:58.881Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "AreaLeaderWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:53:50.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "AreaLeaderWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AreaLeaderWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\AreaLeaderWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AreaLeaderWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\AreaLeaderWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:53:21.093Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AdminWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\AdminWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\AdminWindow.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAQAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:52:43.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "AdminWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\AdminWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\AdminWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:52:19.474Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "AddUserWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:51:35.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "AddUserWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T12:50:52.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "HouseHoldDAO.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\DAO\\HouseHoldDAO.cs",
-              "RelativeDocumentMoniker": "Resident\\DAO\\HouseHoldDAO.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\DAO\\HouseHoldDAO.cs",
-              "RelativeToolTip": "Resident\\DAO\\HouseHoldDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:49:09.055Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "AdminDAO.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\DAO\\AdminDAO.cs",
-              "RelativeDocumentMoniker": "Resident\\DAO\\AdminDAO.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\DAO\\AdminDAO.cs",
-              "RelativeToolTip": "Resident\\DAO\\AdminDAO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:48:44.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\RelayCommand.cs",
-              "RelativeToolTip": "Resident\\Service\\RelayCommand.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:48:07.973Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\NotificationService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\NotificationService.cs",
-              "RelativeToolTip": "Resident\\Service\\NotificationService.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:47:40.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "IReportService.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\IReportService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\IReportService.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\IReportService.cs",
-              "RelativeToolTip": "Resident\\Service\\IReportService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:47:22.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\INotificationService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\INotificationService.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\INotificationService.cs",
-              "RelativeToolTip": "Resident\\Service\\INotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:47:09.058Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ICurrentUserService.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ICurrentUserService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\ICurrentUserService.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ICurrentUserService.cs",
-              "RelativeToolTip": "Resident\\Service\\ICurrentUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:46:49.2Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "DateOnlyConverter.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\DateOnlyConverter.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\DateOnlyConverter.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\DateOnlyConverter.cs",
-              "RelativeToolTip": "Resident\\Service\\DateOnlyConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:46:21.55Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "ChatMessageService.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ChatMessageService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\ChatMessageService.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\ChatMessageService.cs",
-              "RelativeToolTip": "Resident\\Service\\ChatMessageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:45:52.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\BaseViewModel.cs",
-              "RelativeToolTip": "Resident\\Service\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:45:32.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Resident.csproj",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Resident.csproj",
-              "RelativeDocumentMoniker": "Resident\\Resident.csproj",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Resident.csproj",
-              "RelativeToolTip": "Resident\\Resident.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-20T12:41:50.525Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Role.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\Role.cs",
               "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Role.cs",
               "RelativeToolTip": "Resident\\Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:38:07.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Status.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Status.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Status.cs",
-              "RelativeToolTip": "Resident\\Models\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:37:02.352Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ResidenceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ResidenceRegistration.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\ResidenceRegistration.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ResidenceRegistration.cs",
-              "RelativeToolTip": "Resident\\Models\\ResidenceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:40:54.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "DocumentType.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\DocumentType.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\DocumentType.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\DocumentType.cs",
-              "RelativeToolTip": "Resident\\Models\\DocumentType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:35:39.436Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Document.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Document.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Document.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Document.cs",
-              "RelativeToolTip": "Resident\\Models\\Document.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:35:34.696Z"
+              "WhenOpened": "2025-03-20T14:31:38.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ReportData.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ReportData.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\ReportData.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ReportData.cs",
-              "RelativeToolTip": "Resident\\Models\\ReportData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:40:11.928Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "HouseholdMember.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdMember.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdMember.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdMember.cs",
-              "RelativeToolTip": "Resident\\Models\\HouseholdMember.cs",
+              "DocumentIndex": 33,
+              "Title": "UserContact.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\UserContact.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\UserContact.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\UserContact.cs",
+              "RelativeToolTip": "Resident\\Models\\UserContact.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:36:01.273Z"
+              "WhenOpened": "2025-03-20T14:34:23.927Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Household.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Household.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Household.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Household.cs",
-              "RelativeToolTip": "Resident\\Models\\Household.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:35:52.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "HeadOfHouseHold.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HeadOfHouseHold.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\HeadOfHouseHold.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HeadOfHouseHold.cs",
-              "RelativeToolTip": "Resident\\Models\\HeadOfHouseHold.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:35:43.6Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "ChatMessage.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ChatMessage.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\ChatMessage.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ChatMessage.cs",
-              "RelativeToolTip": "Resident\\Models\\ChatMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:35:27.583Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Area.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Area.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Area.cs",
-              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Area.cs",
-              "RelativeToolTip": "Resident\\Models\\Area.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:35:21.081Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 34,
               "Title": "Address.cs",
               "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Address.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\Address.cs",
@@ -995,7 +705,323 @@
               "RelativeToolTip": "Resident\\Models\\Address.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:35:15.158Z"
+              "WhenOpened": "2025-03-20T14:25:06.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ChatMessage.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ChatMessage.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\ChatMessage.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\ChatMessage.cs",
+              "RelativeToolTip": "Resident\\Models\\ChatMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:25:15.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Document.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Document.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Document.cs",
+              "RelativeToolTip": "Resident\\Models\\Document.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:25:23.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "HeadOfHouseHold.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HeadOfHouseHold.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HeadOfHouseHold.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HeadOfHouseHold.cs",
+              "RelativeToolTip": "Resident\\Models\\HeadOfHouseHold.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:45:10.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Household.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Household.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Household.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Household.cs",
+              "RelativeToolTip": "Resident\\Models\\Household.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:25:51.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "HouseholdMember.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdMember.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdMember.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdMember.cs",
+              "RelativeToolTip": "Resident\\Models\\HouseholdMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T19:14:17.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "HouseholdSeparation.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdSeparation.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdSeparation.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\HouseholdSeparation.cs",
+              "RelativeToolTip": "Resident\\Models\\HouseholdSeparation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:36:03.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "HouseHoldSelectionWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T14:48:16.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T15:23:25.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "PoliceWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\PoliceWindow.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\PoliceWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T04:50:19.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CitizenWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T14:52:01.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Register.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\Register.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml",
+              "RelativeToolTip": "Resident\\View\\Register.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T04:50:18.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AddUserWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-22T04:50:13.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\NotificationService.cs",
+              "RelativeToolTip": "Resident\\Service\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:30:32.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "HouseHoldSelectionWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAADgvzkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:51:09.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "UpdateCitizenProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:35:54.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "HouseHoldSelectionWindow.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
+              "RelativeDocumentMoniker": "Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
+              "RelativeToolTip": "Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAEwCYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T18:17:37.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CitizenWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\CitizenWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwCcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:52:02.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ChatWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\ChatWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\ChatWindow.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\ChatWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\ChatWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T17:45:31.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:34:15.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\AdminWindow.xaml",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AdminWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T17:45:22.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "DocumentType.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\DocumentType.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\DocumentType.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\DocumentType.cs",
+              "RelativeToolTip": "Resident\\Models\\DocumentType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:45:11.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "AddUserWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\AddUserWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:34:13.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Register.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\Register.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\Register.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\Register.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:36:06.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "PoliceWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\PoliceWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\PoliceWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\PoliceWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:36:11.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\View\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:15:12.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Service\\RelayCommand.cs",
+              "RelativeToolTip": "Resident\\Service\\RelayCommand.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:27:42.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Area.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Area.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Area.cs",
+              "ToolTip": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Models\\Area.cs",
+              "RelativeToolTip": "Resident\\Models\\Area.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:25:10.794Z"
             }
           ]
         }

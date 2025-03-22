@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Resident.View"
-        xmlns:converters="clr-namespace:Resident.Service"
+        xmlns:converters="clr-namespace:Resident.Service" xmlns:viewmodels="clr-namespace:Resident.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:HouseHoldControlViewModel}"
         mc:Ignorable="d"
         Title="HouseHoldControlWindow" Height="800" Width="800">
 
@@ -22,9 +22,9 @@
 
         <!-- Header -->
         <Border Background="LightSteelBlue" Grid.Row="0" Padding="10">
-            <TextBlock Text="Quản lý Hộ khẩu" 
-                       FontSize="24" 
-                       FontWeight="Bold" 
+            <TextBlock Text="Quản lý Hộ khẩu"
+                       FontSize="24"
+                       FontWeight="Bold"
                        Foreground="Navy"/>
         </Border>
 
@@ -52,26 +52,26 @@
                                 <TextBlock Text="Họ tên:" Grid.Row="0" Grid.Column="0" Margin="0,5"
                                            VerticalAlignment="Center" FontWeight="SemiBold"/>
                                 <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Width="250"
-                                         Text="{Binding FullName}" IsReadOnly="True"/>
+                                         Text="{Binding CurrentUser.FullName}" IsReadOnly="True"/>
 
                                 <!-- CMND/CCCD -->
                                 <TextBlock Text="CMND/CCCD:" Grid.Row="1" Grid.Column="0" Margin="0,5"
                                            VerticalAlignment="Center" FontWeight="SemiBold"/>
                                 <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Width="250"
-                                         Text="{Binding IdentityCard}" IsReadOnly="True"/>
+                                         Text="{Binding CurrentUser.IdentityCard}" IsReadOnly="True"/>
 
                                 <!-- Ngày sinh -->
                                 <TextBlock Text="Ngày sinh:" Grid.Row="2" Grid.Column="0" Margin="0,5"
                                            VerticalAlignment="Center" FontWeight="SemiBold"/>
                                 <DatePicker Grid.Row="2" Grid.Column="1" Margin="5" Width="250"
-                                            SelectedDate="{Binding Birthday, Converter={StaticResource DateOnlyConverter}}"
+                                            SelectedDate="{Binding CurrentUser.Birthday, Converter={StaticResource DateOnlyConverter}}"
                                             IsEnabled="False"/>
 
                                 <!-- Giới tính -->
                                 <TextBlock Text="Giới tính:" Grid.Row="3" Grid.Column="0" Margin="0,5"
                                            VerticalAlignment="Center" FontWeight="SemiBold"/>
                                 <TextBox Grid.Row="3" Grid.Column="1" Margin="5" Width="250"
-                                         Text="{Binding Sex}" IsReadOnly="True"/>
+                                         Text="{Binding CurrentUser.Sex}" IsReadOnly="True"/>
                             </Grid>
                         </GroupBox>
 
@@ -82,8 +82,6 @@
                                     <!-- Rows for each field -->
                                     <RowDefinition Height="Auto"/>
                                     <!-- User ID -->
-                                    <RowDefinition Height="Auto"/>
-                                    <!-- Số nhà, đường -->
                                     <RowDefinition Height="Auto"/>
                                     <!-- Phường/Xã -->
                                     <RowDefinition Height="Auto"/>
@@ -99,29 +97,29 @@
                                 </Grid.ColumnDefinitions>
 
                                 <!-- Số nhà, đường (Street) -->
-                                <TextBlock Text="Số nhà, đường:" Grid.Row="1" Grid.Column="0" Margin="0,5"
-           VerticalAlignment="Center" FontWeight="SemiBold"/>
-                                <TextBox x:Name="StreetTextBox" Grid.Row="1" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBlock Text="Số nhà, đường:" Grid.Row="0" Grid.Column="0" Margin="0,5"
+                                           VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox x:Name="StreetTextBox" Grid.Row="0" Grid.Column="1" Margin="5" Width="250"/>
 
                                 <!-- Phường/Xã (Ward) -->
-                                <TextBlock Text="Phường/Xã:" Grid.Row="2" Grid.Column="0" Margin="0,5"
-           VerticalAlignment="Center" FontWeight="SemiBold"/>
-                                <TextBox x:Name="WardTextBox" Grid.Row="2" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBlock Text="Phường/Xã:" Grid.Row="1" Grid.Column="0" Margin="0,5"
+                                           VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox x:Name="WardTextBox" Grid.Row="1" Grid.Column="1" Margin="5" Width="250"/>
 
                                 <!-- Quận/Huyện (District) -->
-                                <TextBlock Text="Quận/Huyện:" Grid.Row="3" Grid.Column="0" Margin="0,5"
-           VerticalAlignment="Center" FontWeight="SemiBold"/>
-                                <TextBox x:Name="DistrictTextBox" Grid.Row="3" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBlock Text="Quận/Huyện:" Grid.Row="2" Grid.Column="0" Margin="0,5"
+                                           VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox x:Name="DistrictTextBox" Grid.Row="2" Grid.Column="1" Margin="5" Width="250"/>
 
                                 <!-- Tỉnh/Thành phố (City) -->
-                                <TextBlock Text="Tỉnh/Thành phố:" Grid.Row="4" Grid.Column="0" Margin="0,5"
-           VerticalAlignment="Center" FontWeight="SemiBold"/>
-                                <TextBox x:Name="CityTextBox" Grid.Row="4" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBlock Text="Tỉnh/Thành phố:" Grid.Row="3" Grid.Column="0" Margin="0,5"
+                                           VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox x:Name="CityTextBox" Grid.Row="3" Grid.Column="1" Margin="5" Width="250"/>
 
                                 <!-- Quốc gia (Country) -->
-                                <TextBlock Text="Quốc gia:" Grid.Row="5" Grid.Column="0" Margin="0,5"
-           VerticalAlignment="Center" FontWeight="SemiBold"/>
-                                <TextBox x:Name="CountryTextBox" Grid.Row="5" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBlock Text="Quốc gia:" Grid.Row="4" Grid.Column="0" Margin="0,5"
+                                           VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox x:Name="CountryTextBox" Grid.Row="4" Grid.Column="1" Margin="5" Width="250"/>
                             </Grid>
                         </GroupBox>
 
@@ -157,9 +155,10 @@
                                 <!-- Nút Thêm thành viên -->
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,10">
                                     <Button Content="Thêm" Width="80" Height="30" Click="AddMember_Click"/>
+                                    <Button Content="Xóa" Width="80" Height="30" Click="DeleteMember_Click"/>
                                 </StackPanel>
                                 <!-- DataGrid hiển thị danh sách thành viên đã thêm -->
-                                <DataGrid x:Name="dgHouseholdMembers" AutoGenerateColumns="False" Height="200" Margin="5">
+                                <DataGrid x:Name="dgHouseholdMembers" AutoGenerateColumns="False" Height="200" Margin="5" ItemsSource="{Binding _householdMembers}">
                                     <DataGrid.Columns>
                                         <DataGridTextColumn Header="Họ tên" Binding="{Binding User.FullName}" Width="*"/>
                                         <DataGridTextColumn Header="CMND/CCCD" Binding="{Binding User.IdentityCard}" Width="*"/>
@@ -183,6 +182,7 @@
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Orientation="Vertical" Margin="10">
                         <TextBlock Text="Thông tin tách hộ khẩu" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+
                         <GroupBox Header="Thông tin hộ hiện tại" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
                             <Grid Margin="5">
                                 <Grid.RowDefinitions>
@@ -194,23 +194,76 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Số hộ khẩu:" Grid.Row="0" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
-                                <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBox x:Name="txtSoHoKhau" Grid.Row="0" Grid.Column="1" Margin="5" Width="250"
+                                           Text="{Binding SelectedHousehold.HouseholdId}" IsReadOnly="True"/>
                                 <TextBlock Text="Địa chỉ:" Grid.Row="1" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
-                                <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBox x:Name="txtDiaChiHoHienTai" Grid.Row="1" Grid.Column="1" Margin="5" Width="250"
+                                         Text="{Binding HouseholdAddress}" IsReadOnly="True"/>
+                                <!-- Make read-only -->
+                                <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="5" Content="..."
+                                        Command="{Binding SelectHouseHoldCommand}"/>
                             </Grid>
                         </GroupBox>
+
                         <GroupBox Header="Chọn thành viên tách ra" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
-                            <DataGrid AutoGenerateColumns="False" Height="200" Margin="5">
-                                <DataGrid.Columns>
-                                    <DataGridCheckBoxColumn Header="Chọn" Width="50"/>
-                                    <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*"/>
-                                    <DataGridTextColumn Header="CMND/CCCD" Binding="{Binding IdentityNumber}" Width="*"/>
-                                </DataGrid.Columns>
-                            </DataGrid>
+                            <StackPanel>
+                                <DataGrid x:Name="dgMembersToSeparate"
+                                      AutoGenerateColumns="False"
+                                      Height="200"
+                                      Margin="5"
+                                      ItemsSource="{Binding HouseholdMembers}">
+                                    <DataGrid.Columns>
+                                        <DataGridCheckBoxColumn Header="Chọn" Binding="{Binding IsSelected}" Width="50"/>
+                                        <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*" IsReadOnly="True"/>
+                                        <DataGridTextColumn Header="CMND/CCCD" Binding="{Binding IdentityCard}" Width="*" IsReadOnly="True"/>
+                                        <DataGridTextColumn Header="Quan hệ" Binding="{Binding Relationship}" Width="*" IsReadOnly="True"/>
+                                        <DataGridCheckBoxColumn Header="Chủ hộ mới" Binding="{Binding IsNewHead}" Width="80"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                                <TextBlock Text="* Chỉ chọn một người làm chủ hộ." Foreground="Red" FontStyle="Italic"/>
+                            </StackPanel>
                         </GroupBox>
+
+                        <GroupBox Header="Thông tin hộ mới" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
+                            <StackPanel>
+                                <CheckBox x:Name="chkSameAddress" Content="Sử dụng địa chỉ hộ hiện tại" Margin="5" />
+
+                                <Grid x:Name="gridNewAddress" Margin="5" Visibility="Collapsed">
+                                    <!-- Initially hidden -->
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="150"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Text="Đường/Số nhà:" Grid.Row="0" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtNewStreet" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+                                    <TextBlock Text="Phường/Xã:" Grid.Row="1" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtNewWard" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+                                    <TextBlock Text="Quận/Huyện:" Grid.Row="2" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtNewDistrict" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                                    <TextBlock Text="Tỉnh/Thành phố:" Grid.Row="3" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtNewCity" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+                                    <TextBlock Text="Quốc gia:" Grid.Row="4" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtNewCountry" Grid.Row="4" Grid.Column="1" Margin="5"/>
+                                </Grid>
+                            </StackPanel>
+                        </GroupBox>
+
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-                            <Button Content="Hủy" Width="100" Height="30" Margin="0,0,10,0"/>
-                            <Button Content="Tách hộ khẩu" Width="120" Height="30" Background="LightBlue"/>
+                            <Button Content="Hủy" Width="100" Height="30" Margin="0,0,10,0" />
+                            <Button Content="Tách hộ khẩu" Width="120" Height="30" Background="LightBlue" 
+                                    Command="{Binding SeparateHouseholdsCommand}"/>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>

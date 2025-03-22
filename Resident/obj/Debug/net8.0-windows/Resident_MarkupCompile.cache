@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ngoch\source\repos\Resident\Resident\App.xaml
-111458964257
+12847223987
 
-53-1316274415
+58980135829
 252452411520
-MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\UpdateCitizenProfileWindow.xaml;
+MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\UpdateCitizenProfileWindow.xaml;
 
 False
 

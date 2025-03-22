@@ -1,4 +1,6 @@
-﻿using Resident.Enums;
+﻿using System;
+using System.Collections.Generic;
+using Resident.Enums;
 
 namespace Resident.Models;
 
@@ -10,13 +12,13 @@ public partial class Registration
 
     public int AddressId { get; set; }
 
-    public string RegistrationType { get; set; } = null!;
+    public RegistrationType RegistrationType { get; set; } 
 
     public DateOnly StartDate { get; set; }
 
     public DateOnly? EndDate { get; set; }
 
-    public Status Status { get; set; }
+    public Status Status { get; set; } 
 
     public int? ApprovedBy { get; set; }
 

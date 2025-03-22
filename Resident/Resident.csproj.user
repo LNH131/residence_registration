@@ -25,6 +25,9 @@
     <Compile Update="View\HouseHoldControlWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\HouseHoldSelectionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\LoginWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -58,6 +61,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\HouseHoldControlWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\HouseHoldSelectionWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\LoginWindow.xaml">

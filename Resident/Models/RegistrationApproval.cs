@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Resident.Enums;
 
 namespace Resident.Models;
 
@@ -13,7 +14,7 @@ public partial class RegistrationApproval
 
     public string ApprovalStep { get; set; } = null!;
 
-    public string Status { get; set; } = null!;
+    public Status Status { get; set; }
 
     public string? Comments { get; set; }
 
