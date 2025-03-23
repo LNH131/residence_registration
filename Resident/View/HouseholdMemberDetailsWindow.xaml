@@ -1,0 +1,19 @@
+﻿<Window x:Class="Resident.View.HouseholdMemberDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Household Members" Height="500" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <DataGrid x:Name="dgMembers"
+                  ItemsSource="{Binding HouseholdMembers}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Member ID" Binding="{Binding MemberId}" Width="100"/>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding User.FullName}" Width="*"/>
+                <DataGridTextColumn Header="Relationship" Binding="{Binding Relationship}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Close" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Width="80" Click="Close_Click"/>
+    </Grid>
+</Window>

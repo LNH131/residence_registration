@@ -1,13 +1,10 @@
-﻿using System;
+﻿using Resident.Enums;
+using Resident.Models;
+using Resident.ViewModels;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Linq;
 using System.Windows;
-using Resident.DAO;
-using Resident.Enums;
-using Resident.Models;
-using Resident.ViewModels;
 
 namespace Resident.View
 {
@@ -20,9 +17,8 @@ namespace Resident.View
         private Household _selectedHousehold;
         private readonly User _currentUser;
 
-        public User User { get { return _currentUser; } }
+        public User User => _currentUser;
         private ObservableCollection<HouseholdMember> _householdMembers;
-
 
         public HouseHoldControlWindow(HouseHoldControlViewModel viewModel)
         {
@@ -38,7 +34,7 @@ namespace Resident.View
             _viewModel.PropertyChanged += ViewModel_PropertyChanged;
         }
 
-        private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(_viewModel.SelectedHousehold))
             {
@@ -109,8 +105,6 @@ namespace Resident.View
             txtMemberRelationship.Clear();
         }
 
-
-
         private User GetUserById(string identityCard)
         {
             using (var context = new PrnContext())
@@ -119,15 +113,17 @@ namespace Resident.View
             }
         }
 
+        // Updated method to get household based on new model
         private Household GetHouseholdByUserId()
         {
             using (var context = new PrnContext())
             {
-                HeadOfHouseHold? headOfHouseHold = context.HeadOfHouseHolds.FirstOrDefault(u => u.UserId == _currentUser.UserId);
-                if (headOfHouseHold == null)
+                // Look up the head record for the current user
+                var headOfHouse = context.HeadOfHouseHolds.FirstOrDefault(h => h.UserId == _currentUser.UserId);
+                if (headOfHouse == null || headOfHouse.HouseholdId == null)
                     return null;
-
-                return context.Households.FirstOrDefault(u => u.HeadId == headOfHouseHold.HeadOfHouseHoldId);
+                // Return the household associated with the head record
+                return context.Households.FirstOrDefault(h => h.HouseholdId == headOfHouse.HouseholdId);
             }
         }
 
@@ -196,11 +192,10 @@ namespace Resident.View
                         // Thêm các thành viên vào bảng RegistrationMembers dựa trên danh sách _householdMembers
                         foreach (var member in _householdMembers)
                         {
-                            // Lấy thông tin từ đối tượng HouseholdMember và liên kết với đối tượng User tương ứng
                             var regMember = new RegistrationMember
                             {
                                 RegistrationId = registration.RegistrationId,
-                                FullName = member.User != null ? member.User.FullName : "", // Có thể cần xử lý trường hợp null tùy yêu cầu
+                                FullName = member.User != null ? member.User.FullName : "",
                                 Relationship = member.Relationship,
                                 IdentityCard = member.User?.IdentityCard,
                                 Birthday = member.User?.Birthday,

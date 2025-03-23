@@ -1,21 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Resident.Models;
-using Resident.Service;
 using Resident.ViewModels;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows;
 
 namespace Resident.View
 {
@@ -28,71 +16,68 @@ namespace Resident.View
         public List<HouseholdMember> SelectedHouseholdMembers { get; private set; }
 
         private User _currentUser;
-
         private HouseHoldSelectionViewModel _viewModel;
+        private ObservableCollection<HouseholdMember> _householdMembers;
 
         public HouseHoldSelectionWindow(HouseHoldSelectionViewModel viewModel)
         {
             InitializeComponent();
             _viewModel = viewModel;
             _currentUser = viewModel.CurrentUser;
-            DataContext = _viewModel;
+            DataContext = _viewModel; // Enable XAML binding
 
-            Debug.WriteLine("test: " + _currentUser.UserId);
+            Debug.WriteLine("Current User Id: " + _currentUser.UserId);
 
+            _householdMembers = new ObservableCollection<HouseholdMember>();
+            dgHouseholds.ItemsSource = null;  // Initially no selection
+
+            // Load households for which the current user is head
             LoadHouseholds();
         }
 
+        // Loads households where the current user is the head.
         private void LoadHouseholds()
         {
-            List<Household> households = GetHouseholds(); // Lấy danh sách hộ khẩu của người dùng hiện tại.
-            Address address = GetAddress(_currentUser.CurrentAddressId);
+            List<Household> households = GetHouseholds();
 
-            Debug.WriteLine("Address: " + address.AddressId);
-            string formattedAddress = string.Join(", ", new[]
+            if (households == null || households.Count == 0)
             {
-                address.Street,
-                address.Ward,
-                address.District,
-                address.City,
-                address.Country
-            }.Where(s => !string.IsNullOrWhiteSpace(s)));
-            Debug.WriteLine("Households: " + households.Count);
+                Debug.WriteLine("No households found for the current user.");
+                dgHouseholds.ItemsSource = null;
+                return;
+            }
 
-            // Tạo danh sách mới gộp thông tin Household và Address.
+            // For display, use the Address from each household to create a formatted address.
             var dataSource = households.Select(h => new
             {
                 h.HouseholdId,
-                // Các thuộc tính khác của Household nếu cần,
-                FormattedAddress = formattedAddress       // Ví dụ: Thành phố
-                                                          // Thêm các thuộc tính khác từ Address nếu cần.
+                FormattedAddress = string.Join(", ", new[]
+                {
+                    h.Address.Street,
+                    h.Address.Ward,
+                    h.Address.District,
+                    h.Address.City,
+                    h.Address.Country
+                }.Where(s => !string.IsNullOrWhiteSpace(s)))
             }).ToList();
 
             dgHouseholds.ItemsSource = dataSource;
-
         }
 
+        // Retrieves households where the current user is the head.
         private List<Household> GetHouseholds()
-        {
-            HeadOfHouseHold headOfHouseHold = GetHeadOfHouseHold(_currentUser.UserId);
-            using (var context = new PrnContext()) // Thay bằng DbContext của bạn.
-            {
-                // Lấy danh sách hộ khẩu của người dùng hiện tại. Cần join để lấy thông tin địa chỉ
-                var households = context.Households
-                    .Where(h => h.HeadId == headOfHouseHold.HeadOfHouseHoldId) // Lọc theo người dùng hiện tại
-                    .ToList();
-                return households;
-            }
-        }
-
-        private HeadOfHouseHold GetHeadOfHouseHold(int headId)
         {
             using (var context = new PrnContext())
             {
-                return context.HeadOfHouseHolds.FirstOrDefault(h => h.UserId == headId);
+                return context.Households
+                    .Include(h => h.Address)
+                    .Include(h => h.HeadOfHouseHold)
+                    .Where(h => h.HeadOfHouseHold != null && h.HeadOfHouseHold.UserId == _currentUser.UserId)
+                    .ToList();
             }
         }
 
+        // Retrieves the address by Id.
         private Address GetAddress(int addressId)
         {
             using (var context = new PrnContext())
@@ -101,53 +86,45 @@ namespace Resident.View
             }
         }
 
+        // Retrieves HouseholdMembers for a given HouseholdId.
         private List<HouseholdMember> GetHouseholdMember(int householdId)
         {
             using (var context = new PrnContext())
             {
                 return context.HouseholdMembers
                               .Where(h => h.HouseholdId == householdId)
+                              .Include(h => h.User)
                               .ToList();
             }
         }
 
-
+        // Handler for the "Chọn" (Select) button.
         private void SelectButton_Click(object sender, RoutedEventArgs e)
         {
-            // Kiểm tra xem có mục nào được chọn trong DataGrid không.
+            // Check if a household is selected.
             if (dgHouseholds.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng chọn một hộ khẩu.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
-            // Vì ItemsSource của DataGrid là danh sách kiểu ẩn danh chứa thuộc tính HouseholdId,
-            // ta dùng dynamic để truy xuất thuộc tính này.
+            // Since the ItemsSource is a list of anonymous objects, we use dynamic to access the HouseholdId.
             dynamic selectedItem = dgHouseholds.SelectedItem;
             int selectedHouseholdId = selectedItem.HouseholdId;
 
-            // Sử dụng DbContext để truy xuất thông tin chi tiết của hộ khẩu đã chọn, bao gồm cả thông tin địa chỉ.
+            // Retrieve the full household record including its Address and head info.
             using (var context = new PrnContext())
             {
-                // Sử dụng Include nếu bạn muốn load kèm theo thông tin liên quan (ví dụ: Address)
                 SelectedHousehold = context.Households
-                    .Include("Address")
+                    .Include(h => h.Address)
+                    .Include(h => h.HeadOfHouseHold)
                     .FirstOrDefault(h => h.HouseholdId == selectedHouseholdId);
             }
 
             if (SelectedHousehold != null)
             {
-                List<HouseholdMember> householdMember = GetHouseholdMember(SelectedHousehold.HouseholdId);
-                SelectedHouseholdMembers = householdMember;
+                SelectedHouseholdMembers = GetHouseholdMember(SelectedHousehold.HouseholdId);
                 DialogResult = true;
-                string formattedAddress = string.Join(", ", new[]
-                {
-                    SelectedHousehold.Address.Street,
-                    SelectedHousehold.Address.Ward,
-                    SelectedHousehold.Address.District,
-                    SelectedHousehold.Address.City,
-                    SelectedHousehold.Address.Country
-                }.Where(s => !string.IsNullOrWhiteSpace(s)));
                 Close();
             }
             else
@@ -156,7 +133,7 @@ namespace Resident.View
             }
         }
 
-
+        // Handler for the "Hủy" (Cancel) button.
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             DialogResult = false;

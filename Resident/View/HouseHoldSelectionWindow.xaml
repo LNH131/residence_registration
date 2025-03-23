@@ -3,11 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Resident.View"
         mc:Ignorable="d"
-        Title="HouseHoldSelectionWindow" Height="450" Width="800">
+        Title="Chọn hộ khẩu" Height="450" Width="800">
     <Grid>
-        <!-- Định nghĩa Style dùng chung cho các Button -->
+        <!-- Define a common style for all buttons -->
         <Grid.Resources>
             <Style TargetType="Button">
                 <Setter Property="Margin" Value="0,0,5,0"/>
@@ -20,27 +19,25 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- DataGrid hiển thị danh sách hộ khẩu với margin xung quanh -->
+        <!-- DataGrid displaying household list with a margin -->
         <DataGrid x:Name="dgHouseholds"
-              AutoGenerateColumns="False"
-              IsReadOnly="True"
-              SelectionMode="Single"
-              Margin="10">
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  Margin="10">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Số hộ khẩu" Binding="{Binding HouseholdId}" />
-                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding FormattedAddress}" />
-                <!-- Thêm các cột khác nếu cần -->
+                <DataGridTextColumn Header="Số hộ khẩu" Binding="{Binding HouseholdId}" Width="100"/>
+                <DataGridTextColumn Header="Địa chỉ" Binding="{Binding FormattedAddress}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <!-- StackPanel chứa các nút hành động được căn chỉnh sang phải -->
+        <!-- StackPanel containing action buttons aligned to the right -->
         <StackPanel Grid.Row="1"
-                Orientation="Horizontal"
-                HorizontalAlignment="Right"
-                Margin="10">
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="10">
             <Button Content="Chọn" Click="SelectButton_Click"/>
             <Button Content="Hủy" Click="CancelButton_Click" Margin="5,0,0,0"/>
         </StackPanel>
     </Grid>
-
 </Window>

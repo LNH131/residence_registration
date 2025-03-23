@@ -1,8 +1,6 @@
 ﻿using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
-using Resident.Models;
-using Resident.Service;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
@@ -11,6 +9,9 @@ namespace Resident.ViewModels
 {
     public class AreaLeaderViewModel : BaseViewModel
     {
+        private readonly ICurrentUserService _currentUserService;
+        private RegistrationService service = new RegistrationService();
+
         private ObservableCollection<Registration> _pendingRegistrations;
         public ObservableCollection<Registration> PendingRegistrations
         {
@@ -25,15 +26,19 @@ namespace Resident.ViewModels
             set { _selectedRegistration = value; OnPropertyChanged(); }
         }
 
-        // Các Command
         public ICommand ApproveCommand { get; }
         public ICommand SendCommentCommand { get; }
         public ICommand ViewNotificationsCommand { get; }
         public ICommand ChatCommand { get; }
         public ICommand GenerateReportCommand { get; }
+        public ICommand ViewDetailsCommand { get; }
+        public ICommand ViewHouseholdCommand { get; }
+        public ICommand ViewAllRegistrationsCommand { get; }  // New command
 
-        public AreaLeaderViewModel()
+        // Constructor with ICurrentUserService injected.
+        public AreaLeaderViewModel(ICurrentUserService currentUserService)
         {
+            _currentUserService = currentUserService;
             LoadPendingRegistrations();
 
             ApproveCommand = new RelayCommand(o => ApproveRegistration());
@@ -41,26 +46,15 @@ namespace Resident.ViewModels
             ViewNotificationsCommand = new RelayCommand(o => ViewNotifications());
             ChatCommand = new RelayCommand(o => Chat());
             GenerateReportCommand = new RelayCommand(o => GenerateReport());
+            ViewDetailsCommand = new RelayCommand(ViewDetails);
+            ViewHouseholdCommand = new RelayCommand(o => ViewHousehold());
+            ViewAllRegistrationsCommand = new RelayCommand(o => ViewAllRegistrations());
         }
 
         private void LoadPendingRegistrations()
         {
-            // Dữ liệu cứng minh họa; thay thế bằng service lấy dữ liệu từ DB theo AreaLeader hiện tại
-            PendingRegistrations = new ObservableCollection<Registration>
-    {
-        new Registration
-        {
-            RegistrationId = 1001,
-            Status = Resident.Enums.Status.Pending.ToString(),
-            User = new User { UserId = 2001, FullName = "Nguyễn Văn B" }
-        },
-        new Registration
-        {
-            RegistrationId = 1002,
-            Status = Resident.Enums.Status.Pending.ToString(),
-            User = new User { UserId = 2002, FullName = "Lê Thị C" }
-        }
-    };
+            var regs = service.GetPendingRegistrations();
+            PendingRegistrations = new ObservableCollection<Registration>(regs);
         }
 
         private void ApproveRegistration()
@@ -71,8 +65,8 @@ namespace Resident.ViewModels
                 return;
             }
             SelectedRegistration.Status = Status.Approved.ToString();
-            // Ở đây bạn có thể gọi service cập nhật DB
-            MessageBox.Show($"Đã duyệt hồ sơ ID={SelectedRegistration.RegistrationId}");
+            service.UpdateRegistration(SelectedRegistration);
+            MessageBox.Show($"Đã duyệt hồ sơ ID = {SelectedRegistration.RegistrationId}");
         }
 
         private void SendComment()
@@ -82,13 +76,11 @@ namespace Resident.ViewModels
                 MessageBox.Show("Vui lòng chọn hồ sơ để gửi nhận xét!");
                 return;
             }
-            // Mở cửa sổ nhập nhận xét hoặc thực hiện logic gửi thông báo đến công an
-            MessageBox.Show($"Gửi nhận xét cho Công an về hồ sơ ID={SelectedRegistration.RegistrationId}");
+            MessageBox.Show($"Gửi nhận xét cho Công an về hồ sơ ID = {SelectedRegistration.RegistrationId}");
         }
 
         private void ViewNotifications()
         {
-            // Ở đây bạn có thể mở cửa sổ hoặc hiển thị panel quản lý thông báo của khu vực
             MessageBox.Show("Xem thông báo cho cư dân trong khu vực...");
         }
 
@@ -101,15 +93,41 @@ namespace Resident.ViewModels
             }
             int citizenId = SelectedRegistration.User.UserId;
             var chatWindow = new Resident.View.ChatWindow();
-            chatWindow.DataContext = new Resident.ViewModels.ChatViewModel(1009, citizenId);
+            chatWindow.DataContext = new ChatViewModel(1009, citizenId);
             chatWindow.Show();
         }
 
         private void GenerateReport()
         {
-            // Triển khai logic thống kê và xuất báo cáo PDF/Excel
             MessageBox.Show("Tạo báo cáo tổng hợp khu vực...");
         }
 
+        private void ViewDetails(object parameter)
+        {
+            var registration = parameter as Registration;
+            if (registration == null)
+            {
+                MessageBox.Show("Vui lòng chọn hồ sơ để xem chi tiết!");
+                return;
+            }
+            var detailsWindow = new Resident.View.RegistrationDetailsWindow();
+            detailsWindow.DataContext = new RegistrationDetailsViewModel(registration, _currentUserService);
+            detailsWindow.Show();
+        }
+
+        private void ViewHousehold()
+        {
+            var householdDetailsWindow = new Resident.View.HouseholdDetailsWindow(new HouseholdDetailsViewModel());
+            householdDetailsWindow.Show();
+        }
+
+        // New method to view all registrations.
+        private void ViewAllRegistrations()
+        {
+            // Create the RegistrationOverviewViewModel, then create and show the window.
+            var overviewVM = new RegistrationOverviewViewModel();
+            var overviewWindow = new Resident.View.RegistrationOverviewWindow(overviewVM);
+            overviewWindow.Show();
+        }
     }
 }

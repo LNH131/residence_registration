@@ -25,6 +25,12 @@
     <Compile Update="View\HouseHoldControlWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\HouseholdDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HouseholdMemberDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\HouseHoldSelectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -35,6 +41,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\Register.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RegistrationDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RegistrationOverviewWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\StatusOverviewWindow.xaml.cs">

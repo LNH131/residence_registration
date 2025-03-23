@@ -1,0 +1,32 @@
+﻿<Window x:Class="Resident.View.RegistrationOverviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registration Overview" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <!-- DataGrid listing all registrations -->
+        <DataGrid x:Name="dgRegistrations"
+                  ItemsSource="{Binding AllRegistrations}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Registration ID" Binding="{Binding RegistrationId}" Width="100"/>
+                <DataGridTextColumn Header="User" Binding="{Binding User.FullName}" Width="150"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding RegistrationType}" Width="150"/>
+                <DataGridTextColumn Header="Start Date" Binding="{Binding StartDate, StringFormat='{}{0:yyyy-MM-dd}'}" Width="100"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Comments" Binding="{Binding Comments}" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Footer with action buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10">
+            <!-- Button to view registration details; pass the selected registration as parameter -->
+            <Button Content="View Details" Width="120" Margin="0,0,10,0"
+                    Command="{Binding ViewDetailsCommand}"
+                    CommandParameter="{Binding SelectedItem, ElementName=dgRegistrations}"/>
+            <Button Content="Close" Width="80" Click="Close_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
