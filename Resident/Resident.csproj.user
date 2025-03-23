@@ -16,6 +16,9 @@
     <Compile Update="View\AreaLeaderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ChangeUserWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\ChatWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -67,6 +70,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\AreaLeaderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ChangeUserWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ChatWindow.xaml">

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\obj\Debug\net8.0-windows\
+F:\Sunday\residence_registration\Resident\obj\Debug\net8.0-windows\
 Resident
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\App.xaml
-17-111453924
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+F:\Sunday\residence_registration\Resident\App.xaml
+181120105375
 
-741902453548
-252-1169303366
-MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseholdDetailsWindow.xaml;View\HouseholdMemberDetailsWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\RegistrationDetailsWindow.xaml;View\RegistrationOverviewWindow.xaml;View\StatusOverviewWindow.xaml;View\UpdateCitizenProfileWindow.xaml;
+751973103011
+252-1839882562
+MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChangeUserWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseholdDetailsWindow.xaml;View\HouseholdMemberDetailsWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\RegistrationDetailsWindow.xaml;View\RegistrationOverviewWindow.xaml;View\StatusOverviewWindow.xaml;View\UpdateCitizenProfileWindow.xaml;
 
-True
+False
 

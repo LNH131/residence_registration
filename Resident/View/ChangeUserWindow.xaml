@@ -1,0 +1,125 @@
+﻿<Window x:Class="Resident.View.ChangeUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Resident.View"
+        mc:Ignorable="d"
+        Title="ChangeUserWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+        <TabControl>
+            <!-- Tab 1: Account & Password -->
+            <TabItem Header="Account &amp; Password">
+                <Grid>
+                    <!-- Giữ nguyên định nghĩa cột để phù hợp với các thành phần bên trong -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="147*"/>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="647*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Nhóm Label & TextBox nhập thông tin -->
+                    <Label Content="Full name :" 
+                           HorizontalAlignment="Left" Margin="10,225,0,0" 
+                           VerticalAlignment="Top" FontSize="15" 
+                           Grid.Column="1" Height="30" Width="81"/>
+                    <Label Content="Email:" 
+                           HorizontalAlignment="Left" Margin="10,255,0,0" 
+                           VerticalAlignment="Top" FontSize="15" 
+                           Grid.Column="1" Height="30" Width="49"/>
+                    <Label Content="Password:" 
+                           HorizontalAlignment="Left" Margin="10,285,0,0" 
+                           VerticalAlignment="Top" FontSize="15" 
+                           Grid.Column="1" Height="30" Width="79"/>
+
+                    <TextBox x:Name="fullName" 
+                             HorizontalAlignment="Left" Margin="100,225,0,0" 
+                             TextWrapping="Wrap" VerticalAlignment="Top" 
+                             Width="124" Height="30" FontSize="15" 
+                             Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name="email" 
+                             HorizontalAlignment="Left" Margin="100,255,0,0" 
+                             TextWrapping="Wrap" VerticalAlignment="Top" 
+                             Width="124" Height="30" FontSize="15" 
+                             Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <!-- Nếu cần ẩn mật khẩu, bạn có thể thay bằng PasswordBox -->
+                    <TextBox x:Name="passworld" 
+                             HorizontalAlignment="Left" Margin="100,285,0,0" 
+                             TextWrapping="Wrap" VerticalAlignment="Top" 
+                             Width="124" Height="30" FontSize="15" 
+                             Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                    <!-- Nút Update -->
+                    <Button Content="Update" 
+                            HorizontalAlignment="Left" Margin="10,334,0,0" 
+                            VerticalAlignment="Top" 
+                            Grid.Column="3" Height="22" Width="67"/>
+
+                    <!-- Nút Save -->
+                    <Button Content="Save" 
+                            HorizontalAlignment="Left" Margin="429,368,0,0" 
+                            VerticalAlignment="Top" Width="86" 
+                            Grid.Column="3" Height="30"/>
+
+                    <!-- Nút Back -->
+                    <Button Content="Back" 
+                            HorizontalAlignment="Left" Margin="515,368,0,0" 
+                            VerticalAlignment="Top" 
+                            Grid.Column="3" Height="30" Width="65" 
+                            Click="Button_Click"/>
+
+                    <!-- DataGrid hiển thị danh sách người dùng (dgUser) -->
+                    <DataGrid x:Name="dgUser" 
+                              AutoGenerateColumns="False" 
+                              Margin="187,221,34,56" 
+                              Grid.Column="3">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                            <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="*"/>
+                            <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid x:Name="dtUserImport" 
+                              Grid.ColumnSpan="4" 
+                              Margin="10,23,34,206"
+                              AutoGenerateColumns="False">      
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="UserId" Binding="{Binding UserId}" Width="*"/>
+                            <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                            <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="*"/>
+                            <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </Grid>
+            </TabItem>
+
+            <!-- Tab 2: Other Information (dtUser giữ nguyên) -->
+            <TabItem Header="Other Information">
+                <Grid>
+                    <!-- Để giữ nguyên dtUser, chúng ta tạo Grid.ColumnDefinitions tương tự -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="367*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <DataGrid x:Name="dtUserNonimport" 
+                              Margin="10,10,10,249" 
+                              Grid.Column="1" 
+                              AutoGenerateColumns="False" Grid.ColumnSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="UserId" Width="*" Binding="{Binding UserId}"/>
+                            <DataGridTextColumn Header="Full Name" Width="*" Binding="{Binding FullName}"/>
+                            <DataGridTextColumn Header="Email" Width="*" Binding="{Binding Email}"/>
+                            <DataGridTextColumn Header="Role" Width="*" Binding="{Binding Role}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

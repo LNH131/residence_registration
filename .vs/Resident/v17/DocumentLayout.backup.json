@@ -1,348 +1,332 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\",
+  "WorkspaceRootPath": "F:\\Sunday\\residence_registration\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\registrationdetailsviewmodel .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\registrationdetailsviewmodel .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\registrationdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\registrationdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\converters\\statustovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\converters\\statustovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\registrationoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\registrationoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\registrationoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\registrationoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\registrationoverviewwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\registrationoverviewwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\registrationoverviewwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\householddetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householddetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\householdmemberdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdmemberdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householdmemberdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdmemberdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householdmemberdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdmemberdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householddetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householddetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householdselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\arealeaderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\arealeaderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householddetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householddetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\registrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\registrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householdselectionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdselectionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\householdselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\statusoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\statusoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\registrationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registrationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\householdmemberdisplayinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdmemberdisplayinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\chatmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\chatmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\chatwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\chatwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\registrationdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\registrationdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\statusoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\statusoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\registrationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registrationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\registrationdetailsviewmodel .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\registrationdetailsviewmodel .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\converters\\statustovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\converters\\statustovisibilityconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\arealeaderwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\registrationoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\registrationoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\registrationoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\registrationoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\householddetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householddetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\householdmemberdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdmemberdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householdmemberdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdmemberdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householdmemberdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdmemberdetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householddetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householddetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householdselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\arealeaderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\arealeaderwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householddetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householddetailswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\registrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\registrationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\prncontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\dao\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householdselectionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdselectionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\householdselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdselectionviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdcontrolwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\statusoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\statusoverviewviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\headofhousehold.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\household.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\registrationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registrationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\householdmemberdisplayinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdmemberdisplayinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\chatmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\chatmessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\chatwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\chatwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\registrationdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\registrationdetailswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\statusoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\statusoverviewwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\citizenviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\adduserviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\registrationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registrationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\householdcontrolviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\householdcontrolviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\householdcontrolviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\citizenwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ngoch\\AppData\\Local\\SourceServer\\eae5553b09b45e34b5597f9642e808864b67c2057a9b04231ce25a9274094651\\Resident\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\citizenwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\statusoverviewwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\statusoverviewwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\updatecitizenprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\updatecitizenprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\updatecitizenprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\householdseparation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\householdseparation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdseparation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\registrationapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\registrationapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\registrationapproval.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\reportdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\reportdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\reportdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\separationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\separationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\separationmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\householdcontrolwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\dateonlyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\dateonlyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\dateonlyconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\updatecitizenprofilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\householdtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\householdtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\householdtransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\usercontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\usercontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\usercontact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\updatecitizenprofilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\chatwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\adduserwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\service\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|f:\\sunday\\residence_registration\\resident\\service\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\service\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Sunday\\residence_registration\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -353,82 +337,23 @@
       "DocumentGroups": [
         {
           "DockedHeight": 330,
-          "SelectedChildIndex": 18,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:16:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:31:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:32:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StatusToVisibilityConverter.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Converters\\StatusToVisibilityConverter.cs",
-              "RelativeDocumentMoniker": "Resident\\Converters\\StatusToVisibilityConverter.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Converters\\StatusToVisibilityConverter.cs",
-              "RelativeToolTip": "Resident\\Converters\\StatusToVisibilityConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T12:39:58.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegistrationOverviewViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T12:32:21.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RegistrationOverviewWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\RegistrationOverviewWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\RegistrationOverviewWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T12:32:12.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "RegistrationOverviewWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml",
               "RelativeDocumentMoniker": "Resident\\View\\RegistrationOverviewWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml",
               "RelativeToolTip": "Resident\\View\\RegistrationOverviewWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-23T12:31:48.051Z",
@@ -436,349 +361,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HouseholdMemberDetailsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T12:23:22.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HouseholdMemberDetailsWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T12:23:08.501Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "HouseholdMemberDetailsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseholdMemberDetailsWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\HouseholdMemberDetailsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T12:22:47.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HouseholdDetailsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAwDcAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T12:18:09.471Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HouseholdDetailsWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseholdDetailsWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\HouseholdDetailsWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T12:17:52.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "HouseholdDetailsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseholdDetailsWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\HouseholdDetailsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T12:17:15.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "AreaLeaderWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\AreaLeaderWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T11:48:38.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegistrationDetailsViewModel .cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
-              "RelativeToolTip": "Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T10:28:07.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "ChatWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\ChatWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\ChatWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\ChatWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\ChatWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T10:27:54.609Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "RegistrationDetailsWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationDetailsWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\RegistrationDetailsWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationDetailsWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\RegistrationDetailsWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T10:27:12.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegistrationDetailsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationDetailsWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\RegistrationDetailsWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\RegistrationDetailsWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\RegistrationDetailsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T10:26:24.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "RegistrationService.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\RegistrationService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\RegistrationService.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\RegistrationService.cs",
-              "RelativeToolTip": "Resident\\Service\\RegistrationService.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAAAGsAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T10:22:09.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AreaLeaderWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\AreaLeaderWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\AreaLeaderWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T10:15:08.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\App.xaml",
-              "RelativeDocumentMoniker": "Resident\\App.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\App.xaml",
-              "RelativeToolTip": "Resident\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T09:59:48.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "Resident\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\AssemblyInfo.cs",
-              "RelativeToolTip": "Resident\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T09:57:40.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "CitizenViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\CitizenViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\CitizenViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\CitizenViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\CitizenViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:52:21.968Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "CitizenWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\CitizenWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\CitizenWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA6wCMAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:52:02.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "StatusOverviewViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\StatusOverviewViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\StatusOverviewViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\StatusOverviewViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\StatusOverviewViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T09:02:22.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ngoch\\AppData\\Local\\SourceServer\\eae5553b09b45e34b5597f9642e808864b67c2057a9b04231ce25a9274094651\\Resident\\App.xaml.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\ngoch\\AppData\\Local\\SourceServer\\eae5553b09b45e34b5597f9642e808864b67c2057a9b04231ce25a9274094651\\Resident\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\ngoch\\AppData\\Local\\SourceServer\\eae5553b09b45e34b5597f9642e808864b67c2057a9b04231ce25a9274094651\\Resident\\App.xaml.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\ngoch\\AppData\\Local\\SourceServer\\eae5553b09b45e34b5597f9642e808864b67c2057a9b04231ce25a9274094651\\Resident\\App.xaml.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAhwEIAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T09:14:35.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "HouseHoldControlViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwM4AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:53:12.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "HouseHoldSelectionViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T15:37:18.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\LoginViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\LoginViewModel.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAwE0AAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:52:54.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "StatusOverviewWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\StatusOverviewWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\StatusOverviewWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\StatusOverviewWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\StatusOverviewWindow.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBkAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T09:01:12.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\App.xaml.cs",
-              "RelativeToolTip": "Resident\\App.xaml.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAADEAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T15:03:06.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "CitizenWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\CitizenWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\CitizenWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T14:52:01.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "StatusOverviewWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\StatusOverviewWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\StatusOverviewWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\StatusOverviewWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\StatusOverviewWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-23T09:01:07.039Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "HouseHoldControlWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldControlWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\HouseHoldControlWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:18:23.854Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 2,
               "Title": "Register.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\Register.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\Register.xaml",
               "RelativeDocumentMoniker": "Resident\\View\\Register.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\Register.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\Register.xaml",
               "RelativeToolTip": "Resident\\View\\Register.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-22T04:50:18.892Z",
@@ -786,372 +373,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "UpdateCitizenProfileViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AddUserWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\AddUserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\AddUserWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAAkwLgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T09:03:03.625Z"
+              "WhenOpened": "2025-03-20T17:34:13.026Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AreaLeaderViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAwIUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:36:15.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "AddUserViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\AddUserViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\AddUserViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\AddUserViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\AddUserViewModel.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAA9wF8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:35:08.355Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ChatViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\ChatViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\ChatViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\ChatViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\ChatViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T15:31:00.854Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "RegistrationMember.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\RegistrationMember.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationMember.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\RegistrationMember.cs",
-              "RelativeToolTip": "Resident\\Models\\RegistrationMember.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T08:42:40.086Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "PrnContext.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\PrnContext.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\PrnContext.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\PrnContext.cs",
-              "RelativeToolTip": "Resident\\Models\\PrnContext.cs",
-              "ViewState": "AgIAAJkBAAAAAAAAAAAgwLgBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T08:39:22.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "RegistrationApproval.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\RegistrationApproval.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationApproval.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\RegistrationApproval.cs",
-              "RelativeToolTip": "Resident\\Models\\RegistrationApproval.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:32:07.493Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Registration.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Registration.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Registration.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Registration.cs",
-              "RelativeToolTip": "Resident\\Models\\Registration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:32:10.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "HouseholdSeparation.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdSeparation.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdSeparation.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdSeparation.cs",
-              "RelativeToolTip": "Resident\\Models\\HouseholdSeparation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:36:03.618Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "RegistrationType.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\RegistrationType.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationType.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\RegistrationType.cs",
-              "RelativeToolTip": "Resident\\Models\\RegistrationType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:32:04.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "ReportData.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\ReportData.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\ReportData.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\ReportData.cs",
-              "RelativeToolTip": "Resident\\Models\\ReportData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:32:06.073Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "SeparationMember.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\SeparationMember.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\SeparationMember.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\SeparationMember.cs",
-              "RelativeToolTip": "Resident\\Models\\SeparationMember.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:32:02.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAArwEEAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T19:01:00.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "HouseholdMember.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdMember.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdMember.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdMember.cs",
-              "RelativeToolTip": "Resident\\Models\\HouseholdMember.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T19:14:17.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserDAO.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\DAO\\UserDAO.cs",
-              "RelativeDocumentMoniker": "Resident\\DAO\\UserDAO.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\DAO\\UserDAO.cs",
-              "RelativeToolTip": "Resident\\DAO\\UserDAO.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwCEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T08:23:01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\User.cs",
-              "RelativeToolTip": "Resident\\Models\\User.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:23:13.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HouseHoldSelectionWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:51:09.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Status.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Status.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Status.cs",
-              "RelativeToolTip": "Resident\\Models\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:32:00.875Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "HouseHoldSelectionWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldSelectionWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\HouseHoldSelectionWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T14:48:16.119Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Household.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Household.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Household.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Household.cs",
-              "RelativeToolTip": "Resident\\Models\\Household.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:25:51.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "HouseHoldControlWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldControlWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\HouseHoldControlWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T14:18:37.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ICurrentUserService.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\ICurrentUserService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\ICurrentUserService.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\ICurrentUserService.cs",
-              "RelativeToolTip": "Resident\\Service\\ICurrentUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:30:31.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "IReportService.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\IReportService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\IReportService.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\IReportService.cs",
-              "RelativeToolTip": "Resident\\Service\\IReportService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:30:31.951Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "ChatMessageService.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\ChatMessageService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\ChatMessageService.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\ChatMessageService.cs",
-              "RelativeToolTip": "Resident\\Service\\ChatMessageService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwCAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T04:30:29.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\INotificationService.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\INotificationService.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\INotificationService.cs",
-              "RelativeToolTip": "Resident\\Service\\INotificationService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T07:23:25.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "DateOnlyConverter.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\DateOnlyConverter.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\DateOnlyConverter.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\DateOnlyConverter.cs",
-              "RelativeToolTip": "Resident\\Service\\DateOnlyConverter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T07:23:26.82Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\Service\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\BaseViewModel.cs",
-              "RelativeToolTip": "Resident\\Service\\BaseViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T18:43:33.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "PoliceViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\PoliceViewModel.cs",
-              "RelativeDocumentMoniker": "Resident\\ViewModels\\PoliceViewModel.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\PoliceViewModel.cs",
-              "RelativeToolTip": "Resident\\ViewModels\\PoliceViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T06:08:46.695Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Notification.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\Notification.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Notification.cs",
-              "RelativeToolTip": "Resident\\Models\\Notification.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:35:37.125Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\appsettings.json",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\appsettings.json",
               "RelativeDocumentMoniker": "Resident\\appsettings.json",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\appsettings.json",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\appsettings.json",
               "RelativeToolTip": "Resident\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -1160,35 +399,700 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "UpdateCitizenProfileWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\UpdateCitizenProfileWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\UpdateCitizenProfileWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\UpdateCitizenProfileWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\UpdateCitizenProfileWindow.xaml",
+              "DocumentIndex": 4,
+              "Title": "AddUserWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\AddUserWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\AddUserWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-22T04:50:17.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "HouseholdMemberDisplayInfo.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdMemberDisplayInfo.cs",
-              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdMemberDisplayInfo.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdMemberDisplayInfo.cs",
-              "RelativeToolTip": "Resident\\Models\\HouseholdMemberDisplayInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T19:22:05.068Z",
+              "WhenOpened": "2025-03-22T04:50:13.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 5,
+              "Title": "RegistrationDetailsViewModel .cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
+              "RelativeToolTip": "Resident\\ViewModels\\RegistrationDetailsViewModel .cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T10:28:07.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HouseholdMemberDetailsViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\HouseholdMemberDetailsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:23:22.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegistrationOverviewWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\RegistrationOverviewWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\RegistrationOverviewWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\RegistrationOverviewWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:32:12.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegistrationOverviewViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\RegistrationOverviewViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:32:21.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StatusToVisibilityConverter.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Converters\\StatusToVisibilityConverter.cs",
+              "RelativeDocumentMoniker": "Resident\\Converters\\StatusToVisibilityConverter.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Converters\\StatusToVisibilityConverter.cs",
+              "RelativeToolTip": "Resident\\Converters\\StatusToVisibilityConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:39:58.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HouseholdMemberDetailsWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\HouseholdMemberDetailsWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:23:08.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HouseholdMemberDetailsWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseholdMemberDetailsWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdMemberDetailsWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\HouseholdMemberDetailsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-23T12:22:47.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HouseholdDetailsViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\HouseholdDetailsViewModel.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwDcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:18:09.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HouseholdDetailsWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseholdDetailsWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\HouseholdDetailsWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:17:52.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HouseholdDetailsWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseholdDetailsWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseholdDetailsWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\HouseholdDetailsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-23T12:17:15.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AreaLeaderWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\AreaLeaderWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\AreaLeaderWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T11:48:38.987Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ChatWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\ChatWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\ChatWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\ChatWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\ChatWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T10:27:54.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "RegistrationDetailsWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\RegistrationDetailsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\RegistrationDetailsWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\RegistrationDetailsWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\RegistrationDetailsWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T10:27:12.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RegistrationService.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\RegistrationService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\RegistrationService.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\RegistrationService.cs",
+              "RelativeToolTip": "Resident\\Service\\RegistrationService.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAGsAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T10:22:09.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AreaLeaderWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\AreaLeaderWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\AreaLeaderWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\AreaLeaderWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-23T10:15:08.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "App.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\App.xaml",
+              "RelativeDocumentMoniker": "Resident\\App.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\App.xaml",
+              "RelativeToolTip": "Resident\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-23T09:59:48.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Resident\\AssemblyInfo.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\AssemblyInfo.cs",
+              "RelativeToolTip": "Resident\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T09:57:40.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CitizenViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\CitizenViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\CitizenViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\CitizenViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\CitizenViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:52:21.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "CitizenWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\CitizenWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\CitizenWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA6wCMAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:52:02.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "StatusOverviewViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\StatusOverviewViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\StatusOverviewViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\StatusOverviewViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\StatusOverviewViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T09:02:22.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ngoch\\AppData\\Local\\SourceServer\\eae5553b09b45e34b5597f9642e808864b67c2057a9b04231ce25a9274094651\\Resident\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\ngoch\\AppData\\Local\\SourceServer\\eae5553b09b45e34b5597f9642e808864b67c2057a9b04231ce25a9274094651\\Resident\\App.xaml.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAhwEIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T09:14:35.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "HouseHoldControlViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\HouseHoldControlViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwM4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:53:12.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "HouseHoldSelectionViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\HouseHoldSelectionViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:37:18.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\LoginViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwE0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:52:54.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "StatusOverviewWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\StatusOverviewWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\StatusOverviewWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\StatusOverviewWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\StatusOverviewWindow.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwBkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T09:01:12.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\App.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\App.xaml.cs",
+              "RelativeToolTip": "Resident\\App.xaml.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAADEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:03:06.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "CitizenWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\CitizenWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\CitizenWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\CitizenWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\CitizenWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T14:52:01.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HouseHoldControlWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldControlWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\HouseHoldControlWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:18:23.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UpdateCitizenProfileViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\UpdateCitizenProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T09:03:03.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AreaLeaderViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\AreaLeaderViewModel.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAwIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:36:15.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AddUserViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\AddUserViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\AddUserViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\AddUserViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\AddUserViewModel.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAA9wF8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:35:08.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ChatViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\ChatViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\ChatViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\ChatViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\ChatViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T15:31:00.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "RegistrationMember.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\RegistrationMember.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationMember.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\RegistrationMember.cs",
+              "RelativeToolTip": "Resident\\Models\\RegistrationMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T08:42:40.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PrnContext.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\PrnContext.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\PrnContext.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\PrnContext.cs",
+              "RelativeToolTip": "Resident\\Models\\PrnContext.cs",
+              "ViewState": "AgIAAJkBAAAAAAAAAAAgwLgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T08:39:22.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "RegistrationApproval.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\RegistrationApproval.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationApproval.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\RegistrationApproval.cs",
+              "RelativeToolTip": "Resident\\Models\\RegistrationApproval.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:07.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Registration.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Registration.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Registration.cs",
+              "RelativeToolTip": "Resident\\Models\\Registration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:10.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "HouseholdSeparation.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdSeparation.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdSeparation.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdSeparation.cs",
+              "RelativeToolTip": "Resident\\Models\\HouseholdSeparation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:36:03.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "RegistrationType.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\RegistrationType.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\RegistrationType.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\RegistrationType.cs",
+              "RelativeToolTip": "Resident\\Models\\RegistrationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:04.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ReportData.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\ReportData.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\ReportData.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\ReportData.cs",
+              "RelativeToolTip": "Resident\\Models\\ReportData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:06.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SeparationMember.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\SeparationMember.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\SeparationMember.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\SeparationMember.cs",
+              "RelativeToolTip": "Resident\\Models\\SeparationMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:02.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "HouseholdMember.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdMember.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdMember.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdMember.cs",
+              "RelativeToolTip": "Resident\\Models\\HouseholdMember.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T19:14:17.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserDAO.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\DAO\\UserDAO.cs",
+              "RelativeDocumentMoniker": "Resident\\DAO\\UserDAO.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\DAO\\UserDAO.cs",
+              "RelativeToolTip": "Resident\\DAO\\UserDAO.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwCEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T08:23:01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "User.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\User.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\User.cs",
+              "RelativeToolTip": "Resident\\Models\\User.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAADsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:23:13.707Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HouseHoldSelectionWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "RelativeToolTip": "Resident\\View\\HouseHoldSelectionWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:51:09.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Status.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Status.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Status.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Status.cs",
+              "RelativeToolTip": "Resident\\Models\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:32:00.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "HouseHoldSelectionWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\HouseHoldSelectionWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T14:48:16.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Household.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Household.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Household.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Household.cs",
+              "RelativeToolTip": "Resident\\Models\\Household.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:25:51.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "HouseHoldControlWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml",
+              "RelativeDocumentMoniker": "Resident\\View\\HouseHoldControlWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\HouseHoldControlWindow.xaml",
+              "RelativeToolTip": "Resident\\View\\HouseHoldControlWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-20T14:18:37.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ICurrentUserService.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\ICurrentUserService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\ICurrentUserService.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\ICurrentUserService.cs",
+              "RelativeToolTip": "Resident\\Service\\ICurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:30:31.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "IReportService.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\IReportService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\IReportService.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\IReportService.cs",
+              "RelativeToolTip": "Resident\\Service\\IReportService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:30:31.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ChatMessageService.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\ChatMessageService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\ChatMessageService.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\ChatMessageService.cs",
+              "RelativeToolTip": "Resident\\Service\\ChatMessageService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T04:30:29.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\INotificationService.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\INotificationService.cs",
+              "RelativeToolTip": "Resident\\Service\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T07:23:25.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "DateOnlyConverter.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\DateOnlyConverter.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\DateOnlyConverter.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\DateOnlyConverter.cs",
+              "RelativeToolTip": "Resident\\Service\\DateOnlyConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T07:23:26.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "BaseViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\BaseViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\Service\\BaseViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\BaseViewModel.cs",
+              "RelativeToolTip": "Resident\\Service\\BaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T18:43:33.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "PoliceViewModel.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\PoliceViewModel.cs",
+              "RelativeDocumentMoniker": "Resident\\ViewModels\\PoliceViewModel.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\ViewModels\\PoliceViewModel.cs",
+              "RelativeToolTip": "Resident\\ViewModels\\PoliceViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T06:08:46.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\Notification.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Notification.cs",
+              "RelativeToolTip": "Resident\\Models\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T14:35:37.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "HouseholdMemberDisplayInfo.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "RelativeDocumentMoniker": "Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "RelativeToolTip": "Resident\\Models\\HouseholdMemberDisplayInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T19:22:05.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
               "Title": "HouseholdTransfer.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdTransfer.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdTransfer.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\HouseholdTransfer.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HouseholdTransfer.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\HouseholdTransfer.cs",
               "RelativeToolTip": "Resident\\Models\\HouseholdTransfer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1196,11 +1100,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 67,
               "Title": "Log.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Log.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Log.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\Log.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Log.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Log.cs",
               "RelativeToolTip": "Resident\\Models\\Log.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1208,11 +1112,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 68,
               "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Role.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Role.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\Role.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Role.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Role.cs",
               "RelativeToolTip": "Resident\\Models\\Role.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1220,11 +1124,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 69,
               "Title": "UserContact.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\UserContact.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\UserContact.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\UserContact.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\UserContact.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\UserContact.cs",
               "RelativeToolTip": "Resident\\Models\\UserContact.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1232,11 +1136,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 70,
               "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Address.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Address.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\Address.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Address.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Address.cs",
               "RelativeToolTip": "Resident\\Models\\Address.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1244,70 +1148,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "ChatMessage.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\ChatMessage.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\ChatMessage.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\ChatMessage.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\ChatMessage.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\ChatMessage.cs",
               "RelativeToolTip": "Resident\\Models\\ChatMessage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:25:15.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T14:25:15.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "HeadOfHouseHold.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HeadOfHouseHold.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\HeadOfHouseHold.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\HeadOfHouseHold.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\HeadOfHouseHold.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\HeadOfHouseHold.cs",
               "RelativeToolTip": "Resident\\Models\\HeadOfHouseHold.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:45:10.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T17:45:10.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 71,
               "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\LoginWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "Resident\\View\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\LoginWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\LoginWindow.xaml",
               "RelativeToolTip": "Resident\\View\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-20T15:23:25.673Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 72,
               "Title": "PoliceWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\PoliceWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\PoliceWindow.xaml",
               "RelativeDocumentMoniker": "Resident\\View\\PoliceWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\PoliceWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\PoliceWindow.xaml",
               "RelativeToolTip": "Resident\\View\\PoliceWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-22T04:50:19.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "AddUserWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AddUserWindow.xaml",
-              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AddUserWindow.xaml",
-              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-22T04:50:13.315Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 73,
               "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\NotificationService.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\NotificationService.cs",
               "RelativeDocumentMoniker": "Resident\\Service\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\NotificationService.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\NotificationService.cs",
               "RelativeToolTip": "Resident\\Service\\NotificationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1315,11 +1206,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 74,
               "Title": "UpdateCitizenProfileWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
               "RelativeToolTip": "Resident\\View\\UpdateCitizenProfileWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1327,11 +1218,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 81,
               "Title": "HouseHoldSelectionWindow.g.i.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
               "RelativeDocumentMoniker": "Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
               "RelativeToolTip": "Resident\\obj\\Debug\\net8.0-windows\\View\\HouseHoldSelectionWindow.g.i.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAEwCYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1339,23 +1230,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 75,
               "Title": "ChatWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\ChatWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\ChatWindow.xaml",
               "RelativeDocumentMoniker": "Resident\\View\\ChatWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\ChatWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\ChatWindow.xaml",
               "RelativeToolTip": "Resident\\View\\ChatWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-20T17:45:31.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T17:45:31.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 76,
               "Title": "AdminWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AdminWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\AdminWindow.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\View\\AdminWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AdminWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\AdminWindow.xaml.cs",
               "RelativeToolTip": "Resident\\View\\AdminWindow.xaml.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1363,47 +1253,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 77,
               "Title": "AdminWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AdminWindow.xaml",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\AdminWindow.xaml",
               "RelativeDocumentMoniker": "Resident\\View\\AdminWindow.xaml",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AdminWindow.xaml",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\AdminWindow.xaml",
               "RelativeToolTip": "Resident\\View\\AdminWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-20T17:45:22.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
-              "Title": "AddUserWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AddUserWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Resident\\View\\AddUserWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\AddUserWindow.xaml.cs",
-              "RelativeToolTip": "Resident\\View\\AddUserWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T17:34:13.026Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "Register.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\Register.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\Register.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\View\\Register.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\Register.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\Register.xaml.cs",
               "RelativeToolTip": "Resident\\View\\Register.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T15:36:06.058Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T15:36:06.058Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 78,
               "Title": "PoliceWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\PoliceWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\PoliceWindow.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\View\\PoliceWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\PoliceWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\PoliceWindow.xaml.cs",
               "RelativeToolTip": "Resident\\View\\PoliceWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1411,11 +1288,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 79,
               "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\LoginWindow.xaml.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\View\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\View\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\LoginWindow.xaml.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\View\\LoginWindow.xaml.cs",
               "RelativeToolTip": "Resident\\View\\LoginWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1423,11 +1300,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 80,
               "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\RelayCommand.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Service\\RelayCommand.cs",
               "RelativeDocumentMoniker": "Resident\\Service\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Service\\RelayCommand.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Service\\RelayCommand.cs",
               "RelativeToolTip": "Resident\\Service\\RelayCommand.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAmwBsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1435,16 +1312,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "Area.cs",
-              "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Area.cs",
+              "DocumentMoniker": "F:\\Sunday\\residence_registration\\Resident\\Models\\Area.cs",
               "RelativeDocumentMoniker": "Resident\\Models\\Area.cs",
-              "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Models\\Area.cs",
+              "ToolTip": "F:\\Sunday\\residence_registration\\Resident\\Models\\Area.cs",
               "RelativeToolTip": "Resident\\Models\\Area.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T14:25:10.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-20T14:25:10.794Z"
             }
           ]
         }
