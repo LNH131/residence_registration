@@ -81,6 +81,14 @@ namespace Resident.View
                 txtMemberRelationship.Clear();
                 return;
             }
+
+            // Kiểm tra nếu CCCD trùng với của chủ hộ
+            if (user.UserId == _currentUser.UserId)
+            {
+                MessageBox.Show("Chủ hộ không thể được thêm vào danh sách thành viên.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (_householdMembers.Any(m => m.UserId == user.UserId))
             {
                 MessageBox.Show("Thành viên này đã tồn tại.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -97,6 +105,7 @@ namespace Resident.View
             _householdMembers.Add(member);
 
             txtMemberFullName.Clear();
+            txtMemberIdentityNumber.Clear();
             txtMemberRelationship.Clear();
         }
 
@@ -124,12 +133,7 @@ namespace Resident.View
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            // Kiểm tra nếu tài khoản đã đăng ký hộ khẩu rồi
-            //if (GetHouseholdByUserId() != null)
-            //{
-            //    MessageBox.Show("Mỗi tài khoản chỉ được đăng ký 1 lần.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-            //    return;
-            //}
+            // Kiểm tra nếu các trường thông tin địa chỉ không được để trống
             if (string.IsNullOrWhiteSpace(StreetTextBox.Text) ||
                 string.IsNullOrWhiteSpace(WardTextBox.Text) ||
                 string.IsNullOrWhiteSpace(DistrictTextBox.Text) ||
@@ -140,6 +144,7 @@ namespace Resident.View
                 return;
             }
 
+            // Kiểm tra có thêm thành viên nào trong hộ hay không
             if (_householdMembers.Count == 0)
             {
                 MessageBox.Show("Vui lòng thêm ít nhất một thành viên vào hộ khẩu.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -158,6 +163,7 @@ namespace Resident.View
                             return;
                         }
 
+                        // Tạo và lưu địa chỉ
                         Address address = new Address
                         {
                             Street = StreetTextBox.Text,
@@ -171,6 +177,7 @@ namespace Resident.View
                         context.Addresses.Add(address);
                         context.SaveChanges();
 
+                        // Tạo và lưu đăng ký hộ khẩu
                         Registration registration = new Registration
                         {
                             UserId = _currentUser.UserId,
@@ -180,10 +187,28 @@ namespace Resident.View
                             EndDate = null,
                             Status = Status.Pending.ToString(),
                             ApprovedBy = null,
-                            Comments = null 
+                            Comments = null
                         };
 
                         context.Registrations.Add(registration);
+                        context.SaveChanges();
+
+                        // Thêm các thành viên vào bảng RegistrationMembers dựa trên danh sách _householdMembers
+                        foreach (var member in _householdMembers)
+                        {
+                            // Lấy thông tin từ đối tượng HouseholdMember và liên kết với đối tượng User tương ứng
+                            var regMember = new RegistrationMember
+                            {
+                                RegistrationId = registration.RegistrationId,
+                                FullName = member.User != null ? member.User.FullName : "", // Có thể cần xử lý trường hợp null tùy yêu cầu
+                                Relationship = member.Relationship,
+                                IdentityCard = member.User?.IdentityCard,
+                                Birthday = member.User?.Birthday,
+                                Sex = member.User?.Sex
+                            };
+
+                            context.RegistrationMembers.Add(regMember);
+                        }
                         context.SaveChanges();
 
                         transaction.Commit();
@@ -198,6 +223,7 @@ namespace Resident.View
                 }
             }
         }
+
         private void DeleteMember_Click(object sender, RoutedEventArgs e)
         {
             if (dgHouseholdMembers.SelectedItem is HouseholdMember selectedMember)

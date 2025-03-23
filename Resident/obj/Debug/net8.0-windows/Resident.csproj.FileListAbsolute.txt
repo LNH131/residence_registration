@@ -347,3 +347,5 @@ D:\github\residence_registration\Resident\obj\Debug\net8.0-windows\Resident.sour
 D:\github\residence_registration\Resident\obj\Debug\net8.0-windows\Resident.csproj.Up2Date
 D:\github\residence_registration\Resident\obj\Debug\net8.0-windows\Resident.genruntimeconfig.cache
 D:\github\residence_registration\Resident\obj\Debug\net8.0-windows\ref\Resident.dll
+D:\github\residence_registration\Resident\obj\Debug\net8.0-windows\View\StatusOverviewWindow.baml
+D:\github\residence_registration\Resident\obj\Debug\net8.0-windows\View\StatusOverviewWindow.g.cs

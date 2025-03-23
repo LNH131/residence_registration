@@ -1,0 +1,42 @@
+﻿<Window x:Class="Resident.View.StatusOverviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Theo dõi hồ sơ" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl>
+            <!-- Tab hồ sơ đăng ký hộ khẩu -->
+            <TabItem Header="Đăng ký hộ khẩu">
+                <DataGrid ItemsSource="{Binding Registrations}" 
+                          AutoGenerateColumns="False" Margin="10"
+                          IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding RegistrationId}" Width="Auto"/>
+                        <DataGridTextColumn Header="Ngày đăng ký" Binding="{Binding StartDate, StringFormat='dd/MM/yyyy'}" Width="*"/>
+                        <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="*"/>
+                        <DataGridTextColumn Header="Ghi chú" Binding="{Binding Comments}" Width="2*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+
+            <!-- Tab đơn tách hộ -->
+            <TabItem Header="Đơn tách hộ">
+                <DataGrid ItemsSource="{Binding HouseholdSeparations}" 
+                          AutoGenerateColumns="False" Margin="10"
+                          IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding SeparationId}" Width="Auto"/>
+                        <DataGridTextColumn Header="Ngày yêu cầu" Binding="{Binding RequestDate, StringFormat='dd/MM/yyyy'}" Width="*"/>
+                        <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="*"/>
+                        <DataGridTextColumn Header="Ghi chú" Binding="{Binding Comments}" Width="2*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+        </TabControl>
+
+        <!-- Nút đóng cửa sổ -->
+        <Button Content="Đóng" Width="100" Height="30" 
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"
+                Click="Close_Click"/>
+    </Grid>
+</Window>

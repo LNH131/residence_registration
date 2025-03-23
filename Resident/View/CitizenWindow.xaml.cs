@@ -10,6 +10,7 @@ using Resident;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows;
+using System;
 namespace Resident.View
 {
     public partial class CitizenWindow : Window
@@ -31,6 +32,14 @@ namespace Resident.View
             loginWindow.Show();
             this.Close();
         }
+
+        private void OpenStatusOverview_Click(object sender, RoutedEventArgs e)
+        {
+            var serviceProvider = ((App)Application.Current).ServiceProvider;
+            var statusWindow = serviceProvider.GetRequiredService<StatusOverviewWindow>();
+            statusWindow.ShowDialog(); // Hoặc Show() nếu bạn không cần modal
+        }
+
 
         public ObservableCollection<Role> Roles { get; } = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());
     }
