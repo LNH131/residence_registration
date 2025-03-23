@@ -27,8 +27,6 @@ public partial class Registration
 
     public virtual User? ApprovedByNavigation { get; set; }
 
-    public virtual ICollection<Document> Documents { get; set; } = new List<Document>();
-
     public virtual ICollection<RegistrationApproval> RegistrationApprovals { get; set; } = new List<RegistrationApproval>();
 
     public virtual ICollection<RegistrationMember> RegistrationMembers { get; set; } = new List<RegistrationMember>();

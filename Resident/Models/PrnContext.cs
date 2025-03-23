@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Resident.Models;
 
@@ -20,10 +22,6 @@ public partial class PrnContext : DbContext
     public virtual DbSet<Area> Areas { get; set; }
 
     public virtual DbSet<ChatMessage> ChatMessages { get; set; }
-
-    public virtual DbSet<Document> Documents { get; set; }
-
-    public virtual DbSet<DocumentType> DocumentTypes { get; set; }
 
     public virtual DbSet<HeadOfHouseHold> HeadOfHouseHolds { get; set; }
 
@@ -52,8 +50,13 @@ public partial class PrnContext : DbContext
     public virtual DbSet<UserContact> UserContacts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=Admin\\MSSQLSERVER01;uid=sa;password=haingoc@123;database=PRNDB2;Encrypt=True;TrustServerCertificate=True;");
+    {
+        var builder = new ConfigurationBuilder(); //Microsoft.Extensions...
+        builder.SetBasePath(Directory.GetCurrentDirectory());
+        builder.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+        var configuration = builder.Build();
+        optionsBuilder.UseSqlServer(configuration.GetConnectionString("Default"));
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -117,38 +120,6 @@ public partial class PrnContext : DbContext
             entity.HasOne(d => d.ToUser).WithMany(p => p.ChatMessageToUsers)
                 .HasForeignKey(d => d.ToUserId)
                 .HasConstraintName("FK_ChatMessage_Users1");
-        });
-
-        modelBuilder.Entity<Document>(entity =>
-        {
-            entity.HasKey(e => e.DocumentId).HasName("PK__Document__1ABEEF6F47E2923B");
-
-            entity.Property(e => e.DocumentId).HasColumnName("DocumentID");
-            entity.Property(e => e.FilePath)
-                .HasMaxLength(255)
-                .IsUnicode(false);
-            entity.Property(e => e.RegistrationId).HasColumnName("RegistrationID");
-            entity.Property(e => e.UploadDate).HasDefaultValueSql("(getdate())");
-
-            entity.HasOne(d => d.DocumentType).WithMany(p => p.Documents)
-                .HasForeignKey(d => d.DocumentTypeId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Documents__Docum__6754599E");
-
-            entity.HasOne(d => d.Registration).WithMany(p => p.Documents)
-                .HasForeignKey(d => d.RegistrationId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Documents__Regis__68487DD7");
-        });
-
-        modelBuilder.Entity<DocumentType>(entity =>
-        {
-            entity.HasKey(e => e.DocumentTypeId).HasName("PK__Document__DBA390E1B513D030");
-
-            entity.Property(e => e.Description).HasColumnType("text");
-            entity.Property(e => e.Name)
-                .HasMaxLength(100)
-                .IsUnicode(false);
         });
 
         modelBuilder.Entity<HeadOfHouseHold>(entity =>
