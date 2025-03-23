@@ -195,23 +195,23 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Số hộ khẩu:" Grid.Row="0" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
                                 <TextBox x:Name="txtSoHoKhau" Grid.Row="0" Grid.Column="1" Margin="5" Width="250"
-                                           Text="{Binding SelectedHousehold.HouseholdId}" IsReadOnly="True"/>
+                               Text="{Binding SelectedHousehold.HouseholdId}" IsReadOnly="True"/>
                                 <TextBlock Text="Địa chỉ:" Grid.Row="1" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
                                 <TextBox x:Name="txtDiaChiHoHienTai" Grid.Row="1" Grid.Column="1" Margin="5" Width="250"
-                                         Text="{Binding HouseholdAddress}" IsReadOnly="True"/>
+                             Text="{Binding HouseholdAddress}" IsReadOnly="True"/>
                                 <!-- Make read-only -->
                                 <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Margin="5" Content="..."
-                                        Command="{Binding SelectHouseHoldCommand}"/>
+                            Command="{Binding SelectHouseHoldCommand}"/>
                             </Grid>
                         </GroupBox>
 
                         <GroupBox Header="Chọn thành viên tách ra" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
                             <StackPanel>
                                 <DataGrid x:Name="dgMembersToSeparate"
-                                      AutoGenerateColumns="False"
-                                      Height="200"
-                                      Margin="5"
-                                      ItemsSource="{Binding HouseholdMembers}">
+                              AutoGenerateColumns="False"
+                              Height="200"
+                              Margin="5"
+                              ItemsSource="{Binding HouseholdMembers}">
                                     <DataGrid.Columns>
                                         <DataGridCheckBoxColumn Header="Chọn" Binding="{Binding IsSelected}" Width="50"/>
                                         <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*" IsReadOnly="True"/>
@@ -226,7 +226,8 @@
 
                         <GroupBox Header="Thông tin hộ mới" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
                             <StackPanel>
-                                <CheckBox x:Name="chkSameAddress" Content="Sử dụng địa chỉ hộ hiện tại" Margin="5" />
+                                <CheckBox x:Name="chkSameAddress" Content="Sử dụng địa chỉ hộ hiện tại" Margin="5" 
+                                          IsChecked="{Binding IsUsingSameAddress, Mode=TwoWay}"/>
 
                                 <Grid x:Name="gridNewAddress" Margin="5" Visibility="Collapsed">
                                     <!-- Initially hidden -->
@@ -260,14 +261,20 @@
                             </StackPanel>
                         </GroupBox>
 
+                        <!-- Thêm ô nhập lí do tách hộ -->
+                        <GroupBox Header="Lí do tách hộ" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
+                            <TextBox x:Name="txtLyDoTachHo" AcceptsReturn="True" Height="100" Margin="5" TextWrapping="Wrap"/>
+                        </GroupBox>
+
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
                             <Button Content="Hủy" Width="100" Height="30" Margin="0,0,10,0" />
                             <Button Content="Tách hộ khẩu" Width="120" Height="30" Background="LightBlue" 
-                                    Command="{Binding SeparateHouseholdsCommand}"/>
+                        Command="{Binding SeparateHouseholdsCommand}"/>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
+
 
             <TabItem Header="Chuyển hộ khẩu trực tuyến">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">

@@ -25,7 +25,7 @@ namespace Resident.ViewModels
         private string password = string.Empty;
 
         [ObservableProperty]
-        private Role selectedRole;
+        private string selectedRole;
 
         [ObservableProperty]
         private string errorMessage = string.Empty;
@@ -43,7 +43,7 @@ namespace Resident.ViewModels
             _userDAO = _serviceProvider.GetRequiredService<UserDAO>();
 
             // Đặt mặc định là Citizen
-            SelectedRole = Role.Citizen;
+            SelectedRole = Role.Citizen.ToString();
 
             LoginCommand = new AsyncRelayCommand(LoginAsync);
             RegisterCommand = new AsyncRelayCommand(RegisterAsync);
@@ -61,16 +61,16 @@ namespace Resident.ViewModels
                     Window nextWindow = null;
                     switch (user.Role)
                     {
-                        case Role.Admin:
+                        case "Admin":
                             nextWindow = _serviceProvider.GetRequiredService<AdminWindow>();
                             break;
-                        case Role.Police:
+                        case "Police":
                             nextWindow = _serviceProvider.GetRequiredService<PoliceWindow>();
                             break;
-                        case Role.AreaLeader:
+                        case "AreaLeader":
                             nextWindow = _serviceProvider.GetRequiredService<AreaLeaderWindow>();
                             break;
-                        case Role.Citizen:
+                        case "Citizen":
                             _currentUserService.CurrentUser = user;
                             var citizenViewModel = _serviceProvider.GetRequiredService<CitizenViewModel>();
                             var citizenWindow = _serviceProvider.GetRequiredService<CitizenWindow>();

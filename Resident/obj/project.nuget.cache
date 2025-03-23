@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7RGOINP4Sy4=",
+  "dgSpecHash": "iIU12+lUDp0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ngoch\\source\\repos\\Resident\\Resident\\Resident.csproj",
+  "projectFilePath": "D:\\github\\residence_registration\\Resident\\Resident.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ngoch\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ngoch\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

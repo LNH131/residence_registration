@@ -39,6 +39,21 @@ namespace Resident.ViewModels
             }
         }
 
+        private bool _isUsingSameAddress;
+
+        public bool IsUsingSameAddress
+        {
+            get { return _isUsingSameAddress; }
+            set
+            {
+                if (_isUsingSameAddress != value)
+                {
+                    _isUsingSameAddress = value;
+                    OnPropertyChanged(nameof(IsUsingSameAddress));
+                }
+            }
+        }
+
         private ObservableCollection<HouseholdMemberDisplayInfo> _householdMembers;
         public ObservableCollection<HouseholdMemberDisplayInfo> HouseholdMembers
         {
@@ -178,23 +193,55 @@ namespace Resident.ViewModels
                 return;
             }
 
-            // Xử lý logic tách hộ
-            foreach (var selectedMember in selectedMembers)
+            using (var db = new PrnContext())
             {
-                // Lấy UserId (đã lưu trữ trong HouseholdMemberDisplayInfo)
-                int userId = selectedMember.UserId;
+                using (var transaction = db.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        HouseholdSeparation householdSeparation = new HouseholdSeparation
+                        {
+                            OriginalHouseholdId = 2,
+                            NewHouseholdId = null,
+                            RequestDate = DateTime.Now,
+                            Status = Status.Pending.ToString(),
+                            ApprovedBy = null,
+                            ApprovalDate = null,
+                            Comments = null
+                        };
 
-                Debug.WriteLine($"Selected Member: {selectedMember.FullName}, IsNewHead: {selectedMember.IsNewHead}, UserId: {userId}");
-                // Thực hiện các hành động tách hộ, ví dụ:
-                // 1. Tạo Household mới.
-                // 2. Tạo HouseholdMember mới với Relationship = "Chủ hộ" nếu IsNewHead là true,
-                //    hoặc với Relationship như cũ nếu IsNewHead là false.
-                // 3. Thêm HouseholdMember mới vào Household mới.
-                // 4. Cập nhật cơ sở dữ liệu.
-                // ...
+                        db.HouseholdSeparations.Add(householdSeparation);
+                        db.SaveChanges();
 
-                Debug.WriteLine($"Selected Member: {selectedMember.FullName}, IsNewHead: {selectedMember.IsNewHead}, UserId: {userId}");
+                        foreach (var selectedMember in selectedMembers)
+                        {
+                            SeparationMember separationMember = new SeparationMember
+                            {
+                                SeparationId = householdSeparation.SeparationId,
+                                UserId = selectedMember.UserId,
+                                NewRelationship = "chu ho",
+                                IsNewHeadOfHousehold = selectedMember.IsNewHead
+                            };
+
+                            db.SeparationMembers.Add(separationMember);
+                        }
+                        db.SaveChanges();
+
+                        // Commit transaction if all commands succeed
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Rollback transaction if any error occurs
+                        transaction.Rollback();
+                        Debug.WriteLine($"Error: {ex.Message}");
+                    }
+                }
             }
+
+
+
+
 
             MessageBox.Show("Tách hộ thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
 

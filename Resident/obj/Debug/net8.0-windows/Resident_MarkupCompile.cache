@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\ngoch\source\repos\Resident\Resident\obj\Debug\net8.0-windows\
+D:\github\residence_registration\Resident\obj\Debug\net8.0-windows\
 Resident
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\ngoch\source\repos\Resident\Resident\App.xaml
+D:\github\residence_registration\Resident\App.xaml
 12847223987
 
-58980135829
+60-809748707
 252452411520
 MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\LoginWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\UpdateCitizenProfileWindow.xaml;
 

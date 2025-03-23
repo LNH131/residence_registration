@@ -175,10 +175,10 @@ namespace Resident.View
                         {
                             UserId = _currentUser.UserId,
                             AddressId = address.AddressId,
-                            RegistrationType = RegistrationType.HouseholdRegistration,
+                            RegistrationType = RegistrationType.HouseholdRegistration.ToString(),
                             StartDate = DateOnly.FromDateTime(DateTime.Now),
                             EndDate = null,
-                            Status = Status.Pending,
+                            Status = Status.Pending.ToString(),
                             ApprovedBy = null,
                             Comments = null 
                         };

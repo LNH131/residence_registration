@@ -3,9 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Resident.View"
+        xmlns:local="clr-namespace:Resident.View" xmlns:converters="clr-namespace:Resident.Service"
         mc:Ignorable="d"
-        Title="UpdateCitizenProfileWindow" Height="450" Width="800">
+        Title="UpdateCitizenProfileWindow" Height="600" Width="800">
+
+    <Window.Resources>
+        <converters:DateOnlyConverter x:Key="DateOnlyConverter"/>
+    </Window.Resources>
+
     <Grid Margin="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,28 +33,27 @@
                 <!-- Full Name -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Full Name:" Width="150" VerticalAlignment="Center" FontWeight="Bold"/>
-                    <TextBox Width="300" Text="{Binding FullName}"/>
+                    <TextBox Width="300" Text="{Binding CurrentUser.FullName}"/>
                 </StackPanel>
                 <!-- Email (giả sử email không được thay đổi) -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Email:" Width="150" VerticalAlignment="Center" FontWeight="Bold"/>
-                    <TextBox Width="300" Text="{Binding Email}" IsEnabled="False"/>
                 </StackPanel>
                 <!-- ID Card -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="ID Card:" Width="150" VerticalAlignment="Center" FontWeight="Bold"/>
-                    <TextBox Width="300" Text="{Binding IdentityCard}"/>
+                    <TextBox Width="300" Text="{Binding CurrentUser.IdentityCard}"/>
                 </StackPanel>
                 <!-- Birth Date -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Birth Date:" Width="150" VerticalAlignment="Center" FontWeight="Bold"/>
-                    <DatePicker Width="300" SelectedDate="{Binding Birthday}"/>
+                    <DatePicker Width="300" SelectedDate="{Binding CurrentUser.Birthday, Converter={StaticResource DateOnlyConverter}}"/>
                 </StackPanel>
                 <!-- Gender -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Gender:" Width="150" VerticalAlignment="Center" FontWeight="Bold"/>
                     <ComboBox Width="300" 
-                              SelectedValue="{Binding Sex}" 
+                              SelectedValue="{Binding CurrentUser.Sex}" 
                               SelectedValuePath="Content">
                         <ComboBoxItem Content="Male"/>
                         <ComboBoxItem Content="Female"/>
@@ -85,6 +89,16 @@
                         <TextBlock Text="Country:" Width="150" VerticalAlignment="Center"/>
                         <TextBox Width="300" Text="{Binding CurrentAddress.Country}"/>
                     </StackPanel>
+                    <!-- Ward -->
+                    <StackPanel Orientation="Horizontal" Margin="0,5">
+                        <TextBlock Text="Ward:" Width="150" VerticalAlignment="Center"/>
+                        <TextBox Width="300" Text="{Binding CurrentAddress.Ward}"/>
+                    </StackPanel>
+                    <!-- District -->
+                    <StackPanel Orientation="Horizontal" Margin="0,5">
+                        <TextBlock Text="District:" Width="150" VerticalAlignment="Center"/>
+                        <TextBox Width="300" Text="{Binding CurrentAddress.District}"/>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>
@@ -94,7 +108,7 @@
             <Button Content="Save" Width="100" Height="35" Margin="10,0" 
                     Background="LightGreen" FontWeight="Bold"/>
             <Button Content="Cancel" Width="100" Height="35" Margin="10,0"
-                    Background="LightCoral" FontWeight="Bold"/>
+                    Background="LightCoral" FontWeight="Bold" Click="Cancel_Click"/>
         </StackPanel>
     </Grid>
 </Window>

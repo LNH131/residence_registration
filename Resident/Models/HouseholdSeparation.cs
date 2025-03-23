@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Resident.Enums;
 
 namespace Resident.Models;
 
@@ -14,7 +13,7 @@ public partial class HouseholdSeparation
 
     public DateTime RequestDate { get; set; }
 
-    public Status Status { get; set; } 
+    public string Status { get; set; } = null!;
 
     public int? ApprovedBy { get; set; }
 

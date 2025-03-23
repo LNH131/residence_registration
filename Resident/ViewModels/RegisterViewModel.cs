@@ -29,7 +29,7 @@ namespace Resident.ViewModels
         private string confirmPassword = string.Empty;
 
         [ObservableProperty]
-        private Role selectedRole;
+        private string selectedRole;
 
         [ObservableProperty]
         private Area selectedArea;
@@ -47,13 +47,15 @@ namespace Resident.ViewModels
         public IAsyncRelayCommand RegisterCommand { get; }
         public IRelayCommand BackCommand { get; }
 
+        // ... other code ...
+
         public RegisterViewModel(PrnContext context, IServiceProvider serviceProvider)
         {
             _context = context;
             _serviceProvider = serviceProvider;
 
             Roles = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());
-            SelectedRole = Roles.FirstOrDefault();
+            SelectedRole = Roles.FirstOrDefault().ToString(); // Fix the error by converting Role to string
 
             Areas = new ObservableCollection<Area>(_context.Areas.ToList());
             SelectedArea = Areas.FirstOrDefault();
@@ -99,7 +101,7 @@ namespace Resident.ViewModels
                 FullName = FullName,
                 Email = Email,
                 Password = BCrypt.Net.BCrypt.HashPassword(Password),
-                Role = SelectedRole,
+                Role = SelectedRole.ToString(),
                 AreaId = SelectedArea?.AreaId,
                 CurrentAddressId = SelectedAddress.AddressId,
                 CurrentAddress = SelectedAddress

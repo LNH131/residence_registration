@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Resident.Enums;
 
 namespace Resident.Models;
 
@@ -14,7 +13,7 @@ public partial class User
 
     public string Password { get; set; } = null!;
 
-    public Role Role { get; set; } 
+    public string Role { get; set; } = null!;
 
     public int? AreaId { get; set; }
 

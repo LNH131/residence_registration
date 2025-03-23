@@ -42,6 +42,8 @@ namespace Resident.ViewModels
         public ICommand MarkAsReadCommand { get; set; }
         public ICommand OpenChatCommand { get; set; }
 
+        public ICommand UpdateProfileCommand { get; set; }
+
         public CitizenViewModel(ICurrentUserService currentUserService, IServiceProvider serviceProvider)
         {
             _currentUserService = currentUserService;
@@ -58,10 +60,17 @@ namespace Resident.ViewModels
             LoadNotificationsCommand = new RelayCommand(o => LoadNotifications());
             MarkAsReadCommand = new RelayCommand(o => MarkNotificationAsRead(), o => SelectedNotification != null);
             OpenChatCommand = new RelayCommand(o => OpenChat());
+            UpdateProfileCommand = new RelayCommand(o => UpdateProfile());
 
             // Load dữ liệu thông báo ban đầu
             LoadNotifications();
             _serviceProvider = serviceProvider;
+        }
+
+        private void UpdateProfile()
+        {
+            var updateCitizenProfileWindow = _serviceProvider.GetRequiredService<UpdateCitizenProfileWindow>();
+            updateCitizenProfileWindow.ShowDialog();
         }
 
         private void LoadNotifications()

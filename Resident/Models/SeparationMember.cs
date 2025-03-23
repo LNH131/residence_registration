@@ -5,6 +5,8 @@ namespace Resident.Models;
 
 public partial class SeparationMember
 {
+    public int SeparationMemberId { get; set; }
+
     public int SeparationId { get; set; }
 
     public int UserId { get; set; }

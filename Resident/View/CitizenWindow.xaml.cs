@@ -14,7 +14,6 @@ namespace Resident.View
 {
     public partial class CitizenWindow : Window
     {
-        private readonly UserDAO _userDAO;
         private readonly User _currentUser;
         private readonly CitizenViewModel _viewModel;
         public CitizenWindow(CitizenViewModel viewModel)
@@ -31,12 +30,6 @@ namespace Resident.View
             var loginWindow = serviceProvider.GetRequiredService<LoginWindow>();
             loginWindow.Show();
             this.Close();
-        }
-
-        private void UpdateProfile_Click(object sender, RoutedEventArgs e)
-        {
-            var updateProfileWindow = new UpdateCitizenProfileWindow(_userDAO, _currentUser);
-            updateProfileWindow.ShowDialog();
         }
 
         public ObservableCollection<Role> Roles { get; } = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());

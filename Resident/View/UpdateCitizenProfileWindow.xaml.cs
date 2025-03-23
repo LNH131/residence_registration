@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Resident.DAO;
 using Resident.Models;
+using Resident.Service;
+using Resident.ViewModels;
 
 namespace Resident.View
 {
@@ -22,18 +24,23 @@ namespace Resident.View
     /// </summary>
     public partial class UpdateCitizenProfileWindow : Window
     {
-        private readonly UserDAO _userDAO;
-        private readonly User _currentUser;
-        public UpdateCitizenProfileWindow(UserDAO userDAO, User currentUser)
+        private UpdateCitizenProfileViewModel _viewModel;
+        private User _currentUser;
+        private Address _currentAddress;
+        public UpdateCitizenProfileWindow(UpdateCitizenProfileViewModel viewModel)
         {
             InitializeComponent();
 
-            _userDAO = userDAO;
-            _currentUser = currentUser;
-            Debug.WriteLine(_currentUser);
+            _viewModel = viewModel;
+            _currentUser = viewModel.CurrentUser;
+            _currentAddress = viewModel.CurrentAddress;
+            DataContext = _viewModel;
+        }
 
-            // Set DataContext for data binding
-            DataContext = _currentUser;
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+            Close();
         }
     }
 }

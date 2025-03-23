@@ -14,7 +14,7 @@ namespace Resident.DAO
             _context = context;
         }
 
-        public async Task<User?> AuthenticateUser(string email, string password, Role selectedRole)
+        public async Task<User?> AuthenticateUser(string email, string password, string selectedRole)
         {
             Debug.WriteLine("selectedRole: " + selectedRole);
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);

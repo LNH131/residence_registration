@@ -93,7 +93,7 @@ namespace Resident.ViewModels
                 FullName = FullName,
                 Email = Email,
                 Password = BCrypt.Net.BCrypt.HashPassword(Password),
-                Role = SelectedRole,
+                Role = SelectedRole.ToString(),
                 AreaId = SelectedArea?.AreaId,
                 CurrentAddressId = SelectedAddress.AddressId,
                 CurrentAddress = SelectedAddress

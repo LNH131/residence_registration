@@ -51,13 +51,13 @@ namespace Resident.ViewModels
         new Registration
         {
             RegistrationId = 1001,
-            Status = Resident.Enums.Status.Pending,
+            Status = Resident.Enums.Status.Pending.ToString(),
             User = new User { UserId = 2001, FullName = "Nguyễn Văn B" }
         },
         new Registration
         {
             RegistrationId = 1002,
-            Status = Resident.Enums.Status.Pending,
+            Status = Resident.Enums.Status.Pending.ToString(),
             User = new User { UserId = 2002, FullName = "Lê Thị C" }
         }
     };
@@ -70,7 +70,7 @@ namespace Resident.ViewModels
                 MessageBox.Show("Vui lòng chọn hồ sơ để duyệt!");
                 return;
             }
-            SelectedRegistration.Status = Status.Approved;
+            SelectedRegistration.Status = Status.Approved.ToString();
             // Ở đây bạn có thể gọi service cập nhật DB
             MessageBox.Show($"Đã duyệt hồ sơ ID={SelectedRegistration.RegistrationId}");
         }
