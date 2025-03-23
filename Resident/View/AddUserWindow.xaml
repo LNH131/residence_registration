@@ -6,44 +6,44 @@
         xmlns:local="clr-namespace:Resident.View"
         mc:Ignorable="d"
         Title="AddUserWindow" Height="450" Width="800">
-    <StackPanel Margin="20">
-        <Label Content="Full Name:" />
-        <TextBox Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged}" />
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Full name :" HorizontalAlignment="Left" Margin="6,14,0,0" VerticalAlignment="Top" FontSize="15" Grid.Column="1" Height="30" Width="81"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="6,44,0,0" VerticalAlignment="Top" FontSize="15" Grid.Column="1" Height="30" Width="49"/>
+        <Label Content="Passworld:" HorizontalAlignment="Left" Margin="6,74,0,0" VerticalAlignment="Top" FontSize="15" Grid.Column="1" Height="30" Width="79"/>
+        <Label Content="Role : " HorizontalAlignment="Left" Margin="6,104,0,0" VerticalAlignment="Top" FontSize="15" Grid.Column="1" Height="30" Width="50"/>
+        <TextBox x:Name="fullName" HorizontalAlignment="Left" Margin="68,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Height="30" FontSize="15" Grid.Column="1"/>
+        <TextBox x:Name="email" HorizontalAlignment="Left" Margin="68,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Height="30" FontSize="15" Grid.Column="1"/>
+        <TextBox x:Name="passworld" HorizontalAlignment="Left" Margin="68,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="186" Height="30" FontSize="15" Grid.Column="1"/>
 
-        <Label Content="Email:" />
-        <TextBox Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}" />
+        <Button x:Name="Add_click" Content="Add" HorizontalAlignment="Left" Margin="135,171,0,0" VerticalAlignment="Top" Click="Add_Click" Grid.Column="1" Height="20" Width="26"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="168,171,0,0" VerticalAlignment="Top" Click="Update_Click" Grid.Column="1" Height="20" Width="43"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="216,171,0,0" VerticalAlignment="Top" Click="Deleted_Click" Grid.Column="1" Height="20" Width="38"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="456,176,0,0" VerticalAlignment="Top" Width="52" Click="Save_Click" Grid.Column="1" Height="20"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="656,378,0,0" VerticalAlignment="Top" Grid.Column="1" Height="30" Width="65" Click="Button_Click"/>
+        <DataGrid x:Name="dgUser" AutoGenerateColumns="False" Margin="275,14,9,263" SelectedCellsChanged="dgUser_SelectedCellsChanged" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="*"/>
+                <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
-        <Label Content="Password:" />
-        <PasswordBox x:Name="PasswordBox" PasswordChanged="PasswordBox_PasswordChanged" />
+        <DataGrid x:Name="dtUser" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,201,10,61" Grid.Column="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="UserId" Width="*" Binding="{Binding UserId}"/>
+                <DataGridTextColumn Header="Full Name" Width="*" Binding="{Binding FullName}"/>
+                <DataGridTextColumn Header="Email" Width="*" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Role" Width="*" Binding="{Binding Role}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ComboBox x:Name="role"
+          ItemsSource="{Binding Roles}" 
+          SelectedItem="{Binding SelectedRole}" HorizontalAlignment="Left" Margin="68,105,0,273" Width="186" Grid.Column="1"/>
+    </Grid>
 
-
-
-        <Label Content="Role:" />
-        <ComboBox ItemsSource="{Binding Roles}"
-              SelectedItem="{Binding SelectedRole}"
-              Width="150" />
-
-        <Label Content="Area:" />
-        <ComboBox ItemsSource="{Binding Areas}" 
-              SelectedItem="{Binding SelectedArea}" 
-              DisplayMemberPath="AreaName"
-              Width="150" />
-
-        <Label Content="Current Address:" />
-        <ComboBox ItemsSource="{Binding Addresses}"
-              SelectedItem="{Binding SelectedAddress}"
-              DisplayMemberPath="Street"
-              Width="150" />
-
-        <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
-            <Button Content="Register" 
-                Command="{Binding RegisterCommand}"
-                Width="100" Margin="0,0,10,0" />
-            <Button Content="Back" 
-                Command="{Binding BackCommand}"
-                Width="100" />
-        </StackPanel>
-
-        <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" TextWrapping="Wrap" />
-    </StackPanel>
 </Window>
