@@ -199,10 +199,16 @@ namespace Resident.ViewModels
                 {
                     try
                     {
+                        Debug.WriteLine("SelectedHousehold: " + SelectedHousehold.HouseholdId);
+                        int? newHouse = null;
+                        if (IsUsingSameAddress)
+                        {
+                            newHouse = SelectedHousehold.HouseholdId;
+                        }
                         HouseholdSeparation householdSeparation = new HouseholdSeparation
                         {
-                            OriginalHouseholdId = 2,
-                            NewHouseholdId = null,
+                            OriginalHouseholdId = SelectedHousehold.HouseholdId,
+                            NewHouseholdId = newHouse,
                             RequestDate = DateTime.Now,
                             Status = Status.Pending.ToString(),
                             ApprovedBy = null,
@@ -243,7 +249,7 @@ namespace Resident.ViewModels
 
 
 
-            MessageBox.Show("Tách hộ thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Đã gửi đơn tách hộ thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
 
             // Clear selection and IsNewHead sau khi tách
             foreach (var member in HouseholdMembers)

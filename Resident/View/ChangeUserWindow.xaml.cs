@@ -32,6 +32,10 @@ namespace Resident.View
             users = new List<User>();
             dtUserImport.ItemsSource = _context.Users.ToList();
         }
-        
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();   
+        }
     }
 }

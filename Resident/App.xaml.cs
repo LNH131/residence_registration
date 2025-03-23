@@ -51,9 +51,10 @@ namespace Resident
             services.AddTransient<AddUserViewModel>();
             services.AddTransient<HouseHoldSelectionWindow>();
             services.AddTransient<HouseHoldSelectionViewModel>();
+            services.AddTransient<UpdateCitizenProfileViewModel>();
             services.AddTransient<UpdateCitizenProfileWindow>(); 
-            services.AddTransient<StatusOverviewWindow>(); 
-            services.AddTransient<StatusOverviewViewModel>();
+            services.AddTransient<StatusOverviewWindow>();
+            services.AddTransient<StatusOverviewViewModel>(); 
 
         }
         protected override async void OnStartup(StartupEventArgs e)
