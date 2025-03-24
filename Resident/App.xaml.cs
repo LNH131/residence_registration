@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Resident.DAO;
 using Resident.Models;
 using Resident.Service;
+using Resident.Services;
 using Resident.View;
 using Resident.ViewModels;
 using System.IO;
@@ -29,6 +30,7 @@ namespace Resident
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
+            services.AddSingleton<IConfiguration>(configuration);
 
             services.AddDbContext<PrnContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("Default")));
@@ -51,9 +53,25 @@ namespace Resident
             services.AddTransient<AddUserViewModel>();
             services.AddTransient<HouseHoldSelectionWindow>();
             services.AddTransient<HouseHoldSelectionViewModel>();
-            services.AddTransient<UpdateCitizenProfileWindow>(); 
-            services.AddTransient<StatusOverviewWindow>(); 
+            services.AddTransient<UpdateCitizenProfileWindow>();
+            services.AddTransient<StatusOverviewWindow>();
             services.AddTransient<StatusOverviewViewModel>();
+            services.AddTransient<PoliceWindow>();
+            services.AddTransient<PoliceViewModel>();
+            services.AddTransient<PoliceChatSelectionWindow>();
+            services.AddTransient<PoliceChatSelectionViewModel>();
+            services.AddTransient<PoliceChatViewModel>();
+            services.AddSingleton<ICurrentUserService, CurrentUserService>();
+            services.AddTransient<PoliceViewModel>();
+            services.AddTransient<PoliceChatSelectionViewModel>();
+            services.AddTransient<PoliceChatSelectionWindow>();
+            services.AddTransient<HouseholdTransferDetailsViewModel>();
+            services.AddTransient<HouseholdTransferDetailsWindow>();
+            services.AddTransient<HouseholdSeparationDetailsViewModel>();
+            services.AddTransient<HouseholdSeparationDetailsWindow>();
+            services.AddTransient<IPoliceProcessingService, PoliceProcessingService>();
+            services.AddSingleton<ICurrentUserService, CurrentUserService>();
+            services.AddTransient<INotificationService, NotificationService>();
 
         }
         protected override async void OnStartup(StartupEventArgs e)

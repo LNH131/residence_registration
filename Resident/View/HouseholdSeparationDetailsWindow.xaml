@@ -1,0 +1,41 @@
+﻿<Window x:Class="Resident.View.HouseholdSeparationDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chi tiết tách hộ" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Chi tiết tách hộ" 
+                       FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+            <!-- Display key household separation details -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Mã tách hộ:" FontWeight="Bold" Width="150"/>
+                <TextBlock Text="{Binding Separation.SeparationId}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Hộ ban đầu:" FontWeight="Bold" Width="150"/>
+                <TextBlock Text="{Binding Separation.OriginalHousehold.HouseholdId}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Hộ mới:" FontWeight="Bold" Width="150"/>
+                <TextBlock Text="{Binding Separation.NewHousehold.HouseholdId}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Ngày yêu cầu:" FontWeight="Bold" Width="150"/>
+                <TextBlock Text="{Binding Separation.RequestDate, StringFormat='dd/MM/yyyy'}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Trạng thái:" FontWeight="Bold" Width="150"/>
+                <TextBlock Text="{Binding Separation.Status}"/>
+            </StackPanel>
+            <!-- Action Buttons for preliminary approval and rejection -->
+            <StackPanel Orientation="Horizontal" Margin="20" HorizontalAlignment="Center">
+                <Button Content="Duyệt sơ bộ" Width="120" Margin="5"
+                        Command="{Binding ApproveCommand}"/>
+                <Button Content="Từ chối" Width="120" Margin="5"
+                        Command="{Binding RejectCommand}"/>
+            </StackPanel>
+            <Button Content="Đóng" Width="100" Margin="10" HorizontalAlignment="Right" Click="Close_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

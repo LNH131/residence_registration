@@ -54,6 +54,7 @@ namespace Resident.ViewModels
             try
             {
                 ErrorMessage = string.Empty;
+                OnPropertyChanged(nameof(ErrorMessage));
 
                 var user = await _userDAO.AuthenticateUser(Email, Password, SelectedRole);
                 if (user != null)
@@ -62,12 +63,15 @@ namespace Resident.ViewModels
                     switch (user.Role)
                     {
                         case "Admin":
+                            _currentUserService.CurrentUser = user;
                             nextWindow = _serviceProvider.GetRequiredService<AdminWindow>();
                             break;
                         case "Police":
+                            _currentUserService.CurrentUser = user;
                             nextWindow = _serviceProvider.GetRequiredService<PoliceWindow>();
                             break;
                         case "AreaLeader":
+                            _currentUserService.CurrentUser = user;
                             nextWindow = _serviceProvider.GetRequiredService<AreaLeaderWindow>();
                             break;
                         case "Citizen":
@@ -82,21 +86,26 @@ namespace Resident.ViewModels
                     if (nextWindow != null)
                     {
                         nextWindow.Show();
-                        // Đóng LoginWindow hiện tại thông qua DI (tìm theo kiểu)
                         var loginWindow = Application.Current.Windows.OfType<LoginWindow>().FirstOrDefault();
                         loginWindow?.Close();
                     }
                 }
                 else
                 {
+                    // Nếu đăng nhập sai thì hiển thị MessageBox.
+                    MessageBox.Show("Invalid email, password, or role.", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     ErrorMessage = "Invalid email, password, or role.";
+                    OnPropertyChanged(nameof(ErrorMessage));
                 }
             }
             catch (System.Exception ex)
             {
+                MessageBox.Show("An error occurred during login: " + ex.Message, "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 ErrorMessage = "An error occurred during login: " + ex.Message;
+                OnPropertyChanged(nameof(ErrorMessage));
             }
         }
+
 
         private async Task RegisterAsync()
         {

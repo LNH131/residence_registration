@@ -1,17 +1,17 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Resident.View;
-using Resident;
+using Resident.Service;
 using System.Windows;
 
 namespace Resident.View
 {
     public partial class AreaLeaderWindow : Window
     {
-        public AreaLeaderWindow()
+        public AreaLeaderWindow(ICurrentUserService currentUserService, INotificationService notificationService)
         {
             InitializeComponent();
-            this.btnLogout.Click += this.Logout_Click;
+            DataContext = new AreaLeaderViewModel(currentUserService, notificationService);
         }
+
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
             var serviceProvider = ((App)Application.Current).ServiceProvider;
@@ -20,4 +20,6 @@ namespace Resident.View
             this.Close();
         }
     }
+
+
 }

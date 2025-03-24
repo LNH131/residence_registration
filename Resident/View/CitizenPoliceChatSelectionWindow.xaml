@@ -1,0 +1,34 @@
+﻿<Window x:Class="Resident.View.CitizenPoliceChatSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select Police for Chat" Height="350" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Text="Chọn Police để chat" 
+                   FontSize="18" 
+                   FontWeight="Bold" 
+                   Margin="0,0,0,10" />
+
+        <!-- Main content: ComboBox hiển thị danh sách Police -->
+        <ComboBox Grid.Row="1"
+                  ItemsSource="{Binding AvailablePolice}"
+                  SelectedItem="{Binding SelectedPolice, Mode=TwoWay}"
+                  DisplayMemberPath="FullName"
+                  Height="30" />
+
+        <!-- Footer: Các nút Chat và Cancel -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Chat" Width="80" Margin="0,0,10,0"
+                    Command="{Binding OpenChatCommand}"/>
+            <Button Content="Cancel" Width="80"
+                    Command="{Binding CancelCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

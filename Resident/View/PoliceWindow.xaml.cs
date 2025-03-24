@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Resident.View;
-using Resident;
+using Resident.Enums;
+using Resident.Service;
+using Resident.Services; // For IPoliceProcessingService
+using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace Resident.View
@@ -10,8 +12,17 @@ namespace Resident.View
         public PoliceWindow()
         {
             InitializeComponent();
-            this.btnLogout.Click += this.Logout_Click;
+
+            // Resolve any additional services you need from the DI container
+            var serviceProvider = ((App)Application.Current).ServiceProvider;
+            var policeProcessingService = serviceProvider.GetRequiredService<IPoliceProcessingService>();
+
+            // Now create the PoliceViewModel using both services
+            DataContext = new PoliceViewModel(currentUserService, policeProcessingService);
+
+            this.btnLogout.Click += Logout_Click;
         }
+
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
             var serviceProvider = ((App)Application.Current).ServiceProvider;
@@ -19,5 +30,8 @@ namespace Resident.View
             loginWindow.Show();
             this.Close();
         }
+
+        public ObservableCollection<Role> Roles { get; }
+            = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());
     }
 }

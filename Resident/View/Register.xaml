@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewmodels="clr-namespace:Resident.ViewModels"
         mc:Ignorable="d"
-        Title="Register" Height="450" Width="400"
+        Title="Register" Height="500" Width="400"
         WindowStartupLocation="CenterScreen">
 
     <StackPanel Margin="20">
@@ -20,6 +20,10 @@
 
         <Label Content="Confirm Password:" />
         <PasswordBox x:Name="ConfirmPasswordBox" PasswordChanged="ConfirmPasswordBox_PasswordChanged" />
+
+        <!-- Thêm trường CCCD -->
+        <Label Content="CCCD:" />
+        <TextBox Text="{Binding Cccd, UpdateSourceTrigger=PropertyChanged}" />
 
         <Label Content="Role:" />
         <ComboBox ItemsSource="{Binding Roles}"

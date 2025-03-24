@@ -1,5 +1,4 @@
-﻿using Resident.Models;
-using Resident.ViewModels;
+﻿using Resident.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -21,11 +20,12 @@ namespace Resident.View
 
         private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            if (sender is PasswordBox pb)
+            if (DataContext is LoginViewModel vm)
             {
-                _viewModel.Password = pb.Password;
+                vm.Password = ((PasswordBox)sender).Password;
             }
         }
+
 
         // Các hàm khác (như drag window, close, v.v.) giữ nguyên
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)

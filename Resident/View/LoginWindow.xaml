@@ -58,8 +58,7 @@
         <Button Grid.Row="5" Content="Login" Command="{Binding LoginCommand}"
                 Height="35" Width="100" HorizontalAlignment="Center" Margin="20"/>
 
-        <!-- Thông báo lỗi/Thông báo từ ViewModel -->
         <TextBlock Grid.Row="6" Text="{Binding ErrorMessage}" 
-                   Foreground="Red" Margin="10" TextWrapping="Wrap"/>
+           Foreground="Red" Margin="10" TextWrapping="Wrap"/>
     </Grid>
 </Window>

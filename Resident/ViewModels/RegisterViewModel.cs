@@ -7,7 +7,6 @@ using Resident.Models;
 using Resident.View;
 using System.Collections.ObjectModel;
 using System.Windows;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Resident.ViewModels
 {
@@ -28,6 +27,10 @@ namespace Resident.ViewModels
         [ObservableProperty]
         private string confirmPassword = string.Empty;
 
+        // Thêm thuộc tính CCCD
+        [ObservableProperty]
+        private string cccd = string.Empty;
+
         [ObservableProperty]
         private string selectedRole;
 
@@ -47,15 +50,13 @@ namespace Resident.ViewModels
         public IAsyncRelayCommand RegisterCommand { get; }
         public IRelayCommand BackCommand { get; }
 
-        // ... other code ...
-
         public RegisterViewModel(PrnContext context, IServiceProvider serviceProvider)
         {
             _context = context;
             _serviceProvider = serviceProvider;
 
-            Roles = new ObservableCollection<Role>(Enum.GetValues(typeof(Role)).Cast<Role>());
-            SelectedRole = Roles.FirstOrDefault().ToString(); // Fix the error by converting Role to string
+            Roles = new ObservableCollection<Role>(System.Enum.GetValues(typeof(Role)).Cast<Role>());
+            SelectedRole = Roles.FirstOrDefault().ToString();
 
             Areas = new ObservableCollection<Area>(_context.Areas.ToList());
             SelectedArea = Areas.FirstOrDefault();
@@ -72,7 +73,8 @@ namespace Resident.ViewModels
             if (string.IsNullOrWhiteSpace(FullName) ||
                 string.IsNullOrWhiteSpace(Email) ||
                 string.IsNullOrWhiteSpace(Password) ||
-                string.IsNullOrWhiteSpace(ConfirmPassword))
+                string.IsNullOrWhiteSpace(ConfirmPassword) ||
+                string.IsNullOrWhiteSpace(Cccd))
             {
                 ErrorMessage = "Please fill in all required fields.";
                 return;
@@ -104,8 +106,10 @@ namespace Resident.ViewModels
                 Role = SelectedRole.ToString(),
                 AreaId = SelectedArea?.AreaId,
                 CurrentAddressId = SelectedAddress.AddressId,
-                CurrentAddress = SelectedAddress
+                CurrentAddress = SelectedAddress,
+                IdentityCard = Cccd
             };
+
 
             try
             {
@@ -117,7 +121,7 @@ namespace Resident.ViewModels
                 loginWindow.Show();
                 Application.Current.Windows.OfType<Resident.View.Register>().FirstOrDefault()?.Close();
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 ErrorMessage = "Registration failed: " + (ex.InnerException?.Message ?? ex.Message);
             }

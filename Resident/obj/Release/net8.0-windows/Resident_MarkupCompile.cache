@@ -1,0 +1,20 @@
+﻿Resident
+
+
+winexe
+C#
+.cs
+C:\Users\acer\Desktop\CNki5\PRN212\git\residence_registration\Resident\obj\Release\net8.0-windows\
+Resident
+none
+false
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
+C:\Users\acer\Desktop\CNki5\PRN212\git\residence_registration\Resident\App.xaml
+28221339309
+
+100-1379900532
+252-1169303366
+MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderApprovalsOverviewWindow.xaml;View\AreaLeaderChatWindow.xaml;View\AreaLeaderHouseholdChangesWindow.xaml;View\AreaLeaderNotificationWindow.xaml;View\AreaLeaderRegistrationDetailsWindow.xaml;View\AreaLeaderWindow.xaml;View\ChatWindow.xaml;View\CitizenChatWindow.xaml;View\CitizenNotificationWindow.xaml;View\CitizenPoliceChatSelectionWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\HouseholdSeparationDetailsWindow.xaml;View\HouseholdTransferDetailsWindow.xaml;View\LoginWindow.xaml;View\PoliceApprovalsOverviewWindow .xaml;View\PoliceChatSelectionWindow.xaml;View\PoliceChatWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\RegistrationDetailsWindow.xaml;View\RegistrationOverviewWindow.xaml;View\StatusOverviewWindow.xaml;View\UpdateCitizenProfileWindow.xaml;
+
+True
+

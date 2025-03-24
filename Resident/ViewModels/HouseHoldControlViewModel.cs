@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Windows;
-using System.Windows.Input;
+﻿using Microsoft.EntityFrameworkCore; // Cần thêm namespace này
 using Microsoft.Extensions.DependencyInjection;
-using Resident.DAO;
 using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
 using Resident.View;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
@@ -103,9 +101,51 @@ namespace Resident.ViewModels
             // Khởi tạo collection để binding
             HouseholdMembers = new ObservableCollection<HouseholdMemberDisplayInfo>();
 
-            SelectHouseHoldCommand = new RelayCommand(o => SelectHouseHold());
+            // Load hộ khẩu hiện tại của người dùng
+            LoadCurrentHousehold();
 
-            SeparateHouseholdsCommand = new RelayCommand(o => SeparateHouseholds(), o => CanSeparateHouseholds());
+            // Khởi tạo các command
+            SelectHouseHoldCommand = new LocalRelayCommand(o => SelectHouseHold());
+            SeparateHouseholdsCommand = new LocalRelayCommand(o => SeparateHouseholds(), o => CanSeparateHouseholds());
+            TransferHouseholdCommand = new LocalRelayCommand(o => TransferHousehold(), o => CanTransferHousehold());
+        }
+
+        /// <summary>
+        /// Lấy hộ khẩu hiện tại dựa trên currentUserId.
+        /// </summary>
+        private void LoadCurrentHousehold()
+        {
+            using (var db = new PrnContext())
+            {
+                // Giả sử người dùng là thành viên của hộ khẩu, ta lấy hộ khẩu có chứa thành viên có UserId bằng CurrentUser.UserId
+                CurrentHousehold = db.Households
+                    .Include(h => h.Address)
+                    .Include(h => h.HouseholdMembers)
+                    .FirstOrDefault(h => h.HouseholdMembers.Any(m => m.UserId == CurrentUser.UserId));
+            }
+        }
+
+        // Các thuộc tính tính toán cho giao diện hiển thị thông tin hộ khẩu hiện tại
+        public int CurrentHouseholdNumber => CurrentHousehold?.HouseholdId ?? 0;
+
+        public string CurrentHouseholdAddress
+        {
+            get
+            {
+                if (CurrentHousehold?.Address != null)
+                {
+                    var addr = CurrentHousehold.Address;
+                    return string.Join(", ", new[]
+                    {
+                        addr.Street,
+                        addr.Ward,
+                        addr.District,
+                        addr.City,
+                        addr.Country
+                    }.Where(s => !string.IsNullOrWhiteSpace(s)));
+                }
+                return string.Empty;
+            }
         }
 
         private User GetUserById(int id)

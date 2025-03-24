@@ -1,0 +1,33 @@
+﻿<Window x:Class="Resident.View.CitizenNotificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Notifications" Height="450" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <TextBlock Text="Your Notifications" FontSize="20" FontWeight="Bold" Grid.Row="0" Margin="0,0,0,10"/>
+
+        <!-- DataGrid hiển thị danh sách thông báo -->
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Notifications}" AutoGenerateColumns="False" 
+                  IsReadOnly="True" SelectionMode="Single" SelectedItem="{Binding SelectedNotification}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="50" Binding="{Binding NotificationId}" />
+                <DataGridTextColumn Header="Message" Width="*" Binding="{Binding Message}" />
+                <DataGridTextColumn Header="Sent Date" Width="150" 
+                                    Binding="{Binding SentDate, StringFormat=\{0:yyyy-MM-dd HH:mm\}}" />
+                <DataGridCheckBoxColumn Header="Read" Width="60" Binding="{Binding IsRead}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Mark as Read" Width="100" Margin="0,0,10,0" Command="{Binding MarkAsReadCommand}" />
+            <Button Content="Close" Width="100" Command="{Binding CloseCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>

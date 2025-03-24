@@ -13,10 +13,34 @@
     <Compile Update="View\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\AreaLeaderApprovalsOverviewWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AreaLeaderChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AreaLeaderHouseholdChangesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AreaLeaderNotificationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AreaLeaderRegistrationDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AreaLeaderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CitizenChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CitizenNotificationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CitizenPoliceChatSelectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\CitizenWindow.xaml.cs">
@@ -28,7 +52,22 @@
     <Compile Update="View\HouseHoldSelectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\HouseholdSeparationDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HouseholdTransferDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PoliceApprovalsOverviewWindow .xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PoliceChatSelectionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PoliceChatWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PoliceWindow.xaml.cs">
@@ -43,46 +82,5 @@
     <Compile Update="View\UpdateCitizenProfileWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\AddUserWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\AdminWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\AreaLeaderWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\ChatWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\CitizenWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\HouseHoldControlWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\HouseHoldSelectionWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\LoginWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\PoliceWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\Register.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\StatusOverviewWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\UpdateCitizenProfileWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
 </Project>
