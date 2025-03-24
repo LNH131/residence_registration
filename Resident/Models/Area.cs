@@ -11,10 +11,6 @@ public partial class Area
 
     public int PoliceId { get; set; }
 
-    public virtual ICollection<HouseholdTransfer> HouseholdTransferFromAreas { get; set; } = new List<HouseholdTransfer>();
-
-    public virtual ICollection<HouseholdTransfer> HouseholdTransferToAreas { get; set; } = new List<HouseholdTransfer>();
-
     public virtual User Police { get; set; } = null!;
 
     public virtual ICollection<User> Users { get; set; } = new List<User>();

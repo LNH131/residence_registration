@@ -279,7 +279,10 @@
             <TabItem Header="Chuyển hộ khẩu trực tuyến">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Orientation="Vertical" Margin="10">
-                        <TextBlock Text="Thông tin chuyển hộ khẩu trực tuyến" FontSize="20" FontWeight="Bold" Margin="0,0,0,20"/>
+                        <TextBlock Text="Thông tin chuyển hộ khẩu trực tuyến" 
+                       FontSize="20" 
+                       FontWeight="Bold" 
+                       Margin="0,0,0,20"/>
                         <GroupBox Header="Hộ khẩu hiện tại" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
                             <Grid Margin="5">
                                 <Grid.RowDefinitions>
@@ -291,26 +294,51 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text="Số hộ khẩu:" Grid.Row="0" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
-                                <TextBox Grid.Row="0" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBox Text="{Binding CurrentHouseholdNumber, Mode=OneWay}" IsReadOnly="True" Grid.Row="0" Grid.Column="1" Margin="5" Width="500" />
                                 <TextBlock Text="Địa chỉ hiện tại:" Grid.Row="1" Grid.Column="0" Margin="0,5" VerticalAlignment="Center"/>
-                                <TextBox Grid.Row="1" Grid.Column="1" Margin="5" Width="250"/>
+                                <TextBox Text="{Binding CurrentHouseholdAddress, Mode=OneWay}" IsReadOnly="True" Grid.Row="1" Grid.Column="1" Margin="5" Width="500"/>
                             </Grid>
                         </GroupBox>
                         <GroupBox Header="Hộ khẩu chuyển đến" FontWeight="Bold" Padding="10" Margin="0,10,0,10">
-                            <StackPanel Orientation="Vertical" Margin="5">
-                                <TextBox Text="Số nhà, đường" Margin="0,5"/>
-                                <TextBox Text="Phường/Xã" Margin="0,5"/>
-                                <TextBox Text="Quận/Huyện" Margin="0,5"/>
-                                <TextBox Text="Tỉnh/Thành phố" Margin="0,5"/>
-                            </StackPanel>
+                            <Grid Margin="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <!-- Số nhà, đường -->
+                                <TextBlock Text="Số nhà, đường:" Grid.Row="0" Grid.Column="0" Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox Text="{Binding TransferStreet, Mode=TwoWay}" Grid.Row="0" Grid.Column="1" Margin="5" Width="250"/>
+                                <!-- Phường/Xã -->
+                                <TextBlock Text="Phường/Xã:" Grid.Row="1" Grid.Column="0" Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox Text="{Binding TransferWard, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" Margin="5" Width="250"/>
+                                <!-- Quận/Huyện -->
+                                <TextBlock Text="Quận/Huyện:" Grid.Row="2" Grid.Column="0" Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox Text="{Binding TransferDistrict, Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Margin="5" Width="250"/>
+                                <!-- Tỉnh/Thành phố -->
+                                <TextBlock Text="Tỉnh/Thành phố:" Grid.Row="3" Grid.Column="0" Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox Text="{Binding TransferCity, Mode=TwoWay}" Grid.Row="3" Grid.Column="1" Margin="5" Width="250"/>
+                                <!-- Quốc gia -->
+                                <TextBlock Text="Quốc gia:" Grid.Row="4" Grid.Column="0" Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                                <TextBox Text="{Binding TransferCountry, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" Margin="5" Width="250"/>
+                            </Grid>
                         </GroupBox>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
                             <Button Content="Hủy" Width="100" Height="30" Margin="0,0,10,0"/>
-                            <Button Content="Chuyển hộ khẩu" Width="120" Height="30" Background="LightGreen"/>
+                            <Button Content="Chuyển hộ khẩu" Width="120" Height="30" Background="LightGreen"
+                        Command="{Binding TransferHouseholdCommand}"/>
                         </StackPanel>
                     </StackPanel>
                 </ScrollViewer>
             </TabItem>
+
+
         </TabControl>
     </Grid>
 </Window>

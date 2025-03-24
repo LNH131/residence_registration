@@ -21,6 +21,10 @@ public partial class Address
 
     public string? District { get; set; }
 
+    public virtual ICollection<HouseholdTransfer> HouseholdTransferFromAddresses { get; set; } = new List<HouseholdTransfer>();
+
+    public virtual ICollection<HouseholdTransfer> HouseholdTransferToAddresses { get; set; } = new List<HouseholdTransfer>();
+
     public virtual ICollection<Household> Households { get; set; } = new List<Household>();
 
     public virtual ICollection<Registration> Registrations { get; set; } = new List<Registration>();
