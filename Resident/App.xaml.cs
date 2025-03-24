@@ -49,6 +49,8 @@ namespace Resident
             services.AddTransient<HouseHoldControlViewModel>();
             services.AddTransient<AddUserWindow>();
             services.AddTransient<AddUserViewModel>();
+            services.AddTransient<ChangeUserWindow>();
+            services.AddTransient<DeletedUserWindow>();
             services.AddTransient<HouseHoldSelectionWindow>();
             services.AddTransient<HouseHoldSelectionViewModel>();
             services.AddTransient<UpdateCitizenProfileWindow>();

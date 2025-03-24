@@ -42,5 +42,22 @@ namespace Resident.View
         {
             return _context.Users.ToList();
         }
+
+        private void Change_Click(object sender, RoutedEventArgs e)
+        {
+            var serviceProvider = ((App)Application.Current).ServiceProvider;
+            var changeUserWindow = serviceProvider.GetRequiredService<ChangeUserWindow>();
+            changeUserWindow.Show();
+            this.Close();
+        }
+        private void Deleted_Click(object sender, RoutedEventArgs e)
+        {
+            var serviceProvider = ((App)Application.Current).ServiceProvider;
+            var deletedUserWindow = serviceProvider.GetRequiredService<DeletedUserWindow>();
+            deletedUserWindow.Show();
+            this.Close();
+        }
+
+        
     }
 }

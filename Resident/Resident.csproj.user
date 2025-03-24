@@ -34,6 +34,9 @@
     <Compile Update="View\CitizenWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\DeletedUserWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\HouseHoldControlWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -91,6 +94,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\CitizenWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\DeletedUserWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\HouseHoldControlWindow.xaml">

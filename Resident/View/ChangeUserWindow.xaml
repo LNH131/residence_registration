@@ -6,86 +6,168 @@
         xmlns:local="clr-namespace:Resident.View"
         mc:Ignorable="d"
         Title="ChangeUserWindow" Height="450" Width="800">
-    <Grid Margin="0,0,0,-6">
+
+    <!-- Khai báo tài nguyên để trang trí giao diện -->
+    <Window.Resources>
+        <!-- Nền gradient pastel cho cửa sổ -->
+        <LinearGradientBrush x:Key="WindowBackgroundBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#89f7fe" Offset="0.0" />
+            <GradientStop Color="#66a6ff" Offset="1.0" />
+        </LinearGradientBrush>
+
+        <!-- Style cho Label -->
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#2c3e50"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5,0,5,0"/>
+        </Style>
+
+        <!-- Style cho TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderBrush" Value="#B0BEC5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <!-- Style cho Button -->
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#1abc9c"/>
+            <Setter Property="BorderBrush" Value="#16a085"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5,3"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="3"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#16a085"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Style cho ComboBox -->
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Padding" Value="3"/>
+            <Setter Property="BorderBrush" Value="#B0BEC5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+
+        <!-- Style cho DataGrid -->
+        <Style TargetType="DataGrid">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="RowBackground" Value="#ECF0F1"/>
+            <Setter Property="AlternatingRowBackground" Value="#F7F7F7"/>
+            <Setter Property="BorderBrush" Value="#B0BEC5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Style cho DatePicker -->
+        <Style TargetType="DatePicker">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#B0BEC5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <!-- Style cho CheckBox -->
+        <Style TargetType="CheckBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Foreground" Value="#2c3e50"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+
+    <!-- Áp dụng nền gradient cho cửa sổ -->
+    <Grid Margin="0,0,0,-6" Background="{StaticResource WindowBackgroundBrush}">
         <TabControl>
             <!-- Tab 1: Account & Password -->
             <TabItem Header="Account &amp; Password">
                 <Grid>
-                    <!-- Giữ nguyên định nghĩa cột để phù hợp với các thành phần bên trong -->
+                    <!-- Định nghĩa cột giữ nguyên bố cục -->
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0*"/>
                         <ColumnDefinition Width="147*"/>
-                        <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition Width="647*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="26*"/>
+                        <ColumnDefinition Width="605*"/>
                     </Grid.ColumnDefinitions>
 
                     <!-- Nhóm Label & TextBox nhập thông tin -->
                     <Label Content="Full name :" 
                            HorizontalAlignment="Left" Margin="10,225,0,0" 
-                           VerticalAlignment="Top" FontSize="15" 
+                           VerticalAlignment="Top" 
                            Grid.Column="1" Height="30" Width="81"/>
                     <Label Content="Email:" 
                            HorizontalAlignment="Left" Margin="10,255,0,0" 
-                           VerticalAlignment="Top" FontSize="15" 
+                           VerticalAlignment="Top" 
                            Grid.Column="1" Height="30" Width="49"/>
                     <Label Content="Password:" 
                            HorizontalAlignment="Left" Margin="10,285,0,0" 
-                           VerticalAlignment="Top" FontSize="15" 
+                           VerticalAlignment="Top" 
                            Grid.Column="1" Height="30" Width="79"/>
 
                     <TextBox x:Name="fullName" 
                              HorizontalAlignment="Left" Margin="100,225,0,0" 
                              TextWrapping="Wrap" VerticalAlignment="Top" 
-                             Width="124" Height="30" FontSize="15" 
-                             Grid.Column="1" Grid.ColumnSpan="3"/>
+                             Width="124" Height="30" 
+                             Grid.Column="1" Grid.ColumnSpan="4"/>
                     <TextBox x:Name="email" 
                              HorizontalAlignment="Left" Margin="100,255,0,0" 
                              TextWrapping="Wrap" VerticalAlignment="Top" 
-                             Width="124" Height="30" FontSize="15" 
-                             Grid.Column="1" Grid.ColumnSpan="3"/>
-                    <!-- Nếu cần ẩn mật khẩu, bạn có thể thay bằng PasswordBox -->
-                    <TextBox x:Name="passworld" 
+                             Width="124" Height="30" 
+                             Grid.Column="1" Grid.ColumnSpan="4"/>
+                    <!-- Có thể thay TextBox bằng PasswordBox nếu cần ẩn mật khẩu -->
+                    <TextBox x:Name="password" 
                              HorizontalAlignment="Left" Margin="100,285,0,0" 
                              TextWrapping="Wrap" VerticalAlignment="Top" 
-                             Width="124" Height="30" FontSize="15" 
-                             Grid.Column="1" Grid.ColumnSpan="3"/>
+                             Width="124" Height="30" 
+                             Grid.Column="1" Grid.ColumnSpan="4"/>
 
                     <!-- Nút Update -->
                     <Button Content="Update" 
-                            HorizontalAlignment="Left" Margin="10,334,0,0" 
+                            HorizontalAlignment="Left" Margin="8,361,0,0" 
                             VerticalAlignment="Top" 
-                            Grid.Column="3" Height="22" Width="67"/>
+                            Grid.Column="2" Height="20" Width="60" Click="Update_Click" Grid.ColumnSpan="3"/>
 
                     <!-- Nút Save -->
                     <Button Content="Save" 
-                            HorizontalAlignment="Left" Margin="429,368,0,0" 
-                            VerticalAlignment="Top" Width="86" 
-                            Grid.Column="3" Height="30"/>
+                            HorizontalAlignment="Left" Margin="337,360,0,0" 
+                            VerticalAlignment="Top" Width="84" 
+                            Grid.Column="4" Height="30" Click="Save_Click"/>
 
                     <!-- Nút Back -->
                     <Button Content="Back" 
-                            HorizontalAlignment="Left" Margin="515,368,0,0" 
+                            HorizontalAlignment="Left" Margin="462,361,0,0" 
                             VerticalAlignment="Top" 
-                            Grid.Column="3" Height="30" Width="65"/>
+                            Grid.Column="4" Height="30" Width="65" 
+                            Click="Button_Click"/>
 
                     <!-- DataGrid hiển thị danh sách người dùng (dgUser) -->
                     <DataGrid x:Name="dgUser" 
                               AutoGenerateColumns="False" 
                               Margin="187,221,34,56" 
-                              Grid.Column="3">
+                              Grid.Column="4">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
-                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
-                            <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="*"/>
-                            <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="*"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <DataGrid x:Name="dtUserImport" 
-                              Grid.ColumnSpan="4" 
-                              Margin="10,23,34,206"
-                              AutoGenerateColumns="False">      
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="UserId" Binding="{Binding UserId}" Width="*"/>
                             <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
                             <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
                             <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="*"/>
@@ -93,30 +175,110 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
+                    <DataGrid x:Name="dtUserImport" Grid.ColumnSpan="5" 
+                              d:ItemsSource="{d:SampleData ItemCount=5}" 
+                              Margin="10,23,34,206" AutoGenerateColumns="False" 
+                              SelectedCellsChanged="dtUserImport_SelectedCellsChanged" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                            <DataGridTextColumn Header="Password" Binding="{Binding Password}" Width="*"/>
+                            <DataGridTextColumn Header="Role" Binding="{Binding Role}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <CheckBox x:Name="changePass" Grid.Column="4" 
+                              Content="Change Pass" HorizontalAlignment="Left" 
+                              Margin="40,294,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Role : " Grid.ColumnSpan="2" 
+                           HorizontalAlignment="Left" Margin="16,320,0,0" 
+                           VerticalAlignment="Top"/>
+                    <ComboBox x:Name="role" Grid.ColumnSpan="5" Margin="100,315,570,57"
+                              ItemsSource="{Binding Roles}" 
+                              SelectedItem="{Binding SelectedRole}" />
                 </Grid>
             </TabItem>
 
-            <!-- Tab 2: Other Information (dtUser giữ nguyên) -->
+            <!-- Tab 2: Other Information -->
             <TabItem Header="Other Information">
                 <Grid>
-                    <!-- Để giữ nguyên dtUser, chúng ta tạo Grid.ColumnDefinitions tương tự -->
+                    <!-- Định nghĩa cột giữ nguyên bố cục -->
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="0*"/>
-                        <ColumnDefinition Width="30*"/>
-                        <ColumnDefinition Width="367*"/>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="86*"/>
+                        <ColumnDefinition Width="97*"/>
+                        <ColumnDefinition Width="593*"/>
                     </Grid.ColumnDefinitions>
 
                     <DataGrid x:Name="dtUserNonimport" 
                               Margin="10,10,10,249" 
                               Grid.Column="1" 
-                              AutoGenerateColumns="False" Grid.ColumnSpan="2">
+                              AutoGenerateColumns="False" 
+                              Grid.ColumnSpan="4" 
+                              SelectedCellsChanged="dtUserNonimport_SelectedCellsChanged">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="UserId" Width="*" Binding="{Binding UserId}"/>
-                            <DataGridTextColumn Header="Full Name" Width="*" Binding="{Binding FullName}"/>
-                            <DataGridTextColumn Header="Email" Width="*" Binding="{Binding Email}"/>
-                            <DataGridTextColumn Header="Role" Width="*" Binding="{Binding Role}"/>
+                            <DataGridTextColumn Header="UserId" Width="*" Binding="{Binding UserId}" />
+                            <DataGridTextColumn Header="Full Name" Width="*" Binding="{Binding FullName}" />
+                            <DataGridTextColumn Header="AreaId" Width="*" Binding="{Binding AreaId}" />
+                            <DataGridTextColumn Header="Current Address Id" Width="*" Binding="{Binding CurrentAddressId}" />
+                            <DataGridTextColumn Header="Birthday" Width="*">
+                                <DataGridTextColumn.Binding>
+                                    <Binding Path="Birthday" StringFormat="{}{0:yyyy-MM-dd}" />
+                                </DataGridTextColumn.Binding>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Sex" Width="*" Binding="{Binding Sex}" />
                         </DataGrid.Columns>
                     </DataGrid>
+
+                    <DataGrid x:Name="dgUser2" 
+                              Grid.Column="4" 
+                              Margin="181,188,19,76" 
+                              AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="UserId" Width="*" Binding="{Binding UserId}" />
+                            <DataGridTextColumn Header="Full Name" Width="*" Binding="{Binding FullName}" />
+                            <DataGridTextColumn Header="AreaId" Width="*" Binding="{Binding AreaId}" />
+                            <DataGridTextColumn Header="CurrentAddressId" Width="*" Binding="{Binding CurrentAddressId}" />
+                            <DataGridTextColumn Header="Birthday" Width="*">
+                                <DataGridTextColumn.Binding>
+                                    <Binding Path="Birthday" StringFormat="{}{0:yyyy-MM-dd}" />
+                                </DataGridTextColumn.Binding>
+                            </DataGridTextColumn>
+                            <DataGridTextColumn Header="Sex" Width="*" Binding="{Binding Sex}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <Label Grid.Column="2" Content="Full Name :" Margin="4,206,0,0" VerticalAlignment="Top" Height="26"/>
+                    <Label Grid.Column="2" Content="AreaID" Margin="4,232,0,0" VerticalAlignment="Top" Height="26"/>
+                    <Label Grid.Column="2" Content="AddressID" Margin="4,257,0,0" VerticalAlignment="Top" Height="26"/>
+                    <Label Grid.Column="2" Content="Birthday" Margin="4,283,0,0" VerticalAlignment="Top" Height="26"/>
+                    <Label Grid.Column="2" Content="Gender" Margin="4,309,0,0" VerticalAlignment="Top" Height="26"/>
+
+                    <TextBox x:Name="fullname1" Grid.Column="3" HorizontalAlignment="Left" Margin="0,201,0,0" 
+                             TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="134" Height="36" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="areaID" Grid.Column="3" HorizontalAlignment="Left" Margin="0,237,0,0" 
+                              VerticalAlignment="Top" Width="134" Height="25" Grid.ColumnSpan="2"
+                              ItemsSource="{Binding AreaID}" 
+                              SelectedItem="{Binding SelectedArea}"/>
+                    <ComboBox x:Name="addressID" Grid.Column="3" HorizontalAlignment="Left" Margin="0,259,0,0" 
+                              VerticalAlignment="Top" Width="134" Height="25" Grid.ColumnSpan="2"
+                              ItemsSource="{Binding Address}" 
+                              SelectedItem="{Binding SelectedAdress}"/>
+                    <ComboBox x:Name="gender" Grid.Column="3" HorizontalAlignment="Left" Margin="0,310,0,0" 
+                              VerticalAlignment="Top" Width="134" Height="25" Grid.ColumnSpan="2"
+                              ItemsSource="{Binding Gender}" 
+                              SelectedItem="{Binding SelectedGender, Mode=TwoWay}"/>
+                    <DatePicker x:Name="birthday" Grid.Column="3" HorizontalAlignment="Left" Margin="0,284,0,0" 
+                                VerticalAlignment="Top" Height="26" Width="134" Grid.ColumnSpan="2"/>
+                    <Button Grid.Column="4" Content="Add_Change" HorizontalAlignment="Left" Margin="29,362,0,0" 
+                            VerticalAlignment="Top" Click="Addchange_Click"/>
+                    <Button Grid.Column="4" Content="Save" HorizontalAlignment="Left" Margin="368,362,0,0" 
+                            VerticalAlignment="Top" Width="70" Click="Save_Click1"/>
+                    <Button Grid.Column="4" Content="Back" HorizontalAlignment="Left" Margin="438,362,0,0" 
+                            VerticalAlignment="Top" Width="64" Click="Button_Click_1"/>
+                    <TextBox x:Name="userID" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" 
+                             Margin="10,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="28"/>
                 </Grid>
             </TabItem>
         </TabControl>
