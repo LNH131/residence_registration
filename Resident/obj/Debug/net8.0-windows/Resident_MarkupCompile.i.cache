@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\obj\Debug\net8.0-windows\
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\
 Resident
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\App.xaml
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\App.xaml
 23-1450768604
 
 87591850191
-252-1169303366
+252452411520
 MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderChatSelectionWindow.xaml;View\AreaLeaderChatWindow.xaml;View\AreaLeaderWindow.xaml;View\ChangeUserWindow.xaml;View\CitizenChatWindow.xaml;View\CitizenPoliceChatSelectionWindow.xaml;View\CitizenWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseholdDetailsWindow.xaml;View\HouseholdMemberDetailsWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\LoginWindow.xaml;View\PoliceChatSelectionWindow.xaml;View\PoliceChatWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\RegistrationDetailsWindow.xaml;View\RegistrationOverviewWindow.xaml;View\StatusOverviewWindow.xaml;View\UpdateCitizenProfileWindow.xaml;
 
 True

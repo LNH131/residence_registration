@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\viewmodels\\policeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|solutionrelative:resident\\view\\policewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0F0F2910-A5D3-4904-86D3-E7E0B68D233B}|Resident\\Resident.csproj|c:\\users\\acer\\desktop\\cnki5\\prn212\\21-3git\\residence_registration\\resident\\viewmodels\\arealeaderviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -424,7 +424,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 330,
-          "SelectedChildIndex": 107,
+          "SelectedChildIndex": 89,
           "Children": [
             {
               "$type": "Bookmark",
@@ -1426,13 +1426,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PoliceViewModel.cs",
               "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\PoliceViewModel.cs",
               "RelativeDocumentMoniker": "Resident\\ViewModels\\PoliceViewModel.cs",
               "ToolTip": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\ViewModels\\PoliceViewModel.cs",
               "RelativeToolTip": "Resident\\ViewModels\\PoliceViewModel.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDIAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T06:08:46.695Z",
               "EditorCaption": ""
@@ -1640,7 +1640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PoliceWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\View\\PoliceWindow.xaml.cs",
               "RelativeDocumentMoniker": "Resident\\View\\PoliceWindow.xaml.cs",

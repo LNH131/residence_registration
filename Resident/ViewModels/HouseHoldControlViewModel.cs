@@ -1,12 +1,15 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows;
+using System.Windows.Input;
+using Microsoft.Extensions.DependencyInjection;
+using Resident.DAO;
 using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
 using Resident.View;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Windows;
-using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
@@ -14,6 +17,7 @@ namespace Resident.ViewModels
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly ICurrentUserService _currentUserService;
+
 
         private bool _isSelected;
         private bool _isNewHead;
@@ -195,10 +199,16 @@ namespace Resident.ViewModels
                 {
                     try
                     {
+                        Debug.WriteLine("SelectedHousehold: " + SelectedHousehold.HouseholdId);
+                        int? newHouse = null;
+                        if (IsUsingSameAddress)
+                        {
+                            newHouse = SelectedHousehold.HouseholdId;
+                        }
                         HouseholdSeparation householdSeparation = new HouseholdSeparation
                         {
-                            OriginalHouseholdId = 2,
-                            NewHouseholdId = null,
+                            OriginalHouseholdId = SelectedHousehold.HouseholdId,
+                            NewHouseholdId = newHouse,
                             RequestDate = DateTime.Now,
                             Status = Status.Pending.ToString(),
                             ApprovedBy = null,
@@ -239,7 +249,7 @@ namespace Resident.ViewModels
 
 
 
-            MessageBox.Show("Tách hộ thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Đã gửi đơn tách hộ thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
 
             // Clear selection and IsNewHead sau khi tách
             foreach (var member in HouseholdMembers)
