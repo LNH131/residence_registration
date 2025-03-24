@@ -13,13 +13,22 @@
     <Compile Update="View\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\AreaLeaderChatSelectionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AreaLeaderChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AreaLeaderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ChangeUserWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\ChatWindow.xaml.cs">
+    <Compile Update="View\CitizenChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CitizenPoliceChatSelectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\CitizenWindow.xaml.cs">
@@ -38,6 +47,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PoliceChatSelectionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PoliceChatWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PoliceWindow.xaml.cs">
@@ -73,9 +88,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ChangeUserWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="View\ChatWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\CitizenWindow.xaml">

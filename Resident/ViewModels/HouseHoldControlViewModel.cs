@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Windows;
-using System.Windows.Input;
-using Microsoft.Extensions.DependencyInjection;
-using Resident.DAO;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
 using Resident.View;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
@@ -17,7 +14,6 @@ namespace Resident.ViewModels
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly ICurrentUserService _currentUserService;
-
 
         private bool _isSelected;
         private bool _isNewHead;
@@ -116,18 +112,18 @@ namespace Resident.ViewModels
             }
         }
 
-            private void SelectHouseHold()
+        private void SelectHouseHold()
+        {
+
+            var selectHouseHoldWindow = _serviceProvider.GetRequiredService<HouseHoldSelectionWindow>();
+            bool? result = selectHouseHoldWindow.ShowDialog();
+            if (result == true)
             {
-            
-                var selectHouseHoldWindow = _serviceProvider.GetRequiredService<HouseHoldSelectionWindow>();
-                bool? result = selectHouseHoldWindow.ShowDialog();
-                if (result == true)
-                {
-                    // Sau khi cửa sổ đóng, lấy SelectedHousehold từ cửa sổ chọn và gán vào ViewModel.
-                    Household selectedHousehold = selectHouseHoldWindow.SelectedHousehold;
-                    // Giả sử cửa sổ chọn có property HouseholdMembers trả về danh sách các thành viên của hộ khẩu.
-                    List<HouseholdMember> selectedMembers = selectHouseHoldWindow.SelectedHouseholdMembers;
-                    Debug.WriteLine("Select HouseHold: asd: " + selectedMembers);
+                // Sau khi cửa sổ đóng, lấy SelectedHousehold từ cửa sổ chọn và gán vào ViewModel.
+                Household selectedHousehold = selectHouseHoldWindow.SelectedHousehold;
+                // Giả sử cửa sổ chọn có property HouseholdMembers trả về danh sách các thành viên của hộ khẩu.
+                List<HouseholdMember> selectedMembers = selectHouseHoldWindow.SelectedHouseholdMembers;
+                Debug.WriteLine("Select HouseHold: asd: " + selectedMembers);
 
                 SelectedHousehold = selectedHousehold;
 
@@ -135,7 +131,7 @@ namespace Resident.ViewModels
                 if (selectedMembers != null)
                 {
                     // Tạo danh sách mới gộp thông tin Household và Address.
-                    var dataSource = selectedMembers.Select(h => 
+                    var dataSource = selectedMembers.Select(h =>
                     {
                         User user = GetUserById(h.UserId);
                         return new HouseholdMemberDisplayInfo

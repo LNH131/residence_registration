@@ -84,18 +84,16 @@ namespace Resident.ViewModels
             MessageBox.Show("Xem thông báo cho cư dân trong khu vực...");
         }
 
+        // Updated Chat method: open chat with the citizen who submitted the selected registration.
         private void Chat()
         {
-            if (SelectedRegistration == null || SelectedRegistration.User == null)
-            {
-                MessageBox.Show("Vui lòng chọn hồ sơ để chat!");
-                return;
-            }
-            int citizenId = SelectedRegistration.User.UserId;
-            var chatWindow = new Resident.View.ChatWindow();
-            chatWindow.DataContext = new ChatViewModel(1009, citizenId);
-            chatWindow.Show();
+            // Instead of trying to chat with the selected registration’s user,
+            // we open the selection window for area/police selection.
+            var selectionVM = new AreaLeaderChatSelectionViewModel(_currentUserService);
+            var selectionWindow = new Resident.View.AreaLeaderChatSelectionWindow(selectionVM);
+            selectionWindow.ShowDialog();
         }
+
 
         private void GenerateReport()
         {
@@ -120,11 +118,8 @@ namespace Resident.ViewModels
             var householdDetailsWindow = new Resident.View.HouseholdDetailsWindow(new HouseholdDetailsViewModel());
             householdDetailsWindow.Show();
         }
-
-        // New method to view all registrations.
         private void ViewAllRegistrations()
         {
-            // Create the RegistrationOverviewViewModel, then create and show the window.
             var overviewVM = new RegistrationOverviewViewModel();
             var overviewWindow = new Resident.View.RegistrationOverviewWindow(overviewVM);
             overviewWindow.Show();

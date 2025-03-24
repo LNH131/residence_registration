@@ -51,9 +51,18 @@ namespace Resident
             services.AddTransient<AddUserViewModel>();
             services.AddTransient<HouseHoldSelectionWindow>();
             services.AddTransient<HouseHoldSelectionViewModel>();
-            services.AddTransient<UpdateCitizenProfileWindow>(); 
-            services.AddTransient<StatusOverviewWindow>(); 
+            services.AddTransient<UpdateCitizenProfileWindow>();
+            services.AddTransient<StatusOverviewWindow>();
             services.AddTransient<StatusOverviewViewModel>();
+            services.AddTransient<PoliceWindow>();
+            services.AddTransient<PoliceViewModel>();
+            services.AddTransient<PoliceChatSelectionWindow>();
+            services.AddTransient<PoliceChatSelectionViewModel>();
+            services.AddTransient<PoliceChatViewModel>();
+            services.AddSingleton<ICurrentUserService, CurrentUserService>();
+            services.AddTransient<PoliceViewModel>();
+            services.AddTransient<PoliceChatSelectionViewModel>();
+            services.AddTransient<PoliceChatSelectionWindow>();
 
         }
         protected override async void OnStartup(StartupEventArgs e)

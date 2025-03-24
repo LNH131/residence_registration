@@ -2,11 +2,9 @@
 using Resident.Models;
 using Resident.Service;
 using Resident.View;
-using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
-
 namespace Resident.ViewModels
 {
     public class CitizenViewModel : BaseViewModel
@@ -14,7 +12,7 @@ namespace Resident.ViewModels
         private readonly ICurrentUserService _currentUserService;
         private readonly IServiceProvider _serviceProvider;
 
-        // Thuộc tính CurrentUser lấy từ ICurrentUserService
+        // Current user from ICurrentUserService.
         public User CurrentUser => _currentUserService.CurrentUser;
 
         private string _registrationStatus;
@@ -37,32 +35,32 @@ namespace Resident.ViewModels
             get => _selectedNotification;
             set { _selectedNotification = value; OnPropertyChanged(); }
         }
+
         public ICommand ManageHouseholdCommand { get; set; }
         public ICommand LoadNotificationsCommand { get; set; }
         public ICommand MarkAsReadCommand { get; set; }
         public ICommand OpenChatCommand { get; set; }
-
         public ICommand UpdateProfileCommand { get; set; }
 
         public CitizenViewModel(ICurrentUserService currentUserService, IServiceProvider serviceProvider)
         {
             _currentUserService = currentUserService;
 
-            // Debug thông tin người dùng
+            // Debug current user info.
             Debug.WriteLine($"User: {CurrentUser?.Sex ?? "Chưa có thông tin"}");
             RegistrationStatus = "Chờ phê duyệt";
 
-            // Khởi tạo danh sách thông báo
+            // Initialize notifications list.
             Notifications = new ObservableCollection<Notification>();
 
-            // Khởi tạo các command
+            // Initialize commands.
             ManageHouseholdCommand = new RelayCommand(o => ManageHousehold());
             LoadNotificationsCommand = new RelayCommand(o => LoadNotifications());
             MarkAsReadCommand = new RelayCommand(o => MarkNotificationAsRead(), o => SelectedNotification != null);
             OpenChatCommand = new RelayCommand(o => OpenChat());
             UpdateProfileCommand = new RelayCommand(o => UpdateProfile());
 
-            // Load dữ liệu thông báo ban đầu
+            // Load initial notifications.
             LoadNotifications();
             _serviceProvider = serviceProvider;
         }
@@ -103,12 +101,16 @@ namespace Resident.ViewModels
             }
         }
 
+        // In your CitizenViewModel's OpenChat method:
         private void OpenChat()
         {
-            var chatWindow = new Resident.View.ChatWindow();
-            chatWindow.DataContext = new Resident.ViewModels.ChatViewModel(1008, 1009);
-            chatWindow.Show();
+            // Open the citizen police chat selection window.
+            var selectionVM = new CitizenPoliceChatSelectionViewModel(_currentUserService);
+            var selectionWindow = new Resident.View.CitizenPoliceChatSelectionWindow(selectionVM);
+            selectionWindow.ShowDialog();
         }
+
+
         private void ManageHousehold()
         {
             var manageHouseholdWindow = _serviceProvider.GetRequiredService<HouseHoldControlWindow>();

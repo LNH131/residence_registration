@@ -66,8 +66,7 @@
                     <Button Content="Back" 
                             HorizontalAlignment="Left" Margin="515,368,0,0" 
                             VerticalAlignment="Top" 
-                            Grid.Column="3" Height="30" Width="65" 
-                            Click="Button_Click"/>
+                            Grid.Column="3" Height="30" Width="65"/>
 
                     <!-- DataGrid hiển thị danh sách người dùng (dgUser) -->
                     <DataGrid x:Name="dgUser" 

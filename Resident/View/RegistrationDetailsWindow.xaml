@@ -4,9 +4,6 @@
         xmlns:conv="clr-namespace:Resident.Converters"
         Title="Chi tiết hồ sơ" Height="400" Width="600"
         WindowStartupLocation="CenterScreen">
-    <Window.Resources>
-        <conv:StatusToVisibilityConverter x:Key="StatusToVisibilityConverter"/>
-    </Window.Resources>
     <Grid Margin="10">
         <StackPanel>
             <TextBlock Text="Chi tiết hồ sơ" 
