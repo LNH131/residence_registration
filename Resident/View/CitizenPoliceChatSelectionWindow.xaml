@@ -1,20 +1,47 @@
 ﻿<Window x:Class="Resident.View.CitizenPoliceChatSelectionWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Chọn Công an để chat" Height="300" Width="400"
+        Title="Select Police to Chat" 
+        Height="300" Width="400"
         WindowStartupLocation="CenterScreen">
+
     <Grid Margin="10">
-        <StackPanel>
-            <TextBlock Text="Chọn Công an từ khu vực của bạn:" 
-                       FontSize="16" Margin="0,0,0,10"/>
-            <ListBox ItemsSource="{Binding AvailablePolice}" 
-                     SelectedItem="{Binding SelectedPolice}" 
-                     DisplayMemberPath="FullName" Height="150"/>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-                <Button Content="Chat" Width="80" Margin="0,0,10,0"
-                        Command="{Binding OpenChatCommand}"/>
-                <Button Content="Cancel" Width="80" Click="Cancel_Click"/>
-            </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Tiêu đề -->
+            <RowDefinition Height="*"/>
+            <!-- Danh sách police -->
+            <RowDefinition Height="Auto"/>
+            <!-- Nút hành động -->
+        </Grid.RowDefinitions>
+
+        <!-- Tiêu đề -->
+        <TextBlock Text="Select Police to Chat" 
+                   FontSize="18" 
+                   FontWeight="Bold"
+                   Grid.Row="0" Margin="0,0,0,10" />
+
+        <!-- Nội dung chính: ComboBox hiển thị police, nút Start Chat -->
+        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBlock Text="Police in your area:" 
+                       Margin="0,0,0,5" 
+                       FontWeight="Bold"/>
+            <ComboBox ItemsSource="{Binding AvailablePolice}"
+                      SelectedItem="{Binding SelectedPolice}"
+                      DisplayMemberPath="FullName"
+                      Width="200" Height="30" 
+                      Margin="0,0,0,10"/>
+
+            <Button Content="Start Chat" 
+                    Width="120" Height="35"
+                    Command="{Binding StartChatCommand}" 
+                    Margin="0,0,0,20"/>
+        </StackPanel>
+
+        <!-- Nút Cancel -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Cancel" Width="80" Height="30" 
+                    Command="{Binding CancelCommand}" />
         </StackPanel>
     </Grid>
 </Window>

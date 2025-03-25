@@ -1,11 +1,10 @@
-﻿using Resident.ViewModels;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Resident.View
 {
     public partial class RegistrationOverviewWindow : Window
     {
-        public RegistrationOverviewWindow(RegistrationOverviewViewModel viewModel)
+        public RegistrationOverviewWindow(object viewModel)
         {
             InitializeComponent();
             DataContext = viewModel;

@@ -22,7 +22,7 @@ namespace Resident.ViewModels
         public RegistrationOverviewViewModel()
         {
             LoadAllRegistrations();
-            ViewDetailsCommand = new RelayCommand(o => ViewDetails(o));
+            ViewDetailsCommand = new LocalRelayCommand(o => ViewDetails(o));
         }
 
         private void LoadAllRegistrations()

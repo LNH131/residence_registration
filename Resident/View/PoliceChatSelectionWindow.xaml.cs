@@ -9,11 +9,8 @@ namespace Resident.View
         {
             InitializeComponent();
             DataContext = viewModel;
-        }
-
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+            // Gán hành động đóng cửa sổ cho CancelCommand
+            viewModel.CloseAction = () => this.Close();
         }
     }
 }

@@ -1,45 +1,42 @@
 ﻿<Window x:Class="Resident.View.RegistrationDetailsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:conv="clr-namespace:Resident.Converters"
-        Title="Chi tiết hồ sơ" Height="400" Width="600"
+        Title="Registration Details" Height="400" Width="600"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <StackPanel>
-            <TextBlock Text="Chi tiết hồ sơ" 
-                       FontSize="20" 
-                       FontWeight="Bold" 
-                       Margin="0,0,0,10"/>
-            <!-- Display registration details -->
+            <TextBlock Text="Registration Details" 
+                       FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Mã hồ sơ: " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="ID:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.RegistrationId}"/>
             </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Họ tên: " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="Name:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.User.FullName}"/>
             </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Loại hồ sơ: " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="Type:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.RegistrationType}"/>
             </StackPanel>
+
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Trạng thái: " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="Status:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.Status}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Ngày đăng ký: " FontWeight="Bold" Width="120"/>
-                <TextBlock Text="{Binding Registration.StartDate, StringFormat='{}{0:yyyy-MM-dd}'}"/>
-            </StackPanel>
-            <!-- Action Buttons: Visible only when Registration.Status is "Pending" -->
-            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center"
-                        Visibility="{Binding Registration.Status, Converter={StaticResource StatusToVisibilityConverter}}">
-                <Button Content="Duyệt" Width="100" Margin="5"
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                <Button Content="Approve" Width="100" Margin="5"
                         Command="{Binding ApproveCommand}"/>
-                <Button Content="Từ chối" Width="100" Margin="5"
+                <Button Content="Reject" Width="100" Margin="5"
                         Command="{Binding RejectCommand}"/>
             </StackPanel>
-            <Button Content="Đóng" Width="100" Margin="0,20,0,0" HorizontalAlignment="Right" Click="Close_Click"/>
+
+            <Button Content="Close" Width="100" Margin="0,20,0,0" 
+                    HorizontalAlignment="Right" Click="Close_Click"/>
         </StackPanel>
     </Grid>
 </Window>

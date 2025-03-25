@@ -26,7 +26,7 @@ namespace Resident.ViewModels
 
         public HouseholdDetailsViewModel()
         {
-            ViewDetailsCommand = new RelayCommand(o => ViewDetails(o));
+            ViewDetailsCommand = new LocalRelayCommand(o => ViewDetails(o));
             LoadHouseholds();
         }
 

@@ -1,0 +1,45 @@
+﻿<Window x:Class="Resident.View.AreaLeaderApprovalsOverviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tổng quan duyệt hồ sơ (Area Leader)" 
+        Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <Border Background="LightBlue" Grid.Row="0" Padding="10">
+            <TextBlock Text="Tổng quan duyệt hồ sơ (Area Leader)" 
+                       FontSize="24" FontWeight="Bold" Foreground="DarkBlue"/>
+        </Border>
+
+        <!-- Main content: DataGrid hiển thị danh sách ApprovalItem -->
+        <DataGrid Grid.Row="1" ItemsSource="{Binding ApprovalItems}" 
+                  AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single"
+                  SelectedItem="{Binding SelectedApprovalItem}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="80" Binding="{Binding ItemId}" />
+                <DataGridTextColumn Header="Loại" Width="120" Binding="{Binding ItemType}" />
+                <DataGridTextColumn Header="Người tạo" Width="150" Binding="{Binding CreatorName}" />
+                <DataGridTextColumn Header="Trạng thái" Width="100" Binding="{Binding Status}" />
+                <DataGridTemplateColumn Header="Hành động" Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Xem chi tiết" 
+                                    Command="{Binding DataContext.ViewDetailsCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                    CommandParameter="{Binding}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Footer: Refresh button -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button Content="Refresh" Width="100" Command="{Binding RefreshCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

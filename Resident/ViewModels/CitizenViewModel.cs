@@ -54,11 +54,11 @@ namespace Resident.ViewModels
             Notifications = new ObservableCollection<Notification>();
 
             // Initialize commands.
-            ManageHouseholdCommand = new RelayCommand(o => ManageHousehold());
-            LoadNotificationsCommand = new RelayCommand(o => LoadNotifications());
-            MarkAsReadCommand = new RelayCommand(o => MarkNotificationAsRead(), o => SelectedNotification != null);
-            OpenChatCommand = new RelayCommand(o => OpenChat());
-            UpdateProfileCommand = new RelayCommand(o => UpdateProfile());
+            ManageHouseholdCommand = new LocalRelayCommand(o => ManageHousehold());
+            LoadNotificationsCommand = new LocalRelayCommand(o => LoadNotifications());
+            MarkAsReadCommand = new LocalRelayCommand(o => MarkNotificationAsRead(), o => SelectedNotification != null);
+            OpenChatCommand = new LocalRelayCommand(o => OpenChat());
+            UpdateProfileCommand = new LocalRelayCommand(o => UpdateProfile());
 
             // Load initial notifications.
             LoadNotifications();

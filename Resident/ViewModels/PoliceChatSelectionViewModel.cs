@@ -1,13 +1,14 @@
-﻿using Resident.Models;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Resident.Models;
 using Resident.Service;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
-    public class PoliceChatSelectionViewModel : BaseViewModel
+    public class PoliceChatSelectionViewModel : ObservableObject
     {
-        private readonly PrnContext _context = new PrnContext();
+        private readonly PrnContext _context;
         private readonly ICurrentUserService _currentUserService;
 
         public ObservableCollection<User> Citizens { get; set; }
@@ -17,28 +18,49 @@ namespace Resident.ViewModels
         public User SelectedCitizen
         {
             get => _selectedCitizen;
-            set { _selectedCitizen = value; OnPropertyChanged(nameof(SelectedCitizen)); }
+            set
+            {
+                SetProperty(ref _selectedCitizen, value);
+                // Force requery of the command
+                (ChatWithCitizenCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
+            }
         }
 
         private User _selectedAreaLeader;
         public User SelectedAreaLeader
         {
             get => _selectedAreaLeader;
-            set { _selectedAreaLeader = value; OnPropertyChanged(nameof(SelectedAreaLeader)); }
+            set
+            {
+                SetProperty(ref _selectedAreaLeader, value);
+                (ChatWithAreaLeaderCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
+            }
         }
 
+        // Commands for opening chat and canceling.
         public ICommand ChatWithCitizenCommand { get; }
         public ICommand ChatWithAreaLeaderCommand { get; }
         public ICommand CancelCommand { get; }
 
+        // Action to close the window (set from code-behind).
+        public System.Action CloseAction { get; set; }
+
         public PoliceChatSelectionViewModel(ICurrentUserService currentUserService)
         {
+            _context = new PrnContext();
             _currentUserService = currentUserService;
+
             LoadCitizens();
             LoadAreaLeaders();
 
-            ChatWithCitizenCommand = new RelayCommand(o => ChatWithCitizen(), o => SelectedCitizen != null);
-            ChatWithAreaLeaderCommand = new RelayCommand(o => ChatWithAreaLeader(), o => SelectedAreaLeader != null);
+            // Use a RelayCommand implementation that supports RaiseCanExecuteChanged.
+            ChatWithCitizenCommand = new LocalRelayCommand(
+                _ => ChatWithCitizen(),
+                _ => SelectedCitizen != null);
+            ChatWithAreaLeaderCommand = new LocalRelayCommand(
+                _ => ChatWithAreaLeader(),
+                _ => SelectedAreaLeader != null);
+            CancelCommand = new LocalRelayCommand(_ => CloseAction?.Invoke());
         }
 
         private void LoadCitizens()
@@ -55,7 +77,7 @@ namespace Resident.ViewModels
 
         private void ChatWithCitizen()
         {
-            // Create a PoliceChatViewModel for chatting with the selected citizen.
+            // Open the PoliceChatWindow with the selected citizen.
             var chatVM = new PoliceChatViewModel(_currentUserService, SelectedCitizen.UserId);
             var chatWindow = new Resident.View.PoliceChatWindow(chatVM);
             chatWindow.Show();
@@ -63,7 +85,7 @@ namespace Resident.ViewModels
 
         private void ChatWithAreaLeader()
         {
-            // Create a PoliceChatViewModel for chatting with the selected area leader.
+            // Open the PoliceChatWindow with the selected area leader.
             var chatVM = new PoliceChatViewModel(_currentUserService, SelectedAreaLeader.UserId);
             var chatWindow = new Resident.View.PoliceChatWindow(chatVM);
             chatWindow.Show();

@@ -21,15 +21,15 @@ namespace Resident.ViewModels
 
         private RegistrationService service = new RegistrationService();
 
-        // Constructor now accepts ICurrentUserService via dependency injection.
+        // Constructor: nhận Registration và ICurrentUserService
         public RegistrationDetailsViewModel(Registration registration, ICurrentUserService currentUserService)
         {
             _currentUserService = currentUserService;
-            // Load full registration details including related data.
+            // Tải đầy đủ thông tin registration từ DB (nếu cần).
             Registration = service.GetRegistrationDetails(registration);
 
-            ApproveCommand = new RelayCommand(o => ApproveRegistration());
-            RejectCommand = new RelayCommand(o => RejectRegistration());
+            ApproveCommand = new LocalRelayCommand(o => ApproveRegistration());
+            RejectCommand = new LocalRelayCommand(o => RejectRegistration());
         }
 
         private void ApproveRegistration()

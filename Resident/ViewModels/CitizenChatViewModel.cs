@@ -40,7 +40,7 @@ namespace Resident.ViewModels
             ChatMessages = new ObservableCollection<ChatMessage>();
 
             LoadConversation();
-            SendMessageCommand = new RelayCommand(async o => await SendMessageAsync(), o => !string.IsNullOrWhiteSpace(NewMessage));
+            SendMessageCommand = new LocalRelayCommand(async o => await SendMessageAsync(), o => !string.IsNullOrWhiteSpace(NewMessage));
         }
 
         private async void LoadConversation()

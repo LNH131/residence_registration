@@ -27,6 +27,8 @@ namespace Resident.ViewModels
             using (var context = new PrnContext())
             {
                 var members = context.HouseholdMembers
+
+
                     .Include(m => m.User)
                     .Where(m => m.HouseholdId == HouseholdId)
                     .ToList();

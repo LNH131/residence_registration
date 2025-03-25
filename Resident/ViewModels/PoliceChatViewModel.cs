@@ -16,7 +16,12 @@ namespace Resident.ViewModels
         public string NewMessage
         {
             get => _newMessage;
-            set { _newMessage = value; OnPropertyChanged(); }
+            set
+            {
+                _newMessage = value;
+                OnPropertyChanged();
+                (SendMessageCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
+            }
         }
 
         private ObservableCollection<ChatMessage> _chatMessages;
@@ -35,17 +40,10 @@ namespace Resident.ViewModels
         {
             _currentUserService = currentUserService;
 
-            // Fallback for testing if CurrentUser is not set.
+            // Ensure that CurrentUser is already set. If not, it will throw an exception.
             if (_currentUserService.CurrentUser == null)
             {
-                Debug.WriteLine("Warning: Current user is not set. Using fallback test user.");
-                _currentUserService.CurrentUser = new User
-                {
-                    UserId = 1016,
-                    FullName = "Test Area Leader",
-                    Role = "AreaLeader",
-                    AreaId = 1
-                };
+                throw new InvalidOperationException("Current user is not set. Ensure the user is properly authenticated and that ICurrentUserService is registered as a singleton.");
             }
 
             CurrentUserId = _currentUserService.CurrentUser.UserId;
@@ -53,13 +51,17 @@ namespace Resident.ViewModels
 
             Debug.WriteLine($"PoliceChatViewModel: CurrentUserId = {CurrentUserId}, ChatPartnerId = {ChatPartnerId}");
 
-            // Ideally inject ChatMessageService via DI.
+            // Create a ChatMessageService instance (ideally via DI)
             _chatService = new ChatMessageService(new PrnContext());
             ChatMessages = new ObservableCollection<ChatMessage>();
 
+            // Load the conversation asynchronously.
             LoadConversationAsync();
 
-            SendMessageCommand = new RelayCommand(async o => await SendMessageAsync(), o => !string.IsNullOrWhiteSpace(NewMessage));
+            // Initialize SendMessageCommand with a command that re-checks its CanExecute state whenever NewMessage changes.
+            SendMessageCommand = new LocalRelayCommand(
+                async o => await SendMessageAsync(),
+                o => !string.IsNullOrWhiteSpace(NewMessage));
         }
 
         private async void LoadConversationAsync()
@@ -73,7 +75,7 @@ namespace Resident.ViewModels
                     ChatMessages.Add(msg);
                 }
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show("Error loading chat messages: " + ex.Message);
                 Debug.WriteLine("Error loading chat messages: " + ex);
@@ -92,7 +94,7 @@ namespace Resident.ViewModels
                     FromUserId = CurrentUserId,
                     ToUserId = ChatPartnerId,
                     Content = NewMessage,
-                    SentDate = DateTime.Now,
+                    SentDate = System.DateTime.Now,
                     IsRead = false
                 };
 
@@ -101,7 +103,7 @@ namespace Resident.ViewModels
                 NewMessage = string.Empty;
                 Debug.WriteLine("Message sent successfully.");
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show("Error sending message: " + ex.Message);
                 Debug.WriteLine("Error sending message: " + ex);

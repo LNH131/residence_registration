@@ -54,7 +54,7 @@ namespace Resident.ViewModels
             // Initially display all police.
             AvailablePolice = new ObservableCollection<User>(_allPolice);
 
-            OpenChatCommand = new RelayCommand(o => OpenChat(), o => SelectedPolice != null);
+            OpenChatCommand = new LocalRelayCommand(o => OpenChat(), o => SelectedPolice != null);
         }
 
         private void LoadAreas()

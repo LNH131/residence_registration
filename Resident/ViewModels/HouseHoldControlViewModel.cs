@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Windows;
-using System.Windows.Input;
-using Microsoft.EntityFrameworkCore; // Cần thêm namespace này
+﻿using Microsoft.EntityFrameworkCore; // Cần thêm namespace này
 using Microsoft.Extensions.DependencyInjection;
-using Resident.DAO;
 using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
 using Resident.View;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
@@ -126,9 +123,9 @@ namespace Resident.ViewModels
             LoadCurrentHousehold();
 
             // Khởi tạo các command
-            SelectHouseHoldCommand = new RelayCommand(o => SelectHouseHold());
-            SeparateHouseholdsCommand = new RelayCommand(o => SeparateHouseholds(), o => CanSeparateHouseholds());
-            TransferHouseholdCommand = new RelayCommand(o => TransferHousehold(), o => CanTransferHousehold());
+            SelectHouseHoldCommand = new LocalRelayCommand(o => SelectHouseHold());
+            SeparateHouseholdsCommand = new LocalRelayCommand(o => SeparateHouseholds(), o => CanSeparateHouseholds());
+            TransferHouseholdCommand = new LocalRelayCommand(o => TransferHousehold(), o => CanTransferHousehold());
         }
 
         /// <summary>

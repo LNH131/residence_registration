@@ -60,12 +60,15 @@ namespace Resident.ViewModels
                     switch (user.Role)
                     {
                         case "Admin":
+                            _currentUserService.CurrentUser = user;
                             nextWindow = _serviceProvider.GetRequiredService<AdminWindow>();
                             break;
                         case "Police":
+                            _currentUserService.CurrentUser = user;
                             nextWindow = _serviceProvider.GetRequiredService<PoliceWindow>();
                             break;
                         case "AreaLeader":
+                            _currentUserService.CurrentUser = user;
                             nextWindow = _serviceProvider.GetRequiredService<AreaLeaderWindow>();
                             break;
                         case "Citizen":
@@ -80,19 +83,21 @@ namespace Resident.ViewModels
                     if (nextWindow != null)
                     {
                         nextWindow.Show();
-                        // Đóng LoginWindow hiện tại thông qua DI (tìm theo kiểu)
                         var loginWindow = Application.Current.Windows.OfType<LoginWindow>().FirstOrDefault();
                         loginWindow?.Close();
                     }
                 }
                 else
                 {
+                    // Nếu xác thực thất bại, hiển thị thông báo lỗi.
                     ErrorMessage = "Invalid email, password, or role.";
+                    MessageBox.Show(ErrorMessage, "Login Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             catch (System.Exception ex)
             {
                 ErrorMessage = "An error occurred during login: " + ex.Message;
+                MessageBox.Show(ErrorMessage, "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

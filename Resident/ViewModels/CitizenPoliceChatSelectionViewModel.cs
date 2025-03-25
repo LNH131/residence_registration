@@ -1,69 +1,96 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Resident.Models;
 using Resident.Service;
 using System.Collections.ObjectModel;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
-    public class CitizenPoliceChatSelectionViewModel : BaseViewModel
+    public class CitizenPoliceChatSelectionViewModel : ObservableObject
     {
-        private readonly PrnContext _context = new PrnContext();
+        private readonly PrnContext _context;
         private readonly ICurrentUserService _currentUserService;
 
-        // List of police officers available in the citizen's area.
-        public ObservableCollection<User> AvailablePolice { get; set; }
+        // Danh sách công an có thể chat
+        private ObservableCollection<User> _availablePolice;
+        public ObservableCollection<User> AvailablePolice
+        {
+            get => _availablePolice;
+            set
+            {
+                _availablePolice = value;
+                OnPropertyChanged();
+            }
+        }
 
         private User _selectedPolice;
         public User SelectedPolice
         {
             get => _selectedPolice;
-            set { _selectedPolice = value; OnPropertyChanged(nameof(SelectedPolice)); }
+            set
+            {
+                _selectedPolice = value;
+                OnPropertyChanged();
+            }
         }
 
-        public ICommand OpenChatCommand { get; }
+        // Command để mở chat và đóng (cancel) cửa sổ
+        public ICommand StartChatCommand { get; }
         public ICommand CancelCommand { get; }
+
+        // Được gán từ code-behind để đóng cửa sổ (nếu cần)
+        public Action CloseAction { get; set; }
 
         public CitizenPoliceChatSelectionViewModel(ICurrentUserService currentUserService)
         {
+            _context = new PrnContext();
             _currentUserService = currentUserService;
-            LoadAvailablePolice();
-            OpenChatCommand = new RelayCommand(o => OpenChat(), o => SelectedPolice != null);
+
+            LoadPoliceInArea();
+
+            StartChatCommand = new LocalRelayCommand(
+                _ => OpenChatWindow(),
+                _ => SelectedPolice != null
+            );
+
+            CancelCommand = new LocalRelayCommand(
+                _ => CloseAction?.Invoke()
+            );
         }
 
-        private void LoadAvailablePolice()
+        /// <summary>
+        /// Nạp danh sách công an trong cùng khu vực với Citizen.
+        /// </summary>
+        private void LoadPoliceInArea()
         {
-            // Get the area ID from the current citizen.
-            int? areaId = _currentUserService.CurrentUser.AreaId;
+            // Lấy AreaId từ CurrentUser (Citizen).
+            int? areaId = _currentUserService.CurrentUser?.AreaId;
             if (areaId == null)
             {
-                MessageBox.Show("Không xác định được khu vực của bạn.");
+                // Nếu user không có area, thì không thể tải danh sách police
                 AvailablePolice = new ObservableCollection<User>();
                 return;
             }
 
-            // Option 1: Query Users directly.
-            // var policeList = _context.Users.Where(u => u.Role == "Police" && u.AreaId == areaId).ToList();
+            // Truy vấn danh sách Police trong area này
+            var policeInArea = _context.Users
+                                       .Where(u => u.Role == "Police" && u.AreaId == areaId.Value)
+                                       .ToList();
 
-            // Option 2: Use the Area model.
-            var areaRecord = _context.Areas
-                .Include(a => a.Users)
-                .FirstOrDefault(a => a.AreaId == areaId.Value);
-            if (areaRecord == null)
-            {
-                MessageBox.Show("Không tìm thấy khu vực của bạn.");
-                AvailablePolice = new ObservableCollection<User>();
-                return;
-            }
-
-            var policeList = areaRecord.Users.Where(u => u.Role == "Police").ToList();
-            AvailablePolice = new ObservableCollection<User>(policeList);
+            AvailablePolice = new ObservableCollection<User>(policeInArea);
         }
 
-        private void OpenChat()
+        /// <summary>
+        /// Mở cửa sổ chat với công an được chọn.
+        /// </summary>
+        private void OpenChatWindow()
         {
-            // Create the citizen chat view model using the selected police's UserId.
+            if (SelectedPolice == null)
+            {
+                // Phòng trường hợp CanExecute không kịp cập nhật
+                return;
+            }
+
             var chatViewModel = new CitizenChatViewModel(_currentUserService, SelectedPolice.UserId);
             var chatWindow = new Resident.View.CitizenChatWindow(chatViewModel);
             chatWindow.Show();

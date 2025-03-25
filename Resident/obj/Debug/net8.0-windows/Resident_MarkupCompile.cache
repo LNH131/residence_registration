@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\
+C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\obj\Debug\net8.0-windows\
 Resident
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\App.xaml
-24-285821957
+C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\App.xaml
+29-527547923
 
-86-2064384001
-252452411520
-MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderChatSelectionWindow.xaml;View\AreaLeaderChatWindow.xaml;View\AreaLeaderWindow.xaml;View\ChangeUserWindow.xaml;View\CitizenChatWindow.xaml;View\CitizenPoliceChatSelectionWindow.xaml;View\CitizenWindow.xaml;View\DeletedUserWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseholdDetailsWindow.xaml;View\HouseholdMemberDetailsWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\LoginWindow.xaml;View\PoliceChatSelectionWindow.xaml;View\PoliceChatWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\RegistrationDetailsWindow.xaml;View\RegistrationOverviewWindow.xaml;View\StatusOverviewWindow.xaml;View\UpdateCitizenProfileWindow.xaml;
+102-733917280
+252-1169303366
+MainWindow.xaml;View\AddUserWindow.xaml;View\AdminWindow.xaml;View\AreaLeaderApprovalsOverviewWindow.xaml;View\AreaLeaderChatSelectionWindow.xaml;View\AreaLeaderChatWindow.xaml;View\AreaLeaderRegistrationDetailsWindow.xaml;View\AreaLeaderWindow.xaml;View\ChangeUserWindow.xaml;View\CitizenChatWindow.xaml;View\CitizenPoliceChatSelectionWindow.xaml;View\CitizenWindow.xaml;View\DeletedUserWindow.xaml;View\HouseHoldControlWindow.xaml;View\HouseholdDetailsWindow.xaml;View\HouseholdMemberDetailsWindow.xaml;View\HouseHoldSelectionWindow.xaml;View\HouseholdSeparationDetailsWindow.xaml;View\HouseholdTransferDetailsWindow.xaml;View\LoginWindow.xaml;View\PoliceApprovalsOverviewWindow.xaml;View\PoliceChatSelectionWindow.xaml;View\PoliceChatWindow.xaml;View\PoliceWindow.xaml;View\Register.xaml;View\RegistrationDetailsWindow.xaml;View\RegistrationOverviewWindow.xaml;View\StatusOverviewWindow.xaml;View\UpdateCitizenProfileWindow.xaml;
 
 False
 

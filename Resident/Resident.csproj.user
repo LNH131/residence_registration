@@ -13,10 +13,16 @@
     <Compile Update="View\AdminWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\AreaLeaderApprovalsOverviewWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AreaLeaderChatSelectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\AreaLeaderChatWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AreaLeaderRegistrationDetailsWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\AreaLeaderWindow.xaml.cs">
@@ -49,7 +55,16 @@
     <Compile Update="View\HouseHoldSelectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\HouseholdSeparationDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\HouseholdTransferDetailsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PoliceApprovalsOverviewWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\PoliceChatSelectionWindow.xaml.cs">

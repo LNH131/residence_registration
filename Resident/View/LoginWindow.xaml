@@ -1,11 +1,6 @@
 ﻿<Window x:Class="Resident.View.LoginWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Resident.View"
-        xmlns:viewmodels="clr-namespace:Resident.ViewModels"
-        mc:Ignorable="d"
         Title="Login" Height="500" Width="400"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="20" Background="Azure">
@@ -58,7 +53,7 @@
         <Button Grid.Row="5" Content="Login" Command="{Binding LoginCommand}"
                 Height="35" Width="100" HorizontalAlignment="Center" Margin="20"/>
 
-        <!-- Thông báo lỗi/Thông báo từ ViewModel -->
+        <!-- Thông báo lỗi -->
         <TextBlock Grid.Row="6" Text="{Binding ErrorMessage}" 
                    Foreground="Red" Margin="10" TextWrapping="Wrap"/>
     </Grid>
