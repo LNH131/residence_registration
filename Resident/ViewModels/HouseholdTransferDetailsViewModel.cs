@@ -43,7 +43,7 @@ namespace Resident.ViewModels
         {
             try
             {
-                Transfer.Status = Status.Approved.ToString();
+                Transfer.Status = Status.ApprovedByLeader.ToString();
                 _transferService.UpdateHouseholdTransfer(Transfer);
 
                 MessageBox.Show($"Household Transfer ID = {Transfer.TransferId} approved.",

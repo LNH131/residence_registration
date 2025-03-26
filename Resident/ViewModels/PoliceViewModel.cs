@@ -28,7 +28,7 @@ public class PoliceViewModel : BaseViewModel
             _selectedApprovalItem = value;
             OnPropertyChanged(nameof(SelectedApprovalItem));
             // Re-check CanExecute for ProcessCommand
-            if (ProcessCommand is LocalRelayCommand cmd)
+            if (ProcessCommand is Resident.Service.LocalRelayCommand cmd)
             {
                 cmd.RaiseCanExecuteChanged();
             }
@@ -78,22 +78,22 @@ public class PoliceViewModel : BaseViewModel
         _context = new PrnContext();
         _policeProcessingService = policeProcessingService;
 
-        ProcessCommand = new LocalRelayCommand(
+        ProcessCommand = new Resident.Service.LocalRelayCommand(
             async _ => await ProcessApprovalAsync(),
             _ => SelectedApprovalItem != null
         );
 
-        ViewDetailsCommand = new LocalRelayCommand(
+        ViewDetailsCommand = new Resident.Service.LocalRelayCommand(
             o => ViewDetails(o),
             o => o != null
         );
 
-        RefreshCommand = new LocalRelayCommand(_ => { LoadApprovalItems(); LoadHouseholds(); });
-        ChatCommand = new LocalRelayCommand(_ => OpenChat());
-        ViewHouseholdDetailCommand = new LocalRelayCommand(_ => OpenHouseholdDetail());
-        ViewReportCommand = new LocalRelayCommand(_ => OpenReports());
-        NotificationCommand = new LocalRelayCommand(_ => OpenNotifications());
-        ViewAllRegistrationsCommand = new LocalRelayCommand(_ => OpenAllRegistrations());
+        RefreshCommand = new Resident.Service.LocalRelayCommand(_ => { LoadApprovalItems(); LoadHouseholds(); });
+        ChatCommand = new Resident.Service.LocalRelayCommand(_ => OpenChat());
+        ViewHouseholdDetailCommand = new Resident.Service.LocalRelayCommand(_ => OpenHouseholdDetail());
+        ViewReportCommand = new Resident.Service.LocalRelayCommand(_ => OpenReports());
+        NotificationCommand = new Resident.Service.LocalRelayCommand(_ => OpenNotifications());
+        ViewAllRegistrationsCommand = new Resident.Service.LocalRelayCommand(_ => OpenAllRegistrations());
 
         LoadApprovalItems();
         LoadHouseholds();

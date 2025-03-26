@@ -45,7 +45,7 @@ namespace Resident.ViewModels
             {
                 _selectedPolice = value;
                 OnPropertyChanged(nameof(SelectedPolice));
-                (OpenChatCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
+                (OpenChatCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
             }
         }
 

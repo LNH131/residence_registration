@@ -12,6 +12,8 @@ namespace Resident.ViewModels
         private readonly IPoliceProcessingService _policeProcessingService;
         private readonly ICurrentUserService _currentUserService;
 
+        public User CurrentUser => _currentUserService.CurrentUser;
+
         private HouseholdSeparation _separation;
         public HouseholdSeparation Separation
         {
@@ -124,8 +126,10 @@ namespace Resident.ViewModels
         {
             try
             {
-                int currentPoliceId = _currentUserService.CurrentUser.UserId;
-                await _policeProcessingService.ProcessHouseholdSeparationAsync(Separation, currentPoliceId);
+                var separationService = new HouseholdSeparationService();
+
+                separationService.ApproveHouseholdSeparation(Separation, CurrentUser);
+
                 MessageBox.Show($"Household Separation ID {Separation.SeparationId} approved.", "Success");
                 OnPropertyChanged(nameof(CanModify));
             }

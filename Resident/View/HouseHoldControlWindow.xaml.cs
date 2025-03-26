@@ -230,5 +230,10 @@ namespace Resident.View
                 MessageBox.Show("Vui lòng chọn một thành viên để xóa.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
+
+        private void Register_Close(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

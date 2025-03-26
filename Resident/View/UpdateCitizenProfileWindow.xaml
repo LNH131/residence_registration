@@ -38,6 +38,7 @@
                 <!-- Email (giả sử email không được thay đổi) -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
                     <TextBlock Text="Email:" Width="150" VerticalAlignment="Center" FontWeight="Bold"/>
+                    <TextBox Width="300" Text="{Binding CurrentUser.Email}"/>
                 </StackPanel>
                 <!-- ID Card -->
                 <StackPanel Orientation="Horizontal" Margin="0,5">
@@ -78,11 +79,6 @@
                     <StackPanel Orientation="Horizontal" Margin="0,5">
                         <TextBlock Text="State:" Width="150" VerticalAlignment="Center"/>
                         <TextBox Width="300" Text="{Binding CurrentAddress.State}"/>
-                    </StackPanel>
-                    <!-- Zip Code -->
-                    <StackPanel Orientation="Horizontal" Margin="0,5">
-                        <TextBlock Text="Zip Code:" Width="150" VerticalAlignment="Center"/>
-                        <TextBox Width="300" Text="{Binding CurrentAddress.ZipCode}"/>
                     </StackPanel>
                     <!-- Country -->
                     <StackPanel Orientation="Horizontal" Margin="0,5">

@@ -38,7 +38,7 @@ namespace Resident.Service
 
                 // Set the ApprovedBy field using the current user and update the status.
                 sep.ApprovedBy = currentUser.UserId;
-                sep.Status = Status.Approved.ToString();
+                sep.Status = Status.ApprovedByLeader.ToString();
 
                 context.HouseholdSeparations.Update(sep);
                 context.SaveChanges();

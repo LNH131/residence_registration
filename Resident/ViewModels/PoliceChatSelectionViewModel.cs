@@ -24,7 +24,7 @@ namespace Resident.ViewModels
             {
                 _selectedCitizen = value;
                 OnPropertyChanged(nameof(SelectedCitizen));
-                (ChatWithCitizenCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
+                (ChatWithCitizenCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
             }
         }
 
@@ -36,7 +36,7 @@ namespace Resident.ViewModels
             {
                 _selectedAreaLeader = value;
                 OnPropertyChanged(nameof(SelectedAreaLeader));
-                (ChatWithAreaLeaderCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
+                (ChatWithAreaLeaderCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
             }
         }
 

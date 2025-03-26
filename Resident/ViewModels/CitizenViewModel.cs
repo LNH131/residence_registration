@@ -1,4 +1,5 @@
-﻿using Resident.Models;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Resident.Models;
 using Resident.Service;
 using Resident.View;
 using System.Collections.ObjectModel;
@@ -67,6 +68,8 @@ namespace Resident.ViewModels
 
         private void UpdateProfile()
         {
+            var updateCitizenProfileWindow = _serviceProvider.GetRequiredService<UpdateCitizenProfileWindow>();
+            updateCitizenProfileWindow.ShowDialog();
         }
 
         private void LoadNotifications()
@@ -99,6 +102,8 @@ namespace Resident.ViewModels
 
         private void ManageHousehold()
         {
+            var manageHouseholdWindow = _serviceProvider.GetRequiredService<HouseHoldControlWindow>();
+            manageHouseholdWindow.ShowDialog();
         }
     }
 }

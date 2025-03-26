@@ -39,7 +39,7 @@ namespace Resident.Service
 
                 // Set the ApprovedBy field and update the status to Approved.
                 trans.ApprovedBy = currentUser.UserId;
-                trans.Status = Status.Approved.ToString();
+                trans.Status = Status.ApprovedByLeader.ToString();
 
                 context.HouseholdTransfers.Update(trans);
                 context.SaveChanges();
