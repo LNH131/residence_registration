@@ -88,7 +88,6 @@
             <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right" Margin="5">
                 <Button Content="Chat" Height="40" Margin="0,0,0,10" Command="{Binding ChatCommand}"/>
                 <Button Content="View Household Detail" Height="40" Margin="0,0,0,10" Command="{Binding ViewHouseholdDetailCommand}"/>
-                <Button Content="View Report" Height="40" Margin="0,0,0,10" Command="{Binding ViewReportCommand}"/>
                 <Button Content="Notifications" Height="40" Margin="0,0,0,10" Command="{Binding NotificationCommand}"/>
                 <Button Content="View All Approvals" Height="40" Margin="0,0,0,10" Command="{Binding ViewAllRegistrationsCommand}"/>
             </StackPanel>

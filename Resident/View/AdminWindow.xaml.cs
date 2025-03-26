@@ -1,14 +1,13 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Resident.Models;
-using Resident.View;
-using Resident;
+using Resident.Service;
 using System.Windows;
 
 namespace Resident.View
 {
     public partial class AdminWindow : Window
     {
+        private readonly INotificationService _notificationService;
         private readonly PrnContext _context;
         public AdminWindow(PrnContext context)
         {
@@ -16,7 +15,6 @@ namespace Resident.View
             _context = context;
             this.btnLogout.Click += this.Logout_Click;
             this.Loaded += AdminWindow_Loaded;  // Đăng ký sự kiện Loaded
-
         }
         private void AdminWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -57,7 +55,21 @@ namespace Resident.View
             deletedUserWindow.Show();
             this.Close();
         }
+        private void AddNotification_Citizens(object sender, RoutedEventArgs e)
+        {
+            var serviceProvider = ((App)Application.Current).ServiceProvider;
+            var window = serviceProvider.GetRequiredService<CreateNotificationForCitizensWindow>();
+            window.ShowDialog();
+        }
 
-        
+        private void AddNotification_Police(object sender, RoutedEventArgs e)
+        {
+            var serviceProvider = ((App)Application.Current).ServiceProvider;
+            var window = serviceProvider.GetRequiredService<CreateNotificationForPoliceWindow>();
+            window.ShowDialog();
+        }
+
+
+
     }
 }

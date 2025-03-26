@@ -1,0 +1,36 @@
+﻿<Window x:Class="Resident.View.AreaLeaderNotificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="View Notifications" Height="400" Width="600"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <TextBlock Text="Notifications for Your Area" 
+                   FontSize="20" FontWeight="Bold" Margin="0,0,0,10" 
+                   Grid.Row="0"/>
+        <!-- DataGrid for Notifications -->
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Notifications}" 
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  SelectedItem="{Binding SelectedNotification, Mode=TwoWay}"
+                  Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding NotificationId}" Width="50"/>
+                <DataGridTextColumn Header="Message" Binding="{Binding Message}" Width="*"/>
+                <DataGridTextColumn Header="Sent Date" 
+                                    Binding="{Binding SentDate, StringFormat={}{0:G}}" Width="150"/>
+                <DataGridCheckBoxColumn Header="Read" Binding="{Binding IsRead}" Width="60"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <!-- Footer Buttons -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Mark as Read" Width="100" Margin="5" Command="{Binding MarkAsReadCommand}"/>
+            <Button Content="Refresh" Width="100" Margin="5" Command="{Binding RefreshCommand}"/>
+            <Button Content="Close" Width="100" Margin="5" Command="{Binding CloseCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -42,8 +42,15 @@
                 <Button Content="Thêm người dùng" Height="40" Margin="0,0,0,10" Click="AddUser_Click"/>
                 <Button Content="Chỉnh sửa người dùng" Height="40" Margin="0,0,0,10" Click="Change_Click"/>
                 <Button Content="Xóa người dùng" Height="40" Margin="0,0,0,10" Click="Deleted_Click"/>
-                <Button Content="Xem báo cáo tổng hợp" Height="40" Margin="0,0,0,10"/>
-                <Button Content="Cấu hình hệ thống" Height="40" Margin="0,0,0,10"/>
+                <Button Content="Tạo Thông báo Tổ dân phố (Citizens)" 
+        Height="40" Margin="0,0,0,10"
+        Click="AddNotification_Citizens"/>
+
+                <Button Content="Tạo Thông báo Công an Khu vực (Police)"
+       Height="40" Margin="0,0,0,10"
+        Click="AddNotification_Police"/>
+
+
             </StackPanel>
         </Grid>
 

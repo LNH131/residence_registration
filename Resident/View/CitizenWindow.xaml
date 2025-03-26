@@ -53,10 +53,6 @@
 
             <!-- Functionality section -->
             <StackPanel Grid.Column="1" Margin="5" VerticalAlignment="Top">
-                <Button Content="Cập nhật profile" Height="40" Margin="0,0,0,15"
-                        Foreground="Black" BorderBrush="Gray"
-                        FontWeight="SemiBold" Cursor="Hand"
-                        Command="{Binding UpdateProfileCommand}"/>
                 <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"
                         Command="{Binding LoadNotificationsCommand}"/>
                 <Button Content="Quản lý hộ khẩu" Height="40" Margin="0,0,0,10"

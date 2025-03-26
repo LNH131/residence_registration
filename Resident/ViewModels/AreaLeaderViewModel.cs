@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
@@ -61,7 +62,6 @@ namespace Resident.ViewModels
             ChatCommand = new LocalRelayCommand(_ => Chat());
             ViewAllRegistrationsCommand = new LocalRelayCommand(_ => ViewAllRegistrations());
             ViewApprovalsOverviewCommand = new LocalRelayCommand(_ => OpenAllItemsWindow());
-            SendNotificationToCitizensCommand = new AsyncRelayCommand(SendNotificationToCitizensAsync, () => true);
             OpenNotificationWindowCommand = new LocalRelayCommand(_ => OpenNotificationWindow());
         }
 
@@ -178,7 +178,9 @@ namespace Resident.ViewModels
         /// </summary>
         private void ViewNotifications()
         {
-            MessageBox.Show("Notification functionality is under development.", "Notifications");
+            var serviceProvider = ((App)Application.Current).ServiceProvider;
+            var notifWindow = serviceProvider.GetRequiredService<AreaLeaderNotificationWindow>();
+            notifWindow.ShowDialog();
         }
 
         /// <summary>
@@ -210,25 +212,6 @@ namespace Resident.ViewModels
             var approvalsOverviewWindow = new AreaLeaderApprovalsOverviewWindow(approvalsOverviewVM);
             approvalsOverviewWindow.ShowDialog();
         }
-
-        /// <summary>
-        /// Sends an in-app notification to all citizens.
-        /// </summary>
-        private async Task SendNotificationToCitizensAsync()
-        {
-            // Define the notification message.
-            string message = "Thông báo từ Tổ trưởng khu phố: Vui lòng cập nhật thông tin hộ khẩu mới.";
-
-            // Retrieve all users with role "Citizen"
-            var citizens = _context.Users.Where(u => u.Role == "Citizen").ToList();
-            foreach (var citizen in citizens)
-            {
-                await _notificationService.SendNotificationAsync(citizen.UserId, message);
-            }
-
-            MessageBox.Show("Thông báo đã được gửi đến tất cả cư dân.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
-
         /// <summary>
         /// Opens a window for creating a new notification.
         /// </summary>

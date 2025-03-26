@@ -1,0 +1,61 @@
+﻿<Window x:Class="Resident.View.PoliceNotificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Thông báo cho Cảnh sát"
+        Height="400" Width="600"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header / Title -->
+            <RowDefinition Height="*"/>
+            <!-- Notifications List -->
+            <RowDefinition Height="Auto"/>
+            <!-- Buttons -->
+        </Grid.RowDefinitions>
+
+        <!-- Header Title -->
+        <TextBlock Grid.Row="0" Text="Thông báo cho Cảnh sát"
+                   FontSize="20" FontWeight="Bold"
+                   Margin="0,0,0,10" />
+
+        <!-- DataGrid of Notifications -->
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding Notifications}"
+                  SelectedItem="{Binding SelectedNotification}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  Margin="0,5,0,5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"
+                                    Binding="{Binding NotificationId}"
+                                    Width="Auto"/>
+                <DataGridTextColumn Header="Nội dung"
+                                    Binding="{Binding Message}"
+                                    Width="*"/>
+                <DataGridTextColumn Header="Ngày gửi"
+                                    Binding="{Binding SentDate}"
+                                    Width="150"/>
+                <DataGridCheckBoxColumn Header="Đã đọc?"
+                                        Binding="{Binding IsRead}"
+                                        IsReadOnly="True"
+                                        Width="80"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Footer Buttons -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Tải lại"
+                    Margin="5"
+                    Command="{Binding LoadNotificationsCommand}"/>
+            <Button Content="Đánh dấu đã đọc"
+                    Margin="5"
+                    Command="{Binding MarkAsReadCommand}"/>
+            <Button Content="Đóng"
+                    Margin="5"
+                    Command="{Binding CloseWindowCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

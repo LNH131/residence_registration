@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Resident;
 using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
@@ -27,6 +29,7 @@ public class PoliceViewModel : BaseViewModel
         {
             _selectedApprovalItem = value;
             OnPropertyChanged(nameof(SelectedApprovalItem));
+
             // Re-check CanExecute for ProcessCommand
             if (ProcessCommand is Resident.Service.LocalRelayCommand cmd)
             {
@@ -78,23 +81,37 @@ public class PoliceViewModel : BaseViewModel
         _context = new PrnContext();
         _policeProcessingService = policeProcessingService;
 
+        // Process final approvals
         ProcessCommand = new Resident.Service.LocalRelayCommand(
             async _ => await ProcessApprovalAsync(),
             _ => SelectedApprovalItem != null
         );
 
+        // View details of the selected item
         ViewDetailsCommand = new Resident.Service.LocalRelayCommand(
             o => ViewDetails(o),
             o => o != null
         );
 
-        RefreshCommand = new Resident.Service.LocalRelayCommand(_ => { LoadApprovalItems(); LoadHouseholds(); });
+        // Refresh both approvals and households
+        RefreshCommand = new Resident.Service.LocalRelayCommand(_ =>
+        {
+            LoadApprovalItems();
+            LoadHouseholds();
+        });
+
+        // Open chat
         ChatCommand = new Resident.Service.LocalRelayCommand(_ => OpenChat());
+
+        // Possibly implement or set in code-behind
+        // LogoutCommand = new Resident.Service.LocalRelayCommand(_ => Logout());
+
         ViewHouseholdDetailCommand = new Resident.Service.LocalRelayCommand(_ => OpenHouseholdDetail());
         ViewReportCommand = new Resident.Service.LocalRelayCommand(_ => OpenReports());
         NotificationCommand = new Resident.Service.LocalRelayCommand(_ => OpenNotifications());
         ViewAllRegistrationsCommand = new Resident.Service.LocalRelayCommand(_ => OpenAllRegistrations());
 
+        // Initial load
         LoadApprovalItems();
         LoadHouseholds();
     }
@@ -106,11 +123,12 @@ public class PoliceViewModel : BaseViewModel
     {
         ApprovalItems.Clear();
 
-        // Load Registrations
+        // 1) Registrations
         var regs = _context.Registrations
             .Include(r => r.User)
             .Where(r => r.Status == Status.ApprovedByLeader.ToString())
             .ToList();
+
         foreach (var reg in regs)
         {
             ApprovalItems.Add(new ApprovalItem
@@ -123,7 +141,7 @@ public class PoliceViewModel : BaseViewModel
             });
         }
 
-        // Load HouseholdTransfers
+        // 2) HouseholdTransfers
         var transfers = _context.HouseholdTransfers
             .Include(t => t.Household)
                 .ThenInclude(h => h.HeadOfHouseHold)
@@ -132,6 +150,7 @@ public class PoliceViewModel : BaseViewModel
             .Include(t => t.ToAddress)
             .Where(t => t.Status == Status.ApprovedByLeader.ToString())
             .ToList();
+
         foreach (var transfer in transfers)
         {
             string creator = transfer.Household?.HeadOfHouseHold?.User?.FullName ?? "N/A";
@@ -145,13 +164,14 @@ public class PoliceViewModel : BaseViewModel
             });
         }
 
-        // Load HouseholdSeparations
+        // 3) HouseholdSeparations
         var separations = _context.HouseholdSeparations
             .Include(s => s.OriginalHousehold)
                 .ThenInclude(h => h.HeadOfHouseHold)
                     .ThenInclude(hh => hh.User)
             .Where(s => s.Status == Status.ApprovedByLeader.ToString())
             .ToList();
+
         foreach (var sep in separations)
         {
             string creator = sep.OriginalHousehold?.HeadOfHouseHold?.User?.FullName ?? "N/A";
@@ -302,15 +322,32 @@ public class PoliceViewModel : BaseViewModel
         MessageBox.Show("Report functionality is under development.", "Reports");
     }
 
+    /// <summary>
+    /// Opens the PoliceNotificationWindow from the DI container.
+    /// </summary>
     private void OpenNotifications()
     {
-        MessageBox.Show("Notification functionality is under development.", "Notifications");
+        var serviceProvider = ((App)Application.Current).ServiceProvider;
+        var notifWindow = serviceProvider.GetRequiredService<PoliceNotificationWindow>();
+        notifWindow.ShowDialog();
     }
 
+    /// <summary>
+    /// Opens the PoliceApprovalsOverviewWindow for the current policeman.
+    /// </summary>
     private void OpenAllRegistrations()
     {
         var vm = new PoliceApprovalsOverviewViewModel(_currentUserService, _policeProcessingService);
         var window = new PoliceApprovalsOverviewWindow(vm);
         window.ShowDialog();
     }
+
+    // If you want a logout command in MVVM style, you can do something like:
+    // private void Logout()
+    // {
+    //     var serviceProvider = ((App)Application.Current).ServiceProvider;
+    //     var loginWindow = serviceProvider.GetRequiredService<LoginWindow>();
+    //     loginWindow.Show();
+    //     Application.Current.MainWindow.Close();
+    // }
 }

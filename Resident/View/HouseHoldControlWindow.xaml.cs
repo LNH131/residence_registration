@@ -146,6 +146,17 @@ namespace Resident.View
                 MessageBox.Show("Vui lòng thêm ít nhất một thành viên vào hộ khẩu.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            using (var context = new PrnContext())
+            {
+                bool isHead = context.HeadOfHouseHolds.Any(h => h.UserId == _currentUser.UserId);
+                bool isMember = context.HouseholdMembers.Any(m => m.UserId == _currentUser.UserId);
+                if (isHead || isMember)
+                {
+                    MessageBox.Show("Bạn đã có hộ khẩu hoặc đã là thành viên của hộ khẩu. Mỗi người chỉ được đăng ký một hộ khẩu.",
+                        "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return;
+                }
+            }
 
             using (var context = new PrnContext())
             {

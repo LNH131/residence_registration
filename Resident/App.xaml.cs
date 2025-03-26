@@ -33,7 +33,6 @@ namespace Resident
             // Register Services (use singleton for user state, transient for others)
             services.AddSingleton<ICurrentUserService, CurrentUserService>();
             services.AddTransient<IPoliceProcessingService, PoliceProcessingService>();
-            services.AddTransient<INotificationService, NotificationService>();
             services.AddTransient<IHouseholdService, HouseholdService>();
             services.AddTransient<UserDAO>();
             services.AddTransient<ChatMessageService>();
@@ -43,6 +42,8 @@ namespace Resident
             services.AddTransient<CitizenViewModel>();
             services.AddTransient<RegisterViewModel>();
             services.AddTransient<HouseHoldControlViewModel>();
+
+            services.AddTransient<INotificationService, NotificationService>();
             services.AddTransient<AddUserViewModel>();
             services.AddTransient<HouseHoldSelectionViewModel>();
             services.AddTransient<UpdateCitizenProfileViewModel>();
@@ -84,10 +85,20 @@ namespace Resident
             services.AddTransient<HouseholdDetailsWindow>(); // For household monitoring.
             services.AddTransient<CreateNotificationWindow>();
             services.AddTransient<AreaLeaderChatWindow>();
-            services.AddTransient<CitizenPoliceChatSelectionWindow>(); 
+            services.AddTransient<CitizenPoliceChatSelectionWindow>();
             services.AddTransient<CitizenChatWindow>();
             services.AddTransient<UpdateCitizenProfileWindow>();
             services.AddTransient<INotificationService, NotificationService>();
+            services.AddTransient<CreateNotificationForCitizensViewModel>();
+            services.AddTransient<CreateNotificationForCitizensWindow>();
+
+            services.AddTransient<CreateNotificationForPoliceViewModel>();
+            services.AddTransient<CreateNotificationForPoliceWindow>();
+            services.AddTransient<PoliceNotificationViewModel>();
+            services.AddTransient<PoliceNotificationWindow>();
+            services.AddTransient<AreaLeaderNotificationViewModel>();
+            services.AddTransient<AreaLeaderNotificationWindow>();
+
 
         }
 
