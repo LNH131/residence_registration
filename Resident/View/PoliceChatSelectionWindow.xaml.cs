@@ -9,8 +9,8 @@ namespace Resident.View
         {
             InitializeComponent();
             DataContext = viewModel;
-            // Gán CloseAction để khi bấm Cancel, cửa sổ sẽ đóng.
-            viewModel.CloseAction = new Action(() => this.Close());
+            // Gán hành động đóng cửa sổ cho CancelCommand
+            viewModel.CloseAction = () => this.Close();
         }
     }
 }

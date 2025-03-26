@@ -52,7 +52,7 @@ namespace Resident.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Resident;V1.0.0.0;component/view/registrationoverviewwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Resident;component/view/registrationoverviewwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\RegistrationOverviewWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

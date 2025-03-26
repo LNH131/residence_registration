@@ -1,69 +1,76 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Resident.Models;
 using Resident.Service;
 using System.Collections.ObjectModel;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
-    public class CitizenPoliceChatSelectionViewModel : BaseViewModel
+    public class CitizenPoliceChatSelectionViewModel : ObservableObject
     {
-        private readonly PrnContext _context = new PrnContext();
         private readonly ICurrentUserService _currentUserService;
+        private readonly PrnContext _context;
 
-        // List of police officers available in the citizen's area.
-        public ObservableCollection<User> AvailablePolice { get; set; }
+        private ObservableCollection<User> _availablePolice;
+        public ObservableCollection<User> AvailablePolice
+        {
+            get => _availablePolice;
+            set => SetProperty(ref _availablePolice, value);
+        }
 
         private User _selectedPolice;
         public User SelectedPolice
         {
             get => _selectedPolice;
-            set { _selectedPolice = value; OnPropertyChanged(nameof(SelectedPolice)); }
+            set
+            {
+                SetProperty(ref _selectedPolice, value);
+                (StartChatCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
+            }
         }
 
-        public ICommand OpenChatCommand { get; }
+        public ICommand StartChatCommand { get; }
         public ICommand CancelCommand { get; }
+
+        public System.Action CloseAction { get; set; }
 
         public CitizenPoliceChatSelectionViewModel(ICurrentUserService currentUserService)
         {
             _currentUserService = currentUserService;
-            LoadAvailablePolice();
-            OpenChatCommand = new LocalRelayCommand(o => OpenChat(), o => SelectedPolice != null);
+            _context = new PrnContext(); // Consider injecting this via DI for better testability.
+
+            LoadPoliceInArea();
+
+            StartChatCommand = new LocalRelayCommand(
+                _ => OpenChatWindow(),
+                _ => SelectedPolice != null
+            );
+
+            CancelCommand = new LocalRelayCommand(
+                _ => CloseAction?.Invoke()
+            );
         }
 
-        private void LoadAvailablePolice()
+        private void LoadPoliceInArea()
         {
-            // Get the area ID from the current citizen.
-            int? areaId = _currentUserService.CurrentUser.AreaId;
+            // Assuming the citizen's AreaId is in CurrentUser
+            int? areaId = _currentUserService.CurrentUser?.AreaId;
             if (areaId == null)
             {
-                MessageBox.Show("Không xác định được khu vực của bạn.");
                 AvailablePolice = new ObservableCollection<User>();
                 return;
             }
-
-            // Option 1: Query Users directly.
-            // var policeList = _context.Users.Where(u => u.Role == "Police" && u.AreaId == areaId).ToList();
-
-            // Option 2: Use the Area model.
-            var areaRecord = _context.Areas
-                .Include(a => a.Users)
-                .FirstOrDefault(a => a.AreaId == areaId.Value);
-            if (areaRecord == null)
-            {
-                MessageBox.Show("Không tìm thấy khu vực của bạn.");
-                AvailablePolice = new ObservableCollection<User>();
-                return;
-            }
-
-            var policeList = areaRecord.Users.Where(u => u.Role == "Police").ToList();
-            AvailablePolice = new ObservableCollection<User>(policeList);
+            var policeInArea = _context.Users
+                                       .Where(u => u.Role == "Police" && u.AreaId == areaId.Value)
+                                       .ToList();
+            AvailablePolice = new ObservableCollection<User>(policeInArea);
         }
 
-        private void OpenChat()
+        private void OpenChatWindow()
         {
-            // Create the citizen chat view model using the selected police's UserId.
+            if (SelectedPolice == null)
+                return;
+
             var chatViewModel = new CitizenChatViewModel(_currentUserService, SelectedPolice.UserId);
             var chatWindow = new Resident.View.CitizenChatWindow(chatViewModel);
             chatWindow.Show();

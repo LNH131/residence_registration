@@ -1,14 +1,12 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Win32;
 using Resident.DAO;
 using Resident.Enums;
 using Resident.Service;
 using Resident.View;
 using System.Collections.ObjectModel;
 using System.Windows;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Resident.ViewModels
 {
@@ -54,7 +52,6 @@ namespace Resident.ViewModels
             try
             {
                 ErrorMessage = string.Empty;
-                OnPropertyChanged(nameof(ErrorMessage));
 
                 var user = await _userDAO.AuthenticateUser(Email, Password, SelectedRole);
                 if (user != null)
@@ -92,20 +89,17 @@ namespace Resident.ViewModels
                 }
                 else
                 {
-                    // Nếu đăng nhập sai thì hiển thị MessageBox.
-                    MessageBox.Show("Invalid email, password, or role.", "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    // Nếu xác thực thất bại, hiển thị thông báo lỗi.
                     ErrorMessage = "Invalid email, password, or role.";
-                    OnPropertyChanged(nameof(ErrorMessage));
+                    MessageBox.Show(ErrorMessage, "Login Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("An error occurred during login: " + ex.Message, "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 ErrorMessage = "An error occurred during login: " + ex.Message;
-                OnPropertyChanged(nameof(ErrorMessage));
+                MessageBox.Show(ErrorMessage, "Login Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
 
         private async Task RegisterAsync()
         {

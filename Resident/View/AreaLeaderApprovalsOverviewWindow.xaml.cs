@@ -1,12 +1,20 @@
-﻿using System.Windows;
+﻿using Resident.ViewModels;
+using System.Windows;
+
 namespace Resident.View
 {
     public partial class AreaLeaderApprovalsOverviewWindow : Window
     {
-        public AreaLeaderApprovalsOverviewWindow(AreaLeaderApprovalsOverviewViewModel viewModel)
+        // Constructor không tham số (nếu muốn gọi XAML Designer)
+        public AreaLeaderApprovalsOverviewWindow()
         {
             InitializeComponent();
-            DataContext = viewModel;
+        }
+
+        // Constructor có tham số
+        public AreaLeaderApprovalsOverviewWindow(AreaLeaderApprovalsOverviewViewModel vm) : this()
+        {
+            DataContext = vm;
         }
     }
 }

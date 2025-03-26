@@ -2,40 +2,60 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="clr-namespace:Resident.ViewModels"
-        Title="Dashboard AreaLeader" Height="500" Width="800"
+        Title="Dashboard AreaLeader" 
+        Height="500" Width="800"
         WindowStartupLocation="CenterScreen">
-    <Window.DataContext>
-        <vm:AreaLeaderViewModel/>
-    </Window.DataContext>
     <Grid>
+        <!-- Define three rows: header, main content, and footer -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+
+        <!-- Header -->
         <Border Background="LightBlue" Grid.Row="0" Padding="10">
             <TextBlock Text="Dashboard AreaLeader" 
-                       FontSize="24" FontWeight="Bold" Foreground="DarkBlue"/>
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="DarkBlue"/>
         </Border>
+
+        <!-- Main content area -->
         <Grid Grid.Row="1" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <GroupBox Header="Hồ sơ, chuyển hộ và tách hộ cần duyệt" Grid.Column="0" Margin="5">
-                <DataGrid ItemsSource="{Binding ApprovalItems}" AutoGenerateColumns="False" 
-                          IsReadOnly="True" SelectionMode="Single"
+
+            <!-- Left side: GroupBox containing DataGrid -->
+            <GroupBox Header="Hồ sơ, chuyển hộ và tách hộ cần duyệt" 
+                      Grid.Column="0" 
+                      Margin="5">
+                <DataGrid ItemsSource="{Binding ApprovalItems}" 
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          SelectionMode="Single"
                           SelectedItem="{Binding SelectedApprovalItem}">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID" Width="80" Binding="{Binding ItemId}" />
-                        <DataGridTextColumn Header="Loại" Width="120" Binding="{Binding ItemType}" />
-                        <DataGridTextColumn Header="Người tạo" Width="150" Binding="{Binding CreatorName}" />
-                        <DataGridTextColumn Header="Trạng thái" Width="100" Binding="{Binding Status}" />
+                        <DataGridTextColumn Header="ID" 
+                                            Width="80" 
+                                            Binding="{Binding ItemId}" />
+                        <DataGridTextColumn Header="Loại" 
+                                            Width="120" 
+                                            Binding="{Binding ItemType}" />
+                        <DataGridTextColumn Header="Người tạo" 
+                                            Width="150" 
+                                            Binding="{Binding CreatorName}" />
+                        <DataGridTextColumn Header="Trạng thái" 
+                                            Width="100" 
+                                            Binding="{Binding Status}" />
                         <DataGridTemplateColumn Header="Hành động" Width="120">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button Content="Xem chi tiết" 
-                                            Command="{Binding DataContext.ViewDetailsCommand, RelativeSource={RelativeSource AncestorType=DataGrid}}"
+                                            Command="{Binding DataContext.ViewDetailsCommand, 
+                                                              RelativeSource={RelativeSource AncestorType=DataGrid}}"
                                             CommandParameter="{Binding}" />
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
@@ -43,27 +63,42 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </GroupBox>
-            <!-- Side functionalities -->
-            <StackPanel Grid.Column="1" Margin="5,5,5,0" VerticalAlignment="Top" Height="357">
-                <Button Content="Gửi thông báo đến tất cả Citizen" Height="40" Margin="0,0,0,10"
-                        Command="{Binding SendNotificationToCitizensCommand}"/>
-                <Button Content="Tạo thông báo" Height="40" Margin="0,0,0,10"
-        Command="{Binding OpenNotificationWindowCommand}" />
-                <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"
+
+            <!-- Right side: Buttons for extra features -->
+            <StackPanel Grid.Column="1" Margin="5,5,5,0" VerticalAlignment="Top">
+                <Button Content="Gửi thông báo đến tất cả Citizen" 
+                        Height="40" 
+                        Margin="0,0,0,10"
+                        Command="{Binding OpenNotificationWindowCommand}"/>
+                <Button Content="Xem thông báo" 
+                        Height="40" 
+                        Margin="0,0,0,10"
                         Command="{Binding ViewNotificationsCommand}" />
-                <Button Content="Chat" Height="40" Margin="0,0,0,10"
+                <Button Content="Chat" 
+                        Height="40" 
+                        Margin="0,0,0,10"
                         Command="{Binding ChatCommand}" />
-                <Button Content="Xem hộ khẩu" Height="40" Margin="0,0,0,10"
-                        Command="{Binding ViewHouseholdCommand}" />
-                <Button Content="Xem tất cả hồ sơ" Height="40" Margin="0,0,0,10"
+                <Button Content="Xem tất cả hồ sơ" 
+                        Height="40" 
+                        Margin="0,0,0,10"
                         Command="{Binding ViewAllRegistrationsCommand}" />
-                <Button Content="Xem tổng quan duyệt hồ sơ" Height="40" Margin="0,0,0,10"
+                <Button Content="Xem tổng quan duyệt hồ sơ" 
+                        Height="40" 
+                        Margin="0,0,0,10"
                         Command="{Binding ViewApprovalsOverviewCommand}" />
             </StackPanel>
         </Grid>
-        <!-- Footer -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
-            <Button Content="Logout" Width="100" Height="30" x:Name="btnLogout" Click="Logout_Click"/>
+
+        <!-- Footer with Logout button -->
+        <StackPanel Grid.Row="2" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right" 
+                    Margin="10">
+            <Button Content="Logout" 
+                    Width="100" 
+                    Height="30" 
+                    x:Name="btnLogout" 
+                    Click="Logout_Click"/>
         </StackPanel>
     </Grid>
 </Window>

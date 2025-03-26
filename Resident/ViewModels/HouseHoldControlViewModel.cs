@@ -16,11 +16,30 @@ namespace Resident.ViewModels
         private readonly IServiceProvider _serviceProvider;
         private readonly ICurrentUserService _currentUserService;
 
+        // Các thuộc tính binding cho địa chỉ chuyển đến
+        public string TransferStreet { get; set; }
+        public string TransferWard { get; set; }
+        public string TransferDistrict { get; set; }
+        public string TransferCity { get; set; }
+        public string TransferCountry { get; set; }
 
-        private bool _isSelected;
-        private bool _isNewHead;
-        private HouseholdMember _member;
+        private Household _currentHousehold;
+        public Household CurrentHousehold
+        {
+            get => _currentHousehold;
+            set
+            {
+                if (_currentHousehold != value)
+                {
+                    _currentHousehold = value;
+                    OnPropertyChanged(nameof(CurrentHousehold));
+                    OnPropertyChanged(nameof(CurrentHouseholdNumber));
+                    OnPropertyChanged(nameof(CurrentHouseholdAddress));
+                }
+            }
+        }
 
+        // Thông tin người dùng hiện tại
         public User CurrentUser => _currentUserService.CurrentUser;
 
         private Household _selectedHousehold;
@@ -38,7 +57,6 @@ namespace Resident.ViewModels
         }
 
         private bool _isUsingSameAddress;
-
         public bool IsUsingSameAddress
         {
             get { return _isUsingSameAddress; }
@@ -77,7 +95,6 @@ namespace Resident.ViewModels
             }
         }
 
-
         private ObservableCollection<HouseholdMember> _membersToSeparate;
         public ObservableCollection<HouseholdMember> MembersToSeparate
         {
@@ -89,9 +106,10 @@ namespace Resident.ViewModels
             }
         }
 
-
+        // Các ICommand
         public ICommand SelectHouseHoldCommand { get; set; }
         public ICommand SeparateHouseholdsCommand { get; set; }
+        public ICommand TransferHouseholdCommand { get; set; }
 
         public HouseHoldControlViewModel(IServiceProvider serviceProvider, ICurrentUserService currentUserService)
         {
@@ -156,37 +174,30 @@ namespace Resident.ViewModels
             }
         }
 
-            private void SelectHouseHold()
+        private void SelectHouseHold()
+        {
+            var selectHouseHoldWindow = _serviceProvider.GetRequiredService<HouseHoldSelectionWindow>();
+            bool? result = selectHouseHoldWindow.ShowDialog();
+            if (result == true)
             {
-            
-                var selectHouseHoldWindow = _serviceProvider.GetRequiredService<HouseHoldSelectionWindow>();
-                bool? result = selectHouseHoldWindow.ShowDialog();
-                if (result == true)
-                {
-                    // Sau khi cửa sổ đóng, lấy SelectedHousehold từ cửa sổ chọn và gán vào ViewModel.
-                    Household selectedHousehold = selectHouseHoldWindow.SelectedHousehold;
-                    // Giả sử cửa sổ chọn có property HouseholdMembers trả về danh sách các thành viên của hộ khẩu.
-                    List<HouseholdMember> selectedMembers = selectHouseHoldWindow.SelectedHouseholdMembers;
-                    Debug.WriteLine("Select HouseHold: asd: " + selectedMembers);
+                Household selectedHousehold = selectHouseHoldWindow.SelectedHousehold;
+                var selectedMembers = selectHouseHoldWindow.SelectedHouseholdMembers;
+                Debug.WriteLine("Select HouseHold: " + selectedMembers);
 
                 SelectedHousehold = selectedHousehold;
 
-                // Cập nhật danh sách thành viên
                 if (selectedMembers != null)
                 {
-                    // Tạo danh sách mới gộp thông tin Household và Address.
-                    var dataSource = selectedMembers.Select(h => 
+                    var dataSource = selectedMembers.Select(h =>
                     {
                         User user = GetUserById(h.UserId);
                         return new HouseholdMemberDisplayInfo
                         {
-
                             FullName = user.FullName,
                             IdentityCard = user.IdentityCard,
                             Relationship = h.Relationship,
-                            UserId = h.UserId // Lưu UserId
+                            UserId = h.UserId
                         };
-
                     }).ToList();
                     HouseholdMembers = new ObservableCollection<HouseholdMemberDisplayInfo>(dataSource);
                 }
@@ -195,7 +206,6 @@ namespace Resident.ViewModels
                     HouseholdMembers.Clear();
                 }
 
-                // Cập nhật địa chỉ của hộ khẩu dưới dạng chuỗi đã format.
                 if (selectedHousehold?.Address != null)
                 {
                     HouseholdAddress = string.Join(", ", new[]
@@ -217,6 +227,7 @@ namespace Resident.ViewModels
                 MessageBox.Show("Không có hộ khẩu nào được chọn.");
             }
         }
+
         private void SeparateHouseholds()
         {
             var selectedMembers = HouseholdMembers.Where(member => member.IsSelected).ToList();
@@ -239,10 +250,16 @@ namespace Resident.ViewModels
                 {
                     try
                     {
+                        Debug.WriteLine("SelectedHousehold: " + SelectedHousehold.HouseholdId);
+                        int? newHouse = null;
+                        if (IsUsingSameAddress)
+                        {
+                            newHouse = SelectedHousehold.HouseholdId;
+                        }
                         HouseholdSeparation householdSeparation = new HouseholdSeparation
                         {
-                            OriginalHouseholdId = 2,
-                            NewHouseholdId = null,
+                            OriginalHouseholdId = SelectedHousehold.HouseholdId,
+                            NewHouseholdId = newHouse,
                             RequestDate = DateTime.Now,
                             Status = Status.Pending.ToString(),
                             ApprovedBy = null,
@@ -267,25 +284,18 @@ namespace Resident.ViewModels
                         }
                         db.SaveChanges();
 
-                        // Commit transaction if all commands succeed
                         transaction.Commit();
                     }
                     catch (Exception ex)
                     {
-                        // Rollback transaction if any error occurs
                         transaction.Rollback();
                         Debug.WriteLine($"Error: {ex.Message}");
                     }
                 }
             }
 
+            MessageBox.Show("Đã gửi đơn tách hộ thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
 
-
-
-
-            MessageBox.Show("Tách hộ thành công!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
-
-            // Clear selection and IsNewHead sau khi tách
             foreach (var member in HouseholdMembers)
             {
                 member.IsSelected = false;
@@ -295,8 +305,57 @@ namespace Resident.ViewModels
 
         private bool CanSeparateHouseholds()
         {
-            // Kiểm tra xem có thành viên nào được chọn không
             return HouseholdMembers.Any(member => member.IsSelected);
+        }
+
+        /// <summary>
+        /// Xử lý chuyển hộ khẩu:
+        /// 1. Tạo mới Address record với thông tin địa chỉ chuyển đến.
+        /// 2. Tạo record mới trong bảng HouseholdTransfer.
+        /// </summary>
+        private void TransferHousehold()
+        {
+            using (var db = new PrnContext())
+            {
+                // Tạo mới Address cho địa chỉ chuyển đến
+                Address newAddress = new Address
+                {
+                    Street = TransferStreet,
+                    Ward = TransferWard,
+                    District = TransferDistrict,
+                    City = TransferCity,
+                    State = "N/A",      // Điều chỉnh nếu có dữ liệu thực tế
+                    ZipCode = "N/A",    // Điều chỉnh nếu có dữ liệu thực tế
+                    Country = TransferCountry
+                };
+                db.Addresses.Add(newAddress);
+                db.SaveChanges();
+
+                // Tạo mới HouseholdTransfer với thông tin hộ khẩu hiện tại và địa chỉ chuyển đến
+                HouseholdTransfer transfer = new HouseholdTransfer
+                {
+                    HouseholdId = CurrentHousehold?.HouseholdId ?? 0,
+                    FromAddressId = CurrentHousehold != null ? CurrentHousehold.AddressId : 0,
+                    ToAddressId = newAddress.AddressId,
+                    RequestDate = DateOnly.FromDateTime(DateTime.Now),
+                    Status = "Pending",
+                    ApprovedBy = null,
+                    Comments = null
+                };
+
+                db.HouseholdTransfers.Add(transfer);
+                db.SaveChanges();
+            }
+
+            MessageBox.Show("Đơn chuyển hộ khẩu đã được gửi.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private bool CanTransferHousehold()
+        {
+            // Kiểm tra các trường địa chỉ chuyển đến phải được điền ít nhất Số nhà, thành phố và quốc gia
+            return !string.IsNullOrWhiteSpace(TransferStreet) &&
+                   !string.IsNullOrWhiteSpace(TransferCity) &&
+                   !string.IsNullOrWhiteSpace(TransferCountry);
         }
     }
 }

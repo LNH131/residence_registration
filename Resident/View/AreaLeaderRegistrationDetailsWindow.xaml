@@ -1,39 +1,56 @@
 ﻿<Window x:Class="Resident.View.AreaLeaderRegistrationDetailsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Chi tiết hồ sơ (Area Leader)" Height="400" Width="600"
+        Title="Chi tiết hồ sơ (Tổ trưởng khu phố)" 
+        Height="400" Width="600"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
         <StackPanel>
-            <TextBlock Text="Chi tiết hồ sơ" 
+            <TextBlock Text="Chi tiết hồ sơ (Tổ trưởng)" 
                        FontSize="20" 
                        FontWeight="Bold" 
                        Margin="0,0,0,10"/>
-            <!-- Display registration details fields -->
+
+            <!-- Mã hồ sơ -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                 <TextBlock Text="Mã hồ sơ:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.RegistrationId}"/>
             </StackPanel>
+
+            <!-- Họ tên -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                 <TextBlock Text="Họ tên:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.User.FullName}"/>
             </StackPanel>
+
+            <!-- Loại hồ sơ -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                 <TextBlock Text="Loại hồ sơ:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.RegistrationType}"/>
             </StackPanel>
+
+            <!-- Trạng thái -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
                 <TextBlock Text="Trạng thái:" FontWeight="Bold" Width="120"/>
                 <TextBlock Text="{Binding Registration.Status}"/>
             </StackPanel>
-            <!-- Action Buttons: Approve (preliminary) and Reject -->
-            <StackPanel Orientation="Horizontal" Margin="20" HorizontalAlignment="Center">
-                <Button Content="Duyệt sơ bộ" Width="120" Margin="5"
+
+            <!-- Ngày đăng ký -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Ngày đăng ký:" FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding Registration.StartDate, StringFormat='{}{0:yyyy-MM-dd}'}"/>
+            </StackPanel>
+
+            <!-- Action Buttons -->
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                <Button Content="Duyệt sơ bộ" Width="100" Margin="5"
                         Command="{Binding ApproveCommand}"/>
-                <Button Content="Từ chối" Width="120" Margin="5"
+                <Button Content="Từ chối" Width="100" Margin="5"
                         Command="{Binding RejectCommand}"/>
             </StackPanel>
-            <Button Content="Đóng" Width="100" Margin="10" HorizontalAlignment="Right" Click="Close_Click"/>
+
+            <Button Content="Đóng" Width="100" Margin="0,20,0,0" HorizontalAlignment="Right"
+                    Click="Close_Click"/>
         </StackPanel>
     </Grid>
 </Window>

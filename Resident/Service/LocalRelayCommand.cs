@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+
 namespace Resident.Service
 {
     public class LocalRelayCommand : ICommand
@@ -6,15 +7,11 @@ namespace Resident.Service
         private readonly Action<object> _execute;
         private readonly Func<object, bool> _canExecute;
 
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
+        public event EventHandler CanExecuteChanged;
 
         public LocalRelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
-            _execute = execute;
+            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
             _canExecute = canExecute;
         }
 
@@ -27,5 +24,21 @@ namespace Resident.Service
         {
             _execute(parameter);
         }
+
+        /// <summary>
+        /// Manually raise the CanExecuteChanged event to force the UI to re-check CanExecute.
+        /// </summary>
+        public void RaiseCanExecuteChanged()
+        {
+            CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// A convenience alias for RaiseCanExecuteChanged(), 
+        /// matching the naming convention used by many MVVM libraries.
+        /// </summary>
+        public void NotifyCanExecuteChanged()
+            => RaiseCanExecuteChanged();
+
     }
 }

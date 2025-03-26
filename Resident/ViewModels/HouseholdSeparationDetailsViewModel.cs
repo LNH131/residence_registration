@@ -1,133 +1,164 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Resident.Enums;
+﻿using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
 
-public class HouseholdSeparationDetailsViewModel : BaseViewModel
+namespace Resident.ViewModels
 {
-    private HouseholdSeparation _separation;
-    public HouseholdSeparation Separation
+    public class HouseholdSeparationDetailsViewModel : BaseViewModel
     {
-        get => _separation;
-        set { _separation = value; OnPropertyChanged(nameof(Separation)); }
-    }
+        private readonly IPoliceProcessingService _policeProcessingService;
+        private readonly ICurrentUserService _currentUserService;
 
-    public ICommand ApproveCommand { get; }
-    public ICommand RejectCommand { get; }
-
-    public HouseholdSeparationDetailsViewModel(HouseholdSeparation separation)
-    {
-        Separation = separation;
-
-        ApproveCommand = new LocalRelayCommand(o => ApproveSeparation());
-        RejectCommand = new LocalRelayCommand(o => RejectSeparation());
-    }
-
-    private void ApproveSeparation()
-    {
-        try
+        private HouseholdSeparation _separation;
+        public HouseholdSeparation Separation
         {
-            // 1) If currently Pending => preliminary approval by Area Leader
-            if (Separation.Status == Status.Pending.ToString())
+            get => _separation;
+            set
             {
-                // Preliminary approval only: set status = ApprovedByLeader
-                Separation.Status = Status.ApprovedByLeader.ToString();
-                UpdateSeparation(Separation);
-
-                MessageBox.Show($"Tách hộ ID = {Separation.SeparationId} đã được duyệt sơ bộ.\n" +
-                                "Chờ xử lý cuối cùng từ phía Công an (Police).");
+                _separation = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(CanModify));
             }
-            // 2) If currently ApprovedByLeader => final approval by Police
-            else if (Separation.Status == Status.ApprovedByLeader.ToString())
+        }
+
+        // We also want to load OriginalHousehold's info, NewHousehold's info, or members, if needed.
+        // Example: we store them in separate properties, or load them directly from Separation. 
+        // If you want a list of the members that will be separated, you can load them into an ObservableCollection.
+
+        // For example, let's show the members of the OriginalHousehold:
+        private ObservableCollection<User> _originalHouseholdMembers;
+        public ObservableCollection<User> OriginalHouseholdMembers
+        {
+            get => _originalHouseholdMembers;
+            set { _originalHouseholdMembers = value; OnPropertyChanged(); }
+        }
+
+        // If there's a new household created, we can show those members too:
+        private ObservableCollection<User> _newHouseholdMembers;
+        public ObservableCollection<User> NewHouseholdMembers
+        {
+            get => _newHouseholdMembers;
+            set { _newHouseholdMembers = value; OnPropertyChanged(); }
+        }
+
+        // Only allow Approve/Reject when status is Pending.
+        public bool CanModify => Separation.Status == Status.Pending.ToString();
+
+        public ICommand ApproveCommand { get; }
+        public ICommand RejectCommand { get; }
+
+        public HouseholdSeparationDetailsViewModel(
+            HouseholdSeparation separation,
+            IPoliceProcessingService policeProcessingService,
+            ICurrentUserService currentUserService)
+        {
+            _policeProcessingService = policeProcessingService;
+            _currentUserService = currentUserService;
+            Separation = separation;
+
+            // Load the household members (optional).
+            LoadHouseholdMembers();
+
+            ApproveCommand = new LocalRelayCommand(
+                async _ => await ApproveSeparationAsync(),
+                _ => CanModify
+            );
+            RejectCommand = new LocalRelayCommand(
+                async _ => await RejectSeparationAsync(),
+                _ => CanModify
+            );
+        }
+
+        private void LoadHouseholdMembers()
+        {
+            // Example logic: load members from the OriginalHousehold 
+            // and any existing members from the NewHousehold (if created).
+            var context = new PrnContext();
+
+            // 1. Original household members
+            if (Separation.OriginalHouseholdId > 0)
             {
-                using (var context = new PrnContext())
+                var originalHousehold = context.Households
+                    .Find(Separation.OriginalHouseholdId);
+                if (originalHousehold != null)
                 {
-                    // Reload from DB (including members)
-                    var dbSep = context.HouseholdSeparations
-                        .Include(s => s.SeparationMembers)
-                        .FirstOrDefault(s => s.SeparationId == Separation.SeparationId);
+                    // Include user info
+                    var members = context.HouseholdMembers
+                        .Join(context.Users,
+                              hm => hm.UserId,
+                              u => u.UserId,
+                              (hm, u) => new { hm, u })
+                        .Where(x => x.hm.HouseholdId == originalHousehold.HouseholdId)
+                        .Select(x => x.u)
+                        .ToList();
 
-                    if (dbSep == null)
-                        throw new Exception("Separation not found in DB.");
-
-                    // Possibly create a new household if needed
-                    if (dbSep.NewHouseholdId == null)
-                    {
-                        var newHouse = new Household
-                        {
-                            // For example, you might have an AddressId in the separation or a default:
-                            AddressId = 1039,
-                            CreatedDate = DateOnly.FromDateTime(DateTime.Now)
-                        };
-                        context.Households.Add(newHouse);
-                        context.SaveChanges();
-
-                        dbSep.NewHouseholdId = newHouse.HouseholdId;
-                    }
-
-                    // Move each separation member from OriginalHousehold to the new household
-                    foreach (var member in dbSep.SeparationMembers)
-                    {
-                        var hhMember = context.HouseholdMembers
-                            .FirstOrDefault(m => m.UserId == member.UserId &&
-                                                 m.HouseholdId == dbSep.OriginalHouseholdId);
-                        if (hhMember != null)
-                        {
-                            // effectively "removing" from old by reassigning to the new household
-                            hhMember.HouseholdId = dbSep.NewHouseholdId.Value;
-                            context.HouseholdMembers.Update(hhMember);
-                        }
-                    }
-
-                    // Mark as fully Approved
-                    dbSep.Status = Status.Approved.ToString();
-                    dbSep.ApprovedBy = /* policeman’s userId if you have it */ null;
-                    dbSep.ApprovalDate = DateTime.Now;
-                    context.HouseholdSeparations.Update(dbSep);
-                    context.SaveChanges();
-
-                    // Update local copy
-                    Separation.Status = Status.Approved.ToString();
+                    OriginalHouseholdMembers = new ObservableCollection<User>(members);
                 }
-
-                MessageBox.Show($"Tách hộ ID={Separation.SeparationId} đã được phê duyệt (Police). " +
-                                "Thành viên đã di chuyển khỏi hộ cũ.");
             }
-            else
+
+            // 2. If the new household has already been created (NewHouseholdId != null):
+            if (Separation.NewHouseholdId.HasValue && Separation.NewHouseholdId.Value > 0)
             {
-                // If it's already Approved or Rejected, or some unexpected status, do nothing or show error
-                MessageBox.Show($"Không thể phê duyệt tách hộ ở trạng thái {Separation.Status}.");
+                var newHousehold = context.Households
+                    .Find(Separation.NewHouseholdId.Value);
+                if (newHousehold != null)
+                {
+                    var members = context.HouseholdMembers
+                        .Join(context.Users,
+                              hm => hm.UserId,
+                              u => u.UserId,
+                              (hm, u) => new { hm, u })
+                        .Where(x => x.hm.HouseholdId == newHousehold.HouseholdId)
+                        .Select(x => x.u)
+                        .ToList();
+
+                    NewHouseholdMembers = new ObservableCollection<User>(members);
+                }
             }
         }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Error approving household separation: " + ex.Message);
-        }
-    }
 
-    private void RejectSeparation()
-    {
-        try
+        private async Task ApproveSeparationAsync()
         {
-            Separation.Status = Status.Rejected.ToString();
-            UpdateSeparation(Separation);
-            MessageBox.Show($"Tách hộ ID = {Separation.SeparationId} đã bị từ chối.");
+            try
+            {
+                int currentPoliceId = _currentUserService.CurrentUser.UserId;
+                await _policeProcessingService.ProcessHouseholdSeparationAsync(Separation, currentPoliceId);
+                MessageBox.Show($"Household Separation ID {Separation.SeparationId} approved.", "Success");
+                OnPropertyChanged(nameof(CanModify));
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show($"Error approving separation: {ex.Message}",
+                                "Error",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Error);
+            }
         }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Error rejecting household separation: " + ex.Message);
-        }
-    }
 
-    private void UpdateSeparation(HouseholdSeparation separation)
-    {
-        // A small helper to do quick updates (like status changes) 
-        using (var context = new PrnContext())
+        private async Task RejectSeparationAsync()
         {
-            context.HouseholdSeparations.Update(separation);
-            context.SaveChanges();
+            try
+            {
+                // Example of "rejecting" a separation:
+                Separation.Status = Status.Rejected.ToString();
+
+                // If you have a separation service to handle rejections:
+                var separationService = new HouseholdSeparationService();
+                separationService.UpdateHouseholdSeparation(Separation);
+
+                MessageBox.Show($"Household Separation ID {Separation.SeparationId} rejected.", "Info");
+                OnPropertyChanged(nameof(CanModify));
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show($"Error rejecting separation: {ex.Message}",
+                                "Error",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Error);
+            }
         }
     }
 }

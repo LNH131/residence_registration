@@ -57,12 +57,12 @@
                         Foreground="Black" BorderBrush="Gray"
                         FontWeight="SemiBold" Cursor="Hand"
                         Command="{Binding UpdateProfileCommand}"/>
+                <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10"
+                        Command="{Binding LoadNotificationsCommand}"/>
                 <Button Content="Quản lý hộ khẩu" Height="40" Margin="0,0,0,10"
                         Command="{Binding ManageHouseholdCommand}"/>
-                <Button Content="Chat với tổ trưởng khu phố" Height="40" Margin="0,0,0,10"
+                <Button Content="Chat với Police Khu vuc" Height="40" Margin="0,0,0,10"
                         Command="{Binding OpenChatCommand}"/>
-                <Button Content="Xem thông báo" Height="40" Margin="0,0,0,10" 
-        Command="{Binding OpenNotificationsCommand}" />
             </StackPanel>
         </Grid>
 

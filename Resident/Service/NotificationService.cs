@@ -32,12 +32,26 @@ namespace Resident.Service
             _context.Notifications.Add(notification);
             await _context.SaveChangesAsync();
         }
+        public async Task SendNotificationAsync(int userId, string message)
+        {
+            // Use the injected context rather than creating a new one.
+            var notification = new Notification
+            {
+                UserId = userId,
+                Message = message,
+                SentDate = DateTime.Now,
+                IsRead = false
+            };
+
+            _context.Notifications.Add(notification);
+            await _context.SaveChangesAsync();
+        }
 
         public async Task SendEmailNotificationAsync(string recipientEmail, string subject, string body)
         {
             try
             {
-                // Lấy cấu hình SMTP từ appsettings.json
+                // Get SMTP configuration from appsettings.json via IConfiguration
                 string host = _configuration["Smtp:Host"] ?? "smtp.fpt.edu.vn";
                 int port = int.TryParse(_configuration["Smtp:Port"], out int parsedPort) ? parsedPort : 587;
                 string username = _configuration["Smtp:Username"] ?? "giangvthe187264@fpt.edu.vn";
@@ -57,7 +71,6 @@ namespace Resident.Service
                         Body = body,
                         IsBodyHtml = true
                     };
-
                     mail.To.Add(recipientEmail);
 
                     await client.SendMailAsync(mail);
@@ -65,7 +78,6 @@ namespace Resident.Service
             }
             catch (Exception ex)
             {
-                // Bạn có thể tích hợp logging ở đây nếu muốn.
                 throw new Exception("Email sending failed: " + ex.Message, ex);
             }
         }

@@ -7,15 +7,11 @@ public partial class Household
 {
     public int HouseholdId { get; set; }
 
-    public int HeadId { get; set; }
-
     public int AddressId { get; set; }
 
     public DateOnly? CreatedDate { get; set; }
 
     public virtual Address Address { get; set; } = null!;
-
-    public virtual HeadOfHouseHold Head { get; set; } = null!;
 
     public virtual HeadOfHouseHold? HeadOfHouseHold { get; set; }
 

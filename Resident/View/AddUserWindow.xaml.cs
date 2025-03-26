@@ -61,7 +61,7 @@ namespace Resident.View
             }
             user.FullName = fullName.Text;
             user.Email = email.Text;
-            user.Password = passworld.Text;
+            user.Password =passworld.Text;
             user.CurrentAddressId = 1002;
             if (role.SelectedItem == null)
             {
@@ -174,8 +174,15 @@ namespace Resident.View
                     var dbUser = _context.Users.FirstOrDefault(u => u.Email == tempUser.Email);
                     if (dbUser == null)
                     {
-                        // Nếu chưa tồn tại, thêm user vào context
-                        _context.Users.Add(tempUser);
+                        User user = new User()
+                        {
+                            FullName = tempUser.FullName,
+                            Email = tempUser.Email,
+                            Password = BCrypt.Net.BCrypt.HashPassword(tempUser.Password),
+                            Role = tempUser.Role,
+                            CurrentAddressId = tempUser.CurrentAddressId
+                        };
+                        _context.Users.Add(user);
                         addedEmails.Add(tempUser.Email);
                     }
                     else
@@ -215,7 +222,7 @@ namespace Resident.View
             var logoutWindow = serviceProvider.GetRequiredService<AdminWindow>();
             logoutWindow.Show();
             this.Close();
-        
+
         }
     }
 }

@@ -5018,11 +5018,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\git\\residence_registration\\Resident\\Resident.csproj",
+      "projectUniqueName": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Resident.csproj",
       "projectName": "Resident",
-      "projectPath": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\git\\residence_registration\\Resident\\Resident.csproj",
+      "projectPath": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\Resident.csproj",
       "packagesPath": "C:\\Users\\acer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\git\\residence_registration\\Resident\\obj\\",
+      "outputPath": "C:\\Users\\acer\\Desktop\\CNki5\\PRN212\\21-3git\\residence_registration\\Resident\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

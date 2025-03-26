@@ -1,7 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using Microsoft.EntityFrameworkCore;
-using Resident.Models;
+﻿using Resident.Models;
 using Resident.Service;
 using System.Collections.ObjectModel;
 using System.Windows;
@@ -9,80 +6,96 @@ using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
-    public class CitizenNotificationViewModel : ObservableObject
+    public class CitizenNotificationViewModel : BaseViewModel
     {
         private readonly PrnContext _context;
         private readonly ICurrentUserService _currentUserService;
-
-        public ObservableCollection<Notification> Notifications { get; set; } = new ObservableCollection<Notification>();
-
-        private Notification? _selectedNotification;
-        public Notification? SelectedNotification
-        {
-            get => _selectedNotification;
-            set { SetProperty(ref _selectedNotification, value); }
-        }
-
-        public ICommand MarkAsReadCommand { get; }
-        public ICommand CloseCommand { get; }
-
-        // Action để đóng cửa sổ, được thiết lập từ code-behind.
-        public Action? CloseAction { get; set; }
 
         public CitizenNotificationViewModel(ICurrentUserService currentUserService)
         {
             _currentUserService = currentUserService;
             _context = new PrnContext();
 
-            MarkAsReadCommand = new AsyncRelayCommand(MarkAsReadAsync, CanMarkAsRead);
-            CloseCommand = new RelayCommand(() => CloseAction?.Invoke());
+            Notifications = new ObservableCollection<Notification>();
+            LoadNotificationsCommand = new LocalRelayCommand(_ => LoadNotifications());
+            MarkAsReadCommand = new LocalRelayCommand(_ => MarkAsRead(), _ => SelectedNotification != null);
 
-            LoadNotificationsAsync();
+            LoadNotifications(); // Initial load
         }
 
-        private bool CanMarkAsRead() => SelectedNotification != null && SelectedNotification.IsRead != true;
-
-        private async Task LoadNotificationsAsync()
+        private ObservableCollection<Notification> _notifications;
+        public ObservableCollection<Notification> Notifications
         {
+            get => _notifications;
+            set { _notifications = value; OnPropertyChanged(); }
+        }
+
+        private Notification _selectedNotification;
+        public Notification SelectedNotification
+        {
+            get => _selectedNotification;
+            set
+            {
+                _selectedNotification = value;
+                OnPropertyChanged();
+                // Re-check can-execute for MarkAsRead
+                (MarkAsReadCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
+            }
+        }
+
+        public ICommand LoadNotificationsCommand { get; }
+        public ICommand MarkAsReadCommand { get; }
+
+        private void LoadNotifications()
+        {
+            Notifications.Clear();
+
             try
             {
-                if (_currentUserService.CurrentUser == null)
-                {
-                    MessageBox.Show("Chưa có thông tin người dùng. Vui lòng đăng nhập lại.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
-                }
-
                 int currentUserId = _currentUserService.CurrentUser.UserId;
-                var notifications = await _context.Notifications
+
+                // Query all notifications for the current user, sorted by date descending
+                var userNotifications = _context.Notifications
                     .Where(n => n.UserId == currentUserId)
                     .OrderByDescending(n => n.SentDate)
-                    .ToListAsync();
+                    .ToList();
 
-                Notifications = new ObservableCollection<Notification>(notifications);
-                OnPropertyChanged(nameof(Notifications));
+                foreach (var notif in userNotifications)
+                {
+                    Notifications.Add(notif);
+                }
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
-                MessageBox.Show("Lỗi tải thông báo: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Error loading notifications: " + ex.Message,
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private async Task MarkAsReadAsync()
+        private void MarkAsRead()
         {
-            if (SelectedNotification == null)
-                return;
+            if (SelectedNotification == null) return;
 
             try
             {
+                // Mark in DB
+                var dbNotif = _context.Notifications
+                    .FirstOrDefault(n => n.NotificationId == SelectedNotification.NotificationId);
+
+                if (dbNotif != null)
+                {
+                    dbNotif.IsRead = true;
+                    _context.SaveChanges();
+                }
+
+                // Also mark in local collection
                 SelectedNotification.IsRead = true;
-                _context.Notifications.Update(SelectedNotification);
-                await _context.SaveChangesAsync();
-                MessageBox.Show("Thông báo đã được đánh dấu đã đọc.", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
-                await LoadNotificationsAsync();
+                OnPropertyChanged(nameof(Notifications));
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
-                MessageBox.Show("Lỗi cập nhật: " + ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Error marking as read: " + ex.Message,
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

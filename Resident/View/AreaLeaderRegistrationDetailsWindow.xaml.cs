@@ -1,4 +1,4 @@
-﻿using Resident.ViewModels;
+﻿using Resident.ViewModels; // <-- Adjust namespace as needed
 using System.Windows;
 
 namespace Resident.View
@@ -10,7 +10,6 @@ namespace Resident.View
             InitializeComponent();
             DataContext = viewModel;
         }
-
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

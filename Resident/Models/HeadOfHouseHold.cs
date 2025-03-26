@@ -15,7 +15,5 @@ public partial class HeadOfHouseHold
 
     public virtual Household? Household { get; set; }
 
-    public virtual ICollection<Household> Households { get; set; } = new List<Household>();
-
     public virtual User User { get; set; } = null!;
 }

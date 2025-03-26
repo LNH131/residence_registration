@@ -13,33 +13,21 @@ namespace Resident.Service
                 // Retrieve transfers with status "Pending" or "ApprovedByLeader" (preliminarily approved)
                 return context.HouseholdTransfers
                               .Include(t => t.Household)
-                              .Include(t => t.FromAreaId)
-                              .Include(t => t.FromAreaId)
+                              .Include(t => t.FromAddress)
+                              .Include(t => t.ToAddress)
                               .Where(t => t.Status == "Pending" || t.Status == Status.ApprovedByLeader.ToString())
                               .ToList();
             }
         }
 
-        public void UpdateHouseholdTransfer(HouseholdTransfer updatedTransfer)
+        public void UpdateHouseholdTransfer(HouseholdTransfer transfer)
         {
             using (var context = new PrnContext())
             {
-                // Reload from DB so EF sees the real object with correct references
-                var dbTransfer = context.HouseholdTransfers
-                    .FirstOrDefault(t => t.TransferId == updatedTransfer.TransferId);
-
-                if (dbTransfer == null)
-                    throw new Exception("Household Transfer not found in the database.");
-
-                // Now only update the fields you need
-                dbTransfer.Status = updatedTransfer.Status;
-                dbTransfer.ApprovedBy = updatedTransfer.ApprovedBy;
-                dbTransfer.Comments = updatedTransfer.Comments;
-
+                context.HouseholdTransfers.Update(transfer);
                 context.SaveChanges();
             }
         }
-
 
         public void ApproveHouseholdTransfer(HouseholdTransfer transfer, User currentUser)
         {
@@ -49,7 +37,7 @@ namespace Resident.Service
                 if (trans == null)
                     throw new Exception("Household Transfer not found in the database.");
 
-                // Final approval: update the ApprovedBy field and change status to Approved.
+                // Set the ApprovedBy field and update the status to Approved.
                 trans.ApprovedBy = currentUser.UserId;
                 trans.Status = Status.Approved.ToString();
 

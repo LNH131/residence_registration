@@ -1,6 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.IO;
 
 namespace Resident.Models;
 
@@ -31,8 +29,6 @@ public partial class PrnContext : DbContext
 
     public virtual DbSet<HouseholdTransfer> HouseholdTransfers { get; set; }
 
-    public virtual DbSet<Log> Logs { get; set; }
-
     public virtual DbSet<Notification> Notifications { get; set; }
 
     public virtual DbSet<Registration> Registrations { get; set; }
@@ -45,16 +41,9 @@ public partial class PrnContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
-    public virtual DbSet<UserContact> UserContacts { get; set; }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        var builder = new ConfigurationBuilder(); //Microsoft.Extensions...
-        builder.SetBasePath(Directory.GetCurrentDirectory());
-        builder.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-        var configuration = builder.Build();
-        optionsBuilder.UseSqlServer(configuration.GetConnectionString("Default"));
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=VuTruongGiang\\SQLEXPRESS;uid=sa;password=123;database=PRNDB2;Encrypt=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -91,9 +80,7 @@ public partial class PrnContext : DbContext
             entity.HasKey(e => e.AreaId).HasName("PK__Areas__70B820286F49B948");
 
             entity.Property(e => e.AreaId).HasColumnName("AreaID");
-            entity.Property(e => e.AreaName)
-                .HasMaxLength(100)
-                .IsUnicode(false);
+            entity.Property(e => e.AreaName).HasMaxLength(255);
             entity.Property(e => e.PoliceId).HasColumnName("PoliceID");
 
             entity.HasOne(d => d.Police).WithMany(p => p.Areas)
@@ -150,7 +137,6 @@ public partial class PrnContext : DbContext
             entity.Property(e => e.HouseholdId).HasColumnName("HouseholdID");
             entity.Property(e => e.AddressId).HasColumnName("AddressID");
             entity.Property(e => e.CreatedDate).HasDefaultValueSql("(getdate())");
-            entity.Property(e => e.HeadId).HasColumnName("HeadID");
 
             entity.HasOne(d => d.Address).WithMany(p => p.Households)
                 .HasForeignKey(d => d.AddressId)
@@ -217,55 +203,32 @@ public partial class PrnContext : DbContext
 
             entity.Property(e => e.TransferId).HasColumnName("TransferID");
             entity.Property(e => e.Comments).HasColumnType("text");
-            entity.Property(e => e.FromAreaId).HasColumnName("FromAreaID");
+            entity.Property(e => e.FromAddressId).HasColumnName("FromAddressID");
             entity.Property(e => e.HouseholdId).HasColumnName("HouseholdID");
             entity.Property(e => e.Status)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasDefaultValue("Pending");
-            entity.Property(e => e.ToAreaId).HasColumnName("ToAreaID");
+            entity.Property(e => e.ToAddressId).HasColumnName("ToAddressID");
 
             entity.HasOne(d => d.ApprovedByNavigation).WithMany(p => p.HouseholdTransfers)
                 .HasForeignKey(d => d.ApprovedBy)
                 .HasConstraintName("FK__Household__Appro__787EE5A0");
 
-            entity.HasOne(d => d.FromArea).WithMany(p => p.HouseholdTransferFromAreas)
-                .HasForeignKey(d => d.FromAreaId)
+            entity.HasOne(d => d.FromAddress).WithMany(p => p.HouseholdTransferFromAddresses)
+                .HasForeignKey(d => d.FromAddressId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__FromA__72C60C4A");
+                .HasConstraintName("FK_HouseholdTransfers_FromAddressID");
 
             entity.HasOne(d => d.Household).WithMany(p => p.HouseholdTransfers)
                 .HasForeignKey(d => d.HouseholdId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__Household__House__797309D9");
 
-            entity.HasOne(d => d.ToArea).WithMany(p => p.HouseholdTransferToAreas)
-                .HasForeignKey(d => d.ToAreaId)
+            entity.HasOne(d => d.ToAddress).WithMany(p => p.HouseholdTransferToAddresses)
+                .HasForeignKey(d => d.ToAddressId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Household__ToAre__74AE54BC");
-        });
-
-        modelBuilder.Entity<Log>(entity =>
-        {
-            entity.HasKey(e => e.LogId).HasName("PK__Logs__5E5499A84E82A843");
-
-            entity.Property(e => e.LogId).HasColumnName("LogID");
-            entity.Property(e => e.Action)
-                .HasMaxLength(100)
-                .IsUnicode(false);
-            entity.Property(e => e.EntityId).HasColumnName("EntityID");
-            entity.Property(e => e.EntityType)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.Timestamp)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-            entity.Property(e => e.UserId).HasColumnName("UserID");
-
-            entity.HasOne(d => d.User).WithMany(p => p.Logs)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Logs__UserID__75A278F5");
+                .HasConstraintName("FK_HouseholdTransfers_ToAddressID");
         });
 
         modelBuilder.Entity<Notification>(entity =>
@@ -427,25 +390,6 @@ public partial class PrnContext : DbContext
                 .HasForeignKey(d => d.CurrentAddressId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Users_Addresses");
-        });
-
-        modelBuilder.Entity<UserContact>(entity =>
-        {
-            entity.HasKey(e => e.ContactId).HasName("PK__UserCont__5C6625BB6652788E");
-
-            entity.Property(e => e.ContactId).HasColumnName("ContactID");
-            entity.Property(e => e.ContactType)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.ContactValue)
-                .HasMaxLength(255)
-                .IsUnicode(false);
-            entity.Property(e => e.UserId).HasColumnName("UserID");
-
-            entity.HasOne(d => d.User).WithMany(p => p.UserContacts)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__UserConta__UserI__7E37BEF6");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -3,155 +3,157 @@ using Resident.Enums;
 using Resident.Models;
 using Resident.Service;
 using Resident.View;
-using Resident.ViewModels;
 using System.Collections.ObjectModel;
-using System.Windows;
 using System.Windows.Input;
 
-public class AreaLeaderApprovalsOverviewViewModel : BaseViewModel
+namespace Resident.ViewModels
 {
-    private readonly PrnContext _context;
-    private readonly RegistrationService _registrationService;
-
-    public ObservableCollection<ApprovalItem> ApprovalItems { get; set; } = new ObservableCollection<ApprovalItem>();
-
-    private ApprovalItem _selectedApprovalItem;
-    public ApprovalItem SelectedApprovalItem
+    public class AreaLeaderApprovalsOverviewViewModel : BaseViewModel
     {
-        get => _selectedApprovalItem;
-        set
+        private readonly PrnContext _context;
+        private readonly RegistrationService _registrationService;
+        private readonly ICurrentUserService _currentUserService;
+        private readonly IPoliceProcessingService _policeProcessingService;
+
+        public ObservableCollection<ApprovalItem> ApprovalItems { get; set; }
+            = new ObservableCollection<ApprovalItem>();
+
+        public ICommand RefreshCommand { get; }
+        public ICommand ViewDetailsCommand { get; }
+
+        /// <summary>
+        /// Constructor for AreaLeaderApprovalsOverviewViewModel.
+        /// Injects ICurrentUserService and IPoliceProcessingService so that the current user and processing logic can be passed
+        /// to detail view models.
+        /// </summary>
+        public AreaLeaderApprovalsOverviewViewModel(
+            ICurrentUserService currentUserService,
+            IPoliceProcessingService policeProcessingService)
         {
-            _selectedApprovalItem = value;
-            OnPropertyChanged(nameof(SelectedApprovalItem));
+            _context = new PrnContext();
+            _registrationService = new RegistrationService();
+            _currentUserService = currentUserService;
+            _policeProcessingService = policeProcessingService;
+
+            RefreshCommand = new LocalRelayCommand(_ => LoadApprovalItems());
+            ViewDetailsCommand = new LocalRelayCommand(o => ViewDetails(o), o => o != null);
+
+            LoadApprovalItems();
         }
-    }
 
-    public ICommand RefreshCommand { get; }
-    public ICommand ViewDetailsCommand { get; }
-    // Preliminary approval for Registration items (if you still want it).
-    public ICommand ApproveCommand { get; }
-
-    public AreaLeaderApprovalsOverviewViewModel()
-    {
-        _context = new PrnContext();
-        _registrationService = new RegistrationService();
-
-        RefreshCommand = new LocalRelayCommand(o => LoadAllItems());
-        ViewDetailsCommand = new LocalRelayCommand(o => ViewDetails(o), o => o != null);
-        ApproveCommand = new LocalRelayCommand(o => ApproveRegistration(),
-            o => SelectedApprovalItem != null && SelectedApprovalItem.ItemType == "Registration");
-
-        LoadAllItems(); // Load everything on construction
-    }
-
-    private void LoadAllItems()
-    {
-        ApprovalItems.Clear();
-
-        // 1. Load ALL Registrations (no status filter).
-        var allRegs = _context.Registrations
-            .Include(r => r.User)
-            .ToList();
-        // Or you could call your RegistrationService if it provides a method to get all:
-        // var allRegs = _registrationService.GetAllRegistrations();
-
-        foreach (var reg in allRegs)
+        /// <summary>
+        /// Loads all ApprovalItems from Registrations, HouseholdTransfers, and HouseholdSeparations
+        /// whose status is either Pending or ApprovedByLeader.
+        /// </summary>
+        private void LoadApprovalItems()
         {
-            ApprovalItems.Add(new ApprovalItem
+            ApprovalItems.Clear();
+
+            // 1) Load Registrations (status Pending or ApprovedByLeader)
+            var regs = _context.Registrations
+                               .Include(r => r.User)
+                               .Where(r => r.Status == Status.Pending.ToString() ||
+                                           r.Status == Status.ApprovedByLeader.ToString())
+                               .ToList();
+            foreach (var r in regs)
             {
-                ItemId = reg.RegistrationId,
-                ItemType = "Registration",
-                CreatorName = reg.User?.FullName ?? "N/A",
-                Status = reg.Status,
-                UnderlyingItem = reg
-            });
-        }
-
-        // 2. Load ALL HouseholdTransfers (no status filter).
-        var allTransfers = _context.HouseholdTransfers
-            .Include(t => t.Household)
-                .ThenInclude(h => h.HeadOfHouseHold)
-                    .ThenInclude(hh => hh.User)
-            .Include(t => t.FromAddress)
-            .Include(t => t.ToAddress)
-            .ToList();
-
-        foreach (var transfer in allTransfers)
-        {
-            string creator = transfer.Household?.HeadOfHouseHold?.User?.FullName ?? "N/A";
-            ApprovalItems.Add(new ApprovalItem
-            {
-                ItemId = transfer.TransferId,
-                ItemType = "HouseholdTransfer",
-                CreatorName = creator,
-                Status = transfer.Status,
-                UnderlyingItem = transfer
-            });
-        }
-
-        // 3. Load ALL HouseholdSeparations (no status filter).
-        var allSeparations = _context.HouseholdSeparations
-            .Include(s => s.OriginalHousehold)
-                .ThenInclude(h => h.HeadOfHouseHold)
-                    .ThenInclude(hh => hh.User)
-            .Include(s => s.NewHousehold)
-            .ToList();
-
-        foreach (var sep in allSeparations)
-        {
-            string creator = sep.OriginalHousehold?.HeadOfHouseHold?.User?.FullName ?? "N/A";
-            ApprovalItems.Add(new ApprovalItem
-            {
-                ItemId = sep.SeparationId,
-                ItemType = "HouseholdSeparation",
-                CreatorName = creator,
-                Status = sep.Status,
-                UnderlyingItem = sep
-            });
-        }
-
-        OnPropertyChanged(nameof(ApprovalItems));
-    }
-
-    private void ApproveRegistration()
-    {
-        if (SelectedApprovalItem == null)
-        {
-            MessageBox.Show("Vui lòng chọn hồ sơ đăng ký để duyệt sơ bộ!");
-            return;
-        }
-
-        var reg = SelectedApprovalItem.UnderlyingItem as Registration;
-        if (reg != null)
-        {
-            reg.Status = Status.ApprovedByLeader.ToString();
-            _registrationService.UpdateRegistration(reg);
-            MessageBox.Show($"Hồ sơ ID = {reg.RegistrationId} đã được duyệt sơ bộ.\nChờ xử lý từ phía Công an.");
-            LoadAllItems(); // refresh
-        }
-    }
-
-    private void ViewDetails(object parameter)
-    {
-        if (parameter is ApprovalItem item)
-        {
-            if (item.ItemType == "Registration")
-            {
-                var detailsWindow = new AreaLeaderRegistrationDetailsWindow(
-                    new AreaLeaderRegistrationDetailsViewModel(item.UnderlyingItem as Registration, null /* pass ICurrentUserService if needed */));
-                detailsWindow.ShowDialog();
+                ApprovalItems.Add(new ApprovalItem
+                {
+                    ItemId = r.RegistrationId,
+                    ItemType = "Registration",
+                    CreatorName = r.User?.FullName ?? "N/A",
+                    Status = r.Status,
+                    UnderlyingItem = r
+                });
             }
-            else if (item.ItemType == "HouseholdTransfer")
+
+            // 2) Load HouseholdTransfers (status Pending or ApprovedByLeader)
+            var transfers = _context.HouseholdTransfers
+                .Include(t => t.Household)
+                    .ThenInclude(h => h.HeadOfHouseHold)
+                        .ThenInclude(hh => hh.User)
+                .Include(t => t.FromAddress)
+                .Include(t => t.ToAddress)
+                .Where(t => t.Status == Status.Pending.ToString() ||
+                            t.Status == Status.ApprovedByLeader.ToString())
+                .ToList();
+            foreach (var t in transfers)
             {
-                var transferDetailsWindow = new HouseholdTransferDetailsWindow(
-                    new HouseholdTransferDetailsViewModel(item.UnderlyingItem as HouseholdTransfer));
-                transferDetailsWindow.ShowDialog();
+                string creator = t.Household?.HeadOfHouseHold?.User?.FullName ?? "N/A";
+                ApprovalItems.Add(new ApprovalItem
+                {
+                    ItemId = t.TransferId,
+                    ItemType = "HouseholdTransfer",
+                    CreatorName = creator,
+                    Status = t.Status,
+                    UnderlyingItem = t
+                });
             }
-            else if (item.ItemType == "HouseholdSeparation")
+
+            // 3) Load HouseholdSeparations (status Pending or ApprovedByLeader)
+            var separations = _context.HouseholdSeparations
+                .Include(s => s.OriginalHousehold)
+                    .ThenInclude(h => h.HeadOfHouseHold)
+                        .ThenInclude(hh => hh.User)
+                .Where(s => s.Status == Status.Pending.ToString() ||
+                            s.Status == Status.ApprovedByLeader.ToString())
+                .ToList();
+            foreach (var s in separations)
             {
-                var separationDetailsWindow = new HouseholdSeparationDetailsWindow(
-                    new HouseholdSeparationDetailsViewModel(item.UnderlyingItem as HouseholdSeparation));
-                separationDetailsWindow.ShowDialog();
+                string creator = s.OriginalHousehold?.HeadOfHouseHold?.User?.FullName ?? "N/A";
+                ApprovalItems.Add(new ApprovalItem
+                {
+                    ItemId = s.SeparationId,
+                    ItemType = "HouseholdSeparation",
+                    CreatorName = creator,
+                    Status = s.Status,
+                    UnderlyingItem = s
+                });
+            }
+
+            OnPropertyChanged(nameof(ApprovalItems));
+        }
+
+        /// <summary>
+        /// Opens the corresponding details window based on the ItemType of the selected item.
+        /// </summary>
+        /// <param name="parameter">The ApprovalItem passed from the view.</param>
+        private void ViewDetails(object parameter)
+        {
+            if (parameter is not ApprovalItem item) return;
+
+            switch (item.ItemType)
+            {
+                case "Registration":
+                    if (item.UnderlyingItem is Registration registration)
+                    {
+                        var detailsVM = new RegistrationDetailsViewModel(registration, _currentUserService);
+                        var detailsWindow = new RegistrationDetailsWindow(detailsVM);
+                        detailsWindow.ShowDialog();
+                    }
+                    break;
+
+                case "HouseholdTransfer":
+                    if (item.UnderlyingItem is HouseholdTransfer transfer)
+                    {
+                        var detailsVM = new HouseholdTransferDetailsViewModel(transfer);
+                        var detailsWindow = new HouseholdTransferDetailsWindow(detailsVM);
+                        detailsWindow.ShowDialog();
+                    }
+                    break;
+
+                case "HouseholdSeparation":
+                    if (item.UnderlyingItem is HouseholdSeparation separation)
+                    {
+                        var detailsVM = new HouseholdSeparationDetailsViewModel(
+                            separation,
+                            _policeProcessingService,
+                            _currentUserService
+                        );
+                        var detailsWindow = new HouseholdSeparationDetailsWindow(detailsVM);
+                        detailsWindow.ShowDialog();
+                    }
+                    break;
             }
         }
     }

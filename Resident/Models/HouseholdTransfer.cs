@@ -9,9 +9,9 @@ public partial class HouseholdTransfer
 
     public int HouseholdId { get; set; }
 
-    public int FromAreaId { get; set; }
+    public int FromAddressId { get; set; }
 
-    public int ToAreaId { get; set; }
+    public int ToAddressId { get; set; }
 
     public DateOnly RequestDate { get; set; }
 
@@ -23,9 +23,9 @@ public partial class HouseholdTransfer
 
     public virtual User? ApprovedByNavigation { get; set; }
 
-    public virtual Area FromArea { get; set; } = null!;
+    public virtual Address FromAddress { get; set; } = null!;
 
     public virtual Household Household { get; set; } = null!;
 
-    public virtual Area ToArea { get; set; } = null!;
+    public virtual Address ToAddress { get; set; } = null!;
 }

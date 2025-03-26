@@ -1,15 +1,17 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Resident.Models;
+﻿using Resident.Models;
 using Resident.Service;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace Resident.ViewModels
 {
-    public class PoliceChatSelectionViewModel : ObservableObject
+    public class PoliceChatSelectionViewModel : BaseViewModel
     {
-        private readonly PrnContext _context = new PrnContext();
+        private readonly PrnContext _context;
         private readonly ICurrentUserService _currentUserService;
+
+        private List<User> _allCitizens;
+        private List<User> _allAreaLeaders;
 
         public ObservableCollection<User> Citizens { get; set; }
         public ObservableCollection<User> AreaLeaders { get; set; }
@@ -18,49 +20,68 @@ namespace Resident.ViewModels
         public User SelectedCitizen
         {
             get => _selectedCitizen;
-            set { _selectedCitizen = value; OnPropertyChanged(nameof(SelectedCitizen)); }
+            set
+            {
+                _selectedCitizen = value;
+                OnPropertyChanged(nameof(SelectedCitizen));
+                (ChatWithCitizenCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
+            }
         }
 
         private User _selectedAreaLeader;
         public User SelectedAreaLeader
         {
             get => _selectedAreaLeader;
-            set { _selectedAreaLeader = value; OnPropertyChanged(nameof(SelectedAreaLeader)); }
+            set
+            {
+                _selectedAreaLeader = value;
+                OnPropertyChanged(nameof(SelectedAreaLeader));
+                (ChatWithAreaLeaderCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
+            }
         }
 
         public ICommand ChatWithCitizenCommand { get; }
         public ICommand ChatWithAreaLeaderCommand { get; }
         public ICommand CancelCommand { get; }
 
-        // Action để đóng cửa sổ, sẽ được gán từ code-behind.
-        public System.Action? CloseAction { get; set; }
+        // Optional: an Action to close the window (set from code-behind)
+        public System.Action CloseAction { get; set; }
 
-        public PoliceChatSelectionViewModel(ICurrentUserService currentUserService)
+        public PoliceChatSelectionViewModel(ICurrentUserService currentUserService, PrnContext context)
         {
             _currentUserService = currentUserService;
+            _context = context;
+
             LoadCitizens();
             LoadAreaLeaders();
 
-            ChatWithCitizenCommand = new LocalRelayCommand(o => ChatWithCitizen(), o => SelectedCitizen != null);
-            ChatWithAreaLeaderCommand = new LocalRelayCommand(o => ChatWithAreaLeader(), o => SelectedAreaLeader != null);
-            CancelCommand = new LocalRelayCommand(o => CloseAction?.Invoke());
+            Citizens = new ObservableCollection<User>(_allCitizens);
+            AreaLeaders = new ObservableCollection<User>(_allAreaLeaders);
+
+            ChatWithCitizenCommand = new LocalRelayCommand(_ => ChatWithCitizen(), _ => SelectedCitizen != null);
+            ChatWithAreaLeaderCommand = new LocalRelayCommand(_ => ChatWithAreaLeader(), _ => SelectedAreaLeader != null);
+            CancelCommand = new LocalRelayCommand(_ => CloseAction?.Invoke());
         }
 
         private void LoadCitizens()
         {
-            var citizens = _context.Users.Where(u => u.Role == "Citizen").ToList();
-            Citizens = new ObservableCollection<User>(citizens);
+            // Load all citizens from the database.
+            _allCitizens = _context.Users
+                                   .Where(u => u.Role == "Citizen")
+                                   .ToList();
         }
 
         private void LoadAreaLeaders()
         {
-            var leaders = _context.Users.Where(u => u.Role == "AreaLeader").ToList();
-            AreaLeaders = new ObservableCollection<User>(leaders);
+            // Load all area leaders from the database.
+            _allAreaLeaders = _context.Users
+                                      .Where(u => u.Role == "AreaLeader")
+                                      .ToList();
         }
 
         private void ChatWithCitizen()
         {
-            // Tạo PoliceChatViewModel để chat với người dân được chọn.
+            // Create and open the PoliceChatWindow for the selected citizen.
             var chatVM = new PoliceChatViewModel(_currentUserService, SelectedCitizen.UserId);
             var chatWindow = new Resident.View.PoliceChatWindow(chatVM);
             chatWindow.Show();
@@ -68,7 +89,7 @@ namespace Resident.ViewModels
 
         private void ChatWithAreaLeader()
         {
-            // Tạo PoliceChatViewModel để chat với Tổ trưởng được chọn.
+            // Create and open the PoliceChatWindow for the selected area leader.
             var chatVM = new PoliceChatViewModel(_currentUserService, SelectedAreaLeader.UserId);
             var chatWindow = new Resident.View.PoliceChatWindow(chatVM);
             chatWindow.Show();
