@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Resident.ViewModels;
 using System.Windows;
 
 namespace Resident.View
@@ -16,7 +17,7 @@ namespace Resident.View
             var serviceProvider = ((App)Application.Current).ServiceProvider;
             var loginWindow = serviceProvider.GetRequiredService<LoginWindow>();
             loginWindow.Show();
-            Application.Current.MainWindow.Close();
+            this.Close();
         }
     }
 }

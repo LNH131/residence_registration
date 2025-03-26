@@ -34,10 +34,16 @@
     <Compile Update="View\CitizenChatWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\CitizenNotificationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\CitizenPoliceChatSelectionWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\CitizenWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CreateNotificationWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\DeletedUserWindow.xaml.cs">

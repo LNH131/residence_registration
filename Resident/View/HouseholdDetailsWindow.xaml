@@ -1,14 +1,15 @@
 ﻿<Window x:Class="Resident.View.HouseholdDetailsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Household Details" Height="600" Width="800"
+        Title="Household Details" 
+        Height="600" Width="800"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
-        <DataGrid x:Name="dgHouseholds" 
+        <!-- DataGrid listing all households -->
+        <DataGrid ItemsSource="{Binding Households}"
+                  SelectedItem="{Binding SelectedHousehold}"
                   AutoGenerateColumns="False"
-                  IsReadOnly="True"
-                  ItemsSource="{Binding Households}"
-                  SelectedItem="{Binding SelectedHousehold}">
+                  IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Household ID" Binding="{Binding HouseholdId}" Width="100"/>
                 <DataGridTextColumn Header="Address" Binding="{Binding FormattedAddress}" Width="*"/>
@@ -16,8 +17,15 @@
                 <DataGridTextColumn Header="Created Date" Binding="{Binding CreatedDate}" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Bottom">
-            <Button Content="View Details" Width="120" Margin="0,0,10,0" Command="{Binding ViewDetailsCommand}" CommandParameter="{Binding SelectedHousehold}"/>
+
+        <!-- Buttons at the bottom-right -->
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Bottom" 
+                    Margin="10">
+            <Button Content="View Details" Width="120" Margin="0,0,10,0"
+                    Command="{Binding ViewDetailsCommand}"
+                    CommandParameter="{Binding SelectedHousehold}" />
             <Button Content="Close" Width="80" Click="Close_Click"/>
         </StackPanel>
     </Grid>

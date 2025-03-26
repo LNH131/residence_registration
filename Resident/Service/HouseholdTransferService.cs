@@ -37,7 +37,7 @@ namespace Resident.Service
                 if (trans == null)
                     throw new Exception("Household Transfer not found in the database.");
 
-                // Final approval: update the ApprovedBy field and change status to Approved.
+                // Set the ApprovedBy field and update the status to Approved.
                 trans.ApprovedBy = currentUser.UserId;
                 trans.Status = Status.Approved.ToString();
 

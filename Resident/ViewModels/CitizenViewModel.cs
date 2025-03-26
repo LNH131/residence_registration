@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Resident.Models;
+﻿using Resident.Models;
 using Resident.Service;
 using Resident.View;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Windows.Input;
+
 namespace Resident.ViewModels
 {
     public class CitizenViewModel : BaseViewModel
@@ -67,29 +67,15 @@ namespace Resident.ViewModels
 
         private void UpdateProfile()
         {
-            var updateCitizenProfileWindow = _serviceProvider.GetRequiredService<UpdateCitizenProfileWindow>();
-            updateCitizenProfileWindow.ShowDialog();
         }
 
         private void LoadNotifications()
         {
-            Notifications.Clear();
-            Notifications.Add(new Notification
-            {
-                NotificationId = 1,
-                UserId = 0,
-                Message = "Hồ sơ của bạn đã được phê duyệt.",
-                SentDate = DateTime.Now,
-                IsRead = false
-            });
-            Notifications.Add(new Notification
-            {
-                NotificationId = 2,
-                UserId = 0,
-                Message = "Cập nhật thông tin của bạn để đảm bảo tính chính xác.",
-                SentDate = DateTime.Now.AddMinutes(-30),
-                IsRead = false
-            });
+            var notifVM = new CitizenNotificationViewModel(_currentUserService);
+
+            // Show the window
+            var window = new CitizenNotificationWindow(notifVM);
+            window.ShowDialog();
         }
 
         private void MarkNotificationAsRead()
@@ -113,8 +99,6 @@ namespace Resident.ViewModels
 
         private void ManageHousehold()
         {
-            var manageHouseholdWindow = _serviceProvider.GetRequiredService<HouseHoldControlWindow>();
-            manageHouseholdWindow.ShowDialog();
         }
     }
 }

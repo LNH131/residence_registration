@@ -12,8 +12,18 @@ namespace Resident.ViewModels
         public HouseholdTransfer Transfer
         {
             get => _transfer;
-            set { _transfer = value; OnPropertyChanged(); }
+            set
+            {
+                _transfer = value;
+                OnPropertyChanged();
+                OnPropertyChanged(nameof(CanModify));
+            }
         }
+
+        // Only allow Approve/Reject if not Approved or Rejected
+        public bool CanModify =>
+            Transfer.Status != Status.Approved.ToString() &&
+            Transfer.Status != Status.Rejected.ToString();
 
         public ICommand ApproveCommand { get; }
         public ICommand RejectCommand { get; }
@@ -22,40 +32,46 @@ namespace Resident.ViewModels
 
         public HouseholdTransferDetailsViewModel(HouseholdTransfer transfer)
         {
+            _transferService = new HouseholdTransferService(); // or inject if needed
             Transfer = transfer;
-            _transferService = new HouseholdTransferService(); // You could inject via DI
 
-            ApproveCommand = new LocalRelayCommand(_ => ApproveTransfer());
-            RejectCommand = new LocalRelayCommand(_ => RejectTransfer());
+            ApproveCommand = new LocalRelayCommand(async _ => await ApproveTransferAsync(), _ => CanModify);
+            RejectCommand = new LocalRelayCommand(async _ => await RejectTransferAsync(), _ => CanModify);
         }
 
-        private void ApproveTransfer()
+        private async Task ApproveTransferAsync()
         {
-            // Final approval by the Police: update household's AddressId to Transfer.ToAddressId
-            // Then set status to Approved
             try
             {
                 Transfer.Status = Status.Approved.ToString();
                 _transferService.UpdateHouseholdTransfer(Transfer);
-                MessageBox.Show($"Chuyển hộ ID = {Transfer.TransferId} đã được phê duyệt.\nĐịa chỉ hộ đã được cập nhật.");
+
+                MessageBox.Show($"Household Transfer ID = {Transfer.TransferId} approved.",
+                                "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                OnPropertyChanged(nameof(CanModify));
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error approving transfer: " + ex.Message);
+                MessageBox.Show($"Error approving transfer: {ex.Message}",
+                                "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        private void RejectTransfer()
+        private async Task RejectTransferAsync()
         {
             try
             {
                 Transfer.Status = Status.Rejected.ToString();
                 _transferService.UpdateHouseholdTransfer(Transfer);
-                MessageBox.Show($"Chuyển hộ ID = {Transfer.TransferId} đã bị từ chối.");
+
+                MessageBox.Show($"Household Transfer ID = {Transfer.TransferId} rejected.",
+                                "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                OnPropertyChanged(nameof(CanModify));
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error rejecting transfer: " + ex.Message);
+                MessageBox.Show($"Error rejecting transfer: {ex.Message}",
+                                "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

@@ -50,11 +50,14 @@ namespace Resident.Service
                 {
                     throw new Exception("Registration not found in the database.");
                 }
+                // Use the current user to set the ApprovedBy field.
+                reg.ApprovedBy = currentUser.UserId;
                 reg.Status = Status.Approved.ToString();
                 context.Registrations.Update(reg);
                 context.SaveChanges();
             }
         }
+
         public List<Registration> GetAllRegistrations()
         {
             using (var context = new PrnContext())

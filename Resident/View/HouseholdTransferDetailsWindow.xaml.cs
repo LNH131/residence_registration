@@ -1,4 +1,4 @@
-﻿using Resident.ViewModels; // or wherever your VM is
+﻿using Resident.ViewModels;
 using System.Windows;
 
 namespace Resident.View
@@ -10,6 +10,7 @@ namespace Resident.View
             InitializeComponent();
             DataContext = viewModel;
         }
+
         private void Close_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

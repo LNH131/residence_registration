@@ -12,6 +12,13 @@ namespace Resident.ViewModels
         public int CurrentUserId { get; set; }
         public int ChatPartnerId { get; set; }
 
+        private string _chatPartnerFullName;
+        public string ChatPartnerFullName
+        {
+            get => _chatPartnerFullName;
+            set { _chatPartnerFullName = value; OnPropertyChanged(); }
+        }
+
         private string _newMessage;
         public string NewMessage
         {
@@ -20,12 +27,13 @@ namespace Resident.ViewModels
             {
                 _newMessage = value;
                 OnPropertyChanged();
-                (SendMessageCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
+                (SendMessageCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
             }
         }
 
-        private ObservableCollection<ChatMessage> _chatMessages;
-        public ObservableCollection<ChatMessage> ChatMessages
+        // Use ChatMessageDisplay for binding so we can show sender's full name.
+        private ObservableCollection<ChatMessageDisplay> _chatMessages;
+        public ObservableCollection<ChatMessageDisplay> ChatMessages
         {
             get => _chatMessages;
             set { _chatMessages = value; OnPropertyChanged(); }
@@ -40,28 +48,38 @@ namespace Resident.ViewModels
         {
             _currentUserService = currentUserService;
 
-            // Ensure that CurrentUser is already set. If not, it will throw an exception.
             if (_currentUserService.CurrentUser == null)
-            {
-                throw new InvalidOperationException("Current user is not set. Ensure the user is properly authenticated and that ICurrentUserService is registered as a singleton.");
-            }
+                throw new InvalidOperationException("Current user is not set. Ensure the user is authenticated.");
 
             CurrentUserId = _currentUserService.CurrentUser.UserId;
             ChatPartnerId = chatPartnerId;
 
             Debug.WriteLine($"PoliceChatViewModel: CurrentUserId = {CurrentUserId}, ChatPartnerId = {ChatPartnerId}");
 
-            // Create a ChatMessageService instance (ideally via DI)
+            // Ideally inject ChatMessageService via DI; for now we create a new instance.
             _chatService = new ChatMessageService(new PrnContext());
-            ChatMessages = new ObservableCollection<ChatMessage>();
+            ChatMessages = new ObservableCollection<ChatMessageDisplay>();
 
-            // Load the conversation asynchronously.
             LoadConversationAsync();
 
-            // Initialize SendMessageCommand with a command that re-checks its CanExecute state whenever NewMessage changes.
-            SendMessageCommand = new LocalRelayCommand(
-                async o => await SendMessageAsync(),
-                o => !string.IsNullOrWhiteSpace(NewMessage));
+            SendMessageCommand = new LocalRelayCommand(async _ => await SendMessageAsync(),
+                _ => !string.IsNullOrWhiteSpace(NewMessage));
+
+            LoadChatPartnerName();
+        }
+
+        private async void LoadChatPartnerName()
+        {
+            try
+            {
+                var chatPartner = await _currentUserService.GetUserByIdAsync(ChatPartnerId);
+                ChatPartnerFullName = chatPartner?.FullName ?? "Unknown User";
+            }
+            catch (Exception ex)
+            {
+                ChatPartnerFullName = "Unknown User";
+                Debug.WriteLine("Error loading chat partner name: " + ex);
+            }
         }
 
         private async void LoadConversationAsync()
@@ -70,12 +88,31 @@ namespace Resident.ViewModels
             {
                 var messages = await _chatService.GetConversationAsync(CurrentUserId, ChatPartnerId);
                 Debug.WriteLine($"Loaded {messages.Count} messages.");
+                ChatMessages.Clear();
                 foreach (var msg in messages)
                 {
-                    ChatMessages.Add(msg);
+                    // Use the included FromUser if available; otherwise, look up the sender.
+                    string senderName = msg.FromUser?.FullName;
+                    if (string.IsNullOrWhiteSpace(senderName))
+                    {
+                        var sender = await _currentUserService.GetUserByIdAsync(msg.FromUserId ?? 0);
+                        senderName = sender?.FullName ?? (msg.FromUserId?.ToString() ?? "Unknown");
+                    }
+
+                    var displayMsg = new ChatMessageDisplay
+                    {
+                        MessageId = msg.MessageId,
+                        FromUserId = msg.FromUserId,
+                        ToUserId = msg.ToUserId,
+                        Content = msg.Content,
+                        SentDate = msg.SentDate,
+                        IsRead = msg.IsRead,
+                        FromUserFullName = senderName
+                    };
+                    ChatMessages.Add(displayMsg);
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error loading chat messages: " + ex.Message);
                 Debug.WriteLine("Error loading chat messages: " + ex);
@@ -94,16 +131,40 @@ namespace Resident.ViewModels
                     FromUserId = CurrentUserId,
                     ToUserId = ChatPartnerId,
                     Content = NewMessage,
-                    SentDate = System.DateTime.Now,
+                    SentDate = DateTime.Now,
                     IsRead = false
                 };
 
                 await _chatService.InsertMessageAsync(newMsg);
-                ChatMessages.Add(newMsg);
+
+                // Retrieve sender's full name.
+                string senderName;
+                if (newMsg.FromUserId.HasValue)
+                {
+                    var sender = await _currentUserService.GetUserByIdAsync(newMsg.FromUserId.Value);
+                    senderName = sender?.FullName ?? newMsg.FromUserId.ToString();
+                }
+                else
+                {
+                    senderName = "Unknown";
+                }
+
+                var displayMsg = new ChatMessageDisplay
+                {
+                    MessageId = newMsg.MessageId,
+                    FromUserId = newMsg.FromUserId,
+                    ToUserId = newMsg.ToUserId,
+                    Content = newMsg.Content,
+                    SentDate = newMsg.SentDate,
+                    IsRead = newMsg.IsRead,
+                    FromUserFullName = senderName
+                };
+
+                ChatMessages.Add(displayMsg);
                 NewMessage = string.Empty;
                 Debug.WriteLine("Message sent successfully.");
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error sending message: " + ex.Message);
                 Debug.WriteLine("Error sending message: " + ex);

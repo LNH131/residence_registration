@@ -14,6 +14,7 @@ namespace Resident.Service
         public async Task<List<ChatMessage>> GetConversationAsync(int userA, int userB)
         {
             return await _context.ChatMessages
+                .Include(m => m.FromUser) // Load sender details for displaying FullName
                 .Where(m => (m.FromUserId == userA && m.ToUserId == userB) ||
                             (m.FromUserId == userB && m.ToUserId == userA))
                 .OrderBy(m => m.SentDate)

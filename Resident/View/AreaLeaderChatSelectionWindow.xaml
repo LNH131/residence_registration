@@ -11,6 +11,7 @@
                       SelectedItem="{Binding SelectedArea}"
                       DisplayMemberPath="AreaName"
                       Height="30" />
+
             <!-- DataGrid listing police -->
             <TextBlock Text="Danh sách Công an:" FontSize="16" Margin="0,20,0,10"/>
             <DataGrid ItemsSource="{Binding AvailablePolice}"
@@ -19,14 +20,19 @@
                       Height="150">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding UserId}" Width="50"/>
-                    <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*"/>
-                    <DataGridTextColumn Header="Area" Binding="{Binding Area.AreaName}" Width="80"/>
+                    <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*" />
+                    <DataGridTextColumn Header="Area" Binding="{Binding Area.AreaName}" Width="80" />
                 </DataGrid.Columns>
             </DataGrid>
+
             <!-- Buttons -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
-                <Button Content="Chat" Width="80" Margin="0,0,10,0"
-                        Command="{Binding OpenChatCommand}"/>
+                <Button Content="Chat"
+                        Width="80"
+                        Margin="0,0,10,0"
+                        Command="{Binding OpenChatCommand}" />
+                <!-- If you want a purely MVVM Cancel approach, bind a CancelCommand here:
+                     <Button Content="Cancel" Width="80" Command="{Binding CancelCommand}" /> -->
                 <Button Content="Cancel" Width="80" Click="Cancel_Click"/>
             </StackPanel>
         </StackPanel>

@@ -36,7 +36,7 @@ namespace Resident.Service
                 if (sep == null)
                     throw new Exception("Household Separation not found in the database.");
 
-                // Final approval: update ApprovedBy and change status to Approved.
+                // Set the ApprovedBy field using the current user and update the status.
                 sep.ApprovedBy = currentUser.UserId;
                 sep.Status = Status.Approved.ToString();
 

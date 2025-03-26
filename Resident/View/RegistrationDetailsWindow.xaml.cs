@@ -5,17 +5,9 @@ namespace Resident.View
 {
     public partial class RegistrationDetailsWindow : Window
     {
-        // Constructor không tham số (paramless)
-        public RegistrationDetailsWindow()
+        public RegistrationDetailsWindow(RegistrationDetailsViewModel viewModel)
         {
             InitializeComponent();
-        }
-
-        // Constructor có tham số, nhận ViewModel
-        public RegistrationDetailsWindow(RegistrationDetailsViewModel viewModel) : this()
-        {
-            // Gọi constructor không tham số để InitializeComponent()
-            // Rồi gán DataContext
             DataContext = viewModel;
         }
 

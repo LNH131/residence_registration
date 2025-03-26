@@ -8,7 +8,8 @@ namespace Resident.ViewModels
 {
     public class RegistrationOverviewViewModel : BaseViewModel
     {
-        private RegistrationService _service = new RegistrationService();
+        private readonly ICurrentUserService _currentUserService;
+        private readonly RegistrationService _registrationService;
 
         private ObservableCollection<Registration> _allRegistrations;
         public ObservableCollection<Registration> AllRegistrations
@@ -19,10 +20,13 @@ namespace Resident.ViewModels
 
         public ICommand ViewDetailsCommand { get; }
 
-        public RegistrationOverviewViewModel()
+        // Constructor uses DI to obtain the necessary services.
+        public RegistrationOverviewViewModel(ICurrentUserService currentUserService, RegistrationService registrationService)
         {
+            _currentUserService = currentUserService;
+            _registrationService = registrationService;
             LoadAllRegistrations();
-            ViewDetailsCommand = new LocalRelayCommand(o => ViewDetails(o));
+            ViewDetailsCommand = new LocalRelayCommand(o => ViewDetails(o), o => o != null);
         }
 
         private void LoadAllRegistrations()
@@ -41,11 +45,9 @@ namespace Resident.ViewModels
         {
             if (parameter is Registration registration)
             {
-                // Open the RegistrationDetailsWindow for the selected registration.
-                var detailsWindow = new Resident.View.RegistrationDetailsWindow();
-                // If RegistrationDetailsViewModel requires ICurrentUserService, ensure you pass a valid instance.
-                detailsWindow.DataContext = new RegistrationDetailsViewModel(registration, new CurrentUserService());
-                detailsWindow.Show();
+                var detailsVM = new RegistrationDetailsViewModel(registration, _currentUserService);
+                var detailsWindow = new Resident.View.RegistrationDetailsWindow(detailsVM);
+                detailsWindow.ShowDialog();
             }
         }
     }

@@ -8,12 +8,10 @@ namespace Resident.ViewModels
 {
     public class AreaLeaderChatSelectionViewModel : BaseViewModel
     {
-        private readonly PrnContext _context = new PrnContext();
+        private readonly PrnContext _context;
         private readonly ICurrentUserService _currentUserService;
 
-        // Store all police from the database.
         private List<User> _allPolice;
-
         public ObservableCollection<Area> AvailableAreas { get; set; }
 
         private Area _selectedArea;
@@ -32,29 +30,44 @@ namespace Resident.ViewModels
         public ObservableCollection<User> AvailablePolice
         {
             get => _availablePolice;
-            set { _availablePolice = value; OnPropertyChanged(nameof(AvailablePolice)); }
+            set
+            {
+                _availablePolice = value;
+                OnPropertyChanged(nameof(AvailablePolice));
+            }
         }
 
         private User _selectedPolice;
         public User SelectedPolice
         {
             get => _selectedPolice;
-            set { _selectedPolice = value; OnPropertyChanged(nameof(SelectedPolice)); }
+            set
+            {
+                _selectedPolice = value;
+                OnPropertyChanged(nameof(SelectedPolice));
+                (OpenChatCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
+            }
         }
 
         public ICommand OpenChatCommand { get; }
-        public ICommand CancelCommand { get; }
 
-        // Constructor: inject ICurrentUserService so the leader's info is available.
-        public AreaLeaderChatSelectionViewModel(ICurrentUserService currentUserService)
+        // Constructor receives ICurrentUserService and PrnContext via DI.
+        public AreaLeaderChatSelectionViewModel(ICurrentUserService currentUserService, PrnContext context)
         {
             _currentUserService = currentUserService;
+            _context = context;
+
             LoadAreas();
-            LoadAllPolice(); // Load all police first.
-            // Initially display all police.
+            LoadAllPolice();
+
+            // Display all police initially.
             AvailablePolice = new ObservableCollection<User>(_allPolice);
 
-            OpenChatCommand = new LocalRelayCommand(o => OpenChat(), o => SelectedPolice != null);
+            // Initialize command to open chat if a police is selected.
+            OpenChatCommand = new LocalRelayCommand(
+                _ => OpenChat(),
+                _ => SelectedPolice != null
+            );
         }
 
         private void LoadAreas()
@@ -65,8 +78,11 @@ namespace Resident.ViewModels
 
         private void LoadAllPolice()
         {
-            // Load all police from the DB.
-            _allPolice = _context.Users.Where(u => u.Role == "Police").Include(u => u.Area).ToList();
+            // Load all police from the database.
+            _allPolice = _context.Users
+                                 .Where(u => u.Role == "Police")
+                                 .Include(u => u.Area)
+                                 .ToList();
         }
 
         // Filter the police list based on the selected area.
@@ -85,7 +101,7 @@ namespace Resident.ViewModels
 
         private void OpenChat()
         {
-            // Create the AreaLeaderChatViewModel with the current leader and the selected police.
+            // Create the chat ViewModel using the logged-in user's ID and the selected police's UserId.
             var chatVM = new AreaLeaderChatViewModel(_currentUserService, SelectedPolice.UserId);
             var chatWindow = new Resident.View.AreaLeaderChatWindow(chatVM);
             chatWindow.Show();

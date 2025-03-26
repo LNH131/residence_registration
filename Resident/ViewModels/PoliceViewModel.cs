@@ -15,8 +15,9 @@ public class PoliceViewModel : BaseViewModel
     private readonly PrnContext _context;
     private readonly IPoliceProcessingService _policeProcessingService;
 
-    // Danh sách hồ sơ đã được tổ trưởng duyệt
-    public ObservableCollection<ApprovalItem> ApprovalItems { get; set; } = new ObservableCollection<ApprovalItem>();
+    // Collection for approval items (Registrations, HouseholdTransfers, HouseholdSeparations)
+    public ObservableCollection<ApprovalItem> ApprovalItems { get; set; }
+        = new ObservableCollection<ApprovalItem>();
 
     private ApprovalItem _selectedApprovalItem;
     public ApprovalItem SelectedApprovalItem
@@ -26,10 +27,38 @@ public class PoliceViewModel : BaseViewModel
         {
             _selectedApprovalItem = value;
             OnPropertyChanged(nameof(SelectedApprovalItem));
+            // Re-check CanExecute for ProcessCommand
+            if (ProcessCommand is LocalRelayCommand cmd)
+            {
+                cmd.RaiseCanExecuteChanged();
+            }
         }
     }
 
-    // Các command cho dashboard
+    // Household monitoring
+    private ObservableCollection<Household> _households;
+    public ObservableCollection<Household> Households
+    {
+        get => _households;
+        set
+        {
+            _households = value;
+            OnPropertyChanged(nameof(Households));
+        }
+    }
+
+    private Household _selectedHousehold;
+    public Household SelectedHousehold
+    {
+        get => _selectedHousehold;
+        set
+        {
+            _selectedHousehold = value;
+            OnPropertyChanged(nameof(SelectedHousehold));
+        }
+    }
+
+    // Commands on the Police dashboard
     public ICommand ProcessCommand { get; }
     public ICommand ViewDetailsCommand { get; }
     public ICommand RefreshCommand { get; }
@@ -40,32 +69,44 @@ public class PoliceViewModel : BaseViewModel
     public ICommand NotificationCommand { get; }
     public ICommand ViewAllRegistrationsCommand { get; }
 
-    public PoliceViewModel(ICurrentUserService currentUserService, IPoliceProcessingService policeProcessingService)
+    public PoliceViewModel(
+        ICurrentUserService currentUserService,
+        IPoliceProcessingService policeProcessingService)
     {
         _currentUserService = currentUserService;
         _registrationService = new RegistrationService();
         _context = new PrnContext();
         _policeProcessingService = policeProcessingService;
 
-        // Khởi tạo các command với LocalRelayCommand (đảm bảo RelayCommand của bạn hỗ trợ LocalRelayCommand)
-        ProcessCommand = new LocalRelayCommand(async o => await ProcessApprovalAsync(), o => SelectedApprovalItem != null);
-        ViewDetailsCommand = new LocalRelayCommand(o => ViewDetails(o), o => o != null);
-        RefreshCommand = new LocalRelayCommand(o => LoadApprovalItems());
-        ChatCommand = new LocalRelayCommand(o => OpenChat());
-        ViewHouseholdDetailCommand = new LocalRelayCommand(o => OpenHouseholdDetail());
-        ViewReportCommand = new LocalRelayCommand(o => OpenReports());
-        NotificationCommand = new LocalRelayCommand(o => OpenNotifications());
-        ViewAllRegistrationsCommand = new LocalRelayCommand(o => OpenAllRegistrations());
+        ProcessCommand = new LocalRelayCommand(
+            async _ => await ProcessApprovalAsync(),
+            _ => SelectedApprovalItem != null
+        );
+
+        ViewDetailsCommand = new LocalRelayCommand(
+            o => ViewDetails(o),
+            o => o != null
+        );
+
+        RefreshCommand = new LocalRelayCommand(_ => { LoadApprovalItems(); LoadHouseholds(); });
+        ChatCommand = new LocalRelayCommand(_ => OpenChat());
+        ViewHouseholdDetailCommand = new LocalRelayCommand(_ => OpenHouseholdDetail());
+        ViewReportCommand = new LocalRelayCommand(_ => OpenReports());
+        NotificationCommand = new LocalRelayCommand(_ => OpenNotifications());
+        ViewAllRegistrationsCommand = new LocalRelayCommand(_ => OpenAllRegistrations());
 
         LoadApprovalItems();
+        LoadHouseholds();
     }
 
-    // Tải danh sách các hồ sơ được duyệt bởi Tổ trưởng (ApprovedByLeader)
+    /// <summary>
+    /// Loads all ApprovalItems (Registrations, Transfers, Separations) with status ApprovedByLeader.
+    /// </summary>
     private void LoadApprovalItems()
     {
         ApprovalItems.Clear();
 
-        // Tải hồ sơ đăng ký với trạng thái ApprovedByLeader
+        // Load Registrations
         var regs = _context.Registrations
             .Include(r => r.User)
             .Where(r => r.Status == Status.ApprovedByLeader.ToString())
@@ -82,7 +123,7 @@ public class PoliceViewModel : BaseViewModel
             });
         }
 
-        // Tải các yêu cầu chuyển hộ với trạng thái ApprovedByLeader
+        // Load HouseholdTransfers
         var transfers = _context.HouseholdTransfers
             .Include(t => t.Household)
                 .ThenInclude(h => h.HeadOfHouseHold)
@@ -104,7 +145,7 @@ public class PoliceViewModel : BaseViewModel
             });
         }
 
-        // Tải các yêu cầu tách hộ với trạng thái ApprovedByLeader
+        // Load HouseholdSeparations
         var separations = _context.HouseholdSeparations
             .Include(s => s.OriginalHousehold)
                 .ThenInclude(h => h.HeadOfHouseHold)
@@ -127,6 +168,20 @@ public class PoliceViewModel : BaseViewModel
         OnPropertyChanged(nameof(ApprovalItems));
     }
 
+    /// <summary>
+    /// Loads all households for the "Household Monitoring" section.
+    /// </summary>
+    private void LoadHouseholds()
+    {
+        var allHouseholds = _context.Households
+            .Include(h => h.Address)
+            .ToList();
+        Households = new ObservableCollection<Household>(allHouseholds);
+    }
+
+    /// <summary>
+    /// Processes the selected approval item (final processing by Police).
+    /// </summary>
     private async Task ProcessApprovalAsync()
     {
         if (SelectedApprovalItem == null) return;
@@ -135,84 +190,109 @@ public class PoliceViewModel : BaseViewModel
 
         try
         {
-            if (SelectedApprovalItem.ItemType == "Registration")
+            switch (SelectedApprovalItem.ItemType)
             {
-                var reg = SelectedApprovalItem.UnderlyingItem as Registration;
-                if (reg != null)
-                {
-                    await _policeProcessingService.ProcessRegistrationAsync(reg, currentPoliceId);
-                    MessageBox.Show($"Registration ID {reg.RegistrationId} processed by Police.",
-                                    "Success", MessageBoxButton.OK);
-                }
-            }
-            else if (SelectedApprovalItem.ItemType == "HouseholdTransfer")
-            {
-                var transfer = SelectedApprovalItem.UnderlyingItem as HouseholdTransfer;
-                if (transfer != null)
-                {
-                    await _policeProcessingService.ProcessHouseholdTransferAsync(transfer, currentPoliceId);
-                    MessageBox.Show($"Household Transfer ID {transfer.TransferId} processed by Police.",
-                                    "Success", MessageBoxButton.OK);
-                }
-            }
-            else if (SelectedApprovalItem.ItemType == "HouseholdSeparation")
-            {
-                var separation = SelectedApprovalItem.UnderlyingItem as HouseholdSeparation;
-                if (separation != null)
-                {
-                    await _policeProcessingService.ProcessHouseholdSeparationAsync(separation, currentPoliceId);
-                    MessageBox.Show($"Household Separation ID {separation.SeparationId} processed by Police.",
-                                    "Success", MessageBoxButton.OK);
-                }
+                case "Registration":
+                    if (SelectedApprovalItem.UnderlyingItem is Registration reg)
+                    {
+                        await _policeProcessingService.ProcessRegistrationAsync(reg, currentPoliceId);
+                        MessageBox.Show($"Registration ID {reg.RegistrationId} processed by Police.",
+                                        "Success", MessageBoxButton.OK);
+                    }
+                    break;
+
+                case "HouseholdTransfer":
+                    if (SelectedApprovalItem.UnderlyingItem is HouseholdTransfer transfer)
+                    {
+                        await _policeProcessingService.ProcessHouseholdTransferAsync(transfer, currentPoliceId);
+                        MessageBox.Show($"Household Transfer ID {transfer.TransferId} processed by Police.",
+                                        "Success", MessageBoxButton.OK);
+                    }
+                    break;
+
+                case "HouseholdSeparation":
+                    if (SelectedApprovalItem.UnderlyingItem is HouseholdSeparation separation)
+                    {
+                        await _policeProcessingService.ProcessHouseholdSeparationAsync(separation, currentPoliceId);
+                        MessageBox.Show($"Household Separation ID {separation.SeparationId} processed by Police.",
+                                        "Success", MessageBoxButton.OK);
+                    }
+                    break;
             }
         }
-        catch (Exception ex)
+        catch (System.Exception ex)
         {
             MessageBox.Show($"Error processing approval: {ex.Message}",
                             "Error", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
-        // Refresh the list so the processed item disappears from the queue
+        // Refresh the list after processing.
         LoadApprovalItems();
     }
 
+    /// <summary>
+    /// Opens the details window for the selected approval item.
+    /// </summary>
     private void ViewDetails(object parameter)
     {
-        if (parameter is ApprovalItem item)
+        if (parameter is not ApprovalItem item) return;
+
+        switch (item.ItemType)
         {
-            if (item.ItemType == "Registration")
-            {
-                var detailsWindow = new RegistrationDetailsWindow(
-                    new RegistrationDetailsViewModel(item.UnderlyingItem as Registration, _currentUserService)
-                );
-                detailsWindow.ShowDialog();
-            }
-            else if (item.ItemType == "HouseholdTransfer")
-            {
-                var transferDetailsWindow = new HouseholdTransferDetailsWindow(
-                    new HouseholdTransferDetailsViewModel(item.UnderlyingItem as HouseholdTransfer)
-                );
-                transferDetailsWindow.ShowDialog();
-            }
-            else if (item.ItemType == "HouseholdSeparation")
-            {
-                var separationDetailsWindow = new HouseholdSeparationDetailsWindow(
-                    new HouseholdSeparationDetailsViewModel(item.UnderlyingItem as HouseholdSeparation)
-                );
-                separationDetailsWindow.ShowDialog();
-            }
+            case "Registration":
+                if (item.UnderlyingItem is Registration reg)
+                {
+                    var detailsVM = new RegistrationDetailsViewModel(reg, _currentUserService);
+                    var detailsWindow = new RegistrationDetailsWindow(detailsVM);
+                    detailsWindow.ShowDialog();
+                }
+                break;
+
+            case "HouseholdTransfer":
+                if (item.UnderlyingItem is HouseholdTransfer transfer)
+                {
+                    var detailsVM = new HouseholdTransferDetailsViewModel(transfer);
+                    var detailsWindow = new HouseholdTransferDetailsWindow(detailsVM);
+                    detailsWindow.ShowDialog();
+                }
+                break;
+
+            case "HouseholdSeparation":
+                if (item.UnderlyingItem is HouseholdSeparation separation)
+                {
+                    var detailsVM = new HouseholdSeparationDetailsViewModel(
+                        separation,
+                        _policeProcessingService,
+                        _currentUserService
+                    );
+                    var detailsWindow = new HouseholdSeparationDetailsWindow(detailsVM);
+                    detailsWindow.ShowDialog();
+                }
+                break;
         }
     }
 
+    /// <summary>
+    /// Opens the PoliceChatSelectionWindow.
+    /// </summary>
     private void OpenChat()
     {
-        var selectionVM = new PoliceChatSelectionViewModel(_currentUserService);
+        var selectionVM = new PoliceChatSelectionViewModel(_currentUserService, _context);
         var selectionWindow = new PoliceChatSelectionWindow(selectionVM);
         selectionWindow.ShowDialog();
     }
 
+    /// <summary>
+    /// Opens the HouseholdDetailsWindow for the selected household in the monitoring grid.
+    /// </summary>
     private void OpenHouseholdDetail()
     {
+        if (SelectedHousehold == null)
+        {
+            MessageBox.Show("Please select a household first.", "Info");
+            return;
+        }
+
         var householdDetailsWindow = new HouseholdDetailsWindow(new HouseholdDetailsViewModel());
         householdDetailsWindow.ShowDialog();
     }
@@ -229,10 +309,8 @@ public class PoliceViewModel : BaseViewModel
 
     private void OpenAllRegistrations()
     {
-        var overviewVM = new RegistrationOverviewViewModel();
-        var overviewWindow = new RegistrationOverviewWindow(overviewVM);
-        overviewWindow.Show();
+        var vm = new PoliceApprovalsOverviewViewModel(_currentUserService, _policeProcessingService);
+        var window = new PoliceApprovalsOverviewWindow(vm);
+        window.ShowDialog();
     }
-
-
 }

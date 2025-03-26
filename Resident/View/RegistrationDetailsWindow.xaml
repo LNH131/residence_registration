@@ -1,42 +1,81 @@
 ﻿<Window x:Class="Resident.View.RegistrationDetailsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Registration Details" Height="400" Width="600"
+        Title="Chi tiết đăng ký hộ khẩu"
+        Height="450" Width="600"
         WindowStartupLocation="CenterScreen">
-    <Grid Margin="10">
-        <StackPanel>
-            <TextBlock Text="Registration Details" 
-                       FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
 
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0"
+                   Text="Chi tiết hồ sơ đăng ký"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Margin="0,0,0,10"/>
+
+        <!-- Main content: Registration fields -->
+        <StackPanel Grid.Row="1">
+            <!-- Registration ID -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="ID:" FontWeight="Bold" Width="120"/>
+                <TextBlock Text="Registration ID: " FontWeight="Bold" Width="150"/>
                 <TextBlock Text="{Binding Registration.RegistrationId}"/>
             </StackPanel>
 
+            <!-- User -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Name:" FontWeight="Bold" Width="120"/>
+                <TextBlock Text="User: " FontWeight="Bold" Width="150"/>
                 <TextBlock Text="{Binding Registration.User.FullName}"/>
             </StackPanel>
 
+            <!-- Registration Type -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Type:" FontWeight="Bold" Width="120"/>
+                <TextBlock Text="Type: " FontWeight="Bold" Width="150"/>
                 <TextBlock Text="{Binding Registration.RegistrationType}"/>
             </StackPanel>
 
+            <!-- Address -->
             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Status:" FontWeight="Bold" Width="120"/>
+                <TextBlock Text="Address ID: " FontWeight="Bold" Width="150"/>
+                <TextBlock Text="{Binding Registration.AddressId}"/>
+            </StackPanel>
+
+            <!-- Status -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Status: " FontWeight="Bold" Width="150"/>
                 <TextBlock Text="{Binding Registration.Status}"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
-                <Button Content="Approve" Width="100" Margin="5"
-                        Command="{Binding ApproveCommand}"/>
-                <Button Content="Reject" Width="100" Margin="5"
-                        Command="{Binding RejectCommand}"/>
+            <!-- Comments (if any) -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Comments: " FontWeight="Bold" Width="150"/>
+                <TextBlock Text="{Binding Registration.Comments}"/>
             </StackPanel>
+        </StackPanel>
 
-            <Button Content="Close" Width="100" Margin="0,20,0,0" 
-                    HorizontalAlignment="Right" Click="Close_Click"/>
+        <!-- Footer: Approve/Reject/Close -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Approve" 
+                    Width="100" 
+                    Margin="5"
+                    Command="{Binding ApproveCommand}"
+                    IsEnabled="{Binding CanModify}"/>
+
+            <Button Content="Reject" 
+                    Width="100" 
+                    Margin="5"
+                    Command="{Binding RejectCommand}"
+                    IsEnabled="{Binding CanModify}"/>
+
+            <Button Content="Close" 
+                    Width="100" 
+                    Margin="5" 
+                    Click="Close_Click"/>
         </StackPanel>
     </Grid>
 </Window>

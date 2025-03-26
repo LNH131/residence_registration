@@ -1,4 +1,5 @@
-﻿using Resident.Models;
+﻿using Microsoft.Extensions.Configuration;
+using Resident.Models;
 using System.Net;
 using System.Net.Mail;
 
@@ -7,42 +8,77 @@ namespace Resident.Service
     public class NotificationService : INotificationService
     {
         private readonly PrnContext _context;
-        public NotificationService(PrnContext context)
+        private readonly IConfiguration _configuration;
+
+        public NotificationService(PrnContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         public async Task SendInAppNotificationAsync(int userId, string message)
         {
-            // Tạo đối tượng Notification mới
+            if (string.IsNullOrWhiteSpace(message))
+                throw new ArgumentException("Message cannot be empty.", nameof(message));
+
             var notification = new Notification
             {
+                UserId = userId,
                 Message = message,
                 SentDate = DateTime.Now,
-                IsRead = false,
-                UserId = userId
+                IsRead = false
             };
+
+            _context.Notifications.Add(notification);
+            await _context.SaveChangesAsync();
+        }
+        public async Task SendNotificationAsync(int userId, string message)
+        {
+            // Use the injected context rather than creating a new one.
+            var notification = new Notification
+            {
+                UserId = userId,
+                Message = message,
+                SentDate = DateTime.Now,
+                IsRead = false
+            };
+
             _context.Notifications.Add(notification);
             await _context.SaveChangesAsync();
         }
 
         public async Task SendEmailNotificationAsync(string recipientEmail, string subject, string body)
         {
-            using (var client = new SmtpClient("smtp.fpt.edu.vn", 587)) // Sử dụng host và port theo cấu hình của FPT
+            try
             {
-                client.Credentials = new NetworkCredential("giangvthe187264@fpt.edu.vn", "dgoalidwbptuooya");
-                client.EnableSsl = true;
+                // Get SMTP configuration from appsettings.json via IConfiguration
+                string host = _configuration["Smtp:Host"] ?? "smtp.fpt.edu.vn";
+                int port = int.TryParse(_configuration["Smtp:Port"], out int parsedPort) ? parsedPort : 587;
+                string username = _configuration["Smtp:Username"] ?? "giangvthe187264@fpt.edu.vn";
+                string password = _configuration["Smtp:Password"] ?? "dgoalidwbptuooya";
+                bool enableSsl = bool.TryParse(_configuration["Smtp:EnableSsl"], out bool parsedSsl) ? parsedSsl : true;
+                string fromAddress = _configuration["Smtp:FromAddress"] ?? "giangvthe187264@fpt.edu.vn";
 
-                var mail = new MailMessage
+                using (var client = new SmtpClient(host, port))
                 {
-                    From = new MailAddress("giangvthe187264@fpt.edu.vn"),
-                    Subject = subject,
-                    Body = body,
-                    IsBodyHtml = true
-                };
-                mail.To.Add(recipientEmail);
+                    client.Credentials = new NetworkCredential(username, password);
+                    client.EnableSsl = enableSsl;
 
-                await client.SendMailAsync(mail);
+                    var mail = new MailMessage
+                    {
+                        From = new MailAddress(fromAddress),
+                        Subject = subject,
+                        Body = body,
+                        IsBodyHtml = true
+                    };
+                    mail.To.Add(recipientEmail);
+
+                    await client.SendMailAsync(mail);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Email sending failed: " + ex.Message, ex);
             }
         }
     }

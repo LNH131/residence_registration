@@ -10,29 +10,32 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!-- Header -->
         <TextBlock Text="Select a user to chat with:" 
                    FontSize="16" FontWeight="Bold" Grid.Row="0" Margin="0,0,0,10"/>
 
+        <!-- Main content with two sections -->
         <StackPanel Grid.Row="1" Orientation="Vertical">
+            <!-- Citizens Section -->
             <TextBlock Text="Citizens:" FontWeight="Bold" Margin="0,5,0,5"/>
             <ComboBox ItemsSource="{Binding Citizens}" 
                       SelectedItem="{Binding SelectedCitizen}"
                       DisplayMemberPath="FullName" Height="30" Margin="0,0,0,10"/>
-
             <Button Content="Chat with Citizen" 
-        Command="{Binding ChatWithCitizenCommand}" 
-        Height="35" Margin="0,0,0,10"/>
+                    Command="{Binding ChatWithCitizenCommand}" 
+                    Height="35" Margin="0,0,0,10"/>
 
+            <!-- Area Leaders Section -->
             <TextBlock Text="Area Leaders:" FontWeight="Bold" Margin="0,10,0,5"/>
             <ComboBox ItemsSource="{Binding AreaLeaders}" 
                       SelectedItem="{Binding SelectedAreaLeader}"
                       DisplayMemberPath="FullName" Height="30" Margin="0,0,0,10"/>
-
             <Button Content="Chat with Area Leader" 
-        Command="{Binding ChatWithAreaLeaderCommand}" 
-        Height="35" Margin="0,0,0,10"/>
+                    Command="{Binding ChatWithAreaLeaderCommand}" 
+                    Height="35" Margin="0,0,0,10"/>
         </StackPanel>
 
+        <!-- Footer -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Content="Cancel" Width="80" Height="30" Command="{Binding CancelCommand}"/>
         </StackPanel>

@@ -1,47 +1,83 @@
 ﻿<Window x:Class="Resident.View.HouseholdSeparationDetailsWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Chi tiết tách hộ" Height="400" Width="600"
+        Title="Chi tiết tách hộ" 
+        Height="500" Width="700"
         WindowStartupLocation="CenterScreen">
     <Grid Margin="10">
-        <StackPanel>
-            <TextBlock Text="Chi tiết tách hộ" 
-                       FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-            <!-- Separation ID -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Separation ID:" FontWeight="Bold" Width="120"/>
-                <TextBlock Text="{Binding Separation.SeparationId}"/>
+        <!-- Header -->
+        <TextBlock Grid.Row="0"
+                   Text="Chi tiết tách hộ"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   Margin="0,0,0,10"/>
+
+        <!-- Main content area -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Column: Basic info -->
+            <StackPanel Grid.Column="0" Margin="0,0,10,0">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Separation ID:" FontWeight="Bold" Width="150"/>
+                    <TextBlock Text="{Binding Separation.SeparationId}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Original Household:" FontWeight="Bold" Width="150"/>
+                    <TextBlock Text="{Binding Separation.OriginalHouseholdId}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="New Household:" FontWeight="Bold" Width="150"/>
+                    <TextBlock Text="{Binding Separation.NewHouseholdId}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Trạng thái:" FontWeight="Bold" Width="150"/>
+                    <TextBlock Text="{Binding Separation.Status}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Requested Date:" FontWeight="Bold" Width="150"/>
+                    <TextBlock Text="{Binding Separation.RequestDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}'}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Approved By:" FontWeight="Bold" Width="150"/>
+                    <TextBlock Text="{Binding Separation.ApprovedBy}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                    <TextBlock Text="Approval Date:" FontWeight="Bold" Width="150"/>
+                    <TextBlock Text="{Binding Separation.ApprovalDate, StringFormat='{}{0:yyyy-MM-dd HH:mm}'}"/>
+                </StackPanel>
             </StackPanel>
 
-            <!-- OriginalHouseholdId -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Original Household:" FontWeight="Bold" Width="120"/>
-                <TextBlock Text="{Binding Separation.OriginalHouseholdId}"/>
-            </StackPanel>
+            <!-- Right Column: Lists of members in original & new households -->
+            <StackPanel Grid.Column="1">
+                <GroupBox Header="Original Household Members" Margin="0,0,0,10">
+                    <ListBox ItemsSource="{Binding OriginalHouseholdMembers}" DisplayMemberPath="FullName" />
+                </GroupBox>
 
-            <!-- NewHouseholdId -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="New Household:" FontWeight="Bold" Width="120"/>
-                <TextBlock Text="{Binding Separation.NewHouseholdId}"/>
+                <GroupBox Header="New Household Members">
+                    <ListBox ItemsSource="{Binding NewHouseholdMembers}" DisplayMemberPath="FullName" />
+                </GroupBox>
             </StackPanel>
+        </Grid>
 
-            <!-- Status -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <TextBlock Text="Trạng thái:" FontWeight="Bold" Width="120"/>
-                <TextBlock Text="{Binding Separation.Status}"/>
-            </StackPanel>
-
-            <!-- Approve/Reject Buttons -->
-            <StackPanel Orientation="Horizontal" Margin="20,0,0,0" HorizontalAlignment="Center">
-                <Button Content="Duyệt" Width="100" Margin="5"
-                        Command="{Binding ApproveCommand}"/>
-                <Button Content="Từ chối" Width="100" Margin="5"
-                        Command="{Binding RejectCommand}"/>
-            </StackPanel>
-
-            <Button Content="Đóng" Width="100" Margin="10" HorizontalAlignment="Right"
-                    Click="Close_Click"/>
+        <!-- Footer: Approve/Reject Buttons + Close -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Approve" Width="100" Margin="5"
+                    Command="{Binding ApproveCommand}"
+                    IsEnabled="{Binding CanModify}"/>
+            <Button Content="Reject" Width="100" Margin="5"
+                    Command="{Binding RejectCommand}"
+                    IsEnabled="{Binding CanModify}"/>
+            <Button Content="Close" Width="100" Margin="5" Click="Close_Click"/>
         </StackPanel>
     </Grid>
 </Window>
