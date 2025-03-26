@@ -42,5 +42,10 @@ namespace Resident.View
             DialogResult = false;
             Close();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

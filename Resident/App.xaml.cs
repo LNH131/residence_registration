@@ -60,6 +60,7 @@ namespace Resident
             services.AddTransient<AreaLeaderChatSelectionViewModel>();
             services.AddTransient<AreaLeaderChatViewModel>();
             services.AddTransient<CitizenPoliceChatSelectionViewModel>();
+            services.AddTransient<UpdateCitizenProfileViewModel>();
 
             // Register Views / Windows
             services.AddTransient<LoginWindow>();
@@ -83,8 +84,9 @@ namespace Resident
             services.AddTransient<HouseholdDetailsWindow>(); // For household monitoring.
             services.AddTransient<CreateNotificationWindow>();
             services.AddTransient<AreaLeaderChatWindow>();
-            services.AddTransient<CitizenPoliceChatSelectionWindow>();
+            services.AddTransient<CitizenPoliceChatSelectionWindow>(); 
             services.AddTransient<CitizenChatWindow>();
+            services.AddTransient<UpdateCitizenProfileWindow>();
             services.AddTransient<INotificationService, NotificationService>();
 
         }

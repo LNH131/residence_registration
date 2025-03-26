@@ -27,7 +27,7 @@ namespace Resident.ViewModels
             {
                 _newMessage = value;
                 OnPropertyChanged();
-                (SendMessageCommand as LocalRelayCommand)?.NotifyCanExecuteChanged();
+                (SendMessageCommand as LocalRelayCommand)?.RaiseCanExecuteChanged();
             }
         }
 

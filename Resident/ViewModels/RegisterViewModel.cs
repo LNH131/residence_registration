@@ -20,7 +20,10 @@ namespace Resident.ViewModels
         private string fullName = string.Empty;
 
         [ObservableProperty]
-        private string email = string.Empty;
+        private string email = string.Empty; 
+
+        [ObservableProperty]
+        private string identityCard = string.Empty;
 
         [ObservableProperty]
         private string password = string.Empty;
@@ -72,6 +75,7 @@ namespace Resident.ViewModels
             if (string.IsNullOrWhiteSpace(FullName) ||
                 string.IsNullOrWhiteSpace(Email) ||
                 string.IsNullOrWhiteSpace(Password) ||
+                string.IsNullOrWhiteSpace(identityCard) ||
                 string.IsNullOrWhiteSpace(ConfirmPassword))
             {
                 ErrorMessage = "Please fill in all required fields.";
@@ -102,6 +106,7 @@ namespace Resident.ViewModels
                 Email = Email,
                 Password = BCrypt.Net.BCrypt.HashPassword(Password),
                 Role = SelectedRole.ToString(),
+                IdentityCard = IdentityCard,
                 AreaId = SelectedArea?.AreaId,
                 CurrentAddressId = SelectedAddress.AddressId,
                 CurrentAddress = SelectedAddress

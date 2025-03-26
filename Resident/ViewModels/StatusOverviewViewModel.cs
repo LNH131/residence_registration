@@ -3,6 +3,7 @@ using Resident.Models;
 using Resident.Service;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 
 namespace Resident.ViewModels
 {
@@ -26,6 +27,13 @@ namespace Resident.ViewModels
             set { _householdSeparations = value; OnPropertyChanged(nameof(HouseholdSeparations)); }
         }
 
+        private ObservableCollection<HouseholdTransfer> _householdTransfers;
+        public ObservableCollection<HouseholdTransfer> HouseholdTransfers
+        {
+            get => _householdTransfers;
+            set { _householdTransfers = value; OnPropertyChanged(nameof(HouseholdTransfers)); }
+        }
+
         public StatusOverviewViewModel(ICurrentUserService currentUserService)
         {
             _currentUserService = currentUserService;
@@ -39,7 +47,6 @@ namespace Resident.ViewModels
                 );
 
                 // 2) Load HouseholdSeparations in which the current user is head.
-                //    We include the related households and their HeadOfHouseHold.
                 HouseholdSeparations = new ObservableCollection<HouseholdSeparation>(
                     context.HouseholdSeparations
                            .Include(s => s.OriginalHousehold)
@@ -47,13 +54,22 @@ namespace Resident.ViewModels
                            .Include(s => s.NewHousehold)
                                .ThenInclude(h => h.HeadOfHouseHold)
                            .Where(s =>
-                               // Check if the current user is head in the OriginalHousehold
                                (s.OriginalHousehold.HeadOfHouseHold != null && s.OriginalHousehold.HeadOfHouseHold.UserId == CurrentUser.UserId)
-                               // OR if the current user is head in the NewHousehold
                                || (s.NewHousehold != null && s.NewHousehold.HeadOfHouseHold != null && s.NewHousehold.HeadOfHouseHold.UserId == CurrentUser.UserId)
                            )
                            .ToList()
                 );
+
+                // 3) Load HouseholdTransfers in which the current user là chủ hộ.
+                HouseholdTransfers = new ObservableCollection<HouseholdTransfer>(
+                    context.HouseholdTransfers
+                           .Include(t => t.Household)
+                               .ThenInclude(h => h.HeadOfHouseHold)
+                           .Where(t => t.Household.HeadOfHouseHold != null && t.Household.HeadOfHouseHold.UserId == CurrentUser.UserId)
+                           .ToList()
+                );
+
+                Debug.WriteLine($"Loaded {Registrations.Count} registrations, {HouseholdSeparations.Count} household separations, and {HouseholdTransfers.Count} household transfers for user {CurrentUser.UserId}.");
             }
         }
 

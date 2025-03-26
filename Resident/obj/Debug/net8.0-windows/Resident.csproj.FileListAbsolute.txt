@@ -1149,3 +1149,17 @@ C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\obj\D
 C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\obj\Debug\net8.0-windows\ref\Resident.dll
 C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\obj\Debug\net8.0-windows\View\CitizenNotificationWindow.baml
 C:\Users\acer\Desktop\CNki5\PRN212\21-3git\residence_registration\Resident\obj\Debug\net8.0-windows\View\CitizenNotificationWindow.g.cs
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\AreaLeaderApprovalsOverviewWindow.baml
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\AreaLeaderRegistrationDetailsWindow.baml
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\CitizenNotificationWindow.baml
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\CreateNotificationWindow.baml
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\HouseholdSeparationDetailsWindow.baml
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\HouseholdTransferDetailsWindow.baml
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\PoliceApprovalsOverviewWindow.baml
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\AreaLeaderApprovalsOverviewWindow.g.cs
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\AreaLeaderRegistrationDetailsWindow.g.cs
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\CitizenNotificationWindow.g.cs
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\CreateNotificationWindow.g.cs
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\HouseholdSeparationDetailsWindow.g.cs
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\HouseholdTransferDetailsWindow.g.cs
+C:\Users\ngoch\OneDrive\Documents\GitHub\residence_registration\Resident\obj\Debug\net8.0-windows\View\PoliceApprovalsOverviewWindow.g.cs
